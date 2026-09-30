@@ -1,0 +1,8 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {seedSuite,makeVideo,parseBrandText,validSuite} from '../src/suite-model';
+import {validateProject} from '../src/model';
+test('suite keeps product platforms separate from creation formats',()=>{const suite=seedSuite();assert.ok(validSuite(suite));const owner=suite.projects[0];const video=makeVideo(owner,'Landscape demo','16:9');assert.equal(video.outputFormat,'16:9');assert.ok(validateProject(video));assert.deepEqual(owner.apps.map(a=>a.platform),['mobile','web']);assert.equal(video.productName,owner.name);});
+test('creating a video does not mutate shared project media',()=>{const owner=seedSuite().projects[0],count=owner.media.length;const video=makeVideo(owner,'New','1:1');assert.equal(owner.media.length,count);assert.equal(video.assets.length,count+1);assert.notEqual(video.assets,owner.media);assert.equal(video.scenes.length,1);assert.ok(!video.musicId);});
+test('brand import supports semantic JSON and never executes Tailwind code',()=>{assert.equal(parseBrandText('{"brand":{"accent":"#123456","font":"Example Sans"}}','brand.json').accent,'#123456');const parsed=parseBrandText('throw new Error("do not execute"); export default { colors: { brand: "#c0ffee", ink: "#112233" } }','tailwind.config.ts');assert.equal(parsed.background,'#c0ffee');assert.equal(parsed.accent,'#112233');assert.throws(()=>parseBrandText('not JSON','brand.json'));});
+test('video format validation rejects unsupported formats',()=>{const video=makeVideo(seedSuite().projects[0],'New','9:16');assert.ok(validateProject(video));assert.equal(validateProject({...video,outputFormat:'mobile'}),false);});

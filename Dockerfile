@@ -13,6 +13,6 @@ RUN npm run build
 
 # Serve stage: static files via nginx with SPA fallback
 FROM nginx:alpine
-COPY --from=build /app/apps/web/dist /usr/share/nginx/html
+COPY --from=build /app/apps/website/dist /usr/share/nginx/html
 RUN printf 'server { listen 80; root /usr/share/nginx/html; index index.html; location / { try_files $uri $uri/ /index.html; } }\n' > /etc/nginx/conf.d/default.conf
 EXPOSE 80

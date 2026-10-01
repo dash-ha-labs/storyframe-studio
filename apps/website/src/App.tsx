@@ -6,6 +6,8 @@ import { BlogPostPage } from './pages/BlogPostPage';
 import { FeaturesPage } from './pages/FeaturesPage';
 import { GalleryPage } from './pages/GalleryPage';
 import { TemplatesPage } from './pages/TemplatesPage';
+import { ResourceCenterPage } from './pages/ResourceCenterPage';
+import { GuidesPage } from './pages/GuidesPage';
 import { LandingTemplate } from './templates';
 import { Card, Button, Badge } from '@storyframe/ui';
 
@@ -62,6 +64,14 @@ export function App() {
 
   if (currentPath === '/templates') {
     return <TemplatesPage onNavigate={navigate} />;
+  }
+
+  if (currentPath === '/resources') {
+    return <ResourceCenterPage onNavigate={navigate} />;
+  }
+
+  if (currentPath === '/guides') {
+    return <GuidesPage onNavigate={navigate} />;
   }
 
   // Home / Overview landing

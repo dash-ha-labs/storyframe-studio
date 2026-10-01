@@ -1,20 +1,12 @@
 import React from 'react';
 import { FeatureTemplate } from '../templates';
-import { Card, Button, Badge, ToolIcon } from '@storyframe/ui';
+import Suite from '@storyframe/studio/src/Suite.tsx';
 
 export function FeaturesPage({ onNavigate }: { onNavigate?: (path: string) => void }) {
   const embed = (
-    <Card interactive style={{ marginTop: 'var(--sf-space-6)' }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--sf-space-4)', marginBottom: 'var(--sf-space-4)' }}>
-        <ToolIcon tool="video" size={32} />
-        <div>
-          <h3 style={{ margin: '0 0 var(--sf-space-1) 0' }}>Video Studio</h3>
-          <p style={{ margin: 0, fontSize: '12px', color: 'var(--sf-color-text-muted)' }}>Professional video timeline rendering.</p>
-        </div>
-        <Badge variant="shipped" style={{ marginLeft: 'auto' }}>Active</Badge>
-      </div>
-      <Button onClick={() => onNavigate?.('/')}>Try Video Studio</Button>
-    </Card>
+    <div style={{ marginTop: 'var(--sf-space-6)', height: '600px', borderRadius: 'var(--sf-radius-lg)', overflow: 'hidden', border: '1px solid var(--sf-color-border)' }}>
+      <Suite />
+    </div>
   );
 
   return (

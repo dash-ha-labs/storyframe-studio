@@ -1,20 +1,12 @@
 import React from 'react';
 import { GalleryItemTemplate } from '../templates';
-import { Card, Button, Badge, ToolIcon } from '@storyframe/ui';
+import Suite from '@storyframe/studio/src/Suite.tsx';
 
 export function GalleryPage({ onNavigate }: { onNavigate?: (path: string) => void }) {
   const embed = (
-    <Card interactive style={{ marginTop: 'var(--sf-space-6)' }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--sf-space-4)', marginBottom: 'var(--sf-space-4)' }}>
-        <ToolIcon tool="brand" size={32} />
-        <div>
-          <h3 style={{ margin: '0 0 var(--sf-space-1) 0' }}>Brand Design Showcase</h3>
-          <p style={{ margin: 0, fontSize: '12px', color: 'var(--sf-color-text-muted)' }}>Created with Storyframe</p>
-        </div>
-        <Badge variant="accent" style={{ marginLeft: 'auto' }}>Featured</Badge>
-      </div>
-      <Button variant="secondary" onClick={() => onNavigate?.('/')}>View Project</Button>
-    </Card>
+    <div style={{ marginTop: 'var(--sf-space-6)', height: '600px', borderRadius: 'var(--sf-radius-lg)', overflow: 'hidden', border: '1px solid var(--sf-color-border)' }}>
+      <Suite />
+    </div>
   );
 
   return (

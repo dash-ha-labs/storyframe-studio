@@ -1,3 +1,4 @@
+// NOTE: Retained for storyboard asset editing — core video creation tool
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {ArrowDown, ArrowLeft, ArrowRight, ArrowUp, AudioLines, Check, ChevronDown, ChevronRight, Clapperboard, Copy, Download, Expand, Film, FolderOpen, GripVertical, Image as ImageIcon, Layers, LayoutTemplate, Lock, Maximize2, MoreHorizontal, MousePointer2, Music2, Pause, Play, Plus, Redo2, Scissors, Search, Settings2, ShieldCheck, SkipBack, SkipForward, SlidersHorizontal, Sparkles, Trash2, Type, Undo2, Unlock, Upload, Volume2, VolumeX, WandSparkles, X, ZoomIn, ZoomOut} from 'lucide-react';
 import {clock, useFrame, usePlaying} from './clock';

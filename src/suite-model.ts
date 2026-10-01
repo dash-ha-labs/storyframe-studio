@@ -1,6 +1,6 @@
 import {Asset, Project, validateProject} from './model';
 import demoData from './demo.json';
-export type ToolId='video'|'logo'|'brand'|'marketing'|'landing'|'aso'|'keywords';
+export type ToolId='video'|'brand';
 export type Platform='web'|'mobile';
 export type OutputFormat='9:16'|'16:9'|'1:1'|'4:5';
 export interface Brand {background:string;accent:string;ink:string;font:string;voice:string;source:string;}
@@ -12,12 +12,7 @@ export interface SuiteState {version:1;folders:{id:string;name:string}[];project
 export const SUITE_KEY='storyframe.suite.v1';
 export const TOOLS:{id:ToolId;name:string;description:string;label:string;formats:string[]}[]=[
 {id:'video',name:'Video studio',description:'Product stories, with your real UI.',label:'Create video',formats:['9:16','16:9','1:1','4:5']},
-{id:'logo',name:'Logo studio',description:'Explore a mark that feels like you.',label:'Create logo brief',formats:['Wordmark','Symbol','App icon']},
-{id:'brand',name:'Brand builder',description:'Build or refine your visual identity.',label:'Edit brand',formats:[]},
-{id:'marketing',name:'Marketing studio',description:'Screenshots, graphics and mockups.',label:'Create material',formats:['App screenshots','Social graphic','Device mockup','App icon']},
-{id:'landing',name:'Landing pages',description:'Turn product clarity into a page.',label:'Plan landing page',formats:['Product launch','Feature page','Waitlist']},
-{id:'aso',name:'ASO copy',description:'Make your store listing count.',label:'Write store copy',formats:['App Store','Google Play']},
-{id:'keywords',name:'Keywords',description:'Organize the words people search.',label:'Build keyword list',formats:['App Store','Google Play','Web search']}
+{id:'brand',name:'Brand builder',description:'Build or refine your visual identity.',label:'Edit brand',formats:[]}
 ];
 export const newId=()=>crypto.randomUUID();
 export const blankBrand=():Brand=>({background:'#f4f1eb',accent:'#a6b5ff',ink:'#24262c',font:'System sans-serif',voice:'Clear, friendly and useful.',source:'Manual'});

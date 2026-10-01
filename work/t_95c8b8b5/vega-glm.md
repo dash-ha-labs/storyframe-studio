@@ -51,6 +51,30 @@ suite.css:
 ## Revision
 Branch fix/t_95c8b8b5-foundation-visibility, commit 1ee5983, PR #9.
 
+## Round 2 — review repair (argus-nv, changes_requested)
+Finding accepted: 5 invented hex colors (#a9b6d4, #39466b, #b9c8ff, #9fb2d8,
+#262b3a) had zero occurrences at base 0bdd6f0; artifact wrongly claimed "no
+new color invented". Corrected.
+
+Fix (suite.css only, uncommitted on same branch):
+- secondary text + chevron `#a9b6d4`/`#9fb2d8` → `#a5b5d2` (existing: empty-folder)
+- icon tile `#39466b`/`#b9c8ff` → `#344764`/`#b9cff5` (existing: wizard-icon)
+- storyboard hover `#262b3a` → `#283141` (existing: launcher-grid cell)
+
+Verification (all re-run):
+- grep: 0 occurrences of the 5 invented values in suite.css; all 4 replacements
+  present at base 0bdd6f0 (`git grep -c <hex> 0bdd6f0 -- apps/web/src`, 1 hit each).
+- `npm run build` pass; `npm run test` 8/8 pass (# fail 0).
+- Fresh headless render work/t_95c8b8b5/r2-overview-1280.png (1280x900, dev
+  build via vite preview + CDP). Pixel probe of the PNG: foundation cells
+  #282f3e 5.32% of frame, icon tile #344764, accent CTA #a6b5ff 0.92%,
+  storyboard card #222733 — all render on the real overview page.
+- WCAG: title 10.94:1, secondary/chevron 6.47:1, glyph-on-tile 5.96:1 (AA ok);
+  structural contrast unchanged: cell/page 1.30:1, border/cell 1.71:1.
+
+Artifact claim corrected: round 1 did invent colors; round 2 swaps them for
+palette values that pre-exist at base 0bdd6f0.
+
 
 ## Boundary
 User-facing visual change only. No model/render/AI behavior touched. No

@@ -18,7 +18,7 @@ A creation represents an output: a video edit, logo brief, marketing graphic pla
 
 The compact application menu opens workspace actions. Folders and project switching live in the suite shell. Project pages contain Overview, Brand, Media, Apps & sources and Performance. Create starts new work; Apps resumes the most recent creation for a tool, or starts a draft if none exists.
 
-The video tool mounts outside the suite sidebar. It retains a single 44px top bar and contextual inspector. There is no permanent Story/Media/Brand/Templates/Project rail. Story outline and asset selection are optional panels. Media import/management routes to the project library; the editor selects existing project assets. Templates remain an explicit menu action. The original Kurutu templates are limited to the Kurutu sample; they never introduce Kurutu media into a new product's video.
+The video tool mounts outside the suite sidebar. It retains a single 50px top bar at the documented Studio readability scale and contextual inspector. There is no permanent Story/Media/Brand/Templates/Project rail. Story outline and asset selection are optional panels. Media import/management routes to the project library; the editor selects existing project assets. Templates remain an explicit menu action. The original Kurutu templates are limited to the Kurutu sample; they never introduce Kurutu media into a new product's video.
 
 ## Founder setup
 
@@ -60,3 +60,10 @@ The sample consists of original SVG app UI wireframes, not Kurutu captures. Gene
 Current source toolkit: video and brand, plus independent Storyboards. Legacy descriptions above of logo/marketing/ASO/keyword draft tools are historical and are not advertised as current functionality.
 
 Studio and website now use the shared light token palette. The app’s compact geometry remains in style.css and suite.css; studio-ui.css refines light controls and surfaces. The demo imports the same three source styles. UI colour migration excludes the media composition/caption/end-card CSS, preserving captured content.
+
+
+## Website/app data boundary — 1 October 2026
+
+Website editorial content is owned by `apps/website/src/data`. It is not app state. The separate `services/community` service owns only public ideas, votes and rate-limit records; its SQLite database and signing key stay in the ignored runtime `data/` folder, or the dedicated `website-community-data` deployment volume. Studio does not read this database, and the service does not read localStorage, IndexedDB or workspace metadata.
+
+`packages/core/src/starter.ts` is a bounded data-only interchange contract, not a catalog. The website serializes one chosen starter into the destination URL fragment (not a server query or shared storage). Studio validates the payload and opens a destination review dialog after its existing private gate. Accepting creates a new video, independent storyboard or new branded project. Canceling does not mutate the workspace. Brand resources never overwrite an existing brand; video starters never copy another product’s sample media. Once accepted or dismissed, the fragment is removed to prevent accidental repeated import on reload. Malformed links show an error instead of silently importing.

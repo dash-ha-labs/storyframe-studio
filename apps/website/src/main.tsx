@@ -4,6 +4,7 @@ import App from './App';
 import '@storyframe/tokens/tokens.css';
 import '@storyframe/ui/ui.css';
 import './website.css';
+import './content.css';
 
 const container = document.getElementById('root');
 if (container) {

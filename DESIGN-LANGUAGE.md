@@ -6,7 +6,7 @@ Adopted 1 October 2026. Required for implementors and reviewers alongside [AGENT
 
 Storyframe is an AI-aided, brand-aware video builder for creators and entrepreneurs. Explain actual jobs: bring screenshots and footage, plan optional storyboards, edit scenes, generate variations and build phone mockups. Marketing copy describes the intended launch product. Keep implementation gaps and release dependencies in project documentation, not in public-facing development disclaimers.
 
-The current name and source app win over reference explorations. Never remove a feature, enlarge editor chrome or change project ownership to fit a marketing concept. Reference HTML is inspiration, not a feature contract. The source toolkit is Brand Design, independent Storyboards and Video Studio.
+The current name and source app win over reference explorations. Never remove a feature or change project ownership to fit a marketing concept. Density changes require a documented shared rule; the user-authorized readability trial below supersedes the original fixed dimensions. Reference HTML is inspiration, not a feature contract. The source toolkit is Brand Design, independent Storyboards and Video Studio.
 
 The homepage headline is **From your idea to a video in minutes.** This is the requested marketing direction, not a measured completion benchmark. Do not strengthen it into a two-minute guarantee without evidence. Avoid vague motivational copy such as “find your signature,” “give it shape,” “make it a thing” or “make it seamless.”
 
@@ -19,20 +19,20 @@ Website and Studio both use the light reference: white panels, a pale gray canva
 ## Foundations and ownership
 
 - Shared identity: `packages/tokens/tokens.css` and its typed companion. Cobalt action `#2142e7`, hover `#1935c4`, white label; marketing ink `#182b4e`, body `#626d80`.
-- Typography: locally bundled Inter Variable. One family for website headings, body and actions. Existing compact app sizes remain unchanged; mono remains available for time and technical values.
+- Typography: locally bundled Inter Variable. One family for website headings, body and actions. Studio uses 14px core controls/navigation, 13–15px body/labels and 11–12px metadata; mono remains available for time and technical values.
 - Website type: hero 43px phone / up to 68px desktop; section headings 31–36px; card headings 23–24px; body 16–18px; navigation/footer 15–16px. Small metadata may use 12–14px. Never use metadata sizing for core copy.
-- Website grid: 1280px outer container; 40px desktop / 20px phone gutters. Align navigation and content. Feature cards use two columns, other collections three; phone uses one column. Sections use 64px desktop / 43px phone separation, not empty viewport-sized spacers.
+- Website grid: 1280px outer container; 40px desktop / 20px phone gutters. Align navigation and content. Feature cards use two columns, other collections three; phone uses one column. Major sections use `--sf-section-gap`: fluid 56–88px desktop and 52px phone. Headings sit 28px above their content (24px phone); related controls and cards stay closer. Do not stack main bottom padding with footer top padding.
 - Shared components: `packages/ui/src/index.tsx` and `ui.css` own navigation, footer, buttons and layout primitives. `apps/website/src/website.css` owns website composition and responsive refinements. App styles stay in `apps/web/src` and never import website CSS. `studio-ui.css` owns the compact Studio control/surface finish and is imported after base geometry in both the app and website demo.
-- Buttons share cobalt/white or white/outlined variants, consistent typography and 44px normal / 48px large marketing heights. App buttons retain existing compact dimensions.
+- Buttons share cobalt/white or white/outlined variants, consistent typography and 44px normal / 48px large marketing heights. App controls use 32px toolbar/icon and 36px normal button heights.
 - Use Lucide icons, content-sized status badges, visible keyboard focus and natural wrapping. No full-width outline tags, arbitrary line breaks or centered phone headings in left-aligned layouts.
 
 ## Page composition
 
-Homepage: direct headline and signup → real editor → features → templates → gallery examples → useful resources → final CTA → white grouped footer. Keep copy short. Each card must explain a distinct video task through a relevant UI visual. Do not add a blog feed to the homepage.
+Homepage: direct headline and signup → real editor → features → templates → tutorials → useful resources → final CTA → white grouped footer. Keep copy short. Each card must explain a distinct video task through a relevant UI visual. Do not add a blog feed to the homepage.
 
 Footer: brand column plus Product, Resources and Storyframe link groups. Links have comfortable vertical spacing and the same readable scale across groups. A separate light CTA panel sits above; avoid duplicate overlapping signup blocks or fictitious newsletter forms.
 
-Features describe product capabilities directly. Templates present useful scene structures. Gallery cards describe the example’s format or use case without development labels. Resources provide working downloads; guides describe actual steps; the blog covers product video techniques and AI workflows. Roadmap states remain meaningful product information. Do not publish invented customer proof, uptime metrics or incident history; omit synthetic telemetry from the status page.
+Features describe product capabilities directly. Templates use a searchable marketplace and individual scene-structure pages. Tutorials replace Gallery with course and lesson routes. Resources provide working downloads and reviewed Studio imports; product documentation describes actual steps; the blog uses varied editorial layouts for product video techniques and AI workflows. Roadmap states remain meaningful product information. Do not publish invented customer proof, uptime metrics or incident history; omit synthetic telemetry from the status page.
 
 ## Motion and interaction
 
@@ -40,7 +40,7 @@ Use brief CSS transform/opacity motion for app UI wireframes and restrained hove
 
 ## Real editor on the website
 
-The live editor appears on the homepage only. Features, Templates and Gallery must not repeat it. `StudioDemo` embeds `demo.html`, which mounts actual Suite/VideoEditor source, styles and validated model. Do not scale it or recreate a simplified fake editor. Preserve one 44px top bar, optional panels, timeline, inspectors, features and source breakpoints.
+The live editor appears on the homepage only. Features, Templates, Tutorials and other secondary pages must not repeat it. `StudioDemo` embeds `demo.html`, which mounts actual Suite/VideoEditor source, styles and validated model. Do not scale it or recreate a simplified fake editor. Preserve one 50px top bar, optional panels, timeline, inspectors, features and source breakpoints. The demo follows the same Studio scale.
 
 Provide an ordinary validated fixture using `initialState`, `persist={false}` and a separate in-memory media store. Never read personal workspace data in marketing. Reload discards demo edits/imports; the real app retains its existing storage. Show session-only status accurately inside the app. Do not surround the preview with “live studio,” reset/about-sample panels or larger-canvas marketing chrome.
 
@@ -64,7 +64,7 @@ At the user’s direction, remove “illustrative,” “in development,” “p
 
 ## Studio controls — first pass
 
-Keep the established editor dimensions and use one light surface/border scale, 6px control corners, cobalt filled primary actions and restrained neutral navigation selection. Style inspector labels through hierarchy and contrast instead of increasing panel widths. Project-overview empty states should provide a short description and a direct action. Missing source thumbnails must have an honest fallback without rewriting media records. Brand-coloured artwork remains the project’s own; do not apply interface colours over captured content.
+Use the documented Studio readability dimensions and one light surface/border scale, 6px control corners, cobalt filled primary actions and restrained neutral navigation selection. Keep inspector typography, control height and panel width proportional. Project-overview empty states should provide a short description and a direct action. Missing source thumbnails must have an honest fallback without rewriting media records. Brand-coloured artwork remains the project’s own; do not apply interface colours over captured content.
 
 ## Selected states — reference correction
 
@@ -72,4 +72,39 @@ Follow the supplied HTML’s restrained state treatment. Navigation uses a subtl
 
 ## Light Studio correction
 
-The user explicitly rejected the dark app interpretation. Source authority preserves geometry, feature access, media fidelity and behaviour; it does not preserve the old colour theme. Use the supplied app HTML for visual direction at the source app’s dimensions: 44px toolbar, existing inspector/timeline sizes, no added permanent editor rail. Central light tokens serve both website and Studio. White dialogs, fields and chrome surround a pale gray canvas; pastel tracks distinguish picture/captions/audio, with one cobalt selection border. Media compositions and project-owned brand colours remain exact.
+The user explicitly rejected the dark app interpretation. Source authority preserves compact structure, feature access, media fidelity and behaviour; it does not preserve the old colour theme. Use the supplied app HTML for visual direction at the documented readability scale: 50px toolbar, proportionate inspector/timeline sizes, no added permanent editor rail. Central light tokens serve both website and Studio. White dialogs, fields and chrome surround a pale gray canvas; pastel tracks distinguish picture/captions/audio, with one cobalt selection border. Media compositions and project-owned brand colours remain exact.
+
+## Studio readability trial — 1 October 2026
+
+The user requested a modest increase across the Studio because the light version was too small. The previous compact state is saved in commit `7702bc2` for comparison or rollback. This trial supersedes the earlier fixed 44px toolbar requirement.
+
+- Increase UI geometry and icon artwork by approximately 12.5%; increase small text by 2px. Core navigation/actions are 14px, ordinary app buttons 36px, toolbar/icon controls 32px, and the single top bar 50px. Desktop sidebar is 227px, inspector 297px and timeline 216px; existing responsive breakpoints still apply.
+- Scale actual CSS layout and UI icons, never browser zoom or a transform on the app. Keep borders, focus strokes and radii restrained. Keep viewport minimum heights and responsive breakpoints stable.
+- Both Studio and the homepage demo consume the same source CSS and shared dimension tokens. Website marketing typography is independent.
+- Preserve media composition coordinates, caption sizes, preview fitting, timeline time calculations, project data and every feature. Inspect the editor, optional panels, forms and dialogs for clipping after a density change.
+
+## White content surfaces — Arcade reference refinement, 1 October 2026
+
+Inspected the user-provided [Arcade workspace](https://app.arcade.software/workspaces/tender-app/teams/tender-app/arcades), [editor](https://app.arcade.software/flows/N7rcZqOUSda6Pi1EcN0k/edit) and [public website](https://www.arcade.software/) in authenticated Chrome. These are visual references, not evidence of Storyframe capabilities. No reference content or branding is imported into the product.
+
+The user explicitly requires preserving our flow and applying styles. Keep Storyframe's page sequence, navigation, creation/editing actions, information and ownership model. Adopt the reference's hierarchy and visual restraint without transplanting its workflow, centered hero, claims or gray filled sections.
+
+- **No gray content cards.** Cards and raised content surfaces are white, including hover. Use shared `--sf-color-card` / `--sf-color-card-border`; a subtle border or small hover shadow provides separation. `bg-surface-elevated` is white. Never use a broad gray fill as a shortcut for hierarchy.
+- Pale neutral surfaces are reserved for the editor canvas and transient compact control/navigation states. Use `--sf-color-bg-canvas` explicitly for the editing workspace. A canvas is not a card.
+- Color belongs to relevant product visuals, project-owned content, semantic timeline tracks and small functional accents. Marketing card text sits on white; the existing UI visual may use a restrained peach, lilac, mint or blue background. Do not replace gray cards with arbitrary colored text boxes.
+- Avoid boxes within boxes: app references use one white card, a small platform icon, name/type hierarchy and concise location/status metadata. No outlined platform tag or divider inside each source card. Keep actual connection status visible. Reference files use compact rows; overview shortcuts do not need card containers.
+- Preserve the enlarged 14px core controls, 50px toolbar and established responsive structure. White surfaces must not mean faint text, disappearing input boundaries or invisible focus. Tabs use one underline and no filled hover block.
+- Scope: visual styling and presentation only. Preserve website copy, route order, links, downloads and CTA destinations. Preserve Studio state, all creation actions, inspector/editor features, media coordinates and storage isolation.
+
+
+## Content centers and spacing — 1 October 2026
+
+- Keep website content and community data separate from Studio. Catalogs, articles and lessons live in `apps/website/src/data`; community proposals/votes live in the website-only service and its own database. Core contains an interchange contract, never website editorial records. Studio must not import a website catalog or query the community database.
+- Marketplace: search plus combinable use-case, product, format, style and duration filters; URL-backed state, sort and bounded pagination. A template links to its own page with a scene outline and one primary **Use template free** action. Do not invent popularity or usage counts.
+- Resource center: white cards with compact type labels, distinct type-specific download actions, concise explanations and individual pages. Brand kits show their palette; scripts, briefs, checklists and storyboards show relevant contents. **Use in Studio** opens a review step before creating anything.
+- A website starter carries bounded data in a URL fragment. Studio validates it, lets the user choose a new/existing owner, then creates an independent artifact. No website storage is merged into app storage. Existing work and product media stay intact.
+- Tutorials: course overview plus individual lesson URLs; contents on the left, a 16:9 video area on the right and short practice steps underneath. On phones, lesson navigation precedes the player. Videos are explicitly authorized placeholders until supplied; placeholders are not playable controls and must not emit VideoObject schema or fabricated duration.
+- Documentation: section indexes and individual articles, a persistent desktop section navigation, in-page outline, and a mobile section disclosure. Use at least eight current sections, including account/billing. State actual save/import behavior precisely. Avoid repeating the same introductory paragraph under another heading.
+- Blog: a lead story, compact supporting stories and readable article pages. Avoid identical long horizontal cards. Long artwork titles must stay inside the cover; the complete title remains visible below it.
+- Roadmap: ordered **Now / Next / Later** stages, tied to short proposal pages. Keep the timeline visually distinct from the searchable voting board. Votes rank proposals for review; they never assign delivery dates or move an idea onto the timeline automatically. No invented votes, customers or completion claims.
+- SEO: ship rendered HTML for content routes, unique titles/descriptions, canonical links, appropriate structured data, sitemap and real production 404 responses. Redirect Gallery to Tutorials and Guides to Docs. Use ordinary links for navigation; preserve modified-click behavior.

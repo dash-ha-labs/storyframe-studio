@@ -1,0 +1,21 @@
+services:
+  website:
+    build:
+      context: .
+      target: frontend
+    ports:
+      - "127.0.0.1:8080:80"
+    depends_on:
+      - website-community
+  website-community:
+    build:
+      context: .
+      target: community
+    environment:
+      COMMUNITY_ORIGINS: https://storyframe.yamu.app
+      COOKIE_SECURE: "1"
+      TRUST_PROXY: "1"
+    volumes:
+      - website-community-data:/data
+volumes:
+  website-community-data:

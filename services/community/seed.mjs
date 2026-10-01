@@ -1,0 +1,9 @@
+export const categories=['Video editing','AI & generation','Brand & media','Templates','Collaboration','Other'];
+export const seedIdeas=[
+ {slug:'template-marketplace',title:'A template for every product story',category:'Templates',problem:'Starting every launch or update from an empty timeline takes time.',proposal:'Browse a searchable library of editable scene sequences, with a separate page for every template.',phase:'now',status:'in-progress'},
+ {slug:'video-export',title:'Export a finished video',category:'Video editing',problem:'Creators need a playable file to publish after editing.',proposal:'Render the validated project into a video with matching scene timing, captions and audio.',phase:'next',status:'planned'},
+ {slug:'ai-scene-generation',title:'Generate scenes from your brief',category:'AI & generation',problem:'Some stories need new footage alongside the product recordings a creator already has.',proposal:'Generate optional scene takes from a brand-aware brief, keep every original and show queue progress.',phase:'next',status:'planned'},
+ {slug:'portable-projects',title:'Take a complete project with you',category:'Brand & media',problem:'A JSON project alone does not include the media needed to reopen it elsewhere.',proposal:'Package editable project data, original media and provenance together for transfer and backup.',phase:'later',status:'planned'},
+ {slug:'review-links',title:'Share a video for feedback',category:'Collaboration',problem:'Feedback gets scattered across messages without a clear connection to a scene.',proposal:'Share a review link with comments attached to a specific moment in the video.',phase:null,status:'open'},
+ {slug:'caption-styles',title:'Save reusable caption styles',category:'Video editing',problem:'Adjusting the same caption styling in every creation slows down repeat edits.',proposal:'Save named caption styles at project level and apply them to selected scenes.',phase:null,status:'open'},
+];

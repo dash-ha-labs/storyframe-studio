@@ -83,8 +83,8 @@
 
 /* Card */
 .sf-card {
-  background: var(--sf-color-bg-surface);
-  border: 1px solid var(--sf-color-border-subtle);
+  background: var(--sf-color-card);
+  border: 1px solid var(--sf-color-card-border);
   border-radius: var(--sf-radius-lg);
   padding: var(--sf-space-4);
   color: var(--sf-color-text-primary);
@@ -97,7 +97,8 @@
 }
 
 .sf-card-interactive:hover {
-  background: var(--sf-color-bg-surface-hover);
+  background: var(--sf-color-card);
+  box-shadow: var(--sf-shadow-card-hover);
   border-color: var(--sf-color-border);
 }
 

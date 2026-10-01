@@ -5,7 +5,8 @@ export const tokens = {
       sidebar: '#f8f9fc',
       surface: '#ffffff',
       surfaceHover: '#f4f5fb',
-      surfaceElevated: '#f3f5fb',
+      surfaceElevated: '#ffffff',
+      canvas: '#f7f8fa',
       input: '#ffffff',
     },
     text: {
@@ -31,7 +32,8 @@ export const tokens = {
       strong: '#a8b3c8',
     },
   },
-  editor: { barHeight: '44px', controlHeight: '28px' },
+  card: { background: '#ffffff', border: '#e5e8ef', hoverShadow: '0 4px 14px #182b4e08' },
+  editor: { barHeight: '50px', controlHeight: '32px' },
   typography: {
     fontSans: '"Inter Variable", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
     fontDisplay: '"Inter Variable", system-ui, sans-serif',

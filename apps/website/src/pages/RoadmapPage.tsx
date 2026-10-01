@@ -1,77 +1,12 @@
-import React, { useState } from 'react';
-import { RoadmapTemplate } from '../templates';
-import {
-  RoadmapCard,
-  Button,
-  type RoadmapItemData,
-} from '@storyframe/ui';
-import { ROADMAP_ITEMS, ROADMAP_EVIDENCE } from '../data/roadmap-data';
-
-export function RoadmapPage({
-  onNavigate,
-}: {
-  onNavigate?: (path: string) => void;
-}) {
-  const [filter, setFilter] = useState<'all' | 'shipped' | 'in-progress' | 'planned'>('all');
-
-  const filteredItems =
-    filter === 'all'
-      ? ROADMAP_ITEMS
-      : ROADMAP_ITEMS.filter(item => item.status === filter);
-
-  return (
-    <RoadmapTemplate
-      onNavigate={onNavigate}
-      header={
-        <div>
-          <span className="sf-mkt-eyebrow">Public Product Roadmap</span>
-          <h1 className="sf-page-title">What’s next for Storyframe.</h1>
-          <p className="sf-page-subtitle">
-            Follow the ideas taking shape in Storyframe, from small improvements to bigger possibilities. Plans can change as we learn.
-          </p>
-        </div>
-      }
-    >
-      <div style={{ display: 'flex', gap: 'var(--sf-space-2)', marginBottom: 'var(--sf-space-6)' }}>
-        <Button
-          variant={filter === 'all' ? 'primary' : 'secondary'}
-          size="sm"
-          onClick={() => setFilter('all')}
-        >
-          All Features ({ROADMAP_ITEMS.length})
-        </Button>
-        <Button
-          variant={filter === 'shipped' ? 'primary' : 'secondary'}
-          size="sm"
-          onClick={() => setFilter('shipped')}
-        >
-          Shipped ({ROADMAP_ITEMS.filter(i => i.status === 'shipped').length})
-        </Button>
-        <Button
-          variant={filter === 'in-progress' ? 'primary' : 'secondary'}
-          size="sm"
-          onClick={() => setFilter('in-progress')}
-        >
-          In Progress ({ROADMAP_ITEMS.filter(i => i.status === 'in-progress').length})
-        </Button>
-        <Button
-          variant={filter === 'planned' ? 'primary' : 'secondary'}
-          size="sm"
-          onClick={() => setFilter('planned')}
-        >
-          Planned ({ROADMAP_ITEMS.filter(i => i.status === 'planned').length})
-        </Button>
-      </div>
-
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--sf-space-4)' }}>
-        {filteredItems.map((item: RoadmapItemData) => (
-          <RoadmapCard
-            key={item.id}
-            item={item}
-            allEvidence={ROADMAP_EVIDENCE}
-          />
-        ))}
-      </div>
-    </RoadmapTemplate>
-  );
-}
+import React,{useEffect,useState} from 'react';
+import {ArrowRight,ArrowUp,Plus,Link,Check,ArrowLeft} from 'lucide-react';
+import {ContentShell,PageIntro,SearchField,type PageProps} from '../Content';
+import {applyMetadata} from '../seo';
+import {Dialog} from '@storyframe/ui';
+export type Idea={id:string;slug:string;title:string;category:string;problem:string;proposal:string;author:string;phase:'now'|'next'|'later'|null;status:string;created:string;votes:number;voted:number|boolean};
+const statuses:Record<string,string>={open:'Open for votes',planned:'Planned','in-progress':'In progress',shipped:'Shipped',closed:'Closed'};
+async function api(path:string,options?:RequestInit){const res=await fetch('/api/ideas'+path,options);let data;try{data=await res.json()}catch{throw new Error('The ideas board couldn’t load. Please try again.')}if(!res.ok)throw Object.assign(new Error(data.error||'That change could not be saved.'),{status:res.status});return data;}
+function VoteButton({idea,onUpdate}:{idea:Idea;onUpdate:(idea:Idea)=>void}){const [busy,setBusy]=useState(false),[error,setError]=useState('');return <div className="vote-control"><button className="vote-button" aria-label={`${idea.voted?'Remove vote from':'Vote for'} ${idea.title}`} aria-pressed={!!idea.voted} disabled={busy} onClick={async()=>{setBusy(true);setError('');try{const data=await api('/'+idea.slug+'/vote',{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({voted:!idea.voted})});onUpdate(data.idea)}catch(e){setError((e as Error).message)}finally{setBusy(false)}}}><ArrowUp size={17}/><strong>{idea.votes}</strong></button>{error&&<span role="alert" className="vote-error">{error}</span>}</div>}
+function IdeaForm({onClose,onCreated,categories}:{onClose:()=>void;onCreated:(idea:Idea)=>void;categories:string[]}){const [title,setTitle]=useState(''),[problem,setProblem]=useState(''),[proposal,setProposal]=useState(''),[category,setCategory]=useState(categories[0]||'Other'),[error,setError]=useState(''),[busy,setBusy]=useState(false);return <Dialog title="Share an idea" onClose={onClose}><form className="idea-form" onSubmit={async e=>{e.preventDefault();setError('');setBusy(true);try{const data=await api('',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({title,problem,proposal,category})});onCreated(data.idea)}catch(e){setError((e as Error).message)}finally{setBusy(false)}}}><p>A clear problem and a practical proposal. Other creators can vote and share.</p><label>Idea title<input required minLength={8} maxLength={90} value={title} onChange={e=>setTitle(e.target.value)} placeholder="What would you like to do?"/></label><label>Category<select value={category} onChange={e=>setCategory(e.target.value)}>{categories.map(c=><option key={c}>{c}</option>)}</select></label><label>The problem<textarea required minLength={15} maxLength={400} rows={3} value={problem} onChange={e=>setProblem(e.target.value)} placeholder="What gets in your way today?"/></label><label>Your proposal<textarea required minLength={15} maxLength={600} rows={3} value={proposal} onChange={e=>setProposal(e.target.value)} placeholder="How could Storyframe help?"/></label><small>Your idea will be public. Leave out personal or sensitive information.</small>{error&&<p className="form-error" role="alert">{error}</p>}<button className="sf-button sf-button-primary" disabled={busy}>{busy?'Publishing…':'Publish idea'}<ArrowRight size={17}/></button></form></Dialog>}
+export function RoadmapPage(props:PageProps){const [ideas,setIdeas]=useState<Idea[]>([]),[roadmap,setRoadmap]=useState<Idea[]>([]),[page,setPage]=useState(1),[pages,setPages]=useState(1),[total,setTotal]=useState(0),[categories,setCategories]=useState<string[]>([]),[loading,setLoading]=useState(true),[error,setError]=useState(''),[retry,setRetry]=useState(0),[adding,setAdding]=useState(false),[q,setQ]=useState(''),[category,setCategory]=useState('All'),[status,setStatus]=useState('all'),[sort,setSort]=useState('votes');useEffect(()=>{let active=true;setError('');api('?'+new URLSearchParams({q,category,status,sort,page:String(page)})).then(d=>{if(active){setIdeas(d.ideas);setRoadmap(d.roadmap);setPages(d.pages);setTotal(d.total);setCategories(d.categories)}}).catch(e=>{if(active)setError(e.message)}).finally(()=>{if(active)setLoading(false)});return()=>{active=false}},[retry,q,category,status,sort,page]);const update=(idea:Idea)=>{setIdeas(old=>old.map(i=>i.id===idea.id?idea:i).sort((a,b)=>sort==='votes'?b.votes-a.votes||b.created.localeCompare(a.created):b.created.localeCompare(a.created)));setRoadmap(old=>old.map(i=>i.id===idea.id?idea:i));setRetry(r=>r+1);};const filtered=ideas;return <ContentShell section="roadmap" {...props}><PageIntro label="Roadmap & ideas" title="Help shape what’s next." action={<button className="sf-button sf-button-primary" disabled={loading||!!error} onClick={()=>setAdding(true)}><Plus size={18}/>Add an idea</button>}>Vote for the improvements you want. Share an idea. Follow its path into the product.</PageIntro>{loading?<p className="board-loading" role="status">Loading the roadmap…</p>:error?<div className="empty-results" role="alert"><h2>The board couldn’t load.</h2><p>{error}</p><button className="sf-button sf-button-secondary" onClick={()=>setRetry(r=>r+1)}>Try again</button></div>:<><section className="roadmap-timeline" aria-label="Product timeline">{[{id:'now',title:'Now',note:'Current focus'},{id:'next',title:'Next',note:'Up next'},{id:'later',title:'Later',note:'On the horizon'}].map((phase,index)=><div className={`timeline-stage stage-${phase.id}`} key={phase.id}><div className="timeline-stage-heading"><span>{String(index+1).padStart(2,'0')}</span><h2>{phase.title}</h2><small>{phase.note}</small></div><div className="timeline-stage-items">{roadmap.filter(i=>i.phase===phase.id&&!['shipped','closed'].includes(i.status)).map(i=><article key={i.id}><span className={`idea-status status-${i.status}`}>{statuses[i.status]}</span><a href={`/roadmap/ideas/${i.slug}`}><h3>{i.title}</h3></a><div><span>{i.category}</span><span><ArrowUp size={14}/>{i.votes}</span></div></article>)}</div></div>)}</section>{roadmap.some(i=>i.status==='shipped')&&<section className="shipped-strip"><h2>Recently shipped</h2>{roadmap.filter(i=>i.status==='shipped').map(i=><a key={i.id} href={`/roadmap/ideas/${i.slug}`}><Check size={16}/>{i.title}</a>)}</section>}<section className="content-section ideas-section" id="ideas"><div className="collection-heading"><div><span className="sf-mkt-eyebrow">Community ideas</span><h2>What would make your next video better?</h2></div></div><p className="board-note">Votes help us choose what to review. Selected ideas move onto the timeline.</p><div className="board-toolbar"><SearchField value={q} onChange={v=>{setQ(v);setPage(1)}} placeholder="Search ideas"/><select aria-label="Idea category" value={category} onChange={e=>{setCategory(e.target.value);setPage(1)}}><option>All</option>{categories.map(c=><option key={c}>{c}</option>)}</select><select aria-label="Idea status" value={status} onChange={e=>{setStatus(e.target.value);setPage(1)}}><option value="all">All statuses</option>{Object.entries(statuses).map(([v,label])=><option key={v} value={v}>{label}</option>)}</select><select aria-label="Sort ideas" value={sort} onChange={e=>{setSort(e.target.value);setPage(1)}}><option value="votes">Most votes</option><option value="newest">Newest first</option></select></div><p className="result-count" aria-live="polite">{total} ideas</p><div className="ideas-board">{filtered.map(i=><article key={i.id}><VoteButton idea={i} onUpdate={update}/><div><div className="idea-labels"><span>{i.category}</span><span className={`idea-status status-${i.status}`}>{statuses[i.status]}</span></div><a href={`/roadmap/ideas/${i.slug}`}><h3>{i.title}</h3></a><p>{i.problem}</p></div><a className="idea-open" href={`/roadmap/ideas/${i.slug}`} aria-label={`Read proposal: ${i.title}`}><ArrowRight size={20}/></a></article>)}</div>{pages>1&&<nav className="pagination" aria-label="Idea pages"><button disabled={page===1} onClick={()=>setPage(p=>p-1)}>Previous</button><span>Page {page} of {pages}</span><button disabled={page===pages} onClick={()=>setPage(p=>p+1)}>Next <ArrowRight size={16}/></button></nav>}{!filtered.length&&<div className="empty-results"><h3>No ideas match this search.</h3><button className="sf-button sf-button-secondary" onClick={()=>{setQ('');setStatus('all');setCategory('All');setPage(1)}}>Clear filters</button></div>}</section></>}{adding&&<IdeaForm categories={categories} onClose={()=>setAdding(false)} onCreated={idea=>{setAdding(false);if(props.onNavigate)props.onNavigate('/roadmap/ideas/'+idea.slug);else window.location.assign('/roadmap/ideas/'+idea.slug)}}/>}</ContentShell>}
+export function IdeaPage({slug,...props}:{slug:string}&PageProps){const [idea,setIdea]=useState<Idea|null>(null),[error,setError]=useState(''),[copied,setCopied]=useState(false),[shareError,setShareError]=useState('');useEffect(()=>{let active=true;setIdea(null);setError('');api('/'+slug).then(d=>{if(active){setIdea(d.idea);applyMetadata('/roadmap/ideas/'+slug,{title:d.idea.title+' · Storyframe ideas',description:d.idea.proposal})}}).catch(e=>{if(active){setError(e.message);if(e.status===404)applyMetadata('/roadmap/ideas/'+slug,{title:'Idea not found · Storyframe',noindex:true})}});return()=>{active=false}},[slug]);return <ContentShell section="roadmap" {...props}><nav className="breadcrumbs"><a href="/roadmap#ideas"><ArrowLeft size={16}/>All ideas</a></nav>{error?<div className="empty-results" role="alert"><h1>{error}</h1><a href="/roadmap">Back to roadmap</a></div>:!idea?<p role="status">Loading proposal…</p>:<article className="proposal"><div className="idea-labels"><span>{idea.category}</span><span className={`idea-status status-${idea.status}`}>{statuses[idea.status]}</span></div><h1>{idea.title}</h1><div className="proposal-byline">Proposed by {idea.author} · {new Date(idea.created).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'})}</div><div className="proposal-actions"><VoteButton idea={idea} onUpdate={setIdea}/><span>{idea.voted?'You voted for this idea':'Support this idea'}</span><button className="sf-button sf-button-secondary" onClick={async()=>{try{await navigator.clipboard.writeText(window.location.origin+'/roadmap/ideas/'+idea.slug);setCopied(true);setShareError('')}catch{setShareError('Copy the page address to share this idea.')}}}>{copied?<Check size={17}/>:<Link size={17}/>} {copied?'Link copied':'Share idea'}</button></div>{shareError&&<p role="status">{shareError}</p>}<section><h2>The problem</h2><p>{idea.problem}</p></section><section><h2>The proposal</h2><p>{idea.proposal}</p></section>{idea.phase&&<a className="proposal-timeline" href="/roadmap">On the roadmap · {idea.phase[0].toUpperCase()+idea.phase.slice(1)}<ArrowRight size={17}/></a>}</article>}</ContentShell>}

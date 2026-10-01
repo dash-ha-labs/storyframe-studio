@@ -184,7 +184,7 @@ export interface NavLinkItem {
 export const DEFAULT_NAV_LINKS: NavLinkItem[] = [
   { label: 'Features', href: '/features', id: 'features' },
   { label: 'Templates', href: '/templates', id: 'templates' },
-  { label: 'Gallery', href: '/gallery', id: 'gallery' },
+  { label: 'Tutorials', href: '/tutorials', id: 'tutorials' },
   { label: 'Resources', href: '/resources', id: 'resources' },
 ];
 
@@ -196,7 +196,7 @@ export function GlobalNav({
   onNavigate?: (path: string) => void;
 }) {
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (onNavigate) {
+    if (onNavigate && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey && e.button === 0) {
       e.preventDefault();
       onNavigate(href);
     }
@@ -250,7 +250,7 @@ export function GlobalFooter({
   onNavigate?: (path: string) => void;
 }) {
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (onNavigate) {
+    if (onNavigate && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey && e.button === 0) {
       e.preventDefault();
       onNavigate(href);
     }
@@ -260,8 +260,8 @@ export function GlobalFooter({
     <footer className="sf-footer">
       <div className="sf-footer-main">
         <div className="sf-footer-brand"><a href="/" onClick={e=>handleLinkClick(e,'/')}>Storyframe<span>.</span></a><p>AI-aided video creation. Built around your brand.</p></div>
-        <div className="sf-footer-column"><h2>Product</h2><a href="/features" onClick={e=>handleLinkClick(e,'/features')}>Features</a><a href="/templates" onClick={e=>handleLinkClick(e,'/templates')}>Templates</a><a href="/gallery" onClick={e=>handleLinkClick(e,'/gallery')}>Gallery</a><a href="/demo.html" target="_blank" rel="noreferrer">Try the studio ↗</a></div>
-        <div className="sf-footer-column"><h2>Resources</h2><a href="/guides" onClick={e=>handleLinkClick(e,'/guides')}>Getting started</a><a href="/resources" onClick={e=>handleLinkClick(e,'/resources')}>Creative resources</a><a href="/blog" onClick={e=>handleLinkClick(e,'/blog')}>Blog</a></div>
+        <div className="sf-footer-column"><h2>Product</h2><a href="/features" onClick={e=>handleLinkClick(e,'/features')}>Features</a><a href="/templates" onClick={e=>handleLinkClick(e,'/templates')}>Templates</a><a href="/tutorials" onClick={e=>handleLinkClick(e,'/tutorials')}>Tutorials</a><a href="/demo.html" target="_blank" rel="noreferrer">Try the studio ↗</a></div>
+        <div className="sf-footer-column"><h2>Resources</h2><a href="/docs" onClick={e=>handleLinkClick(e,'/docs')}>Product docs</a><a href="/resources" onClick={e=>handleLinkClick(e,'/resources')}>Creative resources</a><a href="/blog" onClick={e=>handleLinkClick(e,'/blog')}>Blog</a></div>
         <div className="sf-footer-column"><h2>Storyframe</h2><a href="/roadmap" onClick={e=>handleLinkClick(e,'/roadmap')}>Product Roadmap</a><a href="/status" onClick={e=>handleLinkClick(e,'/status')}>Status Page</a><a href="/legal" onClick={e=>handleLinkClick(e,'/legal')}>Legal</a></div>
       </div>
       <div className="sf-footer-inner"><p>Storyframe © 2026</p><a href="/status" className="sf-footer-status" onClick={e=>handleLinkClick(e,'/status')}><span>{systemStatusText}</span></a></div>

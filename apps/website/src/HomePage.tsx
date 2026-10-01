@@ -3,7 +3,8 @@ import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { LandingTemplate } from './templates';
 import { StudioDemo } from './StudioDemo';
 import { APP_SIGNUP_URL, AppCta } from '@storyframe/ui';
-import { CoreFeatures, TemplateCards, GalleryCards, ResourceCards, SectionIntro } from './Collections';
+import { CourseCards } from './pages/LearningPages';
+import { CoreFeatures, TemplateCards, ResourceCards, SectionIntro } from './Collections';
 
 
 export function HomePage({ onNavigate }: { onNavigate: (path: string) => void }) {
@@ -17,7 +18,7 @@ export function HomePage({ onNavigate }: { onNavigate: (path: string) => void })
     <StudioDemo/>
     <section className="home-section" id="features"><SectionIntro eyebrow="Features" title="Your brand. Your content. Your video." link="/features" label="Explore features"/><CoreFeatures/></section>
     <section className="home-section"><SectionIntro eyebrow="Templates" title="Templates for your next video." link="/templates" label="Browse templates"/><TemplateCards/></section>
-    <section className="home-section"><SectionIntro eyebrow="From the gallery" title="Product videos, from the first scene." link="/gallery" label="Explore the gallery"/><GalleryCards/></section>
+    <section className="home-section"><SectionIntro eyebrow="Tutorials" title="Learn to make a better product video." link="/tutorials" label="Explore tutorials"/><CourseCards limit={3}/></section>
     <section className="home-section"><SectionIntro eyebrow="Resources" title="Resources for better product videos." link="/resources" label="All resources"/><ResourceCards/></section>
 
     <AppCta title="Start your first video project." subtitle="Bring your screenshots, footage and brand. Edit every scene in one workspace."/>

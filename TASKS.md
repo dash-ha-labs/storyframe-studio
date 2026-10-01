@@ -66,3 +66,31 @@ Removed development disclaimers from website copy at the user’s direction. Bef
 - Replaced the rejected dark interpretation with the supplied HTML’s white/navy/cobalt visual language throughout Studio.
 - Migrated legacy chrome colours to shared semantic tokens; preserved editor geometry, model and media composition styles.
 - Updated implementor/reviewer rules so compactness cannot be interpreted as retaining the old theme.
+
+## Studio readability trial — 1 October 2026
+
+- Saved the compact light Studio as commit `7702bc2` before changing its scale.
+- Increased small text by 2px and UI geometry/icons by about 12.5% across workspace, project pages, storyboards, editor and dialogs. Shared toolbar tokens are now 50px/32px.
+- Kept the single-toolbar structure, responsive breakpoints, media composition and all feature behavior. The homepage demo uses the same app styles.
+- Trial remains uncommitted for live user feedback; restore or compare against the checkpoint as needed.
+
+## Reference styling refinement — 1 October 2026
+
+- Visually inspected the requested Arcade workspace, editor and public homepage in Chrome, using the existing authenticated session for app references. No Arcade project was edited.
+- Applied white content surfaces through shared card/elevation tokens and refined source-app presentation, reference rows, overview shortcuts and website cards. Color is limited to relevant UI visuals and compact accents.
+- Preserved current website flow/copy/actions and Studio behavior/readability scale. Added the no-gray-card rule to implementor and reviewer documentation.
+
+## Content centers and public roadmap — 1 October 2026
+
+- Added a 100-entry template marketplace with URL-backed combined filters, sort, pagination and individual scene-outline pages.
+- Added a 12-resource center with type labels, individual pages, native TXT/JSON downloads and validated Studio starter handoff.
+- Replaced Gallery with Tutorials: six courses, 18 lesson pages, left contents/right video layout and authorized video placeholders.
+- Expanded product documentation to eight sections and 24 articles; added section indexes, search and phone navigation.
+- Reworked the blog into a lead/supporting editorial grid with six article pages and corrected reading typography.
+- Added Now/Next/Later roadmap stages, searchable/filterable vote board, concise proposal pages, public submissions and share links. Votes use a separate persistent website service; timeline changes remain reviewed decisions.
+- Kept all website records outside Studio/core. The shared core starter contract contains validation and app artifact creation only. Imports create independent work after review.
+- Standardized section rhythm (fluid 56–88px desktop, 52px phone), heading gaps and footer spacing; documented implementor/reviewer rules.
+- Added prerendered HTML, unique metadata, canonical/schema entries, sitemap, legacy redirects and production 404 handling. Build emits 178 indexable pages plus course aliases.
+- Added separate community container/volume configuration; no deployment. See QA.md for observed checks and limitations.
+
+Before public launch: replace tutorial placeholders with supplied videos; curate finished visual output for the template starters; complete signup and outstanding generation/rendering work; review public-board moderation/identity controls and legal copy; verify container/proxy operation and persistent backups in the intended deployment environment.

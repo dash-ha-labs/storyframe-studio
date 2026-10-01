@@ -77,11 +77,11 @@ export default function StoryboardWorkspace({
     <div className="page-content storyboard-workspace">
       <div className="storyboard-nav-bar">
         <button className="text-link" onClick={onBack} aria-label="Back to storyboards">
-          <ArrowLeft size={14} /> Back to storyboards
+          <ArrowLeft size={16} /> Back to storyboards
         </button>
         {onDelete && (
           <button className="button text-danger" onClick={onDelete} aria-label="Delete storyboard">
-            <Trash2 size={13} /> Delete storyboard
+            <Trash2 size={15} /> Delete storyboard
           </button>
         )}
       </div>
@@ -99,17 +99,17 @@ export default function StoryboardWorkspace({
           />
           <div className="storyboard-meta-row">
             <span className="storyboard-meta-badge">
-              <Clapperboard size={13} /> {`${sortedFrames.length} ${sortedFrames.length === 1 ? 'frame' : 'frames'}`}
+              <Clapperboard size={15} /> {`${sortedFrames.length} ${sortedFrames.length === 1 ? 'frame' : 'frames'}`}
             </span>
             <span className="storyboard-meta-badge">
-              <Clock size={13} /> {`${totalDuration.toFixed(1)}s total duration`}
+              <Clock size={15} /> {`${totalDuration.toFixed(1)}s total duration`}
             </span>
             <span className="storyboard-meta-tag">M2 Visual Canvas</span>
           </div>
         </div>
         <div className="storyboard-actions">
           <button className="button primary" onClick={addFrame}>
-            <Plus size={15} /> Add frame
+            <Plus size={17} /> Add frame
           </button>
         </div>
       </div>
@@ -117,7 +117,7 @@ export default function StoryboardWorkspace({
       {projects.length > 0 && (
         <section className="storyboard-links" aria-label="Attached projects">
           <div className="storyboard-links-heading">
-            <Link2 size={14} />
+            <Link2 size={16} />
             <strong>Linked projects</strong>
             <span>
               {projects.filter(p => p.storyboardId === storyboard.id).length} of {projects.length} projects use this storyboard
@@ -162,11 +162,11 @@ export default function StoryboardWorkspace({
 
       {sortedFrames.length === 0 ? (
         <div className="empty-frames">
-          <Clapperboard size={32} />
+          <Clapperboard size={36} />
           <h3>No frames in this storyboard</h3>
           <p>Add frames to establish script beats, timing, and visual sequence.</p>
           <button className="button primary" onClick={addFrame}>
-            <Plus size={14} /> Add first frame
+            <Plus size={16} /> Add first frame
           </button>
         </div>
       ) : (
@@ -186,7 +186,7 @@ export default function StoryboardWorkspace({
                     aria-label={`Move frame ${index + 1} earlier`}
                     title="Move earlier"
                   >
-                    <ArrowLeft size={14} />
+                    <ArrowLeft size={16} />
                   </button>
                   <button
                     className="icon-button"
@@ -195,7 +195,7 @@ export default function StoryboardWorkspace({
                     aria-label={`Move frame ${index + 1} later`}
                     title="Move later"
                   >
-                    <ArrowRight size={14} />
+                    <ArrowRight size={16} />
                   </button>
                   <button
                     className="icon-button frame-delete-btn"
@@ -203,7 +203,7 @@ export default function StoryboardWorkspace({
                     aria-label={`Delete frame ${index + 1}`}
                     title="Delete frame"
                   >
-                    <Trash2 size={14} />
+                    <Trash2 size={16} />
                   </button>
                 </div>
               </div>
@@ -217,7 +217,7 @@ export default function StoryboardWorkspace({
                   />
                 ) : (
                   <div className="frame-visual-placeholder">
-                    <Sparkles size={24} />
+                    <Sparkles size={27} />
                     <strong>Low-fi visual placeholder</strong>
                     <small>AI image generation available in M3</small>
                   </div>

@@ -13,7 +13,7 @@ Required companion to [DESIGN-LANGUAGE.md](../DESIGN-LANGUAGE.md). Use for websi
 ## During implementation
 
 - Change shared roles centrally; keep typed token companions aligned. Do not create a parallel palette per page.
-- Preserve the 44px app bar, optional editor panels, existing inspector/timeline geometry and source-driven feature set.
+- Use the documented readability scale: 50px app bar, 32px toolbar controls and 36px normal buttons; keep optional editor panels and the source-driven feature set. Inspect proportional inspector/timeline sizing.
 - Use the real Suite/VideoEditor for website app proof through StudioDemo; one embed on the homepage only; no editor embeds on secondary pages.
 - Keep demo metadata and imports separate from personal workspace persistence.
 - Keep primary signup copy brief: “Sign up free” and “Free. No credit card required.” Queue language belongs to generation, never account access.
@@ -46,3 +46,20 @@ State: the reused pattern, any new pattern and reason, behaviours preserved, ver
 - Selected navigation must use the documented neutral treatment: no blue pill, side stripe, inset shadow or stacked indicators. Verify only the current destination is marked selected; keep keyboard focus visible.
 
 - Studio must visibly match the supplied light HTML and website: white panels/dialogs, pale gray canvas, navy text, cobalt actions and pastel tracks. Reject a return to the former dark palette. Compactness concerns geometry and controls, not colour. Inspect forms, modal backdrops, menus, storyboard and media states as well as the default editor.
+
+- Compare readability changes against checkpoint `7702bc2`. Keep Studio and homepage demo identical, and verify actual layout dimensions without browser zoom. Media composition coordinates and project state must remain unchanged.
+
+- Reject gray content cards and nested icon/tag boxes. Check white card bodies and hover surfaces in app references, resources, tool/creation cards, dialogs and secondary pages. Keep the canvas tone separate.
+- Compare reference adoption as a styling change: routes, sections, actions, content, save/export behavior and project ownership must remain. Check fields and keyboard focus remain clear on white surfaces.
+
+
+## Content centers, data boundaries and rhythm
+
+- [ ] Major section gaps follow shared spacing tokens; headings and filters remain attached to their content; footer spacing is not doubled.
+- [ ] Website catalogs, articles, lessons and community records stay out of app-owned data and bundles. Only validated starter contracts cross into Studio.
+- [ ] Template facets, sorting, page state, empty results and detail links work. Resource downloads use the right format and label.
+- [ ] Starter imports create independent videos/boards/projects; prior creations, brands and product media remain intact; invalid imports explain the error.
+- [ ] Course navigation has real lesson URLs; missing videos use the authorized placeholder, with no fake playback or video schema.
+- [ ] Documentation works on phones, with reachable section navigation and readable articles. Blog artwork does not overflow.
+- [ ] Community votes persist on the service, can be removed and remain unique per signed visitor. No fabricated vote counts or automatic phase changes.
+- [ ] New content routes have rendered HTML, unique metadata, appropriate canonical/schema entries and a sitemap entry. Unknown routes return a production 404.

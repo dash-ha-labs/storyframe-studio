@@ -9,9 +9,15 @@
   --sf-color-bg-sidebar: #f8f9fc;
   --sf-color-bg-surface: #ffffff;
   --sf-color-bg-surface-hover: #f4f5fb;
-  --sf-color-bg-surface-elevated: #f3f5fb;
+  --sf-color-bg-surface-elevated: #ffffff;
   --sf-color-bg-input: #ffffff;
   
+  /* White content surfaces; canvas tone is for the editing workspace only. */
+  --sf-color-bg-canvas: #f7f8fa;
+  --sf-color-card: #ffffff;
+  --sf-color-card-border: #e5e8ef;
+  --sf-shadow-card-hover: 0 4px 14px #182b4e08;
+
   /* Text & Inks */
   --sf-color-text-primary: #182b4e;
   --sf-color-text-secondary: #354561;
@@ -38,8 +44,8 @@
   --sf-color-creative-peach: #f8e7dc;
   --sf-color-creative-lilac: #ece9fb;
   --sf-color-creative-mint: #e5f0e8;
-  --sf-editor-bar-height: 44px;
-  --sf-editor-control-height: 28px;
+  --sf-editor-bar-height: 50px;
+  --sf-editor-control-height: 32px;
 
   /* Typography */
   --sf-font-sans: 'Inter Variable', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -69,7 +75,7 @@
   --sf-color-bg-sidebar: #f8f9fc;
   --sf-color-bg-surface: #ffffff;
   --sf-color-bg-surface-hover: #f4f5fb;
-  --sf-color-bg-surface-elevated: #f3f5fb;
+  --sf-color-bg-surface-elevated: #ffffff;
   --sf-color-bg-input: #ffffff;
   --sf-color-text-primary: #182b4e;
   --sf-color-text-secondary: #354561;

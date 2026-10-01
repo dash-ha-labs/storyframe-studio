@@ -1,36 +1,35 @@
 import {Asset, Project, validateProject} from './model';
 import demoData from './demo.json';
-export type ToolId='video'|'logo'|'brand'|'marketing'|'landing'|'aso'|'keywords';
+export type ToolId='video'|'brand';
 export type Platform='web'|'mobile';
 export type OutputFormat='9:16'|'16:9'|'1:1'|'4:5';
 export interface Brand {background:string;accent:string;ink:string;font:string;voice:string;source:string;}
 export interface SourceApp {id:string;name:string;platform:Platform;url:string;}
 export interface SourceFile {name:string;kind:string;mediaId?:string;}
 export interface Creation {id:string;tool:ToolId;name:string;format:string;brief:string;content:string;updated:string;video?:Project;}
-export interface SuiteProject {id:string;folderId:string;name:string;description:string;apps:SourceApp[];brand:Brand;media:Asset[];sources:SourceFile[];creations:Creation[];metrics:{date:string;visits:string;installs:string;notes:string}[];}
-export interface SuiteState {version:1;folders:{id:string;name:string}[];projects:SuiteProject[];}
+export interface Frame {id:string;text:string;imageUrl:string;durationSeconds:number;order:number;}
+export interface Storyboard {id:string;title:string;frames:Frame[];createdAt:string;}
+export interface SuiteProject {id:string;folderId:string;name:string;description:string;apps:SourceApp[];brand:Brand;media:Asset[];sources:SourceFile[];creations:Creation[];storyboardId?:string;metrics:{date:string;visits:string;installs:string;notes:string}[];}
+export interface SuiteState {version:1;folders:{id:string;name:string}[];projects:SuiteProject[];storyboards:Storyboard[];}
+export const newStoryboard=(title:string):Storyboard=>({id:newId(),title:title.trim()||'Untitled storyboard',frames:[],createdAt:new Date().toISOString()});
+export const blankFrame=(order:number):Frame=>({id:newId(),text:'',imageUrl:'',durationSeconds:4,order});
 export const SUITE_KEY='storyframe.suite.v1';
 export const TOOLS:{id:ToolId;name:string;description:string;label:string;formats:string[]}[]=[
 {id:'video',name:'Video studio',description:'Product stories, with your real UI.',label:'Create video',formats:['9:16','16:9','1:1','4:5']},
-{id:'logo',name:'Logo studio',description:'Explore a mark that feels like you.',label:'Create logo brief',formats:['Wordmark','Symbol','App icon']},
-{id:'brand',name:'Brand builder',description:'Build or refine your visual identity.',label:'Edit brand',formats:[]},
-{id:'marketing',name:'Marketing studio',description:'Screenshots, graphics and mockups.',label:'Create material',formats:['App screenshots','Social graphic','Device mockup','App icon']},
-{id:'landing',name:'Landing pages',description:'Turn product clarity into a page.',label:'Plan landing page',formats:['Product launch','Feature page','Waitlist']},
-{id:'aso',name:'ASO copy',description:'Make your store listing count.',label:'Write store copy',formats:['App Store','Google Play']},
-{id:'keywords',name:'Keywords',description:'Organize the words people search.',label:'Build keyword list',formats:['App Store','Google Play','Web search']}
+{id:'brand',name:'Brand assets',description:'Build or refine your visual identity.',label:'Edit brand',formats:[]}
 ];
 export const newId=()=>crypto.randomUUID();
 export const blankBrand=():Brand=>({background:'#f4f1eb',accent:'#a6b5ff',ink:'#24262c',font:'System sans-serif',voice:'Clear, friendly and useful.',source:'Manual'});
 export function seedSuite():SuiteState {
  let video=structuredClone(demoData) as Project;
  try {const previous=JSON.parse(localStorage.getItem('storyframe.project.v1')||'null');if(validateProject(previous))video=previous;}catch{}
- return {version:1,folders:[{id:'launches',name:'My products'}],projects:[{id:'kurutu',folderId:'launches',name:'Kurutu',description:'A calmer grocery run. Shared lists, smart suggestions, loyalty cards and purchase records.',apps:[{id:'kurutu-mobile',name:'Kurutu mobile',platform:'mobile',url:''},{id:'kurutu-web',name:'Kurutu website',platform:'web',url:'https://kurutu.com'}],brand:{background:video.background,accent:video.accent,ink:'#282828',font:'Bricolage Grotesque',voice:'Warm, practical and quietly playful. Make everyday collaboration feel easy.',source:'Existing Kurutu campaign'},media:video.assets,sources:[{name:'Kurutu design system',kind:'Existing campaign reference'},{name:'App component captures',kind:'Fixture data · original UI'}],creations:[{id:'grocery-evolution',tool:'video',name:video.title,format:'9:16',brief:video.brief,content:'',updated:'2026-09-28',video}],metrics:[]}]};
+ return {version:1,folders:[{id:'launches',name:'My products'}],storyboards:[],projects:[{id:'kurutu',folderId:'launches',name:'Kurutu',description:'A calmer grocery run. Shared lists, smart suggestions, loyalty cards and purchase records.',apps:[{id:'kurutu-mobile',name:'Kurutu mobile',platform:'mobile',url:''},{id:'kurutu-web',name:'Kurutu website',platform:'web',url:'https://kurutu.com'}],brand:{background:video.background,accent:video.accent,ink:'#282828',font:'Bricolage Grotesque',voice:'Warm, practical and quietly playful. Make everyday collaboration feel easy.',source:'Existing Kurutu campaign'},media:video.assets,sources:[{name:'Kurutu design system',kind:'Existing campaign reference'},{name:'App component captures',kind:'Fixture data · original UI'}],creations:[{id:'grocery-evolution',tool:'video',name:video.title,format:'9:16',brief:video.brief,content:'',updated:'2026-09-28',video}],metrics:[]}]};
 }
 export function validSuite(value:unknown):value is SuiteState {
  if(!value||typeof value!=='object')return false;const s=value as SuiteState;
- return s.version===1&&Array.isArray(s.folders)&&Array.isArray(s.projects)&&s.folders.every(f=>typeof f.id==='string'&&typeof f.name==='string')&&s.projects.every(p=>typeof p.id==='string'&&typeof p.name==='string'&&s.folders.some(f=>f.id===p.folderId)&&Array.isArray(p.apps)&&Array.isArray(p.media)&&Array.isArray(p.sources)&&Array.isArray(p.creations)&&Array.isArray(p.metrics)&&!!p.brand&&p.creations.every(c=>!c.video||validateProject(c.video)));
+ return s.version===1&&Array.isArray(s.folders)&&Array.isArray(s.projects)&&Array.isArray(s.storyboards)&&s.folders.every(f=>typeof f.id==='string'&&typeof f.name==='string')&&s.projects.every(p=>typeof p.id==='string'&&typeof p.name==='string'&&s.folders.some(f=>f.id===p.folderId)&&Array.isArray(p.apps)&&Array.isArray(p.media)&&Array.isArray(p.sources)&&Array.isArray(p.creations)&&Array.isArray(p.metrics)&&!!p.brand&&p.creations.every(c=>!c.video||validateProject(c.video))&&(!p.storyboardId||s.storyboards.some(sb=>sb.id===p.storyboardId))&&s.storyboards.every(sb=>sb&&typeof sb.id==='string'&&typeof sb.title==='string'&&typeof sb.createdAt==='string'&&Array.isArray(sb.frames)&&sb.frames.every(f=>f&&typeof f.id==='string'&&typeof f.text==='string'&&typeof f.imageUrl==='string'&&Number.isFinite(f.durationSeconds)&&f.durationSeconds>0&&Number.isInteger(f.order))));
 }
-export function loadSuite():SuiteState {try{const s=JSON.parse(localStorage.getItem(SUITE_KEY)||'null');if(validSuite(s))return s;}catch{}return seedSuite();}
+export function loadSuite():SuiteState {try{const s=JSON.parse(localStorage.getItem(SUITE_KEY)||'null');if(s&&Array.isArray(s.projects)&&!Array.isArray(s.storyboards))s.storyboards=[];if(validSuite(s))return s;}catch{}return seedSuite();}
 export function makeVideo(owner:SuiteProject,name:string,format:string):Project {
  const asset:Asset=owner.media.find(a=>a.id===`brand-canvas-${owner.id}`)||{id:`brand-canvas-${owner.id}`,name:'Brand canvas',type:'image',src:'/demo/brand-canvas.svg',duration:4,origin:'brand'};
  return {version:1,title:name,mode:'Manual',scenes:[{id:newId(),title:'Your opening',caption:'',duration:120,sourceIn:0,assetId:asset.id,kind:'endcard',captionPosition:'top',captionSize:66,captionVisible:true,scale:1,locked:false}],assets:owner.media.some(a=>a.id===asset.id)?[...owner.media]:[...owner.media,asset],musicId:null,musicVolume:.4,musicMuted:false,brief:'',background:owner.brand.background,accent:owner.brand.accent,outputFormat:format as OutputFormat,brandInk:owner.brand.ink,productName:owner.name,headline:'Your story starts here.',website:owner.apps.find(a=>a.platform==='web')?.url||''};

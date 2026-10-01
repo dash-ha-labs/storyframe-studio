@@ -3,7 +3,9 @@ import demoData from './demo.json';
 export type ToolId='video'|'brand';
 export type Platform='web'|'mobile';
 export type OutputFormat='9:16'|'16:9'|'1:1'|'4:5';
-export interface Brand {background:string;accent:string;ink:string;font:string;voice:string;source:string;}
+export interface BrandComponent{name:string;type:string;previewUrl?:string}
+export interface Brand{background:string;accent:string;ink:string;font:string;voice:string;source:string;sourceUrl?:string;components?:BrandComponent[]}
+export interface BrandTokenExtractionResult{colors:{background:string;accent:string;ink:string;palette:string[]};font:string;components?:BrandComponent[];sourceUrl:string}
 export interface SourceApp {id:string;name:string;platform:Platform;url:string;}
 export interface SourceFile {name:string;kind:string;mediaId?:string;}
 export interface Creation {id:string;tool:ToolId;name:string;format:string;brief:string;content:string;updated:string;video?:Project;}
@@ -16,7 +18,7 @@ export const blankFrame=(order:number):Frame=>({id:newId(),text:'',imageUrl:'',d
 export const SUITE_KEY='storyframe.suite.v1';
 export const TOOLS:{id:ToolId;name:string;description:string;label:string;formats:string[]}[]=[
 {id:'video',name:'Video studio',description:'Product stories, with your real UI.',label:'Create video',formats:['9:16','16:9','1:1','4:5']},
-{id:'brand',name:'Brand assets',description:'Build or refine your visual identity.',label:'Edit brand',formats:[]}
+{id:'brand',name:'Brand Design',description:'Build or refine your visual identity.',label:'Edit brand',formats:[]}
 ];
 export const newId=()=>crypto.randomUUID();
 export const blankBrand=():Brand=>({background:'#f4f1eb',accent:'#a6b5ff',ink:'#24262c',font:'System sans-serif',voice:'Clear, friendly and useful.',source:'Manual'});
@@ -48,4 +50,54 @@ export function parseBrandText(text:string,filename:string):Partial<Brand>{
  const ink=color(b?.ink)||(dark&&brightness(dark)<.35?dark:undefined);
  const font=typeof b?.font==='string'?b.font:typeof b?.fonts?.[0]==='string'?b.fonts[0]:text.match(/fontFamily\s*:\s*['"]([^'"]+)['"]/)?.[1];
  return {...(background?{background}:{}),...(accent?{accent}:{}),...(ink?{ink}:{}),...(font?{font:font.slice(0,100)}:{}),source:`Imported · ${filename}`};
+}
+
+// M3 URL import: extract brand tokens from fetched page HTML + CSS (brag-style inspection, read-only).
+const hexBrightness=(hex:string)=>{const[r,g,b]=[1,3,5].map(i=>parseInt(hex.slice(i,i+2),16)/255);return .2126*r+.7152*g+.0722*b};
+export function extractBrandTokens(html:string,cssTexts:string[],sourceUrl:string):BrandTokenExtractionResult{
+ const css=cssTexts.join('\n')+html;
+ // Count color usage across CSS + inline styles; rgb()/rgba() converted, named colors ignored.
+ const counter=new Map<string,number>();
+ for(const m of css.matchAll(/(?:#(?:[0-9a-f]{3}|[0-9a-f]{6})\b|rgba?\([^)]*\))/gi)){
+  const raw=m[0];let hex:string|null=null;
+  if(raw[0]==='#'&&raw.length===4)hex=('#'+raw[1]+raw[1]+raw[2]+raw[2]+raw[3]+raw[3]).toUpperCase();
+  else if(raw[0]==='#')hex=raw.toUpperCase();
+  else{const n=[...raw.matchAll(/[\d.]+/g)].map(Number);if(n.length>=3&&n.slice(0,3).every(v=>v<=255))hex='#'+n.slice(0,3).map(v=>Math.round(v).toString(16).padStart(2,'0')).join('').toUpperCase();}
+  if(hex)counter.set(hex,(counter.get(hex)||0)+1); // ponytail: named colors & usage-context weighting can refine later
+ }
+ const palette=[...counter.entries()].sort((a,b)=>b[1]-a[1]).map(([c])=>c).filter(c=>c!=='#FFFFFF'||counter.size<3).slice(0,8);
+ const byLum=[...palette].sort((a,b)=>hexBrightness(a)-hexBrightness(b));
+ const isDarkTheme=/<html[^>]*\stheme=["']?dark|<meta[^>]+color-scheme["']?\s*content=["']?dark/i.test(html);
+ const light=byLum[byLum.length-1]||'#FFFFFF',dark=byLum[0]||'#24262C';
+ const background=isDarkTheme?dark:(byLum.length>1?byLum[byLum.length-2]:light);
+ const ink=isDarkTheme?(byLum.length>1?byLum[1]:light):dark;
+ const accent=palette.find(c=>c!==background&&c!==ink&&Math.abs(hexBrightness(c)-hexBrightness(background))>.25)
+  ||palette.find(c=>c!==background&&c!==ink)||palette[0]||'#a6b5ff';
+ // Fonts: first Google Fonts family wins, else most common font-family in CSS.
+ const google=[...html.matchAll(/fonts\.googleapis\.com\/css2\?[^"']*family=([^&"':]+)/gi)].map(m=>m[1].replace(/\+/g,' '));
+ const famCount=new Map<string,number>();
+ for(const m of css.matchAll(/font-family\s*:\s*([^;}]+)/gi)){const f=m[1].split(',')[0].replace(/["']/g,'').trim();if(f&&!/^inherit$/i.test(f))famCount.set(f,(famCount.get(f)||0)+1)}
+ const cssFont=[...famCount.entries()].sort((a,b)=>b[1]-a[1]).map(([f])=>f).find(f=>!/^(system-ui|sans-serif|serif|monospace|inherit|ui-monospace|-ui|-apple-system)$/i.test(f)&&!/^(system-ui|sans-serif|serif|monospace)$/i.test(f));
+ const font=(google[0]||cssFont||'System sans-serif').slice(0,100);
+ // Components: notable UI element counts from markup, brag-style tokens.
+ const tags=['header','nav','button','form','input','table','dialog','video','svg'];
+ const components:BrandComponent[]=tags.flatMap(t=>{const n=(html.match(new RegExp(`<${t}[\\s>]`,'gi'))||[]).length;return n?[{name:`${t[0].toUpperCase()+t.slice(1)}s`,type:t,count:n}]:[]})
+  .sort((a,b)=>b.count!-a.count!).slice(0,4).map(({name,type})=>({name,type}));
+ return {colors:{background,accent,ink,palette:palette.length?palette:[background,accent,ink]},font,components:components.length?components:undefined,sourceUrl};
+}
+
+export function brandFromTokens(t:BrandTokenExtractionResult):Brand{
+ return {...blankBrand(),background:t.colors.background,accent:t.colors.accent,ink:t.colors.ink,font:t.font,components:t.components,sourceUrl:t.sourceUrl,source:`Imported · ${safeHost(t.sourceUrl)}`};
+}
+export function safeHost(url:string){try{return new URL(url).host}catch{return url.slice(0,60)}}
+export async function fetchBrandFromUrl(rawUrl:string):Promise<BrandTokenExtractionResult>{
+ let url=rawUrl.trim();if(!/^https?:\/\//i.test(url))url='https://'+url;
+ let parsed:URL;try{parsed=new URL(url)}catch{throw new Error('That does not look like a valid URL.')}
+ const page=await fetch(parsed.href,{redirect:'follow'});
+ if(!page.ok)throw new Error(`Could not load ${parsed.host} (${page.status}).`);
+ const html=await page.text();
+ const cssLinks=[...html.matchAll(/<link[^>]+rel=["']?stylesheet["']?[^>]*>/gi)].map(m=>m[0]).map(tag=>tag.match(/href=["']([^"']+)["']/i)?.[1]).filter((v):v is string=>!!v).slice(0,8)
+  .map(href=>{try{return new URL(href,page.url||parsed.href).href}catch{return null}}).filter((v):v is string=>!!v);
+ const cssTexts=await Promise.all(cssLinks.map(async link=>{try{const r=await fetch(link);return r.ok?await r.text():''}catch{return''}}));
+ return extractBrandTokens(html,cssTexts,parsed.href);
 }

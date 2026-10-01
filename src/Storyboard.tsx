@@ -1,5 +1,5 @@
 import React from 'react';
-import {ArrowLeft, ArrowRight, Clapperboard, Clock, Plus, Sparkles, Trash2} from 'lucide-react';
+import {ArrowLeft, ArrowRight, Clapperboard, Clock, Link2, Plus, Sparkles, Trash2} from 'lucide-react';
 import {Frame, Storyboard, blankFrame} from './suite-model';
 
 interface StoryboardWorkspaceProps {
@@ -18,6 +18,10 @@ export default function StoryboardWorkspace({
   onChange,
   onBack,
   onDelete,
+  projects = [],
+  onAttach,
+  onDetach,
+  onOpenProject,
 }: StoryboardWorkspaceProps) {
   const sortedFrames = [...storyboard.frames].sort((a, b) => a.order - b.order);
   const totalDuration = sortedFrames.reduce((acc, f) => acc + (Number(f.durationSeconds) || 0), 0);
@@ -109,6 +113,52 @@ export default function StoryboardWorkspace({
           </button>
         </div>
       </div>
+
+      {projects.length > 0 && (
+        <section className="storyboard-links" aria-label="Attached projects">
+          <div className="storyboard-links-heading">
+            <Link2 size={14} />
+            <strong>Linked projects</strong>
+            <span>
+              {projects.filter(p => p.storyboardId === storyboard.id).length} of {projects.length} projects use this storyboard
+            </span>
+          </div>
+          <div className="storyboard-links-list">
+            {projects.map(p => {
+              const attached = p.storyboardId === storyboard.id;
+              return (
+                <div key={p.id} className="storyboard-link-row">
+                  <span className="storyboard-link-name">{p.name}</span>
+                  {attached ? (
+                    <>
+                      <span className="storyboard-link-state attached">Attached</span>
+                      {onOpenProject && (
+                        <button className="text-link" onClick={() => onOpenProject(p.id)}>
+                          Open project
+                        </button>
+                      )}
+                      {onDetach && (
+                        <button className="button" onClick={() => onDetach(p.id)}>
+                          Detach
+                        </button>
+                      )}
+                    </>
+                  ) : (
+                    onAttach && (
+                      <button className="button" onClick={() => onAttach(p.id)}>
+                        Attach
+                      </button>
+                    )
+                  )}
+                </div>
+              );
+            })}
+          </div>
+          <p className="micro-note">
+            Storyboards stay independent. Attaching links them as a read-only reference for a project&rsquo;s videos.
+          </p>
+        </section>
+      )}
 
       {sortedFrames.length === 0 ? (
         <div className="empty-frames">

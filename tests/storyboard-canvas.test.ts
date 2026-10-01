@@ -256,3 +256,45 @@ test('Interactive simulated UI workflow: add -> edit -> reorder -> delete with f
   assert.ok(validSuite({...suite, storyboards: [sb]}));
 });
 
+
+test('StoryboardWorkspace shows linked projects and attach/detach actions', () => {
+  const sb = newStoryboard('Launch plan');
+  const projects = [
+    {id: 'p1', name: 'Kurutu', storyboardId: sb.id},
+    {id: 'p2', name: 'Acme'},
+  ];
+  let attachedId = '';
+  let detachedId = '';
+  const html = rds.renderToString(
+    React.createElement(StoryboardWorkspace, {
+      storyboard: sb,
+      onChange: () => {},
+      onBack: () => {},
+      projects,
+      onAttach: (id: string) => { attachedId = id; },
+      onDetach: (id: string) => { detachedId = id; },
+      onOpenProject: () => {},
+    })
+  );
+  assert.ok(html.includes('Linked projects'));
+  assert.ok(html.replace(/<!-- -->/g, '').includes('1 of 2 projects use this storyboard'));
+  assert.ok(html.includes('Kurutu'));
+  assert.ok(html.includes('Attached'));
+  assert.ok(html.includes('Acme'));
+  // props flow is wired; buttons render per project row
+  assert.ok(html.includes('Open project'));
+  assert.ok(html.includes('Detach'));
+  assert.ok(html.includes('Attach'));
+});
+
+test('StoryboardWorkspace without projects hides the links section', () => {
+  const sb = newStoryboard('Solo');
+  const html = rds.renderToString(
+    React.createElement(StoryboardWorkspace, {
+      storyboard: sb,
+      onChange: () => {},
+      onBack: () => {},
+    })
+  );
+  assert.ok(!html.includes('Linked projects'));
+});

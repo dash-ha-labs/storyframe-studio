@@ -15,7 +15,7 @@ const html = rds.renderToString(React.createElement(Suite));
 
 assert.ok(html.includes('Your creative toolkit'), 'Has creative toolkit section');
 assert.ok(html.includes('Video studio'), 'Has Video studio card');
-assert.ok(html.includes('Brand assets'), 'Has Brand assets card');
+assert.ok(html.includes('Brand Design'), 'Has Brand Design card');
 assert.ok(!html.includes('Logo studio'), 'No Logo studio card');
 assert.ok(!html.includes('Marketing studio'), 'No Marketing studio card');
 assert.ok(!html.includes('Landing pages'), 'No Landing pages card');

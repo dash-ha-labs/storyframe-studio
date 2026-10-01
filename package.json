@@ -1,24 +1,22 @@
 {
-  "name": "storyframe-studio",
+  "name": "storyframe",
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "vite --host 127.0.0.1 --port 9180 --strictPort",
-    "build": "tsc --noEmit && vite build",
-    "preview": "vite preview --host 127.0.0.1 --port 9180 --strictPort",
-    "test": "node --import tsx --test tests/*.test.ts"
-  },
-  "dependencies": {
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "lucide-react": "^0.468.0"
+    "dev": "npm run dev --workspace=@storyframe/studio",
+    "build": "npm run build --workspace=@storyframe/tokens && npm run build --workspace=@storyframe/core && npm run build --workspace=@storyframe/ui && npm run build --workspace=@storyframe/studio",
+    "preview": "npm run preview --workspace=@storyframe/studio",
+    "test": "npm test --workspaces --if-present"
   },
   "devDependencies": {
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
     "typescript": "~5.9.2",
-    "vite": "^7.1.0",
     "tsx": "^4.20.0"
   }
 }

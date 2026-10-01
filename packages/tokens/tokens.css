@@ -1,0 +1,47 @@
+/* Storyframe Design Tokens — base tokens shared across Studio and Web */
+:root {
+  /* Color Palette - Neutral Dark */
+  --sf-color-bg-app: #181a1f;
+  --sf-color-bg-sidebar: #1c1e24;
+  --sf-color-bg-surface: #20242d;
+  --sf-color-bg-surface-hover: #283141;
+  --sf-color-bg-surface-elevated: #222833;
+  --sf-color-bg-input: #171d27;
+  
+  /* Text & Inks */
+  --sf-color-text-primary: #e6e8ee;
+  --sf-color-text-secondary: #c0cce2;
+  --sf-color-text-muted: #96a3bc;
+  --sf-color-text-subtle: #77839a;
+
+  /* Accent & Status */
+  --sf-color-accent: #a6b5ff;
+  --sf-color-accent-hover: #beccec;
+  --sf-color-success: #85a893;
+  --sf-color-warning: #dfbc97;
+  --sf-color-danger: #f87171;
+
+  /* Borders */
+  --sf-color-border-subtle: #30343e;
+  --sf-color-border: #3a4354;
+  --sf-color-border-strong: #43516a;
+
+  /* Typography */
+  --sf-font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --sf-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Border Radii */
+  --sf-radius-sm: 4px;
+  --sf-radius-md: 6px;
+  --sf-radius-lg: 8px;
+  --sf-radius-xl: 12px;
+  --sf-radius-full: 9999px;
+
+  /* Spacing */
+  --sf-space-1: 4px;
+  --sf-space-2: 8px;
+  --sf-space-3: 12px;
+  --sf-space-4: 16px;
+  --sf-space-6: 24px;
+  --sf-space-8: 32px;
+}

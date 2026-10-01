@@ -11,22 +11,26 @@ function App() {
   if (authed) return <Suite />;
 
   return (
-    <div style={{ height: '100vh', width: '100vw', background: '#000', color: '#fff', display: 'flex', flexDirection: 'column', fontFamily: 'sans-serif' }}>
-      <header style={{ padding: '20px', display: 'flex', justifyContent: 'flex-end' }}>
-        <button 
-          onClick={() => setShowLogin(!showLogin)} 
-          style={{ background: 'transparent', color: '#888', border: 'none', cursor: 'pointer', fontSize: '14px' }}>
-          Private login
-        </button>
+    <div className="studio">
+      <header className="appbar">
+        <div className="app-actions">
+          <button className="button" onClick={() => setShowLogin(!showLogin)}>
+            Private login
+          </button>
+        </div>
       </header>
       
       <main style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-        <h1 style={{ fontSize: '3rem', fontWeight: 300, letterSpacing: '0.1em', margin: '0 0 10px 0' }}>STORYFRAME</h1>
-        <p style={{ color: '#888', letterSpacing: '0.2em', textTransform: 'uppercase', fontSize: '0.9rem' }}>Coming Soon</p>
+        <h1 style={{ fontFamily: 'Bricolage, sans-serif', fontSize: '42px', fontWeight: 600, letterSpacing: '-1px', margin: '0 0 12px 0' }}>
+          Storyframe
+        </h1>
+        <p style={{ color: 'var(--muted)', letterSpacing: '2px', textTransform: 'uppercase', fontSize: '11px' }}>
+          Coming Soon
+        </p>
         
         {showLogin && (
           <form 
-            style={{ marginTop: '40px', display: 'flex', gap: '10px' }}
+            style={{ marginTop: '32px', display: 'flex', gap: '8px', background: 'var(--panel)', padding: '20px', borderRadius: '7px', border: '1px solid #3c3f48', boxShadow: '0 12px 35px #0008' }}
             onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
               e.preventDefault();
               const pwd = new FormData(e.currentTarget).get('pwd');
@@ -42,11 +46,9 @@ function App() {
               type="password" 
               placeholder="Password" 
               autoFocus
-              style={{ padding: '8px 12px', background: '#111', border: '1px solid #333', color: '#fff', borderRadius: '4px' }} 
+              style={{ padding: '0 12px', background: 'var(--field)', border: '1px solid #454a58', color: 'inherit', borderRadius: '4px', height: '32px', fontSize: '12px', outline: 'none' }} 
             />
-            <button 
-              type="submit"
-              style={{ padding: '8px 16px', background: '#fff', color: '#000', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
+            <button type="submit" className="button primary">
               Enter
             </button>
           </form>

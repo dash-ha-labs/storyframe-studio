@@ -58,3 +58,5 @@ The homepage uses `StudioDemo`, an iframe of the dedicated Vite entry `demo.html
 The sample consists of original SVG app UI wireframes, not Kurutu captures. Generated images have separate provenance in `design/media-provenance.json`; all rejected generated images are retained in `design/explorations` and not shipped. No original Kurutu media was changed or copied by this design task.
 
 Current source toolkit: video and brand, plus independent Storyboards. Legacy descriptions above of logo/marketing/ASO/keyword draft tools are historical and are not advertised as current functionality.
+
+Studio and website now use the shared light token palette. The app’s compact geometry remains in style.css and suite.css; studio-ui.css refines light controls and surfaces. The demo imports the same three source styles. UI colour migration excludes the media composition/caption/end-card CSS, preserving captured content.

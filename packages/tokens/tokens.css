@@ -4,37 +4,37 @@
 }
 /* Storyframe Design Tokens — base tokens shared across Studio and Web */
 :root {
-  /* Color Palette - Neutral Dark */
-  --sf-color-bg-app: #181a1f;
-  --sf-color-bg-sidebar: #1c1e24;
-  --sf-color-bg-surface: #20242d;
-  --sf-color-bg-surface-hover: #283141;
-  --sf-color-bg-surface-elevated: #222833;
-  --sf-color-bg-input: #171d27;
+  /* Light workspace palette shared by website and Studio */
+  --sf-color-bg-app: #ffffff;
+  --sf-color-bg-sidebar: #f8f9fc;
+  --sf-color-bg-surface: #ffffff;
+  --sf-color-bg-surface-hover: #f4f5fb;
+  --sf-color-bg-surface-elevated: #f3f5fb;
+  --sf-color-bg-input: #ffffff;
   
   /* Text & Inks */
-  --sf-color-text-primary: #e6e8ee;
-  --sf-color-text-secondary: #c0cce2;
-  --sf-color-text-muted: #96a3bc;
-  --sf-color-text-subtle: #77839a;
+  --sf-color-text-primary: #182b4e;
+  --sf-color-text-secondary: #354561;
+  --sf-color-text-muted: #626d80;
+  --sf-color-text-subtle: #6e7889;
 
   /* Accent & Status */
-  --sf-color-accent: #9eafff;
-  --sf-color-accent-hover: #b8c5ff;
-  --sf-color-success: #85a893;
-  --sf-color-warning: #dfbc97;
-  --sf-color-danger: #f87171;
+  --sf-color-accent: #2142e7;
+  --sf-color-accent-hover: #1935c4;
+  --sf-color-success: #26704c;
+  --sf-color-warning: #8b570e;
+  --sf-color-danger: #b33243;
 
   /* Borders */
-  --sf-color-border-subtle: #30343e;
-  --sf-color-border: #3a4354;
-  --sf-color-border-strong: #43516a;
+  --sf-color-border-subtle: #e5e8ef;
+  --sf-color-border: #d6dbe6;
+  --sf-color-border-strong: #a8b3c8;
 
-  /* One identity, two surfaces. Cobalt is the action colour in both. */
+  /* Shared identity; density differs by context, not colour theme. */
   --sf-color-action: #2142e7;
   --sf-color-action-hover: #1935c4;
   --sf-color-on-action: #ffffff;
-  --sf-color-selection: #303b56;
+  --sf-color-selection: #f0f2f6;
   --sf-color-creative-peach: #f8e7dc;
   --sf-color-creative-lilac: #ece9fb;
   --sf-color-creative-mint: #e5f0e8;
@@ -62,7 +62,7 @@
   --sf-space-8: 32px;
 }
 
-/* Marketing gets breathing room; these values never cascade into the app iframe. */
+/* Explicit light surface scope, also applied by standalone Studio documents. */
 .sf-page, [data-sf-theme="light"] {
   color-scheme: light;
   --sf-color-bg-app: #ffffff;

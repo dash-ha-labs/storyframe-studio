@@ -39,7 +39,7 @@ h1, h2, h3 { text-wrap: pretty; }
 .hero-copy .sf-mkt-hero-subtitle { margin: 20px 0 24px; max-width: 780px; }
 .studio-demo { margin: 0; scroll-margin-top: 20px; }
 .app-embed { height: 680px; margin: 0; border: 1px solid #d1d7e4; border-radius: 12px; overflow: hidden; box-shadow: 0 18px 42px #182b4e0b; }
-.app-embed iframe { display: block; width: 100%; height: 100%; border: 0; background: #181a1f; }
+.app-embed iframe { display: block; width: 100%; height: 100%; border: 0; background: #f7f8fa; }
 .home-section { margin-top: 64px; }
 .collection-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 27px; }
 .collection-heading h2 { font-family: var(--sf-font-display); font-size: 36px; font-weight: 500; line-height: 1.15; letter-spacing: -1.2px; margin: 0; max-width: 830px; }

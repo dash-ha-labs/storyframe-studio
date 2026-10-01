@@ -49,3 +49,19 @@ Final location check: port 9180 migrated the existing Kurutu edit (13 scenes, 44
 - No encoded film, AI generation, final signup flow, performance benchmark or subjective user approval is claimed. Signup destination remains the existing app; authentication and connected generation/rendering are release dependencies.
 
 Launch-copy follow-up: removed public development disclaimers from features, templates, gallery, guides and articles. Removed synthetic service metrics/incidents rather than presenting them as measured status. Website build and 16 website tests pass. App behavior and completion messaging remain accurate; outstanding capabilities are tracked in TASKS.md for pre-launch implementation.
+
+## Studio UI first pass — 2026-10-01
+
+- Unified compact control, panel, field and selection styling in studio-ui.css, imported by both Studio and the homepage demo. Retained source geometry and all controls. Tightened storyboard empty state and clarified project-overview labels. Missing legacy thumbnail URLs now show an explicit fallback; source references remain unchanged.
+- Full build and all 51 tests pass. Observed at 974 CSS pixels: app bar 43.99px, inspector 235px and timeline 191.997px before and after. No horizontal document overflow. Opened project and caption inspector; all 13 original scenes remain, duration 44s. No project content was edited during this pass.
+- Existing local Kurutu media is unavailable in this checkout; no playback/export parity claim. Only the project cards’ missing-thumbnail presentation was changed.
+
+Studio selected-state correction: replaced the rejected blue sidebar fill/stripe with a neutral background and 4px corners, removed stacked clip borders/shadows, and kept inspector selection to a single underline. Visually inspected the updated project overview at 974 CSS pixels. Project selection now applies only in the project view. Studio build and diff check pass. No full app functionality or media parity claim is added by this styling check.
+
+## Studio light theme — 2026-10-01 (supersedes dark-theme interpretation)
+
+- Applied shared light tokens to application chrome, project pages, editor, brand fields, setup, menus and dialogs. Website demo imports identical Studio styles. Migrated legacy chrome hex values to semantic roles, retaining source dimensions.
+- Visually reviewed project overview, brand page, setup dialog, editor and export dialog at 1422 CSS pixels. White surfaces and navy text; pale gray canvas; pastel picture/caption/audio tracks; cobalt primary actions and one selected-clip border. No document horizontal overflow. App bar 43.99px and timeline 191.997px; inspector 263.993px at this desktop breakpoint.
+- Edited and undid a title in the disposable sample, observed the original title restored, played/paused the preview and opened export. Existing personal project content was not edited.
+- Full build and all 51 tests pass. Media composition/caption/end-card CSS was compared byte-for-byte against the committed baseline and is unchanged. No source-media or brand-colour modifications. Legacy missing demo font/mask warnings and unavailable local Kurutu media remain.
+- Updated AGENTS/design rules: source authority preserves density, feature access and behavior, not the rejected dark palette. No mobile parity, connected generation or encoded export is claimed by this theme pass.

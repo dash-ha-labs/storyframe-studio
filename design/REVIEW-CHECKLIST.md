@@ -42,3 +42,7 @@ State: the reused pattern, any new pattern and reason, behaviours preserved, ver
 - Check that all marketing button labels retain their intended font size; broad footer anchor rules must not restyle buttons.
 - Reject unrelated photos, vague motivational headings, fake generation interactions and extra demo wrapper chrome.
 - Keep Features, Templates, Gallery and Resources distinct; downloads must work and advertised capabilities must be verified before public launch.
+
+- Selected navigation must use the documented neutral treatment: no blue pill, side stripe, inset shadow or stacked indicators. Verify only the current destination is marked selected; keep keyboard focus visible.
+
+- Studio must visibly match the supplied light HTML and website: white panels/dialogs, pale gray canvas, navy text, cobalt actions and pastel tracks. Reject a return to the former dark palette. Compactness concerns geometry and controls, not colour. Inspect forms, modal backdrops, menus, storyboard and media states as well as the default editor.

@@ -9,7 +9,7 @@ import { CoreFeatures, TemplateCards, GalleryCards, ResourceCards, SectionIntro 
 export function HomePage({ onNavigate }: { onNavigate: (path: string) => void }) {
   return <LandingTemplate onNavigate={onNavigate}>
     <section className="home-hero sf-mkt-hero"><div className="hero-copy">
-      
+
       <h1 className="sf-mkt-hero-title">From your idea to a video <span>in minutes.</span></h1>
       <p className="sf-mkt-hero-subtitle">An AI-aided, brand-aware video builder. Bring your screenshots and footage, brainstorm with storyboards, and edit every scene in one workspace.</p>
       <div className="sf-mkt-hero-actions"><a className="sf-button sf-button-primary sf-button-lg" href={APP_SIGNUP_URL}>Sign up free <ArrowRight size={16}/></a><a className="sf-button sf-button-secondary sf-button-lg" href="#studio-demo">Try the studio</a></div><p className="sf-signup-note">Free. No credit card required.</p>

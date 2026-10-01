@@ -53,3 +53,16 @@ Release follow-ups: real signup/account flow at the existing studio URL; AI gene
 ## Launch-facing copy — 1 October 2026
 
 Removed development disclaimers from website copy at the user’s direction. Before public launch, complete and verify signup, AI scene generation and brainstorming, phone mockups, royalty-free image/audio discovery, template creation and final video rendering. Replace gallery examples with reviewed outputs where appropriate; connect status to measured telemetry; publish approved legal policies. These remain implementation/release dependencies, not claims of completed backend work. Actual editor save/export/session messages remain accurate.
+
+## Studio UI first pass — 1 October 2026
+
+- Website baseline committed as 89f4255.
+- Applied shared compact control/surface styling to workspace, project cards, dialogs and editor; kept matching homepage demo styles.
+- Preserved toolbar, inspector and timeline dimensions; clarified overview copy and missing-thumbnail fallback.
+- Studio changes remain available in the working tree for visual feedback.
+
+## Studio light reference correction — 1 October 2026
+
+- Replaced the rejected dark interpretation with the supplied HTML’s white/navy/cobalt visual language throughout Studio.
+- Migrated legacy chrome colours to shared semantic tokens; preserved editor geometry, model and media composition styles.
+- Updated implementor/reviewer rules so compactness cannot be interpreted as retaining the old theme.

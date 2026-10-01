@@ -14,7 +14,7 @@ The homepage headline is **From your idea to a video in minutes.** This is the r
 
 The supplied HTML explorations establish white, navy and cobalt. [Arcade’s website](https://www.arcade.software/) was visually inspected on 1 October 2026 for typography, spacing, cards, grids and footer. Adopt its clear hierarchy, large UI visual areas, restrained card surfaces and evenly spaced footer columns. Do not copy its brand, proprietary artwork, social proof, backend claims or conversion numbers.
 
-Marketing stays light. The real editor stays dark and compact. No dark marketing blocks, unrelated product photos, lifestyle imagery, speakers, wires or decorative hero images. Personality comes from relevant app UI wireframes, short motion, distinct useful content and deliberate colour.
+Website and Studio both use the light reference: white panels, a pale gray canvas, navy text, light borders and cobalt primary actions. Studio remains compact. No dark marketing blocks, unrelated product photos, lifestyle imagery, speakers, wires or decorative hero images. Personality comes from relevant app UI wireframes, short motion, distinct useful content and deliberate colour.
 
 ## Foundations and ownership
 
@@ -22,7 +22,7 @@ Marketing stays light. The real editor stays dark and compact. No dark marketing
 - Typography: locally bundled Inter Variable. One family for website headings, body and actions. Existing compact app sizes remain unchanged; mono remains available for time and technical values.
 - Website type: hero 43px phone / up to 68px desktop; section headings 31–36px; card headings 23–24px; body 16–18px; navigation/footer 15–16px. Small metadata may use 12–14px. Never use metadata sizing for core copy.
 - Website grid: 1280px outer container; 40px desktop / 20px phone gutters. Align navigation and content. Feature cards use two columns, other collections three; phone uses one column. Sections use 64px desktop / 43px phone separation, not empty viewport-sized spacers.
-- Shared components: `packages/ui/src/index.tsx` and `ui.css` own navigation, footer, buttons and layout primitives. `apps/website/src/website.css` owns website composition and responsive refinements. App styles stay in `apps/web/src` and never import website CSS.
+- Shared components: `packages/ui/src/index.tsx` and `ui.css` own navigation, footer, buttons and layout primitives. `apps/website/src/website.css` owns website composition and responsive refinements. App styles stay in `apps/web/src` and never import website CSS. `studio-ui.css` owns the compact Studio control/surface finish and is imported after base geometry in both the app and website demo.
 - Buttons share cobalt/white or white/outlined variants, consistent typography and 44px normal / 48px large marketing heights. App buttons retain existing compact dimensions.
 - Use Lucide icons, content-sized status badges, visible keyboard focus and natural wrapping. No full-width outline tags, arbitrary line breaks or centered phone headings in left-aligned layouts.
 
@@ -61,3 +61,15 @@ Before changing UI, identify the existing pattern, shared owner and behaviour to
 ## Launch-copy policy — 1 October 2026
 
 At the user’s direction, remove “illustrative,” “in development,” “planned workflow,” “coming soon,” and similar implementation disclaimers from marketing. Required features will be implemented before public launch. This is approval to write the launch-facing website, not evidence that features already work. Track gaps in TASKS.md and verify them before deployment. Keep the actual editor’s session/save/export messages truthful; do not simulate successful generation or rendering.
+
+## Studio controls — first pass
+
+Keep the established editor dimensions and use one light surface/border scale, 6px control corners, cobalt filled primary actions and restrained neutral navigation selection. Style inspector labels through hierarchy and contrast instead of increasing panel widths. Project-overview empty states should provide a short description and a direct action. Missing source thumbnails must have an honest fallback without rewriting media records. Brand-coloured artwork remains the project’s own; do not apply interface colours over captured content.
+
+## Selected states — reference correction
+
+Follow the supplied HTML’s restrained state treatment. Navigation uses a subtle neutral surface and stronger text, 4px corners, no coloured side stripe, inset shadow or saturated pill. Inspector tabs use one underline with an otherwise unchanged surface. Timeline selection uses a single clear border, not stacked border/shadow decoration. Keep keyboard focus separate and visible. Only the actual current navigation destination is selected. Never add multiple decorative state signals to make a control look styled.
+
+## Light Studio correction
+
+The user explicitly rejected the dark app interpretation. Source authority preserves geometry, feature access, media fidelity and behaviour; it does not preserve the old colour theme. Use the supplied app HTML for visual direction at the source app’s dimensions: 44px toolbar, existing inspector/timeline sizes, no added permanent editor rail. Central light tokens serve both website and Studio. White dialogs, fields and chrome surround a pale gray canvas; pastel tracks distinguish picture/captions/audio, with one cobalt selection border. Media compositions and project-owned brand colours remain exact.

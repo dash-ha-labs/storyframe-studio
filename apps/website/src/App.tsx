@@ -9,7 +9,15 @@ import { TemplatesPage } from './pages/TemplatesPage';
 import { ResourceCenterPage } from './pages/ResourceCenterPage';
 import { GuidesPage } from './pages/GuidesPage';
 import { LandingTemplate } from './templates';
-import { Card, Button, Badge } from '@storyframe/ui';
+import Suite from '@storyframe/studio/src/Suite.tsx';
+import {
+  Hero,
+  AppCta,
+  FeatureGrid,
+  SectionHeading,
+  APP_SIGNUP_URL,
+} from '@storyframe/ui';
+import { Clapperboard, Palette, LayoutGrid } from 'lucide-react';
 
 export function App() {
   const [currentPath, setCurrentPath] = useState<string>(() => {
@@ -74,43 +82,58 @@ export function App() {
     return <GuidesPage onNavigate={navigate} />;
   }
 
-  // Home / Overview landing
+  // Home / Landing: value prop, proof, conversion.
   return (
     <LandingTemplate onNavigate={navigate}>
-      <div style={{ textAlign: 'center', margin: 'var(--sf-space-8) 0 var(--sf-space-8) 0' }}>
-        <Badge variant="accent" style={{ marginBottom: 'var(--sf-space-3)' }}>
-          Storyframe
-        </Badge>
-        <h1 className="sf-page-title" style={{ fontSize: '42px', marginBottom: 'var(--sf-space-3)' }}>
-          Your Product, Everywhere
-        </h1>
-        <p className="sf-page-subtitle" style={{ maxWidth: '600px', margin: '0 auto var(--sf-space-6) auto' }}>
-          Explore our features, see real creations, and start with templates.
-        </p>
+      <Hero
+        eyebrow="Storyframe Studio"
+        title="Brand-consistent video, every frame."
+        subtitle="Storyframe keeps your brand assets inside the editing flow — storyboards, brand design, and video studio working from one source of truth."
+        primaryCta={{ label: 'Start creating free', href: APP_SIGNUP_URL }}
+        secondaryCta={{ label: 'See it in action', href: '/features' }}
+      />
+
+      <SectionHeading
+        eyebrow="Why Storyframe"
+        title="Everything your brand needs to ship video"
+        subtitle="One workspace for the whole pipeline — no more copy-pasting hex codes or hunting for the latest logo."
+      />
+      <FeatureGrid
+        items={[
+          {
+            icon: <Palette size={18} />,
+            title: 'Brand Design',
+            description:
+              'Import a brand from a URL or define one by hand. Colors, fonts and identity stay attached to every project.',
+          },
+          {
+            icon: <LayoutGrid size={18} />,
+            title: 'Storyboards',
+            description:
+              'Plan shots frame by frame with reorderable frames, durations and notes — all mapped to final video segments.',
+          },
+          {
+            icon: <Clapperboard size={18} />,
+            title: 'Video Studio',
+            description:
+              'Turn storyboards into finished cuts for web and mobile formats, rendered from your storyboard state.',
+          },
+        ]}
+      />
+
+      <SectionHeading
+        eyebrow="Live product"
+        title="The real studio, right here"
+        subtitle="This is the actual Storyframe app — not a screenshot. Every button below works."
+      />
+      <div className="app-embed">
+        <Suite />
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'var(--sf-space-4)' }}>
-        <Card interactive onClick={() => navigate('/features')}>
-          <h2 style={{ fontSize: '18px', margin: 'var(--sf-space-2) 0', color: 'var(--sf-color-text-primary)' }}>
-            Features
-          </h2>
-          <Button variant="secondary" size="sm" onClick={() => navigate('/features')}>Explore →</Button>
-        </Card>
-
-        <Card interactive onClick={() => navigate('/gallery')}>
-          <h2 style={{ fontSize: '18px', margin: 'var(--sf-space-2) 0', color: 'var(--sf-color-text-primary)' }}>
-            Gallery
-          </h2>
-          <Button variant="secondary" size="sm" onClick={() => navigate('/gallery')}>View Gallery →</Button>
-        </Card>
-
-        <Card interactive onClick={() => navigate('/templates')}>
-          <h2 style={{ fontSize: '18px', margin: 'var(--sf-space-2) 0', color: 'var(--sf-color-text-primary)' }}>
-            Templates
-          </h2>
-          <Button variant="secondary" size="sm" onClick={() => navigate('/templates')}>Browse Templates →</Button>
-        </Card>
-      </div>
+      <AppCta
+        title="Ready to make your first branded video?"
+        subtitle="Open Storyframe Studio and go from brand to storyboard to finished video in one sitting."
+      />
     </LandingTemplate>
   );
 }

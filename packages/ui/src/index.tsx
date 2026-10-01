@@ -2,6 +2,9 @@ import React, { useRef, useEffect } from 'react';
 import { Clapperboard, Palette, Globe, Smartphone, X } from 'lucide-react';
 import type { ToolId, Platform } from '@storyframe/core';
 
+// The real deployed Studio app. Operator directive (t_3294f877): never invent app domains.
+export const APP_SIGNUP_URL = 'https://studio.storyframe.yamu.app/';
+
 export const toolIcons: Record<ToolId, React.ComponentType<{ size?: number }>> = {
   video: Clapperboard,
   brand: Palette,
@@ -230,7 +233,7 @@ export function GlobalNav({
         <Button
           variant="primary"
           size="sm"
-          href="https://app.storyframe.com/signup"
+          href={APP_SIGNUP_URL}
         >
           Try Storyframe Studio
         </Button>
@@ -420,5 +423,161 @@ export function BlogPostCard({
         <span>By {post.author}</span>
       </div>
     </Card>
+  );
+}
+
+/* Marketing Sections (token-driven; consumed by the website's master templates) */
+
+export function Hero({
+  eyebrow,
+  title,
+  subtitle,
+  primaryCta,
+  secondaryCta,
+}: {
+  eyebrow?: string;
+  title: string;
+  subtitle?: string;
+  primaryCta?: { label: string; href?: string; onClick?: () => void };
+  secondaryCta?: { label: string; href?: string; onClick?: () => void };
+}) {
+  return (
+    <section className="sf-mkt-hero">
+      {eyebrow && <Badge variant="accent" className="sf-mkt-hero-eyebrow">{eyebrow}</Badge>}
+      <h1 className="sf-mkt-hero-title">{title}</h1>
+      {subtitle && <p className="sf-mkt-hero-subtitle">{subtitle}</p>}
+      <div className="sf-mkt-hero-actions">
+        {primaryCta && (
+          <Button
+            variant="primary"
+            size="lg"
+            href={primaryCta.href}
+            onClick={primaryCta.onClick}
+          >
+            {primaryCta.label}
+          </Button>
+        )}
+        {secondaryCta && (
+          <Button
+            variant="secondary"
+            size="lg"
+            href={secondaryCta.href}
+            onClick={secondaryCta.onClick}
+          >
+            {secondaryCta.label}
+          </Button>
+        )}
+      </div>
+    </section>
+  );
+}
+
+export function AppCta({
+  title,
+  subtitle,
+  label = 'Try Storyframe Studio',
+  onClick,
+}: {
+  title: string;
+  subtitle?: string;
+  label?: string;
+  onClick?: () => void;
+}) {
+  return (
+    <section className="sf-mkt-cta">
+      <h2 className="sf-mkt-cta-title">{title}</h2>
+      {subtitle && <p className="sf-mkt-cta-subtitle">{subtitle}</p>}
+      <Button variant="primary" size="lg" href={APP_SIGNUP_URL} onClick={onClick}>
+        {label}
+      </Button>
+    </section>
+  );
+}
+
+export function FeatureZigzag({
+  items,
+}: {
+  items: Array<{
+    title: string;
+    description: string;
+    visual: React.ReactNode;
+    flip?: boolean;
+  }>;
+}) {
+  return (
+    <section className="sf-mkt-zigzag">
+      {items.map((item, i) => (
+        <div key={i} className={`sf-mkt-zigzag-row${item.flip ? ' sf-mkt-zigzag-flip' : ''}`}>
+          <div className="sf-mkt-zigzag-text">
+            <h2 className="sf-mkt-zigzag-title">{item.title}</h2>
+            <p className="sf-mkt-zigzag-desc">{item.description}</p>
+          </div>
+          <div className="sf-mkt-zigzag-visual">{item.visual}</div>
+        </div>
+      ))}
+    </section>
+  );
+}
+
+export function FeatureGrid({
+  items,
+}: {
+  items: Array<{ icon?: React.ReactNode; title: string; description: string }>;
+}) {
+  return (
+    <div className="sf-mkt-grid">
+      {items.map((item, i) => (
+        <Card key={i} className="sf-mkt-grid-card">
+          {item.icon && <div className="sf-mkt-grid-icon">{item.icon}</div>}
+          <h3 className="sf-mkt-grid-title">{item.title}</h3>
+          <p className="sf-mkt-grid-desc">{item.description}</p>
+        </Card>
+      ))}
+    </div>
+  );
+}
+
+export function SectionHeading({
+  eyebrow,
+  title,
+  subtitle,
+}: {
+  eyebrow?: string;
+  title: string;
+  subtitle?: string;
+}) {
+  return (
+    <div className="sf-mkt-section-heading">
+      {eyebrow && <span className="sf-mkt-eyebrow">{eyebrow}</span>}
+      <h2 className="sf-mkt-section-title">{title}</h2>
+      {subtitle && <p className="sf-mkt-section-subtitle">{subtitle}</p>}
+    </div>
+  );
+}
+
+export function FilterTags({
+  tags,
+  active,
+  onSelect,
+}: {
+  tags: string[];
+  active?: string;
+  onSelect?: (tag: string) => void;
+}) {
+  return (
+    <div className="sf-mkt-filter" role="tablist" aria-label="Filter by use case">
+      {tags.map(tag => (
+        <button
+          key={tag}
+          type="button"
+          role="tab"
+          aria-selected={tag === active}
+          className={`sf-mkt-filter-tag${tag === active ? ' sf-mkt-filter-active' : ''}`}
+          onClick={() => onSelect && onSelect(tag)}
+        >
+          {tag}
+        </button>
+      ))}
+    </div>
   );
 }

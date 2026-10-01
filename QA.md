@@ -100,3 +100,7 @@ Verification:
 - Docker Compose configuration validated. The local Docker daemon was not running, so container startup/nginx serving was not exercised. The separate service was tested directly; no deployment or push occurred.
 
 Limits: tutorial recordings remain authorized placeholders. Template covers are website illustrations; starter canvases and scene instructions are editable structures, not reviewed finished films. The existing Studio private gate remains in place; real public signup, AI generation and encoded export remain release dependencies. Existing build warnings for legacy demo fonts/phone-mask assets remain; no Kurutu media was copied to resolve them. Core import tests establish state integrity; they do not establish encoded-output parity or completed signup.
+
+## Future design guidance — 1 October 2026
+
+Documentation-only follow-up: added the required implementation workflow, source ownership map, page-pattern guide and reviewer note. AGENTS.md and README link the guide; design-language and review rules now distinguish styling-only reference adoption from the later authorized content-center expansion. Corrected the remaining Gallery terminology in current review rules. All 24 relative links in the five changed guidance documents resolve, source owners were checked against the repository, and the whitespace check passes. No runtime code changed; the build and 62-test evidence above remains the applicable verification.

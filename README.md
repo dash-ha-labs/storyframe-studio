@@ -30,7 +30,7 @@ See [suite architecture](SUITE-ARCHITECTURE.md), [QA](QA.md), [tasks](TASKS.md),
 
 ## Shared design language and website
 
-[Design language](DESIGN-LANGUAGE.md) is the implementation contract for all UI. Use the [review checklist](design/REVIEW-CHECKLIST.md) for future changes. It gives Studio and the website one light, focused product identity while preserving the app’s compact geometry and features. The current core toolkit is Brand Design, Storyboards and Video Studio; older suite notes describing additional draft tools are historical.
+[Design language](DESIGN-LANGUAGE.md) is the implementation contract for all UI. Start every UI change with the [implementation guide](design/IMPLEMENTATION-GUIDE.md), then use the [review checklist](design/REVIEW-CHECKLIST.md). These requirements also apply to new pages and components; they are linked from AGENTS.md for future implementors and reviewers. The shared language gives Studio and the website one light, focused product identity while preserving the app’s compact geometry and features. The current core toolkit is Brand Design, Storyboards and Video Studio; older suite notes describing additional draft tools are historical.
 
 Run the website with `npm run dev --workspace=@storyframe/website -- --port 9182`. The homepage embeds `/demo.html`, built from the real app components with an illustrative sample. Its edits and imports are session-only and separate from the user's saved workspace. The actual app retains its normal local persistence.
 

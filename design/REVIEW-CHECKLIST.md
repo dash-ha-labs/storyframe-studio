@@ -1,6 +1,6 @@
 # UI implementation and review checklist
 
-Required companion to [DESIGN-LANGUAGE.md](../DESIGN-LANGUAGE.md). Use for website, suite, editor and new screens. These checks extend the existing project rules; they do not authorise publishing or generation.
+Required companion to [DESIGN-LANGUAGE.md](../DESIGN-LANGUAGE.md) and the [implementation guide](IMPLEMENTATION-GUIDE.md). Use for website, suite, editor and new screens. These checks extend the existing project rules; they do not authorise publishing or generation.
 
 ## Before implementation
 
@@ -23,7 +23,7 @@ Required companion to [DESIGN-LANGUAGE.md](../DESIGN-LANGUAGE.md). Use for websi
 
 ## Before handing over
 
-- Run `npm run build` and `npm test`. Record failures and material pre-existing limitations rather than hiding them.
+- For executable changes, run `npm run build` and `npm test`. For documentation-only changes, check local links, current source ownership, rule consistency and `git diff --check`; no new runtime evidence is implied. Record failures and material pre-existing limitations rather than hiding them.
 - Reject stretched full-width badges, unnecessary hard line breaks, thin navigation, faint or dark marketing footers and mobile headings that become centered in a left-aligned layout. Inspect desktop and phone widths. Check no page overflow, readable headings, visible actions and clean stacking. Do not infer mobile editing parity from a responsive homepage.
 - Confirm keyboard focus is visible. Check menus, links and relevant dialogs. Decorative elements must not receive focus.
 - In the demo: edit a scene/caption, undo, play/pause, switch project pages and reload the disposable sample. Verify export describes JSON and unconnected video rendering accurately.
@@ -34,14 +34,14 @@ Required companion to [DESIGN-LANGUAGE.md](../DESIGN-LANGUAGE.md). Use for websi
 
 ## Required reviewer note
 
-State: the reused pattern, any new pattern and reason, behaviours preserved, verification performed, known limits, and whether this change updates the design language itself. Any intentional departure must update the corresponding rule and consumers together; undocumented visual drift is a review issue.
+State: the reused pattern and shared owner, any new pattern and reason, behaviours preserved, website/app data boundaries, verification performed (including viewports for visual changes), known limits, and whether this change updates the design language itself. Any intentional departure must update the corresponding rule and consumers together; undocumented visual drift is a review issue.
 
 ## Reference adoption checks
 
 - Use the Arcade-inspired readable Inter hierarchy, aligned gutters, large visual areas, two-column feature grid and white grouped footer. Keep Storyframe identity and app density.
 - Check that all marketing button labels retain their intended font size; broad footer anchor rules must not restyle buttons.
 - Reject unrelated photos, vague motivational headings, fake generation interactions and extra demo wrapper chrome.
-- Keep Features, Templates, Gallery and Resources distinct; downloads must work and advertised capabilities must be verified before public launch.
+- Keep Features, Templates, Resources, Tutorials, Docs, Blog and Roadmap distinct using their documented page patterns. Gallery redirects to Tutorials; Guides redirects to Docs. Downloads must work and advertised capabilities must be verified before public launch.
 
 - Selected navigation must use the documented neutral treatment: no blue pill, side stripe, inset shadow or stacked indicators. Verify only the current destination is marked selected; keep keyboard focus visible.
 
@@ -50,7 +50,7 @@ State: the reused pattern, any new pattern and reason, behaviours preserved, ver
 - Compare readability changes against checkpoint `7702bc2`. Keep Studio and homepage demo identical, and verify actual layout dimensions without browser zoom. Media composition coordinates and project state must remain unchanged.
 
 - Reject gray content cards and nested icon/tag boxes. Check white card bodies and hover surfaces in app references, resources, tool/creation cards, dialogs and secondary pages. Keep the canvas tone separate.
-- Compare reference adoption as a styling change: routes, sections, actions, content, save/export behavior and project ownership must remain. Check fields and keyboard focus remain clear on white surfaces.
+- For styling-only reference adoption, preserve routes, sections, actions and content. Explicitly requested content-center work may extend website routes using the documented patterns. In either case, preserve Studio save/export behavior and project ownership. Check fields and keyboard focus remain clear on white surfaces.
 
 
 ## Content centers, data boundaries and rhythm

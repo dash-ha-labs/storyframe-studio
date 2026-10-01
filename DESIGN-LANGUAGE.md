@@ -1,6 +1,6 @@
 # Storyframe design language
 
-Adopted 1 October 2026. Required for implementors and reviewers alongside [AGENTS.md](AGENTS.md), [suite architecture](SUITE-ARCHITECTURE.md) and the [review checklist](design/REVIEW-CHECKLIST.md).
+Adopted 1 October 2026. Required for implementors and reviewers alongside [AGENTS.md](AGENTS.md), [suite architecture](SUITE-ARCHITECTURE.md), the [implementation guide](design/IMPLEMENTATION-GUIDE.md) and the [review checklist](design/REVIEW-CHECKLIST.md).
 
 ## Product and authority
 
@@ -22,7 +22,7 @@ Website and Studio both use the light reference: white panels, a pale gray canva
 - Typography: locally bundled Inter Variable. One family for website headings, body and actions. Studio uses 14px core controls/navigation, 13–15px body/labels and 11–12px metadata; mono remains available for time and technical values.
 - Website type: hero 43px phone / up to 68px desktop; section headings 31–36px; card headings 23–24px; body 16–18px; navigation/footer 15–16px. Small metadata may use 12–14px. Never use metadata sizing for core copy.
 - Website grid: 1280px outer container; 40px desktop / 20px phone gutters. Align navigation and content. Feature cards use two columns, other collections three; phone uses one column. Major sections use `--sf-section-gap`: fluid 56–88px desktop and 52px phone. Headings sit 28px above their content (24px phone); related controls and cards stay closer. Do not stack main bottom padding with footer top padding.
-- Shared components: `packages/ui/src/index.tsx` and `ui.css` own navigation, footer, buttons and layout primitives. `apps/website/src/website.css` owns website composition and responsive refinements. App styles stay in `apps/web/src` and never import website CSS. `studio-ui.css` owns the compact Studio control/surface finish and is imported after base geometry in both the app and website demo.
+- Shared components: `packages/ui/src/index.tsx` and `ui.css` own navigation, footer, buttons and layout primitives. `apps/website/src/website.css` owns marketing composition and responsive refinements; `apps/website/src/content.css` owns marketplace, resource, course, documentation, editorial and community layouts. App styles stay in `apps/web/src` and never import website CSS. `studio-ui.css` owns the compact Studio control/surface finish and is imported after base geometry in both the app and website demo.
 - Buttons share cobalt/white or white/outlined variants, consistent typography and 44px normal / 48px large marketing heights. App controls use 32px toolbar/icon and 36px normal button heights.
 - Use Lucide icons, content-sized status badges, visible keyboard focus and natural wrapping. No full-width outline tags, arbitrary line breaks or centered phone headings in left-aligned layouts.
 
@@ -56,6 +56,8 @@ Preserve generated originals, provenance and checksums. Rejected image explorati
 
 ## Compatibility gate
 
+This document defines the current visual contract. Dated corrections explain decisions; superseded dimensions or rejected explorations are not alternative themes. Follow the [implementation guide](design/IMPLEMENTATION-GUIDE.md) for every future change and the [review checklist](design/REVIEW-CHECKLIST.md) before handover.
+
 Before changing UI, identify the existing pattern, shared owner and behaviour to preserve. Update the pattern and its consumers together. Review desktop and phone layouts, interaction, focus and reduced motion. Record observed evidence and limitations in QA.md; automated checks are not subjective approval. A deliberate design-language change updates this document and the checklist in the same change.
 
 ## Launch-copy policy — 1 October 2026
@@ -87,14 +89,14 @@ The user requested a modest increase across the Studio because the light version
 
 Inspected the user-provided [Arcade workspace](https://app.arcade.software/workspaces/tender-app/teams/tender-app/arcades), [editor](https://app.arcade.software/flows/N7rcZqOUSda6Pi1EcN0k/edit) and [public website](https://www.arcade.software/) in authenticated Chrome. These are visual references, not evidence of Storyframe capabilities. No reference content or branding is imported into the product.
 
-The user explicitly requires preserving our flow and applying styles. Keep Storyframe's page sequence, navigation, creation/editing actions, information and ownership model. Adopt the reference's hierarchy and visual restraint without transplanting its workflow, centered hero, claims or gray filled sections.
+For reference-only styling requests, preserve Storyframe's existing flow, navigation, actions and information. Adopt the reference's hierarchy and visual restraint without transplanting its workflow, centered hero, claims or gray filled sections. The later user-requested content centers below deliberately expand website routes and layouts; that expansion does not change Studio's feature or project-ownership contract.
 
 - **No gray content cards.** Cards and raised content surfaces are white, including hover. Use shared `--sf-color-card` / `--sf-color-card-border`; a subtle border or small hover shadow provides separation. `bg-surface-elevated` is white. Never use a broad gray fill as a shortcut for hierarchy.
 - Pale neutral surfaces are reserved for the editor canvas and transient compact control/navigation states. Use `--sf-color-bg-canvas` explicitly for the editing workspace. A canvas is not a card.
 - Color belongs to relevant product visuals, project-owned content, semantic timeline tracks and small functional accents. Marketing card text sits on white; the existing UI visual may use a restrained peach, lilac, mint or blue background. Do not replace gray cards with arbitrary colored text boxes.
 - Avoid boxes within boxes: app references use one white card, a small platform icon, name/type hierarchy and concise location/status metadata. No outlined platform tag or divider inside each source card. Keep actual connection status visible. Reference files use compact rows; overview shortcuts do not need card containers.
 - Preserve the enlarged 14px core controls, 50px toolbar and established responsive structure. White surfaces must not mean faint text, disappearing input boundaries or invisible focus. Tabs use one underline and no filled hover block.
-- Scope: visual styling and presentation only. Preserve website copy, route order, links, downloads and CTA destinations. Preserve Studio state, all creation actions, inspector/editor features, media coordinates and storage isolation.
+- Scope follows the request: a styling-only change preserves copy, route order, links, downloads and CTA destinations. Authorized product/content work can evolve them using the established page patterns below. Every change preserves Studio state, creation actions, inspector/editor features, media coordinates and storage isolation unless a change to that behavior is explicitly requested.
 
 
 ## Content centers and spacing — 1 October 2026

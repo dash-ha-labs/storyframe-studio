@@ -1,102 +1,19 @@
 import React from 'react';
 import { FeatureTemplate } from '../templates';
-import Suite from '@storyframe/studio/src/Suite.tsx';
-import {
-  Hero,
-  AppCta,
-  FeatureZigzag,
-  FeatureGrid,
-  SectionHeading,
-  APP_SIGNUP_URL,
-} from '@storyframe/ui';
-import { Link2, Palette, Monitor, Smartphone, Wand2, RefreshCw } from 'lucide-react';
+import { WorkflowPreview } from '../WorkflowPreview';
+import { Hero, AppCta, FeatureZigzag, APP_SIGNUP_URL } from '@storyframe/ui';
+export function FeaturesPage({onNavigate}:{onNavigate?:(path:string)=>void}) {
+ return <FeatureTemplate onNavigate={onNavigate}>
+  <Hero title="Your idea. A video you can keep editing." subtitle="Start with your brand and content. Plan with storyboards when you need them. Build and refine every scene in the visual editor." primaryCta={{label:'Sign up free',href:APP_SIGNUP_URL}} secondaryCta={{label:'Try the studio',href:'/#studio-demo'}}/>
+  <p className="sf-signup-note">Free. No credit card required.</p>
+  <div id="brand"><FeatureZigzag items={[{title:'Keep your videos on brand',description:'Save your colours, typeface and voice with the project. Import a brand reference, review it, and reuse it across your creations.',visual:<WorkflowPreview kind="brand"/>}]} /></div>
+  <div id="storyboards"><FeatureZigzag items={[{flip:true,title:'Plan the story before the edit',description:'Arrange scenes, add references and set durations. Start with a storyboard or go straight to the timeline. Storyboards and videos remain independently editable.',visual:<WorkflowPreview kind="storyboard"/>}]} /></div>
+  <div id="media"><FeatureZigzag items={[{title:'Use the content you already have',description:'Upload screenshots, images and recordings. Trim clips, split scenes, add captions and change your video format. Undo an edit whenever you need.',visual:<WorkflowPreview kind="media"/>}]} /></div>
 
-export function FeaturesPage({ onNavigate }: { onNavigate?: (path: string) => void }) {
-  const embed = (
-    <div className="app-embed">
-      <Suite />
-    </div>
-  );
-
-  return (
-    <FeatureTemplate onNavigate={onNavigate} embed={embed}>
-      <Hero
-        eyebrow="Features"
-        title="Everything between brand and final cut."
-        subtitle="Storyframe covers the full pipeline: capture a brand, storyboard the story, render the video — without leaving your brand system."
-        primaryCta={{ label: 'Start creating free', href: APP_SIGNUP_URL }}
-        secondaryCta={{ label: 'Browse templates', href: '/templates' }}
-      />
-
-      <SectionHeading
-        eyebrow="How it works"
-        title="From brand to video in three moves"
-        subtitle="Each step feeds the next. Change the brand once and every downstream asset follows."
-      />
-      <FeatureZigzag
-        items={[
-          {
-            title: 'Brand design that sticks',
-            description:
-              'Point Storyframe at a URL and it extracts a working brand — colors, fonts, identity. Or define one by hand. The brand travels with every project, storyboard and render.',
-            visual: (
-              <div style={{ padding: 'var(--sf-space-8)', display: 'grid', placeItems: 'center' }}>
-                <Palette size={64} color="var(--sf-color-accent)" />
-              </div>
-            ),
-          },
-          {
-            flip: true,
-            title: 'Storyboards mapped to segments',
-            description:
-              'Plan shots frame by frame with reorderable frames, per-frame durations and notes. The storyboard is the source of truth for the final video, not a side document.',
-            visual: (
-              <div style={{ padding: 'var(--sf-space-8)', display: 'grid', placeItems: 'center' }}>
-                <Monitor size={64} color="var(--sf-color-accent)" />
-              </div>
-            ),
-          },
-          {
-            title: 'Render for every platform',
-            description:
-              'Export web and mobile cuts from the same storyboard. Brand assets are composited at render time, so nothing drifts out of date.',
-            visual: (
-              <div style={{ padding: 'var(--sf-space-8)', display: 'grid', placeItems: 'center' }}>
-                <Smartphone size={64} color="var(--sf-color-accent)" />
-              </div>
-            ),
-          },
-        ]}
-      />
-
-      <SectionHeading
-        eyebrow="Under the hood"
-        title="Capabilities professionals expect"
-      />
-      <FeatureGrid
-        items={[
-          {
-            icon: <Link2 size={18} />,
-            title: 'Brand import from URL',
-            description: 'Extracts palette, typography and identity from any public site in seconds.',
-          },
-          {
-            icon: <RefreshCw size={18} />,
-            title: 'Real-time asset sync',
-            description: 'Update a brand once; every storyboard, creation and export reflects it.',
-          },
-          {
-            icon: <Wand2 size={18} />,
-            title: 'Assisted creation',
-            description: 'Draft copy, structure shots and generate storyboards from a short brief.',
-          },
-        ]}
-      />
-
-      <AppCta
-        title="See your brand in the flow"
-        subtitle="Open Storyframe Studio — import a brand and storyboard your first video today."
-      />
-    </FeatureTemplate>
-  );
+  <section className="home-section" id="ai"><div className="collection-heading"><h2>AI creation, with creative control.</h2></div><div className="feature-collection sf-mkt-grid">
+   <article className="feature-card"><WorkflowPreview kind="generate"/><div className="card-heading"><h3>Generate and refine scenes</h3></div><p>Brainstorm with AI, generate scene variations and keep every take. Find royalty-free images and audio in the same workflow.</p></article>
+   <article className="feature-card"><WorkflowPreview kind="mockup"/><div className="card-heading"><h3>Turn screenshots into phone mockups</h3></div><p>Frame your real app screens in editable phone scenes, then combine them with your recordings and generated content.</p></article>
+  </div></section>
+  <AppCta title="Start your first video project." subtitle="Your brand, screenshots and recordings. One place to build the video."/>
+ </FeatureTemplate>;
 }

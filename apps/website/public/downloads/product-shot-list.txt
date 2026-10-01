@@ -1,0 +1,12 @@
+STORYFRAME / PRODUCT DEMO SHOT LIST
+
+[ ] Product name or opening title
+[ ] Starting screen showing the problem
+[ ] Cursor or finger at the real control
+[ ] The action, recorded without interruption
+[ ] The result held long enough to read
+[ ] Close-up of the detail that matters
+[ ] One useful caption in plain language
+[ ] Closing frame with one next step
+
+Record only behaviour your product supports. Label fixture data. Keep screen captures exact. Save original footage alongside your editable project; a project JSON does not bundle media.

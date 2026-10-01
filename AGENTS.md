@@ -22,3 +22,17 @@
 - Never claim MCP is connected, a Figma file is parsed, or another generator is working because a UI exists. Retain clear integration status.
 - No installed package in a founder's codebase. Future MCP requests should run the bounded local capture and require review of candidates before adopting a brand.
 - Never copy Kurutu sample assets into another product's creation via a template. Keep projects isolated.
+
+## Shared design language and UI reviews
+
+- Read [DESIGN-LANGUAGE.md](DESIGN-LANGUAGE.md) and [design/REVIEW-CHECKLIST.md](design/REVIEW-CHECKLIST.md) before any UI decision or review. Future UI must be compatible with these rules; update the shared pattern and affected consumers together when deliberately evolving it.
+- Keep the Storyframe name. Reference explorations guide taste, never overwrite the source app's density, ownership or feature contract.
+- Marketing uses expressive light surfaces; the app keeps its compact dark workspace. Share identity tokens and action styling, not page spacing.
+- Website product demos must reuse the actual app through StudioDemo with isolated sample state/media. Never mount personal workspace storage directly in a marketing page.
+- Signup is free with no credit card. Any wait applies to free AI generation requests, not signup. Marketing describes the intended launch product; track missing AI/rendering as internal release dependencies. Actual app actions and completion reports must remain accurate.
+- Give every page personality with concrete product content, app UI wireframes and restrained motion. Preserve reduced-motion behaviour, feature access and exact captured product UI.
+- Record visual/interaction evidence in QA.md, including known limitations; an app embed or CTA alone does not prove export or signup end-to-end.
+
+- Preserve the revised product-first hierarchy: concise hero, prominent real app, short visual stories, substantial grouped footer. Do not reintroduce a decorative hero image, repeated text grids, thin navigation, full-width border tags, forced heading breaks or centered mobile headings inside left-aligned layouts.
+
+- Use Inter for website typography, a light grouped footer and visual feature cards. Reference Arcade for proportions, not product claims or branding. Never introduce unrelated lifestyle/product photography or vague motivational slogans.

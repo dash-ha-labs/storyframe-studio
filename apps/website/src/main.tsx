@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 import '@storyframe/tokens/tokens.css';
 import '@storyframe/ui/ui.css';
+import './website.css';
 
 const container = document.getElementById('root');
 if (container) {

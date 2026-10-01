@@ -37,3 +37,19 @@ No Kanban connector is available in this session; this file records the local ta
 - Generation adapters and real output workflows for the draft-only tools.
 - Workspace backup restore and portable packages including media.
 - Analytics connectors and keyword intelligence (never synthetic metrics).
+
+## Shared design language — 1 October 2026
+
+- Pulled main with fast-forward-only; checkout already current.
+- Applied shared cobalt actions, readable light marketing tokens and subtle app accents; retained compact dark app geometry and features.
+- Built expressive homepage with working app demo, feature workflows, app UI wireframes, short motion and free/no-card signup copy.
+- Extended design to features, templates, gallery, guides, resources, blog, roadmap and status layouts. Labelled illustrative concepts/status and unconnected features honestly.
+- Replaced direct marketing Suite mounts with isolated session-only demos; removed extraneous demo wrapper labels/actions.
+- Added DESIGN-LANGUAGE.md and design/REVIEW-CHECKLIST.md; linked rules from AGENTS.md, README and suite architecture.
+- Regression checks and visual review are recorded in QA.md.
+
+Release follow-ups: real signup/account flow at the existing studio URL; AI generation queue; encoded video rendering; portable media packages. Free AI queue policy is product intent, not connected behaviour. No push or deployment performed.
+
+## Launch-facing copy — 1 October 2026
+
+Removed development disclaimers from website copy at the user’s direction. Before public launch, complete and verify signup, AI scene generation and brainstorming, phone mockups, royalty-free image/audio discovery, template creation and final video rendering. Replace gallery examples with reviewed outputs where appropriate; connect status to measured telemetry; publish approved legal policies. These remain implementation/release dependencies, not claims of completed backend work. Actual editor save/export/session messages remain accurate.

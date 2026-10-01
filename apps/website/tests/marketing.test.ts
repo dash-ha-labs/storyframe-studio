@@ -29,7 +29,7 @@ test('Features page renders zig-zag layout with alternating rows', () => {
   assert.ok(html.includes('sf-mkt-hero'), 'hero missing');
   assert.ok(html.includes('sf-mkt-zigzag-flip'), 'alternating zig-zag row missing');
   assert.ok(html.includes('sf-mkt-grid'), 'capability grid missing');
-  assert.ok(html.includes('app-embed'), 'app embed missing');
+  assert.ok(!html.includes('<iframe'), 'secondary pages must not mount the live editor');
   assert.ok(html.includes(STUDIO_URL), 'studio CTA missing');
 });
 
@@ -37,7 +37,7 @@ test('Gallery page renders filterable showcase grid', () => {
   const html = renderToString(React.createElement(GalleryPage));
   assert.ok(html.includes('sf-mkt-filter'), 'filter tags missing');
   assert.ok(html.includes('sf-gallery-card'), 'showcase cards missing');
-  assert.ok(html.includes('app-embed'), 'app embed missing');
+  assert.ok(!html.includes('<iframe'), 'secondary pages must not mount the live editor');
   assert.ok(html.includes(STUDIO_URL), 'studio CTA missing');
 });
 
@@ -46,7 +46,7 @@ test('Templates page renders categorized grid with CTAs to studio', () => {
   assert.ok(html.includes('sf-mkt-hero'), 'hero missing');
   assert.ok(html.includes('Explainer Video'), 'category missing');
   assert.ok(html.includes('sf-mkt-grid'), 'template grid missing');
-  assert.ok(html.includes('app-embed'), 'app embed missing');
+  assert.ok(!html.includes('<iframe'), 'secondary pages must not mount the live editor');
   assert.ok(html.includes(STUDIO_URL), 'studio CTA missing');
 });
 

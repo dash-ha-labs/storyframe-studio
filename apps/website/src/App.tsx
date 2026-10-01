@@ -8,16 +8,8 @@ import { GalleryPage } from './pages/GalleryPage';
 import { TemplatesPage } from './pages/TemplatesPage';
 import { ResourceCenterPage } from './pages/ResourceCenterPage';
 import { GuidesPage } from './pages/GuidesPage';
-import { LandingTemplate } from './templates';
-import Suite from '@storyframe/studio/src/Suite.tsx';
-import {
-  Hero,
-  AppCta,
-  FeatureGrid,
-  SectionHeading,
-  APP_SIGNUP_URL,
-} from '@storyframe/ui';
-import { Clapperboard, Palette, LayoutGrid } from 'lucide-react';
+import { HomePage } from './HomePage';
+import { LegalPage } from './pages/LegalPage';
 
 export function App() {
   const [currentPath, setCurrentPath] = useState<string>(() => {
@@ -37,7 +29,10 @@ export function App() {
       window.history.pushState({}, '', path);
     }
     setCurrentPath(path);
+    window.scrollTo(0, 0);
   };
+
+  if (currentPath === '/legal') return <LegalPage onNavigate={navigate} />;
 
   // Route matching
   if (currentPath === '/roadmap') {
@@ -82,60 +77,7 @@ export function App() {
     return <GuidesPage onNavigate={navigate} />;
   }
 
-  // Home / Landing: value prop, proof, conversion.
-  return (
-    <LandingTemplate onNavigate={navigate}>
-      <Hero
-        eyebrow="Storyframe Studio"
-        title="Brand-consistent video, every frame."
-        subtitle="Storyframe keeps your brand assets inside the editing flow — storyboards, brand design, and video studio working from one source of truth."
-        primaryCta={{ label: 'Start creating free', href: APP_SIGNUP_URL }}
-        secondaryCta={{ label: 'See it in action', href: '/features' }}
-      />
-
-      <SectionHeading
-        eyebrow="Why Storyframe"
-        title="Everything your brand needs to ship video"
-        subtitle="One workspace for the whole pipeline — no more copy-pasting hex codes or hunting for the latest logo."
-      />
-      <FeatureGrid
-        items={[
-          {
-            icon: <Palette size={18} />,
-            title: 'Brand Design',
-            description:
-              'Import a brand from a URL or define one by hand. Colors, fonts and identity stay attached to every project.',
-          },
-          {
-            icon: <LayoutGrid size={18} />,
-            title: 'Storyboards',
-            description:
-              'Plan shots frame by frame with reorderable frames, durations and notes — all mapped to final video segments.',
-          },
-          {
-            icon: <Clapperboard size={18} />,
-            title: 'Video Studio',
-            description:
-              'Turn storyboards into finished cuts for web and mobile formats, rendered from your storyboard state.',
-          },
-        ]}
-      />
-
-      <SectionHeading
-        eyebrow="Live product"
-        title="The real studio, right here"
-        subtitle="This is the actual Storyframe app — not a screenshot. Every button below works."
-      />
-      <div className="app-embed">
-        <Suite />
-      </div>
-
-      <AppCta
-        title="Ready to make your first branded video?"
-        subtitle="Open Storyframe Studio and go from brand to storyboard to finished video in one sitting."
-      />
-    </LandingTemplate>
-  );
+  return <HomePage onNavigate={navigate} />;
 }
 
 export default App;

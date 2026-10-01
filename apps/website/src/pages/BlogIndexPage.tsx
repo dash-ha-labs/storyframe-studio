@@ -28,9 +28,10 @@ export function BlogIndexPage({
       onNavigate={onNavigate}
       header={
         <div>
-          <h1 className="sf-page-title">Storyframe Blog</h1>
+          <span className="sf-mkt-eyebrow">Storyframe Blog</span>
+          <h1 className="sf-page-title">Better product videos start here.</h1>
           <p className="sf-page-subtitle">
-            Product updates, engineering deep dives, and announcements from the Storyframe team.
+            Product video techniques, AI workflows and practical ways to show what your app can do.
           </p>
         </div>
       }

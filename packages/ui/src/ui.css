@@ -127,12 +127,12 @@
 }
 
 .sf-button-primary {
-  background: var(--sf-color-accent);
-  color: var(--sf-color-bg-app);
+  background: var(--sf-color-action);
+  color: var(--sf-color-on-action);
 }
 
 .sf-button-primary:hover {
-  background: var(--sf-color-accent-hover);
+  background: var(--sf-color-action-hover);
 }
 
 .sf-button-secondary {

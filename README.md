@@ -27,3 +27,11 @@ MCP transport, AI generation, Figma extraction, analytics connections, publishin
 Edits save in browser storage. Media is in IndexedDB, separate from metadata and undo. Workspace JSON backups do not bundle media and suite backup restore UI is not yet built. Preserve original files.
 
 See [suite architecture](SUITE-ARCHITECTURE.md), [QA](QA.md), [tasks](TASKS.md), [media provenance](MEDIA-PROVENANCE.md), and [agent instructions](AGENTS.md). Original production blueprint: `../storyframe-studio-blueprint/`.
+
+## Shared design language and website
+
+[Design language](DESIGN-LANGUAGE.md) is the implementation contract for all UI. Use the [review checklist](design/REVIEW-CHECKLIST.md) for future changes. It preserves the compact dark app while giving the website a light, focused product identity. The current core toolkit is Brand Design, Storyboards and Video Studio; older suite notes describing additional draft tools are historical.
+
+Run the website with `npm run dev --workspace=@storyframe/website -- --port 9182`. The homepage embeds `/demo.html`, built from the real app components with an illustrative sample. Its edits and imports are session-only and separate from the user's saved workspace. The actual app retains its normal local persistence.
+
+The homepage offers free signup with no credit card and an immediate interactive sample. Generation queuing applies to future free AI requests, not account access. The existing studio destination still needs a real signup flow; this work does not implement authentication or connect generation/rendering.

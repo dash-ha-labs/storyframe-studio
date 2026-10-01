@@ -95,7 +95,7 @@ test('RoadmapPage renders server-side with master RoadmapTemplate and evidence',
 test('StatusPage renders server-side with master StatusTemplate and services', () => {
   const html = renderToString(React.createElement(StatusPage));
   assert.ok(html.includes('System Status'));
-  assert.ok(html.includes('All Systems Operational'));
+  assert.ok(!html.includes('All Systems Operational'), 'synthetic uptime must not be shown as live telemetry');
   assert.ok(html.includes('Asset Sync Engine'));
   assert.ok(html.includes('Video Rendering Pipeline'));
   assert.ok(html.includes('status-page'));
@@ -105,12 +105,12 @@ test('BlogIndexPage and BlogPostPage render server-side with master templates', 
   const indexHtml = renderToString(React.createElement(BlogIndexPage));
   assert.ok(indexHtml.includes('Storyframe Blog'));
   assert.ok(indexHtml.includes('blog-index-page'));
-  assert.ok(indexHtml.includes('Introducing Structured Focus Mode'));
+  assert.ok(indexHtml.includes('Plan a product video in three scenes'));
 
   const postHtml = renderToString(
     React.createElement(BlogPostPage, { slug: 'introducing-structured-focus-mode' })
   );
   assert.ok(postHtml.includes('blog-post-page'));
-  assert.ok(postHtml.includes('Introducing Structured Focus Mode'));
-  assert.ok(postHtml.includes('The Pain of Infinite Canvas'));
+  assert.ok(postHtml.includes('Plan a product video in three scenes'));
+  assert.ok(postHtml.includes('Start with one product action'));
 });

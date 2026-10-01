@@ -36,3 +36,16 @@ Production bundle: approximately 88KB gzip JavaScript and 7KB gzip CSS (media/fo
 Not claimed: live MCP connection, Figma design parsing, AI outputs, encoded-export parity, analytics ingestion, mobile-editor coverage, portable backup restore, production performance or full accessibility conformance.
 
 Final location check: port 9180 migrated the existing Kurutu edit (13 scenes, 44 seconds), with no permanent editor rail/library. User-facing screenshots: `qa/suite-20260928/{project-overview,setup-wizard,video-workspace}.png`.
+
+## Website design adoption — 2026-10-01
+
+- Inspected arcade.software in the browser: Inter hierarchy, large UI visual areas, paired feature cards and white grouped footer. Applied those patterns to Storyframe, retaining its name and compact source editor.
+- Final build and 51 tests pass (27 app, 16 website, 8 core); diff whitespace check passes. Existing missing legacy demo-font/mask warnings remain; no Kurutu media was copied to hide them.
+- Desktop rendered inspection at 1422 CSS pixels: homepage, Features, Templates, Gallery, CTA and footer. No document horizontal overflow; feature columns measure 590px each; footer links 16px; headings use locally bundled Inter.
+- Confirmed exactly one live editor on homepage and zero iframe embeds on Features, Templates and Gallery. Regression test enforces this. Removed reset/about/larger-canvas wrapper chrome.
+- Edited the sample scene title and used Undo: restored “Introduce the product”. Earlier same-session checks covered caption editing, playback and truthful JSON export state. App top bar remained 44px in the earlier geometry check; compact app styles remain authoritative.
+- Demo initialization/privacy and media-store isolation tests pass. Generated unrelated images are archived with checksums and are not referenced in active website content.
+- Earlier responsive inspection covered a 433px CSS viewport without overflow. A final mobile override attempt did not change the hidden tab's 1422px viewport, so final mobile visual parity is not claimed; responsive CSS has been retained and revised. Override was reset.
+- No encoded film, AI generation, final signup flow, performance benchmark or subjective user approval is claimed. Signup destination remains the existing app; authentication and connected generation/rendering are release dependencies.
+
+Launch-copy follow-up: removed public development disclaimers from features, templates, gallery, guides and articles. Removed synthetic service metrics/incidents rather than presenting them as measured status. Website build and 16 website tests pass. App behavior and completion messaging remain accurate; outstanding capabilities are tracked in TASKS.md for pre-launch implementation.

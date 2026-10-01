@@ -15,9 +15,11 @@ export const tokens = {
       subtle: '#77839a',
     },
     accent: {
-      primary: '#a6b5ff',
-      hover: '#beccec',
+      primary: '#9eafff',
+      hover: '#b8c5ff',
     },
+    action: { primary: '#2142e7', hover: '#1935c4', onAction: '#ffffff' },
+    creative: { peach: '#f8e7dc', lilac: '#ece9fb', mint: '#e5f0e8' },
     status: {
       success: '#85a893',
       warning: '#dfbc97',
@@ -29,8 +31,10 @@ export const tokens = {
       strong: '#43516a',
     },
   },
+  editor: { barHeight: '44px', controlHeight: '28px' },
   typography: {
-    fontSans: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+    fontSans: '"Inter Variable", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+    fontDisplay: '"Inter Variable", system-ui, sans-serif',
     fontMono: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace',
   },
   radius: {

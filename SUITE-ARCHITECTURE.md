@@ -48,3 +48,13 @@ The video editor is a lazy chunk and unmounts when leaving the tool. Project pag
 Brand colours are read from the project when opening a video. Original screenshot pixels remain unchanged. This is not versioned brand inheritance yet; before adding team use, add brand revisions and explicit update/diff choices for existing creations.
 
 Workspace JSON is a metadata backup, not a portable media package. It currently has no suite restore UI; the per-video JSON open/save remains available. A proper portable package and restore workflow belong to the persistence milestone.
+
+## Shared website and app identity — 1 October 2026
+
+[DESIGN-LANGUAGE.md](DESIGN-LANGUAGE.md) and the [review checklist](design/REVIEW-CHECKLIST.md) govern future UI. Shared token/UI packages own identity and semantic controls. Website-specific composition stays in `apps/website/src/website.css`; compact app geometry stays in `apps/web/src/{style,suite}.css`.
+
+The homepage uses `StudioDemo`, an iframe of the dedicated Vite entry `demo.html`. It imports the real Suite and VideoEditor, the same styles and validated model, with `initialState` plus `persist=false`. Its sample metadata and media remain in memory; normal app localStorage/IndexedDB behaviour is unchanged. This also scopes keyboard listeners and app styles to the iframe document. Reloading discards the disposable demo only. Only the homepage mounts an instance. Secondary pages use focused visuals.
+
+The sample consists of original SVG app UI wireframes, not Kurutu captures. Generated images have separate provenance in `design/media-provenance.json`; all rejected generated images are retained in `design/explorations` and not shipped. No original Kurutu media was changed or copied by this design task.
+
+Current source toolkit: video and brand, plus independent Storyboards. Legacy descriptions above of logo/marketing/ASO/keyword draft tools are historical and are not advertised as current functionality.

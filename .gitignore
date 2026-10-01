@@ -6,3 +6,13 @@ public/demo/
 **/public/demo/
 qa/
 *.log
+
+# Original, lightweight website demo artwork is source, not production media.
+!apps/website/public/demo/
+apps/website/public/demo/*
+!apps/website/public/demo/*.svg
+
+# Website consumes the app-owned capture utility via Vite.
+apps/website/public/tools/
+
+!apps/website/public/demo/maker-study-v1.png

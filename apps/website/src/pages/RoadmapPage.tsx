@@ -24,9 +24,10 @@ export function RoadmapPage({
       onNavigate={onNavigate}
       header={
         <div>
-          <h1 className="sf-page-title">Public Product Roadmap</h1>
+          <span className="sf-mkt-eyebrow">Public Product Roadmap</span>
+          <h1 className="sf-page-title">What’s next for Storyframe.</h1>
           <p className="sf-page-subtitle">
-            Every feature on our roadmap is directly tied to documented user pain points from community discussions and real creator workflows.
+            Follow the ideas taking shape in Storyframe, from small improvements to bigger possibilities. Plans can change as we learn.
           </p>
         </div>
       }

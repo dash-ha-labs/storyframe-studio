@@ -35,3 +35,13 @@
 .component-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
 .component-tags span{display:inline-flex;align-items:center;gap:6px;border:1px solid #3a4355;border-radius:999px;padding:3px 9px;font-size:11px;color:#e3e9f5;background:#1d222c}
 .component-tags small{color:#99a6bf}
+
+/* Shared identity, existing compact geometry. Product artwork keeps its own brand. */
+.suite-shell{background:var(--sf-color-bg-app);color:var(--sf-color-text-primary);font-family:var(--sf-font-sans)}
+.suite-sidebar{background:var(--sf-color-bg-sidebar);border-color:var(--sf-color-border-subtle)}
+.workspace-avatar,.tool-icon.video{background:var(--sf-color-action);color:var(--sf-color-on-action);border-color:var(--sf-color-action)}
+.sidebar-item.selected,.tree-project.selected{background:var(--sf-color-selection);color:var(--sf-color-text-primary)}
+.project-nav>button.active{color:var(--sf-color-accent);border-color:var(--sf-color-accent)}
+.tool-card,.project-storyboard-card{background:var(--sf-color-bg-surface);border-color:var(--sf-color-border-subtle)}
+.tool-card:hover,.project-storyboard-card:hover{border-color:var(--sf-color-accent)}
+.page-eyebrow,.overview-intro .page-eyebrow{color:var(--sf-color-accent)}

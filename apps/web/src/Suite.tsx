@@ -4,13 +4,9 @@ import {Asset,Project} from './model';
 import {readMedia,storeMedia,downloadJson} from './storage';
 import {Brand,Creation,Platform,SourceFile,Storyboard,SuiteProject,SuiteState,ToolId,TOOLS,SUITE_KEY,blankBrand,brandFromTokens,fetchBrandFromUrl,loadSuite,makeVideo,newId,newStoryboard,parseBrandText,safeHost} from './suite-model';
 import StoryboardWorkspace from './Storyboard';
+import {ToolIcon,Dialog,PlatformBadge} from '@storyframe/ui';
 const VideoEditor=lazy(()=>import('./VideoEditor'));
 type Page='overview'|'brand'|'media'|'sources'|'performance';
-// NOTE: Retained for storyboard asset editing — icon map supports video + brand only
-const toolIcons:Record<ToolId,typeof Clapperboard>={video:Clapperboard,brand:Palette};
-function ToolIcon({tool,size=20}:{tool:ToolId;size?:number}){const Icon=toolIcons[tool];return <Icon size={size}/>;}
-function Dialog({title,children,onClose,wide=false}:{title:string;children:React.ReactNode;onClose:()=>void;wide?:boolean}){const ref=useRef<HTMLDialogElement>(null);useEffect(()=>{ref.current?.showModal();},[]);return <dialog ref={ref} className={`suite-dialog ${wide?'wide':''}`} onCancel={onClose} onClick={e=>{if(e.target===e.currentTarget)onClose();}}><div className="dialog-title"><h2>{title}</h2><button className="icon-button" aria-label="Close dialog" onClick={onClose}><X size={18}/></button></div>{children}</dialog>;}
-function PlatformBadge({platform}:{platform:Platform}){return <span className="platform-badge">{platform==='web'?<Globe size={12}/>:<Smartphone size={12}/>} {platform==='web'?'Web':'Mobile'}</span>;}
 function useLocalMedia(assets:Asset[]){const [urls,setUrls]=useState<Record<string,string>>({});useEffect(()=>{let disposed=false;const made:string[]=[];const next:Record<string,string>={};Promise.all(assets.filter(a=>a.src.startsWith('local:')).map(async a=>{try{const blob=await readMedia(a.src.slice(6));if(blob&&!disposed){const url=URL.createObjectURL(blob);made.push(url);next[a.src]=url;}}catch{}})).then(()=>{if(!disposed)setUrls(next);});return()=>{disposed=true;made.forEach(URL.revokeObjectURL);};},[assets]);return (src?:string)=>src?.startsWith('local:')?urls[src]||'':src||'';}
 export default function Suite(){
  const [state,setState]=useState<SuiteState>(loadSuite);

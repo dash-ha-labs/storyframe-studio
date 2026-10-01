@@ -1,6 +1,8 @@
 node_modules/
 dist/
+**/dist/
 .env*
 public/demo/
+**/public/demo/
 qa/
 *.log

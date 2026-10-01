@@ -184,10 +184,8 @@ export interface NavLinkItem {
 export const DEFAULT_NAV_LINKS: NavLinkItem[] = [
   { label: 'Features', href: '/features', id: 'features' },
   { label: 'Templates', href: '/templates', id: 'templates' },
-  { label: 'Gallery', href: '/gallery', id: 'gallery' },
-  { label: 'Resource Center', href: '/resources', id: 'resources' },
-  { label: 'Guides', href: '/guides', id: 'guides' },
-  { label: 'Blog', href: '/blog', id: 'blog' },
+  { label: 'Tutorials', href: '/tutorials', id: 'tutorials' },
+  { label: 'Resources', href: '/resources', id: 'resources' },
 ];
 
 export function GlobalNav({
@@ -198,7 +196,7 @@ export function GlobalNav({
   onNavigate?: (path: string) => void;
 }) {
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (onNavigate) {
+    if (onNavigate && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey && e.button === 0) {
       e.preventDefault();
       onNavigate(href);
     }
@@ -235,7 +233,7 @@ export function GlobalNav({
           size="sm"
           href={APP_SIGNUP_URL}
         >
-          Try Storyframe Studio
+          Sign up free
         </Button>
       </div>
     </nav>
@@ -244,7 +242,7 @@ export function GlobalNav({
 
 export function GlobalFooter({
   systemStatus = 'operational',
-  systemStatusText = 'All Systems Operational',
+  systemStatusText = 'Product status',
   onNavigate,
 }: {
   systemStatus?: StatusLevel;
@@ -252,7 +250,7 @@ export function GlobalFooter({
   onNavigate?: (path: string) => void;
 }) {
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (onNavigate) {
+    if (onNavigate && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey && e.button === 0) {
       e.preventDefault();
       onNavigate(href);
     }
@@ -260,23 +258,13 @@ export function GlobalFooter({
 
   return (
     <footer className="sf-footer">
-      <div className="sf-footer-inner">
-        <div className="sf-footer-links">
-          <a href="/roadmap" onClick={e => handleLinkClick(e, '/roadmap')}>Product Roadmap</a>
-          <a href="/status" onClick={e => handleLinkClick(e, '/status')}>Status Page</a>
-          <a href="/legal" onClick={e => handleLinkClick(e, '/legal')}>Legal</a>
-        </div>
-        <a
-          href="/status"
-          className="sf-footer-status"
-          style={{ textDecoration: 'none' }}
-          onClick={e => handleLinkClick(e, '/status')}
-        >
-          <StatusDot status={systemStatus} />
-          <span>{systemStatusText}</span>
-        </a>
-        <p style={{ margin: 0 }}>Storyframe © 2026. All rights reserved.</p>
+      <div className="sf-footer-main">
+        <div className="sf-footer-brand"><a href="/" onClick={e=>handleLinkClick(e,'/')}>Storyframe<span>.</span></a><p>AI-aided video creation. Built around your brand.</p></div>
+        <div className="sf-footer-column"><h2>Product</h2><a href="/features" onClick={e=>handleLinkClick(e,'/features')}>Features</a><a href="/templates" onClick={e=>handleLinkClick(e,'/templates')}>Templates</a><a href="/tutorials" onClick={e=>handleLinkClick(e,'/tutorials')}>Tutorials</a><a href="/demo.html" target="_blank" rel="noreferrer">Try the studio ↗</a></div>
+        <div className="sf-footer-column"><h2>Resources</h2><a href="/docs" onClick={e=>handleLinkClick(e,'/docs')}>Product docs</a><a href="/resources" onClick={e=>handleLinkClick(e,'/resources')}>Creative resources</a><a href="/blog" onClick={e=>handleLinkClick(e,'/blog')}>Blog</a></div>
+        <div className="sf-footer-column"><h2>Storyframe</h2><a href="/roadmap" onClick={e=>handleLinkClick(e,'/roadmap')}>Product Roadmap</a><a href="/status" onClick={e=>handleLinkClick(e,'/status')}>Status Page</a><a href="/legal" onClick={e=>handleLinkClick(e,'/legal')}>Legal</a></div>
       </div>
+      <div className="sf-footer-inner"><p>Storyframe © 2026</p><a href="/status" className="sf-footer-status" onClick={e=>handleLinkClick(e,'/status')}><span>{systemStatusText}</span></a></div>
     </footer>
   );
 }
@@ -475,7 +463,7 @@ export function Hero({
 export function AppCta({
   title,
   subtitle,
-  label = 'Try Storyframe Studio',
+  label = 'Sign up free',
   onClick,
 }: {
   title: string;
@@ -490,6 +478,7 @@ export function AppCta({
       <Button variant="primary" size="lg" href={APP_SIGNUP_URL} onClick={onClick}>
         {label}
       </Button>
+      <p className="sf-signup-note">Free. No credit card required.</p>
     </section>
   );
 }

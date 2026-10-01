@@ -6,3 +6,26 @@ public/demo/
 **/public/demo/
 qa/
 *.log
+
+# Original, lightweight website demo artwork is source, not production media.
+!apps/website/public/demo/
+apps/website/public/demo/*
+!apps/website/public/demo/*.svg
+
+# Website consumes the app-owned capture utility via Vite.
+apps/website/public/tools/
+
+!apps/website/public/demo/maker-study-v1.png
+
+# Authored template canvases; never unignore production media.
+!apps/web/public/demo/
+apps/web/public/demo/*
+!apps/web/public/demo/template-0.svg
+!apps/web/public/demo/template-1.svg
+!apps/web/public/demo/template-2.svg
+# Runtime community state and anonymous visitor signing key.
+/data/
+*.sqlite*
+*.sqlite.key
+
+apps/website/public/library-downloads/

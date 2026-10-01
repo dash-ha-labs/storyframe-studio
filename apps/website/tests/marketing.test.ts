@@ -5,7 +5,7 @@ import { renderToString } from 'react-dom/server';
 
 import App from '../src/App';
 import { FeaturesPage } from '../src/pages/FeaturesPage';
-import { GalleryPage } from '../src/pages/GalleryPage';
+import { TutorialsPage } from '../src/pages/LearningPages';
 import { TemplatesPage } from '../src/pages/TemplatesPage';
 import { APP_SIGNUP_URL, GlobalNav } from '@storyframe/ui';
 
@@ -29,24 +29,24 @@ test('Features page renders zig-zag layout with alternating rows', () => {
   assert.ok(html.includes('sf-mkt-hero'), 'hero missing');
   assert.ok(html.includes('sf-mkt-zigzag-flip'), 'alternating zig-zag row missing');
   assert.ok(html.includes('sf-mkt-grid'), 'capability grid missing');
-  assert.ok(html.includes('app-embed'), 'app embed missing');
+  assert.ok(!html.includes('<iframe'), 'secondary pages must not mount the live editor');
   assert.ok(html.includes(STUDIO_URL), 'studio CTA missing');
 });
 
-test('Gallery page renders filterable showcase grid', () => {
-  const html = renderToString(React.createElement(GalleryPage));
-  assert.ok(html.includes('sf-mkt-filter'), 'filter tags missing');
-  assert.ok(html.includes('sf-gallery-card'), 'showcase cards missing');
-  assert.ok(html.includes('app-embed'), 'app embed missing');
+test('Tutorial center links to real course lesson routes', () => {
+  const html = renderToString(React.createElement(TutorialsPage));
+  assert.ok(html.includes('course-grid'), 'filter tags missing');
+  assert.ok(html.includes('/tutorials/your-first-product-video/choose-the-story'), 'showcase cards missing');
+  assert.ok(!html.includes('<iframe'), 'secondary pages must not mount the live editor');
   assert.ok(html.includes(STUDIO_URL), 'studio CTA missing');
 });
 
 test('Templates page renders categorized grid with CTAs to studio', () => {
   const html = renderToString(React.createElement(TemplatesPage));
-  assert.ok(html.includes('sf-mkt-hero'), 'hero missing');
-  assert.ok(html.includes('Explainer Video'), 'category missing');
-  assert.ok(html.includes('sf-mkt-grid'), 'template grid missing');
-  assert.ok(html.includes('app-embed'), 'app embed missing');
+  assert.ok(html.includes('content-intro'), 'hero missing');
+  assert.ok(html.includes('Product updates'), 'category missing');
+  assert.ok(html.includes('catalog-grid'), 'template grid missing');
+  assert.ok(!html.includes('<iframe'), 'secondary pages must not mount the live editor');
   assert.ok(html.includes(STUDIO_URL), 'studio CTA missing');
 });
 

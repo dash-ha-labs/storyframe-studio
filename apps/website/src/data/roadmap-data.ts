@@ -1,3 +1,5 @@
+// Historical research snapshot. Not imported by the public roadmap.
+// Current public proposals and phase assignments live in services/community.
 import type { RoadmapItemData, RoadmapEvidence } from '@storyframe/ui';
 
 export const ROADMAP_EVIDENCE: Record<number, RoadmapEvidence> = {

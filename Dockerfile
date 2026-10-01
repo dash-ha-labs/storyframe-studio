@@ -11,8 +11,20 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-# Serve stage: static files via nginx with SPA fallback and MIME types
-FROM nginx:alpine
+# Separate website community service: no Studio workspace or app data.
+FROM node:22-alpine AS community
+WORKDIR /app
+COPY --from=build /app/services/community/ ./services/community/
+COPY --from=build /app/apps/website/dist/ ./website/
+ENV HOST=0.0.0.0 PORT=9183 COMMUNITY_DB=/data/community.sqlite WEBSITE_DIR=/app/website COOKIE_SECURE=1 TRUST_PROXY=1 COMMUNITY_ORIGINS=https://storyframe.yamu.app
+RUN mkdir /data && chown node:node /data
+USER node
+VOLUME /data
+EXPOSE 9183
+CMD ["node", "services/community/server.mjs"]
+
+# Static website pages and the Studio SPA.
+FROM nginx:alpine AS frontend
 COPY --from=build /app/apps/website/dist /usr/share/nginx/website
 COPY --from=build /app/apps/web/dist /usr/share/nginx/web
 COPY nginx.conf /etc/nginx/conf.d/default.conf

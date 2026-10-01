@@ -40,7 +40,7 @@ export function FeatureTemplate({
       <GlobalNav activeSection="features" onNavigate={onNavigate} />
       <main className="sf-main">
         {children}
-        {embed && <div className="app-embed">{embed}</div>}
+        {embed && <>{embed}</>}
       </main>
       <GlobalFooter onNavigate={onNavigate} />
     </div>
@@ -61,7 +61,7 @@ export function GalleryItemTemplate({
       <GlobalNav activeSection="gallery" onNavigate={onNavigate} />
       <main className="sf-main">
         {children}
-        {embed && <div className="app-embed">{embed}</div>}
+        {embed && <>{embed}</>}
       </main>
       <GlobalFooter onNavigate={onNavigate} />
     </div>
@@ -222,7 +222,7 @@ export function TemplateDetailTemplate({
       <GlobalNav activeSection="templates" onNavigate={onNavigate} />
       <main className="sf-main">
         {children}
-        {embed && <div className="app-embed">{embed}</div>}
+        {embed && <>{embed}</>}
       </main>
       <GlobalFooter onNavigate={onNavigate} />
     </div>

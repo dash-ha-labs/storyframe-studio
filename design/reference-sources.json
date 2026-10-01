@@ -1,0 +1,14 @@
+[
+  {
+    "path": "/Users/d/Downloads/generated-page (4).html",
+    "sha256": "1ccd9a3f7335e2ba87fe8efa5c9098cb80c86860e5d3be8e4b42fbde017c45ee",
+    "role": "App style exploration",
+    "evidence": "HTML source inspected; local file rendering blocked by browser URL policy. Not executed as application source."
+  },
+  {
+    "path": "/Users/d/Downloads/generated-page (5).html",
+    "sha256": "b0ea57be460edceb57da5a221a94f22f81ef52f9d1cf3ea189783f9bbff13b99",
+    "role": "Website style exploration",
+    "evidence": "HTML source inspected; local file rendering blocked by browser URL policy. Not executed as application source."
+  }
+]

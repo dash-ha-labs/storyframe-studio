@@ -7,6 +7,10 @@ interface StoryboardWorkspaceProps {
   onChange: (storyboard: Storyboard) => void;
   onBack: () => void;
   onDelete?: () => void;
+  projects?: {id:string;name:string;storyboardId?:string}[];
+  onAttach?: (projectId:string) => void;
+  onDetach?: (projectId:string) => void;
+  onOpenProject?: (projectId:string) => void;
 }
 
 export default function StoryboardWorkspace({

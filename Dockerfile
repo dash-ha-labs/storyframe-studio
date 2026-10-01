@@ -3,6 +3,7 @@ FROM node:22-alpine AS build
 WORKDIR /app
 COPY package*.json ./
 COPY apps/web/package*.json ./apps/web/
+COPY apps/website/package*.json ./apps/website/
 COPY packages/core/package*.json ./packages/core/
 COPY packages/tokens/package*.json ./packages/tokens/
 COPY packages/ui/package*.json ./packages/ui/

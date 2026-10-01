@@ -2,6 +2,7 @@
   "name": "@storyframe/studio",
   "version": "0.1.0",
   "private": true,
+  "exports": { "./src/*": "./src/*" },
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1 --port 9180 --strictPort",

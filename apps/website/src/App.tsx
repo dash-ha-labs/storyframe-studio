@@ -3,6 +3,9 @@ import { RoadmapPage } from './pages/RoadmapPage';
 import { StatusPage } from './pages/StatusPage';
 import { BlogIndexPage } from './pages/BlogIndexPage';
 import { BlogPostPage } from './pages/BlogPostPage';
+import { FeaturesPage } from './pages/FeaturesPage';
+import { GalleryPage } from './pages/GalleryPage';
+import { TemplatesPage } from './pages/TemplatesPage';
 import { LandingTemplate } from './templates';
 import { Card, Button, Badge } from '@storyframe/ui';
 
@@ -49,59 +52,53 @@ export function App() {
     return <BlogPostPage slug={slug} onNavigate={navigate} />;
   }
 
+  if (currentPath === '/features') {
+    return <FeaturesPage onNavigate={navigate} />;
+  }
+
+  if (currentPath === '/gallery') {
+    return <GalleryPage onNavigate={navigate} />;
+  }
+
+  if (currentPath === '/templates') {
+    return <TemplatesPage onNavigate={navigate} />;
+  }
+
   // Home / Overview landing
   return (
     <LandingTemplate onNavigate={navigate}>
       <div style={{ textAlign: 'center', margin: 'var(--sf-space-8) 0 var(--sf-space-8) 0' }}>
         <Badge variant="accent" style={{ marginBottom: 'var(--sf-space-3)' }}>
-          Storyframe Transparency
+          Storyframe
         </Badge>
         <h1 className="sf-page-title" style={{ fontSize: '42px', marginBottom: 'var(--sf-space-3)' }}>
-          Public Modules & Product Truth
+          Your Product, Everywhere
         </h1>
         <p className="sf-page-subtitle" style={{ maxWidth: '600px', margin: '0 auto var(--sf-space-6) auto' }}>
-          Explore our public product updates, user-backed roadmap, and real-time service operations.
+          Explore our features, see real creations, and start with templates.
         </p>
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'var(--sf-space-4)' }}>
-        <Card interactive onClick={() => navigate('/blog')}>
-          <Badge variant="accent" style={{ marginBottom: 'var(--sf-space-2)' }}>Blog</Badge>
+        <Card interactive onClick={() => navigate('/features')}>
           <h2 style={{ fontSize: '18px', margin: 'var(--sf-space-2) 0', color: 'var(--sf-color-text-primary)' }}>
-            Product Updates & Engineering
+            Features
           </h2>
-          <p style={{ fontSize: '13px', color: 'var(--sf-color-text-muted)', margin: '0 0 var(--sf-space-4) 0' }}>
-            Latest feature drops, technical deep-dives into our monorepo token architecture, and announcements.
-          </p>
-          <Button variant="secondary" size="sm" onClick={() => navigate('/blog')}>
-            Read the Blog →
-          </Button>
+          <Button variant="secondary" size="sm" onClick={() => navigate('/features')}>Explore →</Button>
         </Card>
 
-        <Card interactive onClick={() => navigate('/roadmap')}>
-          <Badge variant="warning" style={{ marginBottom: 'var(--sf-space-2)' }}>Roadmap</Badge>
+        <Card interactive onClick={() => navigate('/gallery')}>
           <h2 style={{ fontSize: '18px', margin: 'var(--sf-space-2) 0', color: 'var(--sf-color-text-primary)' }}>
-            Public Product Roadmap
+            Gallery
           </h2>
-          <p style={{ fontSize: '13px', color: 'var(--sf-color-text-muted)', margin: '0 0 var(--sf-space-4) 0' }}>
-            Evidence-backed priorities driven directly by creator feedback and competitive analysis.
-          </p>
-          <Button variant="secondary" size="sm" onClick={() => navigate('/roadmap')}>
-            View Roadmap →
-          </Button>
+          <Button variant="secondary" size="sm" onClick={() => navigate('/gallery')}>View Gallery →</Button>
         </Card>
 
-        <Card interactive onClick={() => navigate('/status')}>
-          <Badge variant="shipped" style={{ marginBottom: 'var(--sf-space-2)' }}>Status</Badge>
+        <Card interactive onClick={() => navigate('/templates')}>
           <h2 style={{ fontSize: '18px', margin: 'var(--sf-space-2) 0', color: 'var(--sf-color-text-primary)' }}>
-            Live System Health
+            Templates
           </h2>
-          <p style={{ fontSize: '13px', color: 'var(--sf-color-text-muted)', margin: '0 0 var(--sf-space-4) 0' }}>
-            Real-time status of Asset Sync Engine, Video Rendering Pipeline, and Studio infrastructure.
-          </p>
-          <Button variant="secondary" size="sm" onClick={() => navigate('/status')}>
-            Check Status →
-          </Button>
+          <Button variant="secondary" size="sm" onClick={() => navigate('/templates')}>Browse Templates →</Button>
         </Card>
       </div>
     </LandingTemplate>

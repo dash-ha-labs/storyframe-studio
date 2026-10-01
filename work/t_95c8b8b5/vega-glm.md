@@ -36,11 +36,21 @@ suite.css:
   (existing variant, no new CSS).
 
 ## Checks
-- `npm run build` + `npm run test` (existing suites) must pass.
-- Serve build; screenshot project overview at 1280px and 900px widths;
-  save under work/t_95c8b8b5/.
-- Not verified by me: assistive-tech run; contrast numbers above are computed,
-  visual judgment goes to Argus review.
+- `npm run build` pass; `npm run test` 8/8 pass.
+- Headless Chrome 1280x900/1400 screenshots: work/t_95c8b8b5/overview-1280.png,
+  full-page.png (committed). Strip renders 3 distinct cells (#282f3e) on
+  #181a1f; icon tiles #39466b with #b9c8ff glyphs; empty-state CTA renders as
+  .button.primary fill #a6b5ff.
+- Pixel-contrast probe (tools in ~/.hermes profile scratch, not committed):
+  label text 7.8:1, CTA 8.9:1 vs page bg.
+- Environment note: box has no system Chromium libs or fonts; verification ran
+  on the bundled Chrome-for-Testing with locally extracted .deb libs and
+  DejaVu/Liberation fonts. App copy rendered with fallback fonts in the proof
+  screenshots — glyph shapes differ from user machines, colors/geometry exact.
+
+## Revision
+Branch fix/t_95c8b8b5-foundation-visibility, commit 1ee5983, PR #9.
+
 
 ## Boundary
 User-facing visual change only. No model/render/AI behavior touched. No

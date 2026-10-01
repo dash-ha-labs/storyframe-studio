@@ -131,13 +131,17 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-
 }
 .creation-card:not(:disabled):hover, .project-card:not(:disabled):hover,
 .tool-card:not(:disabled):hover, .new-creation-card:not(:disabled):hover,
-.launcher-grid>button:not(:disabled):hover, .template-grid button:not(:disabled):hover {
+.launcher-grid>button:not(:disabled):hover, .template-grid button:not(:disabled):hover,
+.project-storyboard-card:not(:disabled):hover {
  background: var(--sf-color-card); border-color: #b8c5eb; box-shadow: var(--sf-shadow-card-hover);
 }
+.project-storyboard-card { border-left: 3px solid var(--sf-color-accent); }
+.project-storyboard-card:not(:disabled):hover { border-left-color: var(--sf-color-accent); }
 .project-foundation { border: 0; border-radius: 0; overflow: visible; gap: 22px; }
 .project-foundation>button { padding: 4px 0; border: 0; background: #fff; }
 .project-foundation>button:not(:disabled):hover { background: #fff; }
 .project-foundation>button:hover strong { color: var(--sf-color-action); }
+.project-foundation>button:hover svg { color: var(--sf-color-action); }
 .foundation-icon { background: none; color: var(--sf-color-action); }
 .project-storyboard-empty { padding: 8px 0; border: 0; border-radius: 0; }
 .platform-badge { background: none; border: 0; padding: 0; color: var(--sf-color-text-muted); }

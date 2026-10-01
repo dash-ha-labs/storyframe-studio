@@ -23,7 +23,7 @@
 .sb-card-links{display:inline-flex;align-items:center;gap:5px;font-size:12px;color:var(--sf-color-text-muted);margin-top:3px}
 .project-storyboard-panel{margin-bottom:34px}
 .project-storyboard-panel .section-heading{margin-bottom:14px}
-.project-storyboard-card{display:flex;flex-direction:column;gap:10px;align-items:flex-start;border:1px solid var(--sf-color-border);border-radius:7px;padding:16px 18px;background:var(--sf-color-bg-surface-elevated)}
+.project-storyboard-card{display:flex;flex-direction:column;gap:10px;align-items:flex-start;border:1px solid var(--sf-color-border);border-left:3px solid var(--sf-color-accent);border-radius:7px;padding:16px 18px;background:var(--sf-color-bg-surface-elevated)}.project-storyboard-card:hover{background:var(--sf-color-bg-surface-hover);border-color:#b8c5eb;border-left-color:var(--sf-color-accent)}
 .project-storyboard-empty{display:flex;flex-direction:column;gap:12px;align-items:flex-start;border:1px dashed var(--sf-color-border);border-radius:7px;padding:16px 18px}
 .project-storyboard-empty p{font-size:13px;color:var(--sf-color-text-muted);line-height:1.6;max-width:473px}.url-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:11px}
 .micro-note{font-size:13px;color:var(--sf-color-text-muted);line-height:1.6;margin:9px 0 0;max-width:495px}

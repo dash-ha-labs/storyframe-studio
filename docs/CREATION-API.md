@@ -50,7 +50,7 @@ Template schema: [validateTemplate](../services/brag/catalog.mjs). Required titl
 }
 ```
 
-The string above documents the `context` producer; send its actual object, not the literal string. `scope` is `new`, `all` or `selected`. `parentJobId` is optional. Admin may supply a fully validated `templateDraft` for preview without publishing. Normal users cannot preview private drafts.
+`templateSlug` is optional and defaults to raw brag planning (`"auto"`): the planner composes the strip dynamically from project context using the brag creative discipline (hook → reveal → highlights → close, tone directives) instead of a rigid template scene map, and the rank scaler attaches beat cues aligned to the composed scene cuts. Passing a real template slug keeps that template as optional creative direction; an unknown slug still returns 404. The string above documents the `context` producer; send its actual object, not the literal string. `scope` is `new`, `all` or `selected`. `parentJobId` is optional. Admin may supply a fully validated `templateDraft` for preview without publishing. Normal users cannot preview private drafts.
 
 Returns 202 with a durable job. Reusing the same requestId **within the same owner session** returns the original job, even if the supplied payload differs. Do not generate a fresh ID for a retry. `GET /api/jobs` lists the latest 50 owner jobs; optional `creationId` currently filters that window. `GET /api/jobs/:id` returns stage, result/error and client requestId. Foreign sessions get 404. Stages: queued → planning → ready, or failed/interrupted/canceled. Render stages: queued → validating → rendering → complete. Only `ready` plans can be applied; only `complete` render jobs have encoded output.
 

@@ -52,9 +52,7 @@ export default function AiPanel({
 }) {
   const catalog = useCatalog(),
     [template, setTemplate] = useState(
-      project.templateSlug ||
-        project.generation?.templateSlug ||
-        "saas-product-launch",
+      project.templateSlug || project.generation?.templateSlug || "auto",
     ),
     [prompt, setPrompt] = useState(""),
     [scope, setScope] = useState<AiScope>("all"),
@@ -340,12 +338,13 @@ export default function AiPanel({
         </IconButton>
       </div>
       <Field>
-        Template
+        Creative direction
         <select
-          aria-label="AI template"
+          aria-label="AI creative direction"
           value={template}
           onChange={(e) => setTemplate(e.target.value)}
         >
+          <option value="auto">Auto · plan from your project</option>
           {catalog.templates.map((t) => (
             <option key={t.slug} value={t.slug}>
               {t.title}

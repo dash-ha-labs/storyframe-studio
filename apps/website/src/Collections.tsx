@@ -1,3 +1,4 @@
+import {useCatalog} from '@storyframe/catalog/react';
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import {TEMPLATES,RESOURCES} from './data/catalog';
@@ -18,5 +19,5 @@ export function CoreFeatures() {
   {kind:'mockup' as PreviewKind,title:'Show your app in a phone',copy:'Build phone mockups around your screenshots.',href:'/features#ai'},
  ].map(item=><article className="feature-card" key={item.kind}><WorkflowPreview kind={item.kind}/><a className="card-heading" href={item.href}><h3>{item.title}</h3><ArrowUpRight size={16}/></a><p>{item.copy}</p></article>)}</div>;
 }
-export function TemplateCards() {return <div className="catalog-grid related-grid">{TEMPLATES.filter(t=>['mobile-app-debut','one-feature-announcement','homepage-hero-video'].includes(t.slug)).map(t=><TemplateCard key={t.slug} item={t}/>)}</div>;}
-export function ResourceCards() {return <div className="resource-library-grid">{RESOURCES.slice(0,3).map(item=><ResourceCard key={item.slug} item={item}/>)}</div>;}
+export function TemplateCards() {const {templates:TEMPLATES}=useCatalog();return <div className="catalog-grid related-grid">{TEMPLATES.filter(t=>t.featured).slice(0,3).map(t=><TemplateCard key={t.slug} item={t}/>)}</div>;}
+export function ResourceCards() {const {resources:RESOURCES}=useCatalog();return <div className="resource-library-grid">{RESOURCES.slice(0,3).map(item=><ResourceCard key={item.slug} item={item}/>)}</div>;}

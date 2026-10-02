@@ -22,12 +22,12 @@ Dated QA entries and archived explorations are historical evidence, not competin
 | Marketplace, learning, documentation, editorial and community layouts | `apps/website/src/content.css`, `apps/website/src/pages` | Extend the corresponding page pattern rather than giving every collection the same card grid. |
 | Studio geometry and responsive structure | `apps/web/src/style.css`, `apps/web/src/suite.css` | Preserve the compact structure, optional panels and feature access at the documented readability scale. |
 | Studio surfaces, controls and selected states | `apps/web/src/studio-ui.css` | Reuse the restrained light finish; Studio and the homepage demo consume the same file. |
-| Website content and SEO | `apps/website/src/data`, `apps/website/src/seo.ts` | Keep editorial records website-owned; add crawlable routes and appropriate metadata. |
+| Website editorial content and SEO | `apps/website/src/data`, `apps/website/src/seo.ts` | Keep editorial records website-owned; add crawlable routes and appropriate metadata. |
 | Public ideas, votes and roadmap decisions | `services/community` | Keep public records in the separate website service/database; votes do not schedule delivery. |
-| Website-to-Studio handoff | `apps/website/src/data/handoff.ts`, `packages/core/src/starter.ts`, `apps/web/src/StarterImport.tsx` | Transfer only bounded validated starter data, review the import and create independent artifacts. |
+| Website-to-Studio handoff | `apps/website/src/data/handoff.ts`, `packages/core/src/starter.ts`, `apps/web/src/StarterImport.tsx` | Resolve template slugs from the public catalog; validate starter data and create independent private artifacts without overwriting existing work. |
 | Editing, project ownership and persistence | `apps/web/src/model.ts`, `apps/web/src/suite-model.ts`, `apps/web/src/storage.ts`, `packages/core` | UI work must preserve behavior and existing data; never merge website storage into Studio. |
 
-Do not import website styles or catalogs into the app. The homepage demo reuses actual Studio source with isolated fixture state and media; it never reads a personal workspace. Project brand colors and captured UI belong to that project, not to interface tokens.
+Do not import website layout styles or editorial articles/lessons into the app. Shared public catalog records are deliberately consumed by both app and website. The homepage demo reuses actual Studio source with isolated fixture state and media; it never reads a personal workspace. Project brand colors and captured UI belong to that project, not to interface tokens.
 
 ## Implement a change
 
@@ -35,7 +35,7 @@ Do not import website styles or catalogs into the app. The homepage demo reuses 
 2. **Choose the pattern and owner.** Reuse the corresponding shared control or page layout. Add a token only for a reusable semantic role. Keep website spacing distinct from compact Studio geometry.
 3. **Make the content concrete.** Explain video-making tasks directly. Use concise labels and type-specific actions. Personality comes from relevant product content, useful previews, deliberate color and restrained motion. Avoid generic slogans, unrelated photography, repetitive text grids and decorative controls.
 4. **Implement all affected states.** Keep readable type, white content cards, visible boundaries and keyboard focus. Do not reintroduce dark blocks, gray card fills, saturated navigation pills, full-width outline tags or arbitrary heading breaks. Keep phone headings aligned with the content below.
-5. **Preserve the product.** Do not remove features to fit a design. Keep media coordinates, project-owned content and save/edit behavior unchanged during styling. New template/resource imports must preserve existing brands, creations and media.
+5. **Preserve capabilities and data; replace superseded UI.** PRODUCT.md defines the intended workflow. Do not preserve a rejected old screen because it already exists, or redesign customer flows to suit an admin task. Keep media coordinates, project-owned content and save/edit behavior unchanged during styling. New template/resource imports must preserve existing brands, creations and media.
 6. **Verify the actual result.** Follow the checklist below and record relevant evidence. Update rules in the same change if the shared language deliberately evolves.
 
 ## Choose the right page pattern
@@ -70,3 +70,9 @@ Record observed evidence and limitations in [QA.md](../QA.md); keep missing capa
 - **Design decision:** existing rule followed, or the deliberate evolution and updated consumers/docs.
 
 Reviewers should request correction for undocumented visual drift, inconsistent controls, lost features or mixed website/app data. Passing tests does not establish subjective approval. Commit/push/deployment authorization follows AGENTS.md and the user's instructions; this guide creates no extra approval requirement.
+
+## Admin and AI implementation boundary
+
+Use the customer design system in admin, never make admin the customer design baseline. Inspect existing controls before introducing anything. `packages/ui` owns buttons, icon actions, fields, badges and dialogs; use its Studio variants and document any genuine missing variant there. `workspace-layout.css` arranges the admin page only; `composition-preview.css` owns the reusable frame fitting. No page-local control skins or global button/input overrides.
+
+Before handing off, verify every input is styled, linked buttons have no underline, equal-role actions have equal heights, groups have intentional separation, and 16:9 / 9:16 / 1:1 previews fit without cropping. A separate zoom action must not change document layout. Check generated and manual edits, save, undo and existing project navigation after any shared change. Remove superseded local controls/styles in the same change and list exactly what changed.

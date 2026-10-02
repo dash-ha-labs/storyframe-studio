@@ -702,3 +702,14 @@
   background: var(--sf-color-bg-surface-elevated);
   border-bottom: 1px solid var(--sf-color-border-subtle);
 }
+
+/* Studio variants extend the shared controls, not page-specific overrides. */
+.sf-button-studio { min-height:36px; padding:8px 12px; font-size:14px; line-height:18px; border-radius:6px; }
+.sf-button:disabled { cursor:not-allowed; opacity:.45; }
+.sf-button-subtle[aria-pressed="true"], .sf-icon-button.is-active { color:var(--sf-color-action); background:transparent; }
+.sf-icon-button { width:32px; height:32px; min-height:32px; padding:6px; }
+.sf-field { display:flex; flex-direction:column; gap:8px; min-width:0; font-size:14px; line-height:1.5; color:var(--sf-color-text-secondary); }
+.sf-field input:not([type="checkbox"]):not([type="range"]), .sf-field textarea, .sf-field select { width:100%; min-height:36px; border:1px solid var(--sf-color-border); border-radius:6px; padding:8px 10px; background:var(--sf-color-bg-surface); color:var(--sf-color-text-primary); font:inherit; line-height:1.5; }
+.sf-field textarea { resize:vertical; }
+.sf-field input:disabled { color:var(--sf-color-text-muted); }
+.sf-field input:focus-visible, .sf-field textarea:focus-visible, .sf-field select:focus-visible, .sf-button:focus-visible { outline:2px solid var(--sf-color-action); outline-offset:2px; }

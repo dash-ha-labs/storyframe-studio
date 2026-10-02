@@ -143,35 +143,20 @@ export function Card({
   );
 }
 
-export function Button({
-  variant = 'primary',
-  size = 'md',
-  href,
-  onClick,
-  children,
-  className = '',
-}: {
+export type ButtonProps = Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'size'> & {
   variant?: 'primary' | 'secondary' | 'subtle';
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'sm' | 'md' | 'lg' | 'studio';
   href?: string;
-  onClick?: () => void;
-  children: React.ReactNode;
-  className?: string;
-}) {
-  const cls = `sf-button sf-button-${variant} sf-button-${size} ${className}`.trim();
-  if (href) {
-    return (
-      <a href={href} className={cls} onClick={onClick}>
-        {children}
-      </a>
-    );
-  }
-  return (
-    <button type="button" className={cls} onClick={onClick}>
-      {children}
-    </button>
-  );
+};
+export function Button({variant='primary',size='md',href,children,className='',type='button',...props}:ButtonProps) {
+  const cls=`sf-button sf-button-${variant} sf-button-${size} ${className}`.trim();
+  if(href)return <a href={href} className={cls} onClick={props.onClick as unknown as React.MouseEventHandler<HTMLAnchorElement>} aria-label={props['aria-label']}>{children}</a>;
+  return <button type={type} className={cls} {...props}>{children}</button>;
 }
+
+// Shared compact controls for Studio and administration; never restyle per page.
+export function Field({children,className='',...props}:React.LabelHTMLAttributes<HTMLLabelElement>){return <label className={`sf-field ${className}`.trim()} {...props}>{children}</label>}
+export function IconButton({label,children,active=false,className='',...props}:React.ButtonHTMLAttributes<HTMLButtonElement>&{label:string;active?:boolean}){return <Button variant="subtle" size="studio" className={`sf-icon-button ${active?'is-active':''} ${className}`} aria-label={label} title={label} {...props}>{children}</Button>}
 
 /* Global Shared Chrome */
 

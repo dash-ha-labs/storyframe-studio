@@ -1,3 +1,19 @@
+# Current verification — 2 October 2026
+
+This section supersedes older capability statements below. Product intent: [PRODUCT](PRODUCT.md). Remaining acceptance work: [HANDOFF](docs/HANDOFF.md), [TASKS](TASKS.md).
+
+- `npm test`: **69 passed**, zero failed (27 Studio, 21 website, 14 canonical core, 7 service/community). Includes scoped edits, locked/unrelated scene preservation, foreign/duplicate target rejection, typography duration, server ownership/idempotency, restart without retry, admin revisions/publication/archive and existing manual model/import tests.
+- `npm run build`: passed, including type checks and 178 prerendered website pages. Legacy demo font/mask warnings remain; source media is not bundled in a clean clone.
+- `git diff --check`: passed. Active local Markdown documentation links checked and resolved.
+- Browser: admin at 974×1042. Shared action buttons measured **36px**, **0 underlined action labels**, **no horizontal overflow**, composition frame entirely contained in its allocated preview. Verified after replacing the initial duplicated admin skin with shared controls and focused editing sections. This is observed layout evidence, not user acceptance of visual quality.
+- Browser: existing customer project/editor opened; AI panel, template selection, timeline, inspector and transport remain reachable. Selecting “A very long list” changed AI scope to **1 selected scene** and preserved the 44-second/13-scene timeline. No AI request or timeline content mutation performed in this browser check. Historical source media is missing locally and is reported as unavailable, not replaced with fabricated imagery.
+- Offline render: `node --import tsx work/ai-creation/verify-render.mjs` produced a four-second two-scene fixture through Hyperframes check → render → FFprobe → poster. Output `data/render-verification/fd6a989c-fb9d-4248-98e3-5a950b793fa8/video.mp4`, 175673 bytes, SHA-256 `f4ad3dd02f744c784e4475640b4acc809aef8ce883a0cb1ca62e50935f449f8b`. Originals/manifests retained locally. **Technical smoke evidence only**: no full subjective watch/listen, audio mix review, legacy parity or performance claim.
+- No live model/provider calls or paid generation tests. Service tests inject an offline provider. Local review service uses an empty provider key and loopback-only local admin.
+
+Not verified: full browser auto-apply/review/restore/reload recovery scenarios; actual model quality; MP4 download from editor; imported-video/audio encoded parity; real signup/accounts; example reuse UI; Docker deployment. Phone viewport override did not apply to the existing tab, so mobile visual verification remains pending. See the ordered checks in TASKS rather than treating a working admin page as complete product delivery.
+
+## Earlier QA history (historical evidence)
+
 # UI milestone verification — 2026-09-28
 
 ## Passed

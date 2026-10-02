@@ -29,3 +29,5 @@ apps/web/public/demo/*
 *.sqlite.key
 
 apps/website/public/library-downloads/
+
+!apps/web/public/demo/brand-canvas.svg

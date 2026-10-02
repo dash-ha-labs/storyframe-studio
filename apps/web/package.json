@@ -2,7 +2,9 @@
   "name": "@storyframe/studio",
   "version": "0.1.0",
   "private": true,
-  "exports": { "./src/*": "./src/*" },
+  "exports": {
+    "./src/*": "./src/*"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1 --port 9180 --strictPort",
@@ -16,7 +18,9 @@
     "@storyframe/ui": "*",
     "lucide-react": "^0.468.0",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "@storyframe/catalog": "*",
+    "@storyframe/composition": "*"
   },
   "devDependencies": {
     "@types/react": "^19.1.0",

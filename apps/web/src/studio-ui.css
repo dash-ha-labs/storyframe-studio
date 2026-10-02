@@ -16,7 +16,6 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-
 .suite-dialog::backdrop, .modal::backdrop { background: #182b4e38; }
 .app-menu>button { border-radius: 5px; }
 .app-menu>button svg { color: var(--sf-color-text-muted); }
-.assistant-trigger { border-color: transparent; background: transparent; box-shadow: none; }
 .app-project, .suite-breadcrumb.current, .crumb-current { color: var(--sf-color-text-primary); }
 .save-indicator, .local-state, .menu-brand>span { color: var(--sf-color-text-muted); }
 .local-state>span, .live-dot { background: var(--sf-color-success); }
@@ -37,8 +36,7 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-
 .inspector-section h3, .brand-content h3, .panel-heading h2 { color: var(--sf-color-text-primary); font-weight: 600; }
 .inspector-section { border-color: var(--sf-color-border-subtle); }
 .scene-title-input { letter-spacing: -.2px; }
-.number-field, .inspector textarea, .modal textarea, .modal>input,
-.suite-field input, .suite-field textarea, .suite-field select, .settings-section>textarea {
+.number-field, .inspector textarea, .modal textarea, .modal>input, .suite-field input, .suite-field textarea, .suite-field select, .settings-section>textarea {
   border-color: var(--sf-color-border); border-radius: 6px; background: #fff; color: var(--sf-color-text-primary);
 }
 .suite-field { color: var(--sf-color-text-secondary); }
@@ -100,7 +98,7 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-
 .storyboard-link-state, .brand-found { color: #26704c; background: #eff8f2; border-color: #d5e8dc; }
 .danger, .text-danger, .form-error { color: #b33243; }
 .text-danger:hover { background: #fff0f1; color: #9b2233; }
-.format-options button.selected, .platform-options>button.selected, .mode-cards button.selected { background: #f5f7ff; border-color: #b6c5f7; color: #182b4e; }
+.format-options button.selected, .platform-options>button.selected { background: #f5f7ff; border-color: #b6c5f7; color: #182b4e; }
 .wizard-steps>div.active, .wizard-steps>div.complete { color: #2142e7; }
 .wizard-steps>div.active>span { background: #2142e7; border-color: #2142e7; color: #fff; }
 .selected>.option-check { background: #2142e7; color: #fff; }
@@ -120,19 +118,13 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-
 }
 
 /* White content surfaces: reference-led hierarchy, never a gray card fill. */
-.source-app-card, .source-file, .metric-grid>div, .mcp-details,
-.empty-creations, .empty-folder, .project-storyboard-card, .storyboard-links,
-.draft-context, .brand-rule, .music-card, .format-options button,
-.platform-options>button, .launcher-grid>button, .mode-cards button, .template-grid button {
+.source-app-card, .source-file, .metric-grid>div, .mcp-details, .empty-creations, .empty-folder, .project-storyboard-card, .storyboard-links, .draft-context, .brand-rule, .music-card, .format-options button, .platform-options>button, .launcher-grid>button {
  background: var(--sf-color-card); border-color: var(--sf-color-card-border);
 }
 .creation-card, .project-card, .frame-card, .tool-card, .new-creation-card {
  background: var(--sf-color-card); border-color: var(--sf-color-card-border);
 }
-.creation-card:not(:disabled):hover, .project-card:not(:disabled):hover,
-.tool-card:not(:disabled):hover, .new-creation-card:not(:disabled):hover,
-.launcher-grid>button:not(:disabled):hover, .template-grid button:not(:disabled):hover,
-.project-storyboard-card:not(:disabled):hover {
+.creation-card:not(:disabled):hover, .project-card:not(:disabled):hover, .tool-card:not(:disabled):hover, .new-creation-card:not(:disabled):hover, .launcher-grid>button:not(:disabled):hover, .project-storyboard-card:not(:disabled):hover {
  background: var(--sf-color-card); border-color: #b8c5eb; box-shadow: var(--sf-shadow-card-hover);
 }
 .project-storyboard-card { border-left: 3px solid var(--sf-color-accent); }

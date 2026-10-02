@@ -26,7 +26,7 @@ Required companion to [DESIGN-LANGUAGE.md](../DESIGN-LANGUAGE.md) and the [imple
 - For executable changes, run `npm run build` and `npm test`. For documentation-only changes, check local links, current source ownership, rule consistency and `git diff --check`; no new runtime evidence is implied. Record failures and material pre-existing limitations rather than hiding them.
 - Reject stretched full-width badges, unnecessary hard line breaks, thin navigation, faint or dark marketing footers and mobile headings that become centered in a left-aligned layout. Inspect desktop and phone widths. Check no page overflow, readable headings, visible actions and clean stacking. Do not infer mobile editing parity from a responsive homepage.
 - Confirm keyboard focus is visible. Check menus, links and relevant dialogs. Decorative elements must not receive focus.
-- In the demo: edit a scene/caption, undo, play/pause, switch project pages and reload the disposable sample. Verify export describes JSON and unconnected video rendering accurately.
+- In the demo: edit a scene/caption, undo, play/pause, switch project pages and reload the disposable sample. Verify export describes JSON and the actual video-render integration status accurately.
 - Inspect the actual toolbar height and confirm no feature was removed to make room for branding.
 - Check images load and no invented customer proof or synthetic service telemetry is presented as measured evidence.
 - Check links point to real destinations. A CTA link alone is not a working signup flow; verify that flow separately before claiming launch readiness.
@@ -56,10 +56,19 @@ State: the reused pattern and shared owner, any new pattern and reason, behaviou
 ## Content centers, data boundaries and rhythm
 
 - [ ] Major section gaps follow shared spacing tokens; headings and filters remain attached to their content; footer spacing is not doubled.
-- [ ] Website catalogs, articles, lessons and community records stay out of app-owned data and bundles. Only validated starter contracts cross into Studio.
+- [ ] Public catalog records are shared intentionally; private work never appears in them. Editorial articles/lessons and community state remain separate. Template links resolve the same published record used by Studio.
 - [ ] Template facets, sorting, page state, empty results and detail links work. Resource downloads use the right format and label.
 - [ ] Starter imports create independent videos/boards/projects; prior creations, brands and product media remain intact; invalid imports explain the error.
 - [ ] Course navigation has real lesson URLs; missing videos use the authorized placeholder, with no fake playback or video schema.
 - [ ] Documentation works on phones, with reachable section navigation and readable articles. Blog artwork does not overflow.
 - [ ] Community votes persist on the service, can be removed and remain unique per signed visitor. No fabricated vote counts or automatic phase changes.
 - [ ] New content routes have rendered HTML, unique metadata, appropriate canonical/schema entries and a sitemap entry. Unknown routes return a production 404.
+
+## Shared controls and contextual layouts
+
+- [ ] Admin uses the existing design system and task-specific layout; customer flow was not changed merely to imitate admin.
+- [ ] Buttons, fields, badges and dialogs reuse shared components; any new variant has a use-case reason and canonical owner. No duplicate local control implementation or feature CSS skin overrides.
+- [ ] No unstyled inputs, underlined action labels, unexplained button-height differences, overlapping content or ambiguous selected states.
+- [ ] Preview fits its allocated space for landscape, portrait and square; separate zoom, if present, works without stretching/cropping the film.
+- [ ] Old superseded UI and its unused styles are removed, while existing edits, project ownership, locks, media, saves and undo still work.
+- [ ] AI scope, immediate-apply/review, history and pending/error states are exercised without unauthorized live provider calls.

@@ -1,0 +1,3945 @@
+{
+  "templates": [
+    {
+      "slug": "saas-product-launch",
+      "title": "SaaS product launch",
+      "category": "Launches",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Clean",
+      "description": "Introduce a new workspace. Show the first useful result in your dashboard.",
+      "proof": "Show the first useful result in your dashboard",
+      "audience": "Introduce a new workspace",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Introduce a new workspace.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show the first useful result in your dashboard.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "blue",
+      "featured": true
+    },
+    {
+      "slug": "mobile-app-debut",
+      "title": "Mobile app debut",
+      "category": "Launches",
+      "platform": "Mobile",
+      "format": "9:16",
+      "style": "Bold",
+      "description": "Introduce an app to first-time users. Show the main action on a real phone capture.",
+      "proof": "Show the main action on a real phone capture",
+      "audience": "Introduce an app to first-time users",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Introduce an app to first-time users.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show the main action on a real phone capture.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "mint",
+      "featured": false
+    },
+    {
+      "slug": "new-website-reveal",
+      "title": "New website reveal",
+      "category": "Launches",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Editorial",
+      "description": "Announce a redesigned website. Move from the homepage to the most useful page.",
+      "proof": "Move from the homepage to the most useful page",
+      "audience": "Announce a redesigned website",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Announce a redesigned website.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Move from the homepage to the most useful page.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "peach",
+      "featured": false
+    },
+    {
+      "slug": "product-hunt-launch",
+      "title": "Product Hunt launch",
+      "category": "Launches",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Clean",
+      "description": "Give early adopters a clear reason to try. Demonstrate the differentiating workflow.",
+      "proof": "Demonstrate the differentiating workflow",
+      "audience": "Give early adopters a clear reason to try",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Give early adopters a clear reason to try.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Demonstrate the differentiating workflow.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "lilac",
+      "featured": false
+    },
+    {
+      "slug": "beta-invitation",
+      "title": "Beta invitation",
+      "category": "Launches",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Bold",
+      "description": "Invite a focused group of early testers. Show the task they can test today.",
+      "proof": "Show the task they can test today",
+      "audience": "Invite a focused group of early testers",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Invite a focused group of early testers.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show the task they can test today.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "blue",
+      "featured": false
+    },
+    {
+      "slug": "founder-introduction",
+      "title": "Founder introduction",
+      "category": "Launches",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Editorial",
+      "description": "Explain why you built the product. Pair a founder introduction with a real product action.",
+      "proof": "Pair a founder introduction with a real product action",
+      "audience": "Explain why you built the product",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Explain why you built the product.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Pair a founder introduction with a real product action.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "mint",
+      "featured": false
+    },
+    {
+      "slug": "waitlist-announcement",
+      "title": "Waitlist announcement",
+      "category": "Launches",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Clean",
+      "description": "Introduce a product before general access. Show the product promise with an actual prototype screen.",
+      "proof": "Show the product promise with an actual prototype screen",
+      "audience": "Introduce a product before general access",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Introduce a product before general access.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show the product promise with an actual prototype screen.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "peach",
+      "featured": false
+    },
+    {
+      "slug": "desktop-app-launch",
+      "title": "Desktop app launch",
+      "category": "Launches",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Bold",
+      "description": "Introduce a desktop workflow. Show the app window completing one task.",
+      "proof": "Show the app window completing one task",
+      "audience": "Introduce a desktop workflow",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Introduce a desktop workflow.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show the app window completing one task.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "lilac",
+      "featured": false
+    },
+    {
+      "slug": "ai-tool-introduction",
+      "title": "AI tool introduction",
+      "category": "Launches",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Editorial",
+      "description": "Explain an AI-assisted workflow. Show an input and a reviewed output together.",
+      "proof": "Show an input and a reviewed output together",
+      "audience": "Explain an AI-assisted workflow",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Explain an AI-assisted workflow.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show an input and a reviewed output together.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "blue",
+      "featured": false
+    },
+    {
+      "slug": "marketplace-opening",
+      "title": "Marketplace opening",
+      "category": "Launches",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Clean",
+      "description": "Introduce a new place to discover products. Browse a category and open one useful listing.",
+      "proof": "Browse a category and open one useful listing",
+      "audience": "Introduce a new place to discover products",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Introduce a new place to discover products.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Browse a category and open one useful listing.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "mint",
+      "featured": false
+    },
+    {
+      "slug": "monthly-release-roundup",
+      "title": "Monthly release roundup",
+      "category": "Product updates",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Bold",
+      "description": "Keep existing users up to date. Show three meaningful changes in sequence.",
+      "proof": "Show three meaningful changes in sequence",
+      "audience": "Keep existing users up to date",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Keep existing users up to date.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show three meaningful changes in sequence.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "peach",
+      "featured": true
+    },
+    {
+      "slug": "one-feature-announcement",
+      "title": "One-feature announcement",
+      "category": "Product updates",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Editorial",
+      "description": "Make a new capability easy to understand. Compare the old task with the new control.",
+      "proof": "Compare the old task with the new control",
+      "audience": "Make a new capability easy to understand",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Make a new capability easy to understand.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Compare the old task with the new control.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "lilac",
+      "featured": false
+    },
+    {
+      "slug": "redesigned-dashboard",
+      "title": "Redesigned dashboard",
+      "category": "Product updates",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Clean",
+      "description": "Orient users after a dashboard redesign. Point out the relocated controls with real captures.",
+      "proof": "Point out the relocated controls with real captures",
+      "audience": "Orient users after a dashboard redesign",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Orient users after a dashboard redesign.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Point out the relocated controls with real captures.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "blue",
+      "featured": false
+    },
+    {
+      "slug": "integration-announcement",
+      "title": "Integration announcement",
+      "category": "Product updates",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Bold",
+      "description": "Show how two tools now work together. Follow one item from its source to its destination.",
+      "proof": "Follow one item from its source to its destination",
+      "audience": "Show how two tools now work together",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Show how two tools now work together.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Follow one item from its source to its destination.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "mint",
+      "featured": false
+    },
+    {
+      "slug": "performance-improvement",
+      "title": "Performance improvement",
+      "category": "Product updates",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Editorial",
+      "description": "Explain a measured workflow improvement. Use your own recorded timings and the same task.",
+      "proof": "Use your own recorded timings and the same task",
+      "audience": "Explain a measured workflow improvement",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Explain a measured workflow improvement.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Use your own recorded timings and the same task.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "peach",
+      "featured": false
+    },
+    {
+      "slug": "new-mobile-experience",
+      "title": "New mobile experience",
+      "category": "Product updates",
+      "platform": "Mobile",
+      "format": "9:16",
+      "style": "Clean",
+      "description": "Introduce an updated mobile workflow. Show the updated screen and its primary action.",
+      "proof": "Show the updated screen and its primary action",
+      "audience": "Introduce an updated mobile workflow",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Introduce an updated mobile workflow.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show the updated screen and its primary action.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "lilac",
+      "featured": false
+    },
+    {
+      "slug": "changelog-highlight",
+      "title": "Changelog highlight",
+      "category": "Product updates",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Bold",
+      "description": "Turn one release note into a useful visual. Pair the release note with the changed interface.",
+      "proof": "Pair the release note with the changed interface",
+      "audience": "Turn one release note into a useful visual",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Turn one release note into a useful visual.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Pair the release note with the changed interface.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "blue",
+      "featured": false
+    },
+    {
+      "slug": "accessibility-update",
+      "title": "Accessibility update",
+      "category": "Product updates",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Editorial",
+      "description": "Explain a specific accessibility improvement. Demonstrate the interaction using the improved control.",
+      "proof": "Demonstrate the interaction using the improved control",
+      "audience": "Explain a specific accessibility improvement",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Explain a specific accessibility improvement.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Demonstrate the interaction using the improved control.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "mint",
+      "featured": false
+    },
+    {
+      "slug": "new-language-release",
+      "title": "New language release",
+      "category": "Product updates",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Clean",
+      "description": "Welcome users in a newly supported language. Show the language selector and localized interface.",
+      "proof": "Show the language selector and localized interface",
+      "audience": "Welcome users in a newly supported language",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Welcome users in a newly supported language.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show the language selector and localized interface.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "peach",
+      "featured": false
+    },
+    {
+      "slug": "workflow-migration",
+      "title": "Workflow migration",
+      "category": "Product updates",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Bold",
+      "description": "Help users move to a new workflow. Show where the old task now begins and ends.",
+      "proof": "Show where the old task now begins and ends",
+      "audience": "Help users move to a new workflow",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Help users move to a new workflow.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show where the old task now begins and ends.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "lilac",
+      "featured": false
+    },
+    {
+      "slug": "dashboard-walkthrough",
+      "title": "Dashboard walkthrough",
+      "category": "Feature demos",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Editorial",
+      "description": "Explain one dashboard task. Select a view and interpret the resulting information.",
+      "proof": "Select a view and interpret the resulting information",
+      "audience": "Explain one dashboard task",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Explain one dashboard task.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Select a view and interpret the resulting information.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "blue",
+      "featured": true
+    },
+    {
+      "slug": "search-in-action",
+      "title": "Search in action",
+      "category": "Feature demos",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Clean",
+      "description": "Help users find the right item. Enter a realistic query and narrow the results.",
+      "proof": "Enter a realistic query and narrow the results",
+      "audience": "Help users find the right item",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Help users find the right item.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Enter a realistic query and narrow the results.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "mint",
+      "featured": false
+    },
+    {
+      "slug": "collaboration-demo",
+      "title": "Collaboration demo",
+      "category": "Feature demos",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Bold",
+      "description": "Show how people work together. Add a comment and show how a teammate responds.",
+      "proof": "Add a comment and show how a teammate responds",
+      "audience": "Show how people work together",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Show how people work together.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Add a comment and show how a teammate responds.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "peach",
+      "featured": false
+    },
+    {
+      "slug": "automation-walkthrough",
+      "title": "Automation walkthrough",
+      "category": "Feature demos",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Editorial",
+      "description": "Explain a repeatable automation. Show the trigger, rule and resulting action.",
+      "proof": "Show the trigger, rule and resulting action",
+      "audience": "Explain a repeatable automation",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Explain a repeatable automation.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show the trigger, rule and resulting action.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "lilac",
+      "featured": false
+    },
+    {
+      "slug": "analytics-explainer",
+      "title": "Analytics explainer",
+      "category": "Feature demos",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Clean",
+      "description": "Make a report understandable. Choose a date range and explain one metric.",
+      "proof": "Choose a date range and explain one metric",
+      "audience": "Make a report understandable",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Make a report understandable.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Choose a date range and explain one metric.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "blue",
+      "featured": false
+    },
+    {
+      "slug": "import-your-data",
+      "title": "Import your data",
+      "category": "Feature demos",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Bold",
+      "description": "Reduce uncertainty around an import. Select a sample file and review the mapped fields.",
+      "proof": "Select a sample file and review the mapped fields",
+      "audience": "Reduce uncertainty around an import",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Reduce uncertainty around an import.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Select a sample file and review the mapped fields.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "mint",
+      "featured": false
+    },
+    {
+      "slug": "export-a-result",
+      "title": "Export a result",
+      "category": "Feature demos",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Editorial",
+      "description": "Help users take their work elsewhere. Open export settings and show the saved result.",
+      "proof": "Open export settings and show the saved result",
+      "audience": "Help users take their work elsewhere",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Help users take their work elsewhere.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Open export settings and show the saved result.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "peach",
+      "featured": false
+    },
+    {
+      "slug": "keyboard-shortcut-spotlight",
+      "title": "Keyboard shortcut spotlight",
+      "category": "Feature demos",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Clean",
+      "description": "Teach a faster way to perform one task. Show the shortcut beside its visible result.",
+      "proof": "Show the shortcut beside its visible result",
+      "audience": "Teach a faster way to perform one task",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Teach a faster way to perform one task.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show the shortcut beside its visible result.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "lilac",
+      "featured": false
+    },
+    {
+      "slug": "phone-mockup-showcase",
+      "title": "Phone mockup showcase",
+      "category": "Feature demos",
+      "platform": "Mobile",
+      "format": "9:16",
+      "style": "Bold",
+      "description": "Present a mobile feature in context. Place an exact screenshot inside a phone frame.",
+      "proof": "Place an exact screenshot inside a phone frame",
+      "audience": "Present a mobile feature in context",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Present a mobile feature in context.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Place an exact screenshot inside a phone frame.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "blue",
+      "featured": false
+    },
+    {
+      "slug": "before-and-after-workflow",
+      "title": "Before and after workflow",
+      "category": "Feature demos",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Editorial",
+      "description": "Explain how a task becomes simpler. Use the same task and comparable starting conditions.",
+      "proof": "Use the same task and comparable starting conditions",
+      "audience": "Explain how a task becomes simpler",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Explain how a task becomes simpler.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Use the same task and comparable starting conditions.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "mint",
+      "featured": false
+    },
+    {
+      "slug": "first-session-welcome",
+      "title": "First session welcome",
+      "category": "Free trials",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Clean",
+      "description": "Help a new trial user begin. Show the first action after opening the workspace.",
+      "proof": "Show the first action after opening the workspace",
+      "audience": "Help a new trial user begin",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Help a new trial user begin.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show the first action after opening the workspace.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "peach",
+      "featured": true
+    },
+    {
+      "slug": "your-first-project",
+      "title": "Your first project",
+      "category": "Free trials",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Bold",
+      "description": "Get a trial user to a first saved project. Name a project and add its first piece of content.",
+      "proof": "Name a project and add its first piece of content",
+      "audience": "Get a trial user to a first saved project",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Get a trial user to a first saved project.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Name a project and add its first piece of content.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "lilac",
+      "featured": false
+    },
+    {
+      "slug": "activation-checklist",
+      "title": "Activation checklist",
+      "category": "Free trials",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Editorial",
+      "description": "Guide the first useful setup steps. Show the short path from setup to first result.",
+      "proof": "Show the short path from setup to first result",
+      "audience": "Guide the first useful setup steps",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Guide the first useful setup steps.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show the short path from setup to first result.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "blue",
+      "featured": false
+    },
+    {
+      "slug": "invite-your-team",
+      "title": "Invite your team",
+      "category": "Free trials",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Clean",
+      "description": "Explain team onboarding. Open the invite flow using fictional sample accounts.",
+      "proof": "Open the invite flow using fictional sample accounts",
+      "audience": "Explain team onboarding",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Explain team onboarding.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Open the invite flow using fictional sample accounts.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "mint",
+      "featured": false
+    },
+    {
+      "slug": "connect-your-first-source",
+      "title": "Connect your first source",
+      "category": "Free trials",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Bold",
+      "description": "Help users bring their own content. Choose a source and review the imported information.",
+      "proof": "Choose a source and review the imported information",
+      "audience": "Help users bring their own content",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Help users bring their own content.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Choose a source and review the imported information.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "peach",
+      "featured": false
+    },
+    {
+      "slug": "trial-value-recap",
+      "title": "Trial value recap",
+      "category": "Free trials",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Editorial",
+      "description": "Help users recognize what they have made. Use their own project milestones without invented metrics.",
+      "proof": "Use their own project milestones without invented metrics",
+      "audience": "Help users recognize what they have made",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Help users recognize what they have made.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Use their own project milestones without invented metrics.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "lilac",
+      "featured": false
+    },
+    {
+      "slug": "return-to-your-draft",
+      "title": "Return to your draft",
+      "category": "Free trials",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Clean",
+      "description": "Bring users back to unfinished work. Open a saved draft at the next useful action.",
+      "proof": "Open a saved draft at the next useful action",
+      "audience": "Bring users back to unfinished work",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Bring users back to unfinished work.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Open a saved draft at the next useful action.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "blue",
+      "featured": false
+    },
+    {
+      "slug": "explore-a-second-feature",
+      "title": "Explore a second feature",
+      "category": "Free trials",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Bold",
+      "description": "Introduce a relevant next capability. Connect a completed task to its natural next step.",
+      "proof": "Connect a completed task to its natural next step",
+      "audience": "Introduce a relevant next capability",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Introduce a relevant next capability.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Connect a completed task to its natural next step.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "mint",
+      "featured": false
+    },
+    {
+      "slug": "trial-faq-video",
+      "title": "Trial FAQ video",
+      "category": "Free trials",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Editorial",
+      "description": "Answer one common trial question. Show the exact screen that resolves the question.",
+      "proof": "Show the exact screen that resolves the question",
+      "audience": "Answer one common trial question",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Answer one common trial question.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show the exact screen that resolves the question.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "peach",
+      "featured": false
+    },
+    {
+      "slug": "aha-moment-demo",
+      "title": "Aha moment demo",
+      "category": "Free trials",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Clean",
+      "description": "Help a new user reach a meaningful result. Show the shortest repeatable path to that result.",
+      "proof": "Show the shortest repeatable path to that result",
+      "audience": "Help a new user reach a meaningful result",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Help a new user reach a meaningful result.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show the shortest repeatable path to that result.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "lilac",
+      "featured": false
+    },
+    {
+      "slug": "product-walkthrough-video",
+      "title": "Product walkthrough video",
+      "category": "YouTube",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Bold",
+      "description": "Create a focused long-form product tour. Move through a task with readable chapter breaks.",
+      "proof": "Move through a task with readable chapter breaks",
+      "audience": "Create a focused long-form product tour",
+      "scenes": [
+        {
+          "title": "The result",
+          "instruction": "Show what viewers will learn: create a focused long-form product tour.",
+          "seconds": 5
+        },
+        {
+          "title": "Before you begin",
+          "instruction": "Show the starting screen and name any prerequisites.",
+          "seconds": 8
+        },
+        {
+          "title": "The walkthrough",
+          "instruction": "Move through a task with readable chapter breaks.",
+          "seconds": 20
+        },
+        {
+          "title": "Check your work",
+          "instruction": "Hold on the result and explain how to recognize success.",
+          "seconds": 10
+        },
+        {
+          "title": "Keep learning",
+          "instruction": "End with one related action or lesson.",
+          "seconds": 5
+        }
+      ],
+      "duration": 48,
+      "color": "blue",
+      "featured": true
+    },
+    {
+      "slug": "software-tutorial-intro",
+      "title": "Software tutorial intro",
+      "category": "YouTube",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Editorial",
+      "description": "Introduce a practical tutorial. Show the result viewers will learn to make.",
+      "proof": "Show the result viewers will learn to make",
+      "audience": "Introduce a practical tutorial",
+      "scenes": [
+        {
+          "title": "The result",
+          "instruction": "Show what viewers will learn: introduce a practical tutorial.",
+          "seconds": 5
+        },
+        {
+          "title": "Before you begin",
+          "instruction": "Show the starting screen and name any prerequisites.",
+          "seconds": 8
+        },
+        {
+          "title": "The walkthrough",
+          "instruction": "Show the result viewers will learn to make.",
+          "seconds": 20
+        },
+        {
+          "title": "Check your work",
+          "instruction": "Hold on the result and explain how to recognize success.",
+          "seconds": 10
+        },
+        {
+          "title": "Keep learning",
+          "instruction": "End with one related action or lesson.",
+          "seconds": 5
+        }
+      ],
+      "duration": 48,
+      "color": "mint",
+      "featured": false
+    },
+    {
+      "slug": "feature-comparison",
+      "title": "Feature comparison",
+      "category": "YouTube",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Clean",
+      "description": "Compare two real approaches to a task. Use consistent examples and verified differences.",
+      "proof": "Use consistent examples and verified differences",
+      "audience": "Compare two real approaches to a task",
+      "scenes": [
+        {
+          "title": "The result",
+          "instruction": "Show what viewers will learn: compare two real approaches to a task.",
+          "seconds": 5
+        },
+        {
+          "title": "Before you begin",
+          "instruction": "Show the starting screen and name any prerequisites.",
+          "seconds": 8
+        },
+        {
+          "title": "The walkthrough",
+          "instruction": "Use consistent examples and verified differences.",
+          "seconds": 20
+        },
+        {
+          "title": "Check your work",
+          "instruction": "Hold on the result and explain how to recognize success.",
+          "seconds": 10
+        },
+        {
+          "title": "Keep learning",
+          "instruction": "End with one related action or lesson.",
+          "seconds": 5
+        }
+      ],
+      "duration": 48,
+      "color": "peach",
+      "featured": false
+    },
+    {
+      "slug": "weekly-build-log",
+      "title": "Weekly build log",
+      "category": "YouTube",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Bold",
+      "description": "Share progress on a product build. Show a shipped change and the decision behind it.",
+      "proof": "Show a shipped change and the decision behind it",
+      "audience": "Share progress on a product build",
+      "scenes": [
+        {
+          "title": "The result",
+          "instruction": "Show what viewers will learn: share progress on a product build.",
+          "seconds": 5
+        },
+        {
+          "title": "Before you begin",
+          "instruction": "Show the starting screen and name any prerequisites.",
+          "seconds": 8
+        },
+        {
+          "title": "The walkthrough",
+          "instruction": "Show a shipped change and the decision behind it.",
+          "seconds": 20
+        },
+        {
+          "title": "Check your work",
+          "instruction": "Hold on the result and explain how to recognize success.",
+          "seconds": 10
+        },
+        {
+          "title": "Keep learning",
+          "instruction": "End with one related action or lesson.",
+          "seconds": 5
+        }
+      ],
+      "duration": 48,
+      "color": "lilac",
+      "featured": false
+    },
+    {
+      "slug": "screen-recording-explainer",
+      "title": "Screen recording explainer",
+      "category": "YouTube",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Editorial",
+      "description": "Explain a recorded workflow. Pair a continuous action with concise captions.",
+      "proof": "Pair a continuous action with concise captions",
+      "audience": "Explain a recorded workflow",
+      "scenes": [
+        {
+          "title": "The result",
+          "instruction": "Show what viewers will learn: explain a recorded workflow.",
+          "seconds": 5
+        },
+        {
+          "title": "Before you begin",
+          "instruction": "Show the starting screen and name any prerequisites.",
+          "seconds": 8
+        },
+        {
+          "title": "The walkthrough",
+          "instruction": "Pair a continuous action with concise captions.",
+          "seconds": 20
+        },
+        {
+          "title": "Check your work",
+          "instruction": "Hold on the result and explain how to recognize success.",
+          "seconds": 10
+        },
+        {
+          "title": "Keep learning",
+          "instruction": "End with one related action or lesson.",
+          "seconds": 5
+        }
+      ],
+      "duration": 48,
+      "color": "blue",
+      "featured": false
+    },
+    {
+      "slug": "youtube-shorts-demo",
+      "title": "YouTube Shorts demo",
+      "category": "YouTube",
+      "platform": "Mobile",
+      "format": "9:16",
+      "style": "Clean",
+      "description": "Teach one action in a vertical clip. Keep one phone-sized control and result in focus.",
+      "proof": "Keep one phone-sized control and result in focus",
+      "audience": "Teach one action in a vertical clip",
+      "scenes": [
+        {
+          "title": "The result",
+          "instruction": "Show what viewers will learn: teach one action in a vertical clip.",
+          "seconds": 5
+        },
+        {
+          "title": "Before you begin",
+          "instruction": "Show the starting screen and name any prerequisites.",
+          "seconds": 8
+        },
+        {
+          "title": "The walkthrough",
+          "instruction": "Keep one phone-sized control and result in focus.",
+          "seconds": 20
+        },
+        {
+          "title": "Check your work",
+          "instruction": "Hold on the result and explain how to recognize success.",
+          "seconds": 10
+        },
+        {
+          "title": "Keep learning",
+          "instruction": "End with one related action or lesson.",
+          "seconds": 5
+        }
+      ],
+      "duration": 48,
+      "color": "mint",
+      "featured": false
+    },
+    {
+      "slug": "release-notes-video",
+      "title": "Release notes video",
+      "category": "YouTube",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Bold",
+      "description": "Turn a release into a chaptered video. Give each meaningful update its own short segment.",
+      "proof": "Give each meaningful update its own short segment",
+      "audience": "Turn a release into a chaptered video",
+      "scenes": [
+        {
+          "title": "The result",
+          "instruction": "Show what viewers will learn: turn a release into a chaptered video.",
+          "seconds": 5
+        },
+        {
+          "title": "Before you begin",
+          "instruction": "Show the starting screen and name any prerequisites.",
+          "seconds": 8
+        },
+        {
+          "title": "The walkthrough",
+          "instruction": "Give each meaningful update its own short segment.",
+          "seconds": 20
+        },
+        {
+          "title": "Check your work",
+          "instruction": "Hold on the result and explain how to recognize success.",
+          "seconds": 10
+        },
+        {
+          "title": "Keep learning",
+          "instruction": "End with one related action or lesson.",
+          "seconds": 5
+        }
+      ],
+      "duration": 48,
+      "color": "peach",
+      "featured": false
+    },
+    {
+      "slug": "founder-product-breakdown",
+      "title": "Founder product breakdown",
+      "category": "YouTube",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Editorial",
+      "description": "Explain a product decision in context. Pair your explanation with the relevant app screen.",
+      "proof": "Pair your explanation with the relevant app screen",
+      "audience": "Explain a product decision in context",
+      "scenes": [
+        {
+          "title": "The result",
+          "instruction": "Show what viewers will learn: explain a product decision in context.",
+          "seconds": 5
+        },
+        {
+          "title": "Before you begin",
+          "instruction": "Show the starting screen and name any prerequisites.",
+          "seconds": 8
+        },
+        {
+          "title": "The walkthrough",
+          "instruction": "Pair your explanation with the relevant app screen.",
+          "seconds": 20
+        },
+        {
+          "title": "Check your work",
+          "instruction": "Hold on the result and explain how to recognize success.",
+          "seconds": 10
+        },
+        {
+          "title": "Keep learning",
+          "instruction": "End with one related action or lesson.",
+          "seconds": 5
+        }
+      ],
+      "duration": 48,
+      "color": "lilac",
+      "featured": false
+    },
+    {
+      "slug": "tutorial-outro",
+      "title": "Tutorial outro",
+      "category": "YouTube",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Clean",
+      "description": "Give viewers a useful next step. Show the finished result and one related lesson.",
+      "proof": "Show the finished result and one related lesson",
+      "audience": "Give viewers a useful next step",
+      "scenes": [
+        {
+          "title": "The result",
+          "instruction": "Show what viewers will learn: give viewers a useful next step.",
+          "seconds": 5
+        },
+        {
+          "title": "Before you begin",
+          "instruction": "Show the starting screen and name any prerequisites.",
+          "seconds": 8
+        },
+        {
+          "title": "The walkthrough",
+          "instruction": "Show the finished result and one related lesson.",
+          "seconds": 20
+        },
+        {
+          "title": "Check your work",
+          "instruction": "Hold on the result and explain how to recognize success.",
+          "seconds": 10
+        },
+        {
+          "title": "Keep learning",
+          "instruction": "End with one related action or lesson.",
+          "seconds": 5
+        }
+      ],
+      "duration": 48,
+      "color": "blue",
+      "featured": false
+    },
+    {
+      "slug": "webinar-highlight",
+      "title": "Webinar highlight",
+      "category": "YouTube",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Bold",
+      "description": "Repurpose one useful webinar moment. Keep the question, demonstration and answer together.",
+      "proof": "Keep the question, demonstration and answer together",
+      "audience": "Repurpose one useful webinar moment",
+      "scenes": [
+        {
+          "title": "The result",
+          "instruction": "Show what viewers will learn: repurpose one useful webinar moment.",
+          "seconds": 5
+        },
+        {
+          "title": "Before you begin",
+          "instruction": "Show the starting screen and name any prerequisites.",
+          "seconds": 8
+        },
+        {
+          "title": "The walkthrough",
+          "instruction": "Keep the question, demonstration and answer together.",
+          "seconds": 20
+        },
+        {
+          "title": "Check your work",
+          "instruction": "Hold on the result and explain how to recognize success.",
+          "seconds": 10
+        },
+        {
+          "title": "Keep learning",
+          "instruction": "End with one related action or lesson.",
+          "seconds": 5
+        }
+      ],
+      "duration": 48,
+      "color": "mint",
+      "featured": false
+    },
+    {
+      "slug": "vertical-app-ad",
+      "title": "Vertical app ad",
+      "category": "Social ads",
+      "platform": "Mobile",
+      "format": "9:16",
+      "style": "Editorial",
+      "description": "Introduce one mobile benefit in a feed. Show the relevant action within the opening scene.",
+      "proof": "Show the relevant action within the opening scene",
+      "audience": "Introduce one mobile benefit in a feed",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Introduce one mobile benefit in a feed.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show the relevant action within the opening scene.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "peach",
+      "featured": true
+    },
+    {
+      "slug": "square-product-ad",
+      "title": "Square product ad",
+      "category": "Social ads",
+      "platform": "Any",
+      "format": "1:1",
+      "style": "Clean",
+      "description": "Present a product in a square placement. Keep the product and caption inside a square frame.",
+      "proof": "Keep the product and caption inside a square frame",
+      "audience": "Present a product in a square placement",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Present a product in a square placement.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Keep the product and caption inside a square frame.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "lilac",
+      "featured": false
+    },
+    {
+      "slug": "linkedin-product-demo",
+      "title": "LinkedIn product demo",
+      "category": "Social ads",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Bold",
+      "description": "Explain a work-related product benefit. Demonstrate a realistic professional workflow.",
+      "proof": "Demonstrate a realistic professional workflow",
+      "audience": "Explain a work-related product benefit",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Explain a work-related product benefit.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Demonstrate a realistic professional workflow.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "blue",
+      "featured": false
+    },
+    {
+      "slug": "instagram-feature-reel",
+      "title": "Instagram feature reel",
+      "category": "Social ads",
+      "platform": "Mobile",
+      "format": "9:16",
+      "style": "Editorial",
+      "description": "Make one feature clear on a phone. Use large interface crops and a short caption.",
+      "proof": "Use large interface crops and a short caption",
+      "audience": "Make one feature clear on a phone",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Make one feature clear on a phone.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Use large interface crops and a short caption.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "mint",
+      "featured": false
+    },
+    {
+      "slug": "retargeting-reminder",
+      "title": "Retargeting reminder",
+      "category": "Social ads",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Clean",
+      "description": "Remind interested viewers of a useful capability. Return to the product action they already recognize.",
+      "proof": "Return to the product action they already recognize",
+      "audience": "Remind interested viewers of a useful capability",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Remind interested viewers of a useful capability.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Return to the product action they already recognize.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "peach",
+      "featured": false
+    },
+    {
+      "slug": "offer-announcement",
+      "title": "Offer announcement",
+      "category": "Social ads",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Bold",
+      "description": "Explain a genuine product offer. Show the actual offer terms and relevant product value.",
+      "proof": "Show the actual offer terms and relevant product value",
+      "audience": "Explain a genuine product offer",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Explain a genuine product offer.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show the actual offer terms and relevant product value.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "lilac",
+      "featured": false
+    },
+    {
+      "slug": "problem-and-solution-ad",
+      "title": "Problem and solution ad",
+      "category": "Social ads",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Editorial",
+      "description": "Connect a recognizable problem to a product action. Show the problem briefly before demonstrating the solution.",
+      "proof": "Show the problem briefly before demonstrating the solution",
+      "audience": "Connect a recognizable problem to a product action",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Connect a recognizable problem to a product action.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show the problem briefly before demonstrating the solution.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "blue",
+      "featured": false
+    },
+    {
+      "slug": "carousel-companion-video",
+      "title": "Carousel companion video",
+      "category": "Social ads",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Clean",
+      "description": "Turn a static story into a short video. Follow the same sequence as the companion carousel.",
+      "proof": "Follow the same sequence as the companion carousel",
+      "audience": "Turn a static story into a short video",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Turn a static story into a short video.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Follow the same sequence as the companion carousel.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "mint",
+      "featured": false
+    },
+    {
+      "slug": "event-promotion",
+      "title": "Event promotion",
+      "category": "Social ads",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Bold",
+      "description": "Invite viewers to a product event. Show the topic, date and registration destination.",
+      "proof": "Show the topic, date and registration destination",
+      "audience": "Invite viewers to a product event",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Invite viewers to a product event.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show the topic, date and registration destination.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "peach",
+      "featured": false
+    },
+    {
+      "slug": "app-store-campaign",
+      "title": "App store campaign",
+      "category": "Social ads",
+      "platform": "Mobile",
+      "format": "9:16",
+      "style": "Editorial",
+      "description": "Help viewers understand the app before installing. Show real interface actions at a readable scale.",
+      "proof": "Show real interface actions at a readable scale",
+      "audience": "Help viewers understand the app before installing",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Help viewers understand the app before installing.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show real interface actions at a readable scale.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "lilac",
+      "featured": false
+    },
+    {
+      "slug": "homepage-hero-video",
+      "title": "Homepage hero video",
+      "category": "Websites",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Clean",
+      "description": "Show product value beside a homepage headline. Demonstrate one core workflow without dense captions.",
+      "proof": "Demonstrate one core workflow without dense captions",
+      "audience": "Show product value beside a homepage headline",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Show product value beside a homepage headline.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Demonstrate one core workflow without dense captions.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "blue",
+      "featured": true
+    },
+    {
+      "slug": "landing-page-demo",
+      "title": "Landing page demo",
+      "category": "Websites",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Bold",
+      "description": "Support a focused campaign landing page. Match the product action to the page promise.",
+      "proof": "Match the product action to the page promise",
+      "audience": "Support a focused campaign landing page",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Support a focused campaign landing page.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Match the product action to the page promise.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "mint",
+      "featured": false
+    },
+    {
+      "slug": "pricing-page-explainer",
+      "title": "Pricing page explainer",
+      "category": "Websites",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Editorial",
+      "description": "Explain a product option with context. Show a real workflow relevant to that option.",
+      "proof": "Show a real workflow relevant to that option",
+      "audience": "Explain a product option with context",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Explain a product option with context.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show a real workflow relevant to that option.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "peach",
+      "featured": false
+    },
+    {
+      "slug": "feature-page-loop",
+      "title": "Feature page loop",
+      "category": "Websites",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Clean",
+      "description": "Give a feature page a concise demonstration. Start and end on a compatible interface state.",
+      "proof": "Start and end on a compatible interface state",
+      "audience": "Give a feature page a concise demonstration",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Give a feature page a concise demonstration.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Start and end on a compatible interface state.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "lilac",
+      "featured": false
+    },
+    {
+      "slug": "checkout-walkthrough",
+      "title": "Checkout walkthrough",
+      "category": "Websites",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Bold",
+      "description": "Explain an online purchase flow. Use test data and show each required decision.",
+      "proof": "Use test data and show each required decision",
+      "audience": "Explain an online purchase flow",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Explain an online purchase flow.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Use test data and show each required decision.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "blue",
+      "featured": false
+    },
+    {
+      "slug": "portfolio-project-story",
+      "title": "Portfolio project story",
+      "category": "Websites",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Editorial",
+      "description": "Present the purpose of a portfolio project. Show the problem, your interface and its result.",
+      "proof": "Show the problem, your interface and its result",
+      "audience": "Present the purpose of a portfolio project",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Present the purpose of a portfolio project.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show the problem, your interface and its result.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "mint",
+      "featured": false
+    },
+    {
+      "slug": "agency-service-demo",
+      "title": "Agency service demo",
+      "category": "Websites",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Clean",
+      "description": "Make a service tangible through its deliverable. Show an authorized example and explain the process.",
+      "proof": "Show an authorized example and explain the process",
+      "audience": "Make a service tangible through its deliverable",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Make a service tangible through its deliverable.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show an authorized example and explain the process.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "peach",
+      "featured": false
+    },
+    {
+      "slug": "ecommerce-product-page",
+      "title": "Ecommerce product page",
+      "category": "Websites",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Bold",
+      "description": "Explain a product page interaction. Choose a variant and show its relevant details.",
+      "proof": "Choose a variant and show its relevant details",
+      "audience": "Explain a product page interaction",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Explain a product page interaction.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Choose a variant and show its relevant details.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "lilac",
+      "featured": false
+    },
+    {
+      "slug": "booking-flow-demo",
+      "title": "Booking flow demo",
+      "category": "Websites",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Editorial",
+      "description": "Show how to book a service. Select an available slot using sample details.",
+      "proof": "Select an available slot using sample details",
+      "audience": "Show how to book a service",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Show how to book a service.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Select an available slot using sample details.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "blue",
+      "featured": false
+    },
+    {
+      "slug": "website-redesign-case",
+      "title": "Website redesign case",
+      "category": "Websites",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Clean",
+      "description": "Explain a design change through a user task. Compare the same task on both versions.",
+      "proof": "Compare the same task on both versions",
+      "audience": "Explain a design change through a user task",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Explain a design change through a user task.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Compare the same task on both versions.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "mint",
+      "featured": false
+    },
+    {
+      "slug": "app-onboarding-sequence",
+      "title": "App onboarding sequence",
+      "category": "Mobile apps",
+      "platform": "Mobile",
+      "format": "9:16",
+      "style": "Bold",
+      "description": "Introduce the app without overwhelming users. Show the first meaningful setup action.",
+      "proof": "Show the first meaningful setup action",
+      "audience": "Introduce the app without overwhelming users",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Introduce the app without overwhelming users.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show the first meaningful setup action.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "peach",
+      "featured": true
+    },
+    {
+      "slug": "one-tap-feature",
+      "title": "One tap feature",
+      "category": "Mobile apps",
+      "platform": "Mobile",
+      "format": "9:16",
+      "style": "Editorial",
+      "description": "Highlight a simple mobile interaction. Hold on the control before showing its result.",
+      "proof": "Hold on the control before showing its result",
+      "audience": "Highlight a simple mobile interaction",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Highlight a simple mobile interaction.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Hold on the control before showing its result.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "lilac",
+      "featured": false
+    },
+    {
+      "slug": "mobile-dashboard-tour",
+      "title": "Mobile dashboard tour",
+      "category": "Mobile apps",
+      "platform": "Mobile",
+      "format": "9:16",
+      "style": "Clean",
+      "description": "Orient viewers within a mobile dashboard. Show the primary screen and one useful detail.",
+      "proof": "Show the primary screen and one useful detail",
+      "audience": "Orient viewers within a mobile dashboard",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Orient viewers within a mobile dashboard.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show the primary screen and one useful detail.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "blue",
+      "featured": false
+    },
+    {
+      "slug": "app-notification-flow",
+      "title": "App notification flow",
+      "category": "Mobile apps",
+      "platform": "Mobile",
+      "format": "9:16",
+      "style": "Bold",
+      "description": "Explain what happens after a notification. Show the notification and the destination screen.",
+      "proof": "Show the notification and the destination screen",
+      "audience": "Explain what happens after a notification",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Explain what happens after a notification.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show the notification and the destination screen.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "mint",
+      "featured": false
+    },
+    {
+      "slug": "mobile-checkout-demo",
+      "title": "Mobile checkout demo",
+      "category": "Mobile apps",
+      "platform": "Mobile",
+      "format": "9:16",
+      "style": "Editorial",
+      "description": "Make a mobile purchase flow understandable. Use a test checkout with no personal payment data.",
+      "proof": "Use a test checkout with no personal payment data",
+      "audience": "Make a mobile purchase flow understandable",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Make a mobile purchase flow understandable.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Use a test checkout with no personal payment data.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "peach",
+      "featured": false
+    },
+    {
+      "slug": "gesture-walkthrough",
+      "title": "Gesture walkthrough",
+      "category": "Mobile apps",
+      "platform": "Mobile",
+      "format": "9:16",
+      "style": "Clean",
+      "description": "Teach a gesture through visible feedback. Show the gesture location and resulting interface state.",
+      "proof": "Show the gesture location and resulting interface state",
+      "audience": "Teach a gesture through visible feedback",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Teach a gesture through visible feedback.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show the gesture location and resulting interface state.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "lilac",
+      "featured": false
+    },
+    {
+      "slug": "app-settings-tip",
+      "title": "App settings tip",
+      "category": "Mobile apps",
+      "platform": "Mobile",
+      "format": "9:16",
+      "style": "Bold",
+      "description": "Help users personalize one setting. Open the setting and show its visible effect.",
+      "proof": "Open the setting and show its visible effect",
+      "audience": "Help users personalize one setting",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Help users personalize one setting.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Open the setting and show its visible effect.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "blue",
+      "featured": false
+    },
+    {
+      "slug": "mobile-search-story",
+      "title": "Mobile search story",
+      "category": "Mobile apps",
+      "platform": "Mobile",
+      "format": "9:16",
+      "style": "Editorial",
+      "description": "Demonstrate search on a small screen. Enter a useful query and open one result.",
+      "proof": "Enter a useful query and open one result",
+      "audience": "Demonstrate search on a small screen",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Demonstrate search on a small screen.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Enter a useful query and open one result.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "mint",
+      "featured": false
+    },
+    {
+      "slug": "app-sharing-feature",
+      "title": "App sharing feature",
+      "category": "Mobile apps",
+      "platform": "Mobile",
+      "format": "9:16",
+      "style": "Clean",
+      "description": "Show how to share product content. Use sample recipients and a non-sensitive example.",
+      "proof": "Use sample recipients and a non-sensitive example",
+      "audience": "Show how to share product content",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Show how to share product content.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Use sample recipients and a non-sensitive example.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "peach",
+      "featured": false
+    },
+    {
+      "slug": "tablet-app-showcase",
+      "title": "Tablet app showcase",
+      "category": "Mobile apps",
+      "platform": "Mobile",
+      "format": "9:16",
+      "style": "Bold",
+      "description": "Present a workflow on a larger touch screen. Show the layout and one touch interaction.",
+      "proof": "Show the layout and one touch interaction",
+      "audience": "Present a workflow on a larger touch screen",
+      "scenes": [
+        {
+          "title": "The opening",
+          "instruction": "Present a workflow on a larger touch screen.",
+          "seconds": 4
+        },
+        {
+          "title": "The product action",
+          "instruction": "Show the layout and one touch interaction.",
+          "seconds": 8
+        },
+        {
+          "title": "The useful result",
+          "instruction": "Hold on the actual result so the viewer can read it.",
+          "seconds": 5
+        },
+        {
+          "title": "The next step",
+          "instruction": "Close with your product name and one clear invitation.",
+          "seconds": 3
+        }
+      ],
+      "duration": 20,
+      "color": "lilac",
+      "featured": false
+    },
+    {
+      "slug": "quick-start-lesson",
+      "title": "Quick start lesson",
+      "category": "Education",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Editorial",
+      "description": "Teach the minimum steps to begin. Show a complete first task from an empty state.",
+      "proof": "Show a complete first task from an empty state",
+      "audience": "Teach the minimum steps to begin",
+      "scenes": [
+        {
+          "title": "The result",
+          "instruction": "Show what viewers will learn: teach the minimum steps to begin.",
+          "seconds": 5
+        },
+        {
+          "title": "Before you begin",
+          "instruction": "Show the starting screen and name any prerequisites.",
+          "seconds": 8
+        },
+        {
+          "title": "The walkthrough",
+          "instruction": "Show a complete first task from an empty state.",
+          "seconds": 20
+        },
+        {
+          "title": "Check your work",
+          "instruction": "Hold on the result and explain how to recognize success.",
+          "seconds": 10
+        },
+        {
+          "title": "Keep learning",
+          "instruction": "End with one related action or lesson.",
+          "seconds": 5
+        }
+      ],
+      "duration": 48,
+      "color": "blue",
+      "featured": true
+    },
+    {
+      "slug": "three-step-how-to",
+      "title": "Three step how-to",
+      "category": "Education",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Clean",
+      "description": "Explain a short repeatable task. Give each step one action and a visible outcome.",
+      "proof": "Give each step one action and a visible outcome",
+      "audience": "Explain a short repeatable task",
+      "scenes": [
+        {
+          "title": "The result",
+          "instruction": "Show what viewers will learn: explain a short repeatable task.",
+          "seconds": 5
+        },
+        {
+          "title": "Before you begin",
+          "instruction": "Show the starting screen and name any prerequisites.",
+          "seconds": 8
+        },
+        {
+          "title": "The walkthrough",
+          "instruction": "Give each step one action and a visible outcome.",
+          "seconds": 20
+        },
+        {
+          "title": "Check your work",
+          "instruction": "Hold on the result and explain how to recognize success.",
+          "seconds": 10
+        },
+        {
+          "title": "Keep learning",
+          "instruction": "End with one related action or lesson.",
+          "seconds": 5
+        }
+      ],
+      "duration": 48,
+      "color": "mint",
+      "featured": false
+    },
+    {
+      "slug": "troubleshooting-guide",
+      "title": "Troubleshooting guide",
+      "category": "Education",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Bold",
+      "description": "Resolve one concrete product problem. Show the symptom, the setting and the corrected result.",
+      "proof": "Show the symptom, the setting and the corrected result",
+      "audience": "Resolve one concrete product problem",
+      "scenes": [
+        {
+          "title": "The result",
+          "instruction": "Show what viewers will learn: resolve one concrete product problem.",
+          "seconds": 5
+        },
+        {
+          "title": "Before you begin",
+          "instruction": "Show the starting screen and name any prerequisites.",
+          "seconds": 8
+        },
+        {
+          "title": "The walkthrough",
+          "instruction": "Show the symptom, the setting and the corrected result.",
+          "seconds": 20
+        },
+        {
+          "title": "Check your work",
+          "instruction": "Hold on the result and explain how to recognize success.",
+          "seconds": 10
+        },
+        {
+          "title": "Keep learning",
+          "instruction": "End with one related action or lesson.",
+          "seconds": 5
+        }
+      ],
+      "duration": 48,
+      "color": "peach",
+      "featured": false
+    },
+    {
+      "slug": "advanced-workflow-lesson",
+      "title": "Advanced workflow lesson",
+      "category": "Education",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Editorial",
+      "description": "Teach a workflow for experienced users. Name prerequisites before demonstrating the sequence.",
+      "proof": "Name prerequisites before demonstrating the sequence",
+      "audience": "Teach a workflow for experienced users",
+      "scenes": [
+        {
+          "title": "The result",
+          "instruction": "Show what viewers will learn: teach a workflow for experienced users.",
+          "seconds": 5
+        },
+        {
+          "title": "Before you begin",
+          "instruction": "Show the starting screen and name any prerequisites.",
+          "seconds": 8
+        },
+        {
+          "title": "The walkthrough",
+          "instruction": "Name prerequisites before demonstrating the sequence.",
+          "seconds": 20
+        },
+        {
+          "title": "Check your work",
+          "instruction": "Hold on the result and explain how to recognize success.",
+          "seconds": 10
+        },
+        {
+          "title": "Keep learning",
+          "instruction": "End with one related action or lesson.",
+          "seconds": 5
+        }
+      ],
+      "duration": 48,
+      "color": "lilac",
+      "featured": false
+    },
+    {
+      "slug": "safety-settings-guide",
+      "title": "Safety settings guide",
+      "category": "Education",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Clean",
+      "description": "Help users understand a privacy-related control. Explain the effect using a fictional project.",
+      "proof": "Explain the effect using a fictional project",
+      "audience": "Help users understand a privacy-related control",
+      "scenes": [
+        {
+          "title": "The result",
+          "instruction": "Show what viewers will learn: help users understand a privacy-related control.",
+          "seconds": 5
+        },
+        {
+          "title": "Before you begin",
+          "instruction": "Show the starting screen and name any prerequisites.",
+          "seconds": 8
+        },
+        {
+          "title": "The walkthrough",
+          "instruction": "Explain the effect using a fictional project.",
+          "seconds": 20
+        },
+        {
+          "title": "Check your work",
+          "instruction": "Hold on the result and explain how to recognize success.",
+          "seconds": 10
+        },
+        {
+          "title": "Keep learning",
+          "instruction": "End with one related action or lesson.",
+          "seconds": 5
+        }
+      ],
+      "duration": 48,
+      "color": "blue",
+      "featured": false
+    },
+    {
+      "slug": "team-training-clip",
+      "title": "Team training clip",
+      "category": "Education",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Bold",
+      "description": "Teach a shared team convention. Demonstrate the agreed naming or review workflow.",
+      "proof": "Demonstrate the agreed naming or review workflow",
+      "audience": "Teach a shared team convention",
+      "scenes": [
+        {
+          "title": "The result",
+          "instruction": "Show what viewers will learn: teach a shared team convention.",
+          "seconds": 5
+        },
+        {
+          "title": "Before you begin",
+          "instruction": "Show the starting screen and name any prerequisites.",
+          "seconds": 8
+        },
+        {
+          "title": "The walkthrough",
+          "instruction": "Demonstrate the agreed naming or review workflow.",
+          "seconds": 20
+        },
+        {
+          "title": "Check your work",
+          "instruction": "Hold on the result and explain how to recognize success.",
+          "seconds": 10
+        },
+        {
+          "title": "Keep learning",
+          "instruction": "End with one related action or lesson.",
+          "seconds": 5
+        }
+      ],
+      "duration": 48,
+      "color": "mint",
+      "featured": false
+    },
+    {
+      "slug": "import-format-guide",
+      "title": "Import format guide",
+      "category": "Education",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Editorial",
+      "description": "Explain what an import file needs. Compare a small sample file with its mapped result.",
+      "proof": "Compare a small sample file with its mapped result",
+      "audience": "Explain what an import file needs",
+      "scenes": [
+        {
+          "title": "The result",
+          "instruction": "Show what viewers will learn: explain what an import file needs.",
+          "seconds": 5
+        },
+        {
+          "title": "Before you begin",
+          "instruction": "Show the starting screen and name any prerequisites.",
+          "seconds": 8
+        },
+        {
+          "title": "The walkthrough",
+          "instruction": "Compare a small sample file with its mapped result.",
+          "seconds": 20
+        },
+        {
+          "title": "Check your work",
+          "instruction": "Hold on the result and explain how to recognize success.",
+          "seconds": 10
+        },
+        {
+          "title": "Keep learning",
+          "instruction": "End with one related action or lesson.",
+          "seconds": 5
+        }
+      ],
+      "duration": 48,
+      "color": "peach",
+      "featured": false
+    },
+    {
+      "slug": "template-customization-lesson",
+      "title": "Template customization lesson",
+      "category": "Education",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Clean",
+      "description": "Teach users to adapt a starter. Replace the example text and apply a project brand.",
+      "proof": "Replace the example text and apply a project brand",
+      "audience": "Teach users to adapt a starter",
+      "scenes": [
+        {
+          "title": "The result",
+          "instruction": "Show what viewers will learn: teach users to adapt a starter.",
+          "seconds": 5
+        },
+        {
+          "title": "Before you begin",
+          "instruction": "Show the starting screen and name any prerequisites.",
+          "seconds": 8
+        },
+        {
+          "title": "The walkthrough",
+          "instruction": "Replace the example text and apply a project brand.",
+          "seconds": 20
+        },
+        {
+          "title": "Check your work",
+          "instruction": "Hold on the result and explain how to recognize success.",
+          "seconds": 10
+        },
+        {
+          "title": "Keep learning",
+          "instruction": "End with one related action or lesson.",
+          "seconds": 5
+        }
+      ],
+      "duration": 48,
+      "color": "lilac",
+      "featured": false
+    },
+    {
+      "slug": "workflow-checklist-video",
+      "title": "Workflow checklist video",
+      "category": "Education",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Bold",
+      "description": "Turn a checklist into a visual review. Show each check on the actual finished project.",
+      "proof": "Show each check on the actual finished project",
+      "audience": "Turn a checklist into a visual review",
+      "scenes": [
+        {
+          "title": "The result",
+          "instruction": "Show what viewers will learn: turn a checklist into a visual review.",
+          "seconds": 5
+        },
+        {
+          "title": "Before you begin",
+          "instruction": "Show the starting screen and name any prerequisites.",
+          "seconds": 8
+        },
+        {
+          "title": "The walkthrough",
+          "instruction": "Show each check on the actual finished project.",
+          "seconds": 20
+        },
+        {
+          "title": "Check your work",
+          "instruction": "Hold on the result and explain how to recognize success.",
+          "seconds": 10
+        },
+        {
+          "title": "Keep learning",
+          "instruction": "End with one related action or lesson.",
+          "seconds": 5
+        }
+      ],
+      "duration": 48,
+      "color": "blue",
+      "featured": false
+    },
+    {
+      "slug": "help-center-answer",
+      "title": "Help center answer",
+      "category": "Education",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Editorial",
+      "description": "Answer one support question visually. Open the relevant screen and perform the action.",
+      "proof": "Open the relevant screen and perform the action",
+      "audience": "Answer one support question visually",
+      "scenes": [
+        {
+          "title": "The result",
+          "instruction": "Show what viewers will learn: answer one support question visually.",
+          "seconds": 5
+        },
+        {
+          "title": "Before you begin",
+          "instruction": "Show the starting screen and name any prerequisites.",
+          "seconds": 8
+        },
+        {
+          "title": "The walkthrough",
+          "instruction": "Open the relevant screen and perform the action.",
+          "seconds": 20
+        },
+        {
+          "title": "Check your work",
+          "instruction": "Hold on the result and explain how to recognize success.",
+          "seconds": 10
+        },
+        {
+          "title": "Keep learning",
+          "instruction": "End with one related action or lesson.",
+          "seconds": 5
+        }
+      ],
+      "duration": 48,
+      "color": "mint",
+      "featured": false
+    },
+    {
+      "slug": "customer-workflow-story",
+      "title": "Customer workflow story",
+      "category": "Customer stories",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Clean",
+      "description": "Explain an authorized customer use case. Show the actual task and a supported outcome.",
+      "proof": "Show the actual task and a supported outcome",
+      "audience": "Explain an authorized customer use case",
+      "scenes": [
+        {
+          "title": "The context",
+          "instruction": "Explain an authorized customer use case.",
+          "seconds": 5
+        },
+        {
+          "title": "The workflow",
+          "instruction": "Show the actual task and a supported outcome.",
+          "seconds": 12
+        },
+        {
+          "title": "The evidence",
+          "instruction": "Add a verified outcome or approved quote; keep its context.",
+          "seconds": 8
+        },
+        {
+          "title": "Try the workflow",
+          "instruction": "Invite viewers to try the demonstrated task.",
+          "seconds": 5
+        }
+      ],
+      "duration": 30,
+      "color": "peach",
+      "featured": true
+    },
+    {
+      "slug": "before-and-after-case-study",
+      "title": "Before and after case study",
+      "category": "Customer stories",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Bold",
+      "description": "Compare a real workflow change. Use evidence from both versions of the same task.",
+      "proof": "Use evidence from both versions of the same task",
+      "audience": "Compare a real workflow change",
+      "scenes": [
+        {
+          "title": "The context",
+          "instruction": "Compare a real workflow change.",
+          "seconds": 5
+        },
+        {
+          "title": "The workflow",
+          "instruction": "Use evidence from both versions of the same task.",
+          "seconds": 12
+        },
+        {
+          "title": "The evidence",
+          "instruction": "Add a verified outcome or approved quote; keep its context.",
+          "seconds": 8
+        },
+        {
+          "title": "Try the workflow",
+          "instruction": "Invite viewers to try the demonstrated task.",
+          "seconds": 5
+        }
+      ],
+      "duration": 30,
+      "color": "lilac",
+      "featured": false
+    },
+    {
+      "slug": "customer-quote-highlight",
+      "title": "Customer quote highlight",
+      "category": "Customer stories",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Editorial",
+      "description": "Share an approved customer quote. Pair the exact quote with the product feature discussed.",
+      "proof": "Pair the exact quote with the product feature discussed",
+      "audience": "Share an approved customer quote",
+      "scenes": [
+        {
+          "title": "The context",
+          "instruction": "Share an approved customer quote.",
+          "seconds": 5
+        },
+        {
+          "title": "The workflow",
+          "instruction": "Pair the exact quote with the product feature discussed.",
+          "seconds": 12
+        },
+        {
+          "title": "The evidence",
+          "instruction": "Add a verified outcome or approved quote; keep its context.",
+          "seconds": 8
+        },
+        {
+          "title": "Try the workflow",
+          "instruction": "Invite viewers to try the demonstrated task.",
+          "seconds": 5
+        }
+      ],
+      "duration": 30,
+      "color": "blue",
+      "featured": false
+    },
+    {
+      "slug": "team-adoption-story",
+      "title": "Team adoption story",
+      "category": "Customer stories",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Clean",
+      "description": "Show how a team adopted a product. Present the setup and a repeatable shared workflow.",
+      "proof": "Present the setup and a repeatable shared workflow",
+      "audience": "Show how a team adopted a product",
+      "scenes": [
+        {
+          "title": "The context",
+          "instruction": "Show how a team adopted a product.",
+          "seconds": 5
+        },
+        {
+          "title": "The workflow",
+          "instruction": "Present the setup and a repeatable shared workflow.",
+          "seconds": 12
+        },
+        {
+          "title": "The evidence",
+          "instruction": "Add a verified outcome or approved quote; keep its context.",
+          "seconds": 8
+        },
+        {
+          "title": "Try the workflow",
+          "instruction": "Invite viewers to try the demonstrated task.",
+          "seconds": 5
+        }
+      ],
+      "duration": 30,
+      "color": "mint",
+      "featured": false
+    },
+    {
+      "slug": "creator-spotlight",
+      "title": "Creator spotlight",
+      "category": "Customer stories",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Bold",
+      "description": "Show what a creator built. Feature their approved work and the relevant editing steps.",
+      "proof": "Feature their approved work and the relevant editing steps",
+      "audience": "Show what a creator built",
+      "scenes": [
+        {
+          "title": "The context",
+          "instruction": "Show what a creator built.",
+          "seconds": 5
+        },
+        {
+          "title": "The workflow",
+          "instruction": "Feature their approved work and the relevant editing steps.",
+          "seconds": 12
+        },
+        {
+          "title": "The evidence",
+          "instruction": "Add a verified outcome or approved quote; keep its context.",
+          "seconds": 8
+        },
+        {
+          "title": "Try the workflow",
+          "instruction": "Invite viewers to try the demonstrated task.",
+          "seconds": 5
+        }
+      ],
+      "duration": 30,
+      "color": "peach",
+      "featured": false
+    },
+    {
+      "slug": "agency-project-showcase",
+      "title": "Agency project showcase",
+      "category": "Customer stories",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Editorial",
+      "description": "Explain a client project with permission. Show the brief and authorized final deliverable.",
+      "proof": "Show the brief and authorized final deliverable",
+      "audience": "Explain a client project with permission",
+      "scenes": [
+        {
+          "title": "The context",
+          "instruction": "Explain a client project with permission.",
+          "seconds": 5
+        },
+        {
+          "title": "The workflow",
+          "instruction": "Show the brief and authorized final deliverable.",
+          "seconds": 12
+        },
+        {
+          "title": "The evidence",
+          "instruction": "Add a verified outcome or approved quote; keep its context.",
+          "seconds": 8
+        },
+        {
+          "title": "Try the workflow",
+          "instruction": "Invite viewers to try the demonstrated task.",
+          "seconds": 5
+        }
+      ],
+      "duration": 30,
+      "color": "lilac",
+      "featured": false
+    },
+    {
+      "slug": "community-use-case",
+      "title": "Community use case",
+      "category": "Customer stories",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Clean",
+      "description": "Share a useful community workflow. Show the contributor-approved example and its steps.",
+      "proof": "Show the contributor-approved example and its steps",
+      "audience": "Share a useful community workflow",
+      "scenes": [
+        {
+          "title": "The context",
+          "instruction": "Share a useful community workflow.",
+          "seconds": 5
+        },
+        {
+          "title": "The workflow",
+          "instruction": "Show the contributor-approved example and its steps.",
+          "seconds": 12
+        },
+        {
+          "title": "The evidence",
+          "instruction": "Add a verified outcome or approved quote; keep its context.",
+          "seconds": 8
+        },
+        {
+          "title": "Try the workflow",
+          "instruction": "Invite viewers to try the demonstrated task.",
+          "seconds": 5
+        }
+      ],
+      "duration": 30,
+      "color": "blue",
+      "featured": false
+    },
+    {
+      "slug": "founder-customer-interview",
+      "title": "Founder customer interview",
+      "category": "Customer stories",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Bold",
+      "description": "Turn an interview into a focused product story. Keep the customer question and demonstrated answer together.",
+      "proof": "Keep the customer question and demonstrated answer together",
+      "audience": "Turn an interview into a focused product story",
+      "scenes": [
+        {
+          "title": "The context",
+          "instruction": "Turn an interview into a focused product story.",
+          "seconds": 5
+        },
+        {
+          "title": "The workflow",
+          "instruction": "Keep the customer question and demonstrated answer together.",
+          "seconds": 12
+        },
+        {
+          "title": "The evidence",
+          "instruction": "Add a verified outcome or approved quote; keep its context.",
+          "seconds": 8
+        },
+        {
+          "title": "Try the workflow",
+          "instruction": "Invite viewers to try the demonstrated task.",
+          "seconds": 5
+        }
+      ],
+      "duration": 30,
+      "color": "mint",
+      "featured": false
+    },
+    {
+      "slug": "result-breakdown",
+      "title": "Result breakdown",
+      "category": "Customer stories",
+      "platform": "Web",
+      "format": "16:9",
+      "style": "Editorial",
+      "description": "Explain a verified project result. Show the original evidence with context and time period.",
+      "proof": "Show the original evidence with context and time period",
+      "audience": "Explain a verified project result",
+      "scenes": [
+        {
+          "title": "The context",
+          "instruction": "Explain a verified project result.",
+          "seconds": 5
+        },
+        {
+          "title": "The workflow",
+          "instruction": "Show the original evidence with context and time period.",
+          "seconds": 12
+        },
+        {
+          "title": "The evidence",
+          "instruction": "Add a verified outcome or approved quote; keep its context.",
+          "seconds": 8
+        },
+        {
+          "title": "Try the workflow",
+          "instruction": "Invite viewers to try the demonstrated task.",
+          "seconds": 5
+        }
+      ],
+      "duration": 30,
+      "color": "peach",
+      "featured": false
+    },
+    {
+      "slug": "customer-tutorial",
+      "title": "Customer tutorial",
+      "category": "Customer stories",
+      "platform": "Any",
+      "format": "16:9",
+      "style": "Clean",
+      "description": "Teach a workflow demonstrated by a customer. Use an approved recording and preserve its real interface.",
+      "proof": "Use an approved recording and preserve its real interface",
+      "audience": "Teach a workflow demonstrated by a customer",
+      "scenes": [
+        {
+          "title": "The context",
+          "instruction": "Teach a workflow demonstrated by a customer.",
+          "seconds": 5
+        },
+        {
+          "title": "The workflow",
+          "instruction": "Use an approved recording and preserve its real interface.",
+          "seconds": 12
+        },
+        {
+          "title": "The evidence",
+          "instruction": "Add a verified outcome or approved quote; keep its context.",
+          "seconds": 8
+        },
+        {
+          "title": "Try the workflow",
+          "instruction": "Invite viewers to try the demonstrated task.",
+          "seconds": 5
+        }
+      ],
+      "duration": 30,
+      "color": "lilac",
+      "featured": false
+    }
+  ],
+  "resources": [
+    {
+      "slug": "product-launch-brief",
+      "title": "Product launch brief",
+      "type": "Brief",
+      "description": "Turn a product idea into one audience, one proof point and a clear next step.",
+      "contents": [
+        "What are you launching? Write one sentence.",
+        "Who is it for? Name one specific audience.",
+        "What frustrating moment does it improve?",
+        "Which real product action proves the benefit?",
+        "What should the viewer do next?"
+      ],
+      "use": "Start a launch video with these questions in your creative brief.",
+      "template": "saas-product-launch",
+      "format": "TXT",
+      "downloadLabel": "Download brief",
+      "color": "blue"
+    },
+    {
+      "slug": "starter-brand-kit",
+      "title": "Starter brand kit",
+      "type": "Brand kit",
+      "description": "A readable palette, Inter typography and a concise voice for your next project.",
+      "contents": [
+        "White background · #ffffff",
+        "Cobalt accent · #2142e7",
+        "Navy text · #182b4e",
+        "Inter typography",
+        "Voice: clear, curious and useful."
+      ],
+      "use": "Create a new branded project so your existing project colors stay intact.",
+      "template": "saas-product-launch",
+      "format": "JSON",
+      "downloadLabel": "Download brand kit",
+      "color": "lilac",
+      "brand": {
+        "background": "#ffffff",
+        "accent": "#2142e7",
+        "ink": "#182b4e",
+        "font": "Inter",
+        "voice": "Clear, curious and useful."
+      }
+    },
+    {
+      "slug": "product-demo-shot-list",
+      "title": "Product demo shot list",
+      "type": "Checklist",
+      "description": "Capture the screens you need for a clear product demo, from opening state to final result.",
+      "contents": [
+        "Product name or opening title",
+        "Starting screen showing the problem",
+        "Cursor or finger at the real control",
+        "The action recorded without interruption",
+        "The result held long enough to read",
+        "One useful caption in plain language",
+        "Closing frame with one next step"
+      ],
+      "use": "Add the checklist to the brief of a new walkthrough.",
+      "template": "product-walkthrough-video",
+      "format": "TXT",
+      "downloadLabel": "Download checklist",
+      "color": "mint"
+    },
+    {
+      "slug": "three-scene-storyboard",
+      "title": "Three-scene storyboard",
+      "type": "Storyboard",
+      "description": "Plan the problem, product action and result before opening the timeline.",
+      "contents": [
+        "The problem: show a recognizable starting state.",
+        "The action: demonstrate one useful product interaction.",
+        "The result: hold on the outcome and name the next step."
+      ],
+      "use": "Create an editable storyboard with three independent frames.",
+      "template": "problem-and-solution-ad",
+      "format": "JSON",
+      "downloadLabel": "Download storyboard",
+      "color": "peach"
+    },
+    {
+      "slug": "feature-demo-script",
+      "title": "Feature demo script",
+      "type": "Script",
+      "description": "A short script that explains one feature without narrating every click.",
+      "contents": [
+        "Opening: Here is how to [complete the task].",
+        "Context: Start with [the required screen or content].",
+        "Action: Choose [the control] to [perform the action].",
+        "Result: You now have [the visible result].",
+        "Close: Try it with [a useful next input]."
+      ],
+      "use": "Create a feature video with the script ready in its brief.",
+      "template": "one-feature-announcement",
+      "format": "TXT",
+      "downloadLabel": "Download script",
+      "color": "blue"
+    },
+    {
+      "slug": "ai-scene-prompt-pack",
+      "title": "Product scene prompts",
+      "type": "Prompt pack",
+      "description": "Reusable prompts for thinking through a launch, a feature demo and a product update.",
+      "contents": [
+        "Plan a four-scene launch for [product] and [audience]. Use only these verified features: [list].",
+        "Suggest three ways to explain [feature] using this real screenshot: [reference].",
+        "Rewrite this caption in our brand voice without changing its claim: [caption].",
+        "Compare these scene ideas for clarity, product fidelity and reading time."
+      ],
+      "use": "Keep the prompt collection in a new video brief; adapt it before making an AI request.",
+      "template": "ai-tool-introduction",
+      "format": "TXT",
+      "downloadLabel": "Download prompts",
+      "color": "lilac"
+    },
+    {
+      "slug": "vertical-video-checklist",
+      "title": "Vertical video checklist",
+      "type": "Checklist",
+      "description": "Check crops, captions and interface readability before publishing a portrait video.",
+      "contents": [
+        "Choose 9:16 before framing.",
+        "Keep the meaningful control large enough to read.",
+        "Keep captions clear of the captured action.",
+        "Check the start and end of every scene.",
+        "Preview on a phone-sized screen."
+      ],
+      "use": "Start a portrait app video with the checklist attached to its brief.",
+      "template": "vertical-app-ad",
+      "format": "TXT",
+      "downloadLabel": "Download checklist",
+      "color": "mint"
+    },
+    {
+      "slug": "release-update-storyboard",
+      "title": "Release update storyboard",
+      "type": "Storyboard",
+      "description": "Give a release its own opening, feature proof and invitation to try.",
+      "contents": [
+        "What changed: name the update in plain language.",
+        "Where it lives: show the new control in context.",
+        "How it works: perform one useful action.",
+        "Try it: close on the result and next step."
+      ],
+      "use": "Create a four-frame storyboard you can attach to a product project.",
+      "template": "monthly-release-roundup",
+      "format": "JSON",
+      "downloadLabel": "Download storyboard",
+      "color": "peach"
+    },
+    {
+      "slug": "customer-story-brief",
+      "title": "Customer story brief",
+      "type": "Brief",
+      "description": "Collect the context, permissions and evidence behind a useful customer story.",
+      "contents": [
+        "Who is the customer and who approved the story?",
+        "What task were they trying to complete?",
+        "Which recording demonstrates the real workflow?",
+        "What result can you support with evidence?",
+        "Which exact quote is approved for publication?"
+      ],
+      "use": "Start a customer-story edit with the evidence questions in its brief.",
+      "template": "customer-workflow-story",
+      "format": "TXT",
+      "downloadLabel": "Download brief",
+      "color": "blue"
+    },
+    {
+      "slug": "youtube-tutorial-script",
+      "title": "YouTube tutorial script",
+      "type": "Script",
+      "description": "An outcome-first outline for a tutorial with a clear beginning and useful chapters.",
+      "contents": [
+        "Show the finished result.",
+        "List the starting materials or settings.",
+        "Demonstrate the task in distinct steps.",
+        "Explain how to check the result.",
+        "Link to one next lesson."
+      ],
+      "use": "Create a landscape tutorial edit with chapter-ready scenes.",
+      "template": "software-tutorial-intro",
+      "format": "TXT",
+      "downloadLabel": "Download script",
+      "color": "lilac"
+    },
+    {
+      "slug": "calm-brand-kit",
+      "title": "Calm brand kit",
+      "type": "Brand kit",
+      "description": "A white, evergreen and ink palette for thoughtful product demonstrations.",
+      "contents": [
+        "White background · #ffffff",
+        "Evergreen accent · #20816c",
+        "Ink text · #203c36",
+        "Inter typography",
+        "Voice: calm, specific and helpful."
+      ],
+      "use": "Create a fresh project with this palette without changing an existing brand.",
+      "template": "homepage-hero-video",
+      "format": "JSON",
+      "downloadLabel": "Download brand kit",
+      "color": "mint",
+      "brand": {
+        "background": "#ffffff",
+        "accent": "#20816c",
+        "ink": "#203c36",
+        "font": "Inter",
+        "voice": "Calm, specific and helpful."
+      }
+    },
+    {
+      "slug": "caption-writing-prompts",
+      "title": "Caption writing prompts",
+      "type": "Prompt pack",
+      "description": "Write concise captions that explain value while leaving the interface room to speak.",
+      "contents": [
+        "Shorten this caption to one clear idea: [text].",
+        "Describe the visible result without narrating the click: [action].",
+        "Write three accurate opening captions for this product action: [context].",
+        "Check this caption against the screenshot. Remove anything the image does not support."
+      ],
+      "use": "Add caption prompts to the brief of a new feature video.",
+      "template": "screen-recording-explainer",
+      "format": "TXT",
+      "downloadLabel": "Download prompts",
+      "color": "peach"
+    }
+  ],
+  "categories": [
+    "Launches",
+    "Product updates",
+    "Feature demos",
+    "Free trials",
+    "YouTube",
+    "Social ads",
+    "Websites",
+    "Mobile apps",
+    "Education",
+    "Customer stories"
+  ]
+}

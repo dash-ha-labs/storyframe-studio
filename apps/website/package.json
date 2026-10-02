@@ -16,7 +16,8 @@
     "@storyframe/studio": "*",
     "lucide-react": "^0.468.0",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "@storyframe/catalog": "*"
   },
   "devDependencies": {
     "@types/react": "^19.1.0",

@@ -1,0 +1,18 @@
+{
+  "repository": "https://github.com/latent-spaces/brag",
+  "commit": "cb89b9f44309b0bf4e3cb89e685fadf80c7999ed",
+  "checkedAt": "2026-10-02",
+  "license": "MIT",
+  "files": {
+    "LICENSE": "92d538e0da9abeaafff8ecfc62e142f5053fa92b2c3ef29978742c325c554089",
+    "skills/brag/SKILL.md": "4cd47d39c35bbc70d99ad6ad76aaae7b15b84f14721cf94fd65417fd51658cae",
+    "skills/brag/references/tones.md": "e6ea8c6d3061a8734194cdad2c176b371f3ec41cb85c89306ac549baeebaa59e",
+    "skills/brag/references/step-2-plan.md": "2caec3b2f21626174683804961dc7f2b1c4bf439827cca9b1423f7ebd805e7db",
+    "skills/brag/references/step-3-compose.md": "e61e338fe47f51569905b61512a5502b3029ad1ab33a34aa436d9e937f804156",
+    "skills/brag/references/audio.md": "8225dc498aeddd693c11542beb57986a783b4f13e02e5b6d253256f21c3a1f1f",
+    "skills/brag/references/step-1-inspect.md": "eb2ca315b727d8fa1e2dec12c58aa79e30888f98485217a588e84a7252e33e51",
+    "skills/brag/references/step-4-deliver.md": "4413fbabb454e9404d5521ba3dc85f42424d3553f55b85a38d50cad151cfd9f8",
+    "skills/brag/assets/music/README.md": "b142b3379af4c353b438b81a20c583823f4aa53b6f9f3d9ae95c5d06d5028e56"
+  },
+  "note": "Workflow reference snapshot only. No bundled music or SFX copied. Storyframe may adapt upstream directly; preserve this comparison baseline and license."
+}

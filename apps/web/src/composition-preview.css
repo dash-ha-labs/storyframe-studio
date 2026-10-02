@@ -1,0 +1,16 @@
+/* A composition has fixed media coordinates; fit the whole frame without cropping. */
+.composition-preview {
+  position: relative;
+  width: 100%;
+  min-height: 0;
+  overflow: hidden;
+  background: var(--sf-color-bg-canvas);
+  border-radius: var(--sf-radius-md);
+}
+.composition-preview iframe {
+  display: block;
+  position: absolute;
+  border: 0;
+  max-width: none;
+  max-height: none;
+}

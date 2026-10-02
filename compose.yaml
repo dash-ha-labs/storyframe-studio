@@ -23,7 +23,9 @@ services:
       context: .
       target: brag
     environment:
-      BRAG_ORIGINS: https://studio.storyframe.yamu.app,https://storyframe-studio.yamu.app
+      BRAG_ORIGINS: https://studio.storyframe.yamu.app,https://storyframe-studio.yamu.app,https://storyframe.yamu.app
+      STORYFRAME_ADMIN_TOKEN: ${STORYFRAME_ADMIN_TOKEN:-}
+      COOKIE_SECURE: "1"
       N9ROUTER_BASE_URL: ${N9ROUTER_BASE_URL:-https://router.darshgun.com/v1}
       N9ROUTER_API_KEY: ${N9ROUTER_API_KEY:-}
       GEMINI_MODEL: ${GEMINI_MODEL:-ag/gemini-3.8-flash-high}

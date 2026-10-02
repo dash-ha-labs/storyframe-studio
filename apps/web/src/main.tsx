@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {createRoot} from 'react-dom/client';
 import Suite from './Suite';
+import TemplateStudio from './TemplateStudio';
 import './style.css';
 import './suite.css';
 import './studio-ui.css';
@@ -9,6 +10,7 @@ function App() {
   const [authed, setAuthed] = useState(localStorage.getItem('authed') === '1');
   const [showLogin, setShowLogin] = useState(false);
 
+  if(window.location.pathname==='/admin/templates')return <TemplateStudio/>;
   if (authed) return <Suite />;
 
   return (

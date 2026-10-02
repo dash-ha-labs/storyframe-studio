@@ -6,7 +6,7 @@ Adopted 1 October 2026. Required for implementors and reviewers alongside [AGENT
 
 Storyframe is an AI-aided, brand-aware video builder for creators and entrepreneurs. Explain actual jobs: bring screenshots and footage, plan optional storyboards, edit scenes, generate variations and build phone mockups. Marketing copy describes the intended launch product. Keep implementation gaps and release dependencies in project documentation, not in public-facing development disclaimers.
 
-The current name and source app win over reference explorations. Never remove a feature or change project ownership to fit a marketing concept. Density changes require a documented shared rule; the user-authorized readability trial below supersedes the original fixed dimensions. Reference HTML is inspiration, not a feature contract. The source toolkit is Brand Design, independent Storyboards and Video Studio.
+Keep the current name and working feature/data contracts. Current product intent in PRODUCT.md wins over rejected or incoherent old presentation; replace superseded UI rather than preserving it behind overrides. Never remove a working capability or change ownership merely to fit a concept. Density changes require a documented shared rule; the user-authorized readability trial below supersedes the original fixed dimensions. Reference HTML is inspiration, not a feature contract. The source toolkit is Brand Design, independent Storyboards and Video Studio.
 
 The homepage headline is **From your idea to a video in minutes.** This is the requested marketing direction, not a measured completion benchmark. Do not strengthen it into a two-minute guarantee without evidence. Avoid vague motivational copy such as “find your signature,” “give it shape,” “make it a thing” or “make it seamless.”
 
@@ -44,7 +44,7 @@ The live editor appears on the homepage only. Features, Templates, Tutorials and
 
 Provide an ordinary validated fixture using `initialState`, `persist={false}` and a separate in-memory media store. Never read personal workspace data in marketing. Reload discards demo edits/imports; the real app retains its existing storage. Show session-only status accurately inside the app. Do not surround the preview with “live studio,” reset/about-sample panels or larger-canvas marketing chrome.
 
-The trusted app iframe isolates CSS and keyboard listeners. Its sandbox and CSP restrict capabilities; it is not a security boundary for arbitrary third-party code. Export must still identify JSON downloads and unconnected rendering honestly. Responsive marketing does not prove full mobile editor parity.
+The trusted app iframe isolates CSS and keyboard listeners. Its sandbox and CSP restrict capabilities; it is not a security boundary for arbitrary third-party code. Export must identify the actual available format and job state honestly; a render API is not an editor export integration. Responsive marketing does not prove full mobile editor parity.
 
 ## Conversion and evidence
 
@@ -101,12 +101,25 @@ For reference-only styling requests, preserve Storyframe's existing flow, naviga
 
 ## Content centers and spacing — 1 October 2026
 
-- Keep website content and community data separate from Studio. Catalogs, articles and lessons live in `apps/website/src/data`; community proposals/votes live in the website-only service and its own database. Core contains an interchange contract, never website editorial records. Studio must not import a website catalog or query the community database.
+- Shared public templates/resources/opt-in examples live in `packages/catalog` and the creation service. Website and Studio consume the same published records. Private workspace data stays separate; articles/lessons remain website-owned, and proposals/votes stay in the community service. See PRODUCT.md for ownership. Do not restore duplicate public catalogs.
 - Marketplace: search plus combinable use-case, product, format, style and duration filters; URL-backed state, sort and bounded pagination. A template links to its own page with a scene outline and one primary **Use template free** action. Do not invent popularity or usage counts.
 - Resource center: white cards with compact type labels, distinct type-specific download actions, concise explanations and individual pages. Brand kits show their palette; scripts, briefs, checklists and storyboards show relevant contents. **Use in Studio** opens a review step before creating anything.
-- A website starter carries bounded data in a URL fragment. Studio validates it, lets the user choose a new/existing owner, then creates an independent artifact. No website storage is merged into app storage. Existing work and product media stay intact.
+- A template link carries a stable public slug resolved against the current publication; resource starters currently carry bounded data in a URL fragment. Studio validates it, lets the user choose a new/existing owner, then creates an independent artifact. No website storage is merged into app storage. Existing work and product media stay intact.
 - Tutorials: course overview plus individual lesson URLs; contents on the left, a 16:9 video area on the right and short practice steps underneath. On phones, lesson navigation precedes the player. Videos are explicitly authorized placeholders until supplied; placeholders are not playable controls and must not emit VideoObject schema or fabricated duration.
 - Documentation: section indexes and individual articles, a persistent desktop section navigation, in-page outline, and a mobile section disclosure. Use at least eight current sections, including account/billing. State actual save/import behavior precisely. Avoid repeating the same introductory paragraph under another heading.
 - Blog: a lead story, compact supporting stories and readable article pages. Avoid identical long horizontal cards. Long artwork titles must stay inside the cover; the complete title remains visible below it.
 - Roadmap: ordered **Now / Next / Later** stages, tied to short proposal pages. Keep the timeline visually distinct from the searchable voting board. Votes rank proposals for review; they never assign delivery dates or move an idea onto the timeline automatically. No invented votes, customers or completion claims.
 - SEO: ship rendered HTML for content routes, unique titles/descriptions, canonical links, appropriate structured data, sitemap and real production 404 responses. Redirect Gallery to Tutorials and Guides to Docs. Use ordinary links for navigation; preserve modified-click behavior.
+
+## Consistency, task fit and replacement policy
+
+Consistency means a familiar customer workflow and shared visual/interaction grammar, not identical layouts. Admin is for admins; adapt its density and arrangement to authoring tasks without changing customer pages merely to match it. The customer creation/editing journey in PRODUCT.md remains the reference.
+
+- Use `Button`, `IconButton`, `Field`, `Badge` and `Dialog` from `packages/ui` where applicable. Extend the shared component with a named, documented variant if a real use case needs it. Studio normal buttons are 36px; icon/toolbar actions are 32px; marketing remains 44/48px. Differences need a use-case reason, not a page-local override.
+- Feature CSS may arrange panels/grids and contextual spacing. It must not invent input skins, button colors/radii/type, ad hoc selected states or override the global control selectors. Fix the canonical component. Remove the superseded local component/rules in the same change.
+- All editable controls must use the shared field treatment. Actions rendered as links still use Button and never have underlined labels. Text links remain links. Group related controls, separate different tasks, and avoid a long undifferentiated settings form.
+- AI stays alongside the real timeline with explicit scope, selected/locked blocks, the immediate-apply checkbox and recoverable history. No detached Strip/generator modal or redundant assistant upsell card.
+- Admin uses a template library, focused direction/scene/publishing sections and a bounded preview. Draft/published/archived are real stored states. Preview must contain the entire composition at every aspect ratio without clipping, document overflow or control overlap; zoom/fullscreen is a separate action if offered.
+- Preserve working functionality and saved data while replacing old UI. Test the specific affected customer paths whenever changing a shared control; admin polish does not authorize unrelated customer navigation/model changes.
+
+The original base/finish Studio styles still require gradual consolidation as their components are touched. This historical layering is not permission to add another override sheet. New controls use shared UI; migrate each old control with behavioral and visual evidence, not a blind repo-wide replacement.

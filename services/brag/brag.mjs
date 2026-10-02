@@ -36,11 +36,39 @@ hook is 2-3s, reveal 2-4s, highlights 2-4s each, punchline 2-3s. Total 15-25s.
 Each scene: 1-2 short on-screen lines. No emoji. No corporate filler.
 Follow the selected template/tone guidelines precisely (e.g. metric callouts for case studies, step progression for tutorials, UI updates for changelogs).`;
 
-function scenePrompt(project, toneKey) {
+// Clamp + shape incoming project context (storyboard frames, brand tokens).
+// ponytail: fixed allowlist, no deep schema validation; grow fields when the Studio sends more.
+export function normalizeContext(raw) {
+  const c = raw && typeof raw === 'object' ? raw : {};
+  const frames = (Array.isArray(c.frames) ? c.frames : [])
+    .slice(0, 12)
+    .map((f) => ({ text: String(f?.text ?? '').slice(0, 300).trim() }))
+    .filter((f) => f.text);
+  const brand = c.brand && typeof c.brand === 'object' ? c.brand : {};
+  const tokens = {};
+  for (const k of ['background', 'accent', 'ink', 'font', 'voice']) {
+    if (typeof brand[k] === 'string' && brand[k].trim()) tokens[k] = brand[k].trim().slice(0, 120);
+  }
+  return { frames, brand: tokens };
+}
+
+function contextPrompt(ctx) {
+  const parts = [];
+  if (ctx.frames.length) {
+    parts.push(`Existing storyboard frames (user already wrote these — reuse their facts, order and wording where useful):\n${ctx.frames.map((f, i) => `${i + 1}. ${f.text}`).join('\n')}`);
+  }
+  const b = ctx.brand;
+  if (Object.keys(b).length) {
+    parts.push(`Brand tokens (match this voice and personality in the copy):\n${Object.entries(b).map(([k, v]) => `- ${k}: ${v}`).join('\n')}`);
+  }
+  return parts.length ? `\n${parts.join('\n\n')}\n` : '';
+}
+
+function scenePrompt(project, toneKey, ctx) {
   const t = TONES[toneKey];
   const templateNote = t.intent ? `\nTemplate Intent: ${t.intent} (${t.category})` : '';
   return `Project name: ${project.name}
-Project summary: ${project.summary || '(none given — invent a plausible angle from the name)'}
+Project summary: ${project.summary || '(none given — invent a plausible angle from the name)'}${contextPrompt(ctx)}
 Selected preset "${toneKey}":${templateNote}
 - Energy: ${t.energy}
 - Voice: ${t.voice}
@@ -62,6 +90,7 @@ export async function generateStrip(input, { chatFn = chat } = {}) {
     throw err;
   }
   const summary = typeof input?.project?.summary === 'string' ? input.project.summary.slice(0, 500) : '';
+  const ctx = normalizeContext(input?.context);
 
   // Determine selected tone / template:
   // Accept input.template or input.tone (template takes priority if valid)
@@ -71,7 +100,7 @@ export async function generateStrip(input, { chatFn = chat } = {}) {
 
   const { text, model } = await chatFn([
     { role: 'system', content: SYSTEM },
-    { role: 'user', content: scenePrompt({ name, summary }, tone) },
+    { role: 'user', content: scenePrompt({ name, summary }, tone, ctx) },
   ]);
 
   const board = parseStoryboard(text);
@@ -101,6 +130,7 @@ export async function generateStrip(input, { chatFn = chat } = {}) {
   return {
     id: randomUUID(),
     project: { name, summary },
+    context: ctx,
     tone,
     template: isTemplate ? tone : null,
     templateMetadata: isTemplate ? {

@@ -11,8 +11,9 @@
     "dev": "npm run dev --workspace=@storyframe/studio",
     "build": "npm run build --workspace=@storyframe/tokens && npm run build --workspace=@storyframe/core && npm run build --workspace=@storyframe/ui && npm run build --workspace=@storyframe/studio && npm run build --workspace=@storyframe/website",
     "preview": "npm run preview --workspace=@storyframe/studio",
-    "test": "npm test --workspaces --if-present && node --test services/community/*.test.mjs",
-    "dev:community": "node services/community/server.mjs"
+    "test": "npm test --workspaces --if-present && node --test services/community/*.test.mjs services/brag/*.test.mjs",
+    "dev:community": "node services/community/server.mjs",
+    "dev:brag": "node services/brag/server.mjs"
   },
   "devDependencies": {
     "@types/react": "^19.1.0",

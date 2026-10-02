@@ -24,7 +24,10 @@ ENV HOST=0.0.0.0 \
     BRAG_PORT=9184 \
     COOKIE_SECURE=1 \
     TRUST_PROXY=1 \
-    HYPERFRAMES_BROWSER_PATH=/usr/bin/chromium
+    HYPERFRAMES_BROWSER_PATH=/usr/bin/chromium \
+    WEBSITE_DIST=/app/srv/website \
+    COMMUNITY_ORIGINS=https://storyframe.yamu.app \
+    BRAG_ORIGINS=https://studio.storyframe.yamu.app,https://storyframe-studio.yamu.app,https://storyframe.yamu.app
 WORKDIR /app
 COPY --from=build /app/services/community/ ./services/community/
 COPY --from=build /app/services/brag/ ./services/brag/

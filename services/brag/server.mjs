@@ -42,7 +42,7 @@ export function createBragServer({ dbPath = 'data/brag.sqlite', origins = [] } =
       let bytes = 0, body = '';
       for await (const chunk of req) {
         bytes += chunk.length;
-        if (bytes > 20000) return json(res, 413, { error: 'Keep the brief short.' });
+        if (bytes > 40000) return json(res, 413, { error: 'Keep the brief short.' });
         body += chunk;
       }
       let input;

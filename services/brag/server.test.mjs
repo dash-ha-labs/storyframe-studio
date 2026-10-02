@@ -44,6 +44,40 @@ test('missing name rejected with 400', async () => {
   await assert.rejects(() => generateStrip({ project: { name: '' } }, { chatFn: stub() }), (e) => e.status === 400);
 });
 
+test('project context reaches the prompt and the stored strip', async () => {
+  let seen = '';
+  const chatFn = async (messages) => {
+    seen = messages[1].content;
+    return { text: '```json\n' + JSON.stringify(BOARD) + '\n```', model: 'ag/test-model' };
+  };
+  const context = {
+    frames: [{ text: 'Frame one: heroes join the waitlist.' }, { text: 'Frame two: they share their invite code.' }],
+    brand: { background: '#101010', accent: '#7c5cff', ink: '#ffffff', font: 'Inter', voice: 'Playful but precise' },
+  };
+  const strip = await generateStrip({ project: { name: 'Horse Tinder' }, template: 'changelog', context }, { chatFn });
+  assert.ok(seen.includes('Existing storyboard frames'));
+  assert.ok(seen.includes('Frame one: heroes join the waitlist.'));
+  assert.ok(seen.includes('Brand tokens'));
+  assert.ok(seen.includes('voice: Playful but precise'));
+  assert.deepEqual(strip.context, {
+    frames: context.frames,
+    brand: context.brand,
+  });
+});
+
+test('context is clamped and garbage is dropped', async () => {
+  const strip = await generateStrip({
+    project: { name: 'Horse Tinder' },
+    context: {
+      frames: [{ text: 'x'.repeat(999) }, { text: '   ' }, { nope: 1 }, 'garbage'],
+      brand: { accent: '#fff', evil: '<script>', font: 42 },
+    },
+  }, { chatFn: stub() });
+  assert.equal(strip.context.frames.length, 1);
+  assert.equal(strip.context.frames[0].text.length, 300);
+  assert.deepEqual(strip.context.brand, { accent: '#fff' });
+});
+
 test('POST /api/strips: origin gate, generation, persistence, fetch back', async () => {
   const dir = mkdtempSync(join(tmpdir(), 'brag-test-'));
   const server = createBragServer({ dbPath: join(dir, 'brag.sqlite'), origins: ['http://studio.test'] });

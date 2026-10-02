@@ -1,6 +1,6 @@
-# Single-container Dokploy deploy: nginx + community API + creation service,
-# supervised by s6-overlay. Dokploy builds THIS file (Dockerfile.dokploy);
-# the multi-stage `Dockerfile` stays for local Compose.
+# Single-container Dokploy deploy: nginx + community API + creation service.
+# Dokploy builds THIS file (Dockerfile.dokploy); the multi-stage `Dockerfile`
+# stays for local Compose.
 FROM node:22-alpine AS build
 WORKDIR /app
 COPY package*.json ./
@@ -15,14 +15,9 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-# Runtime: nginx + two node services under s6-overlay
+# Runtime: nginx in the foreground, two node services in the background.
 FROM node:22-alpine AS dokploy
-ARG S6_OVERLAY_VERSION=3.2.0.2
-RUN apk add --no-cache xz nginx ffmpeg chromium ca-certificates curl \
-    && curl -fsSL -o /tmp/s6.tar.xz https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/s6-overlay-noarch.tar.xz \
-    && curl -fsSL -o /tmp/s6arch.tar.xz https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/s6-overlay-x86_64.tar.xz \
-    && tar -C / -Jxpf /tmp/s6.tar.xz && tar -C / -Jxpf /tmp/s6arch.tar.xz \
-    && rm /tmp/s6*.tar.xz
+RUN apk add --no-cache nginx ffmpeg chromium ca-certificates
 ENV HOST=0.0.0.0 \
     COMMUNITY_DB=/data/community.sqlite \
     STUDIO_DB=/data/studio.sqlite \
@@ -39,23 +34,10 @@ COPY --from=build /app/packages/ ./packages/
 COPY --from=build /app/apps/web/public/demo/ ./apps/web/public/demo/
 COPY --from=build /app/apps/website/dist/ ./srv/website/
 COPY --from=build /app/apps/web/dist/ ./srv/web/
-COPY docker/s6/ /etc/s6-overlay/s6-rc.d/
 COPY dokploy-nginx.conf /etc/nginx/http.d/default.conf
-RUN mkdir -p /etc/s6-overlay/user-bundles.d/user/contents.d \
-        /etc/s6-overlay/s6-rc.d/nginx/dependencies.d/base \
-        /etc/s6-overlay/s6-rc.d/community/dependencies.d/base \
-        /etc/s6-overlay/s6-rc.d/brag/dependencies.d/base \
-        /data /run/nginx \
-    && touch /etc/s6-overlay/user-bundles.d/user/contents.d/nginx \
-             /etc/s6-overlay/user-bundles.d/user/contents.d/community \
-             /etc/s6-overlay/user-bundles.d/user/contents.d/brag \
-    && echo longrun > /etc/s6-overlay/s6-rc.d/nginx/type \
-    && echo longrun > /etc/s6-overlay/s6-rc.d/community/type \
-    && echo longrun > /etc/s6-overlay/s6-rc.d/brag/type \
-    && chown -R node:node /data \
-    && chmod +x /etc/s6-overlay/s6-rc.d/nginx/run \
-                 /etc/s6-overlay/s6-rc.d/community/run \
-                 /etc/s6-overlay/s6-rc.d/brag/run
-VOLUME /data
+RUN mkdir -p /data /var/log/nginx /var/lib/nginx/tmp /run/nginx \
+    && chown -R node:node /data /var/log/nginx /var/lib/nginx /run/nginx \
+    && ln -sf /dev/stdout /var/log/nginx/access.log \
+    && ln -sf /dev/stderr /var/log/nginx/error.log
 EXPOSE 80
-ENTRYPOINT ["/init"]
+CMD ["sh", "-c", "node services/community/server.mjs & node --import tsx services/brag/server.mjs & exec nginx -g 'daemon off;'"]

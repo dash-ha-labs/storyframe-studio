@@ -2,6 +2,7 @@ import { DatabaseSync } from "node:sqlite";
 import { mkdirSync, readFileSync } from "node:fs";
 import { dirname } from "node:path";
 import { randomUUID } from "node:crypto";
+import { TONE_NAMES, STRIP_SHAPE } from "./tones.mjs";
 const seeds = JSON.parse(
   readFileSync(
     new URL("../../packages/catalog/src/seeds.json", import.meta.url),
@@ -63,14 +64,21 @@ export function validateTemplate(raw) {
       throw fail(
         "Each scene needs a title, instruction and 1–30 second duration.",
       );
+    // Optional brag strip-shape beat (hook/reveal/highlight/punchline).
+    if (s.beat !== undefined && !STRIP_SHAPE.includes(s.beat))
+      throw fail("Choose a valid scene beat.");
     return {
       title: s.title.trim(),
       instruction: s.instruction.trim(),
       seconds: s.seconds,
+      ...(s.beat !== undefined ? { beat: s.beat } : {}),
     };
   });
   const duration = scenes.reduce((a, s) => a + s.seconds, 0);
   if (duration > 120) throw fail("Keep a template within two minutes.");
+  // Optional creative tone; must be a known brag tone name (services/brag/tones.mjs).
+  if (raw.tone !== undefined && !TONE_NAMES.includes(raw.tone))
+    throw fail("Choose a valid tone.");
   return {
     slug,
     title: text("title", 100),
@@ -80,6 +88,8 @@ export function validateTemplate(raw) {
     format: pick("format", ["16:9", "9:16", "1:1"]),
     style: pick("style", ["Clean", "Bold", "Editorial"]),
     color: pick("color", ["blue", "mint", "peach", "lilac"]),
+    // Optional creative tone; resolved by the planner via services/brag/tones.mjs.
+    ...(raw.tone !== undefined ? { tone: raw.tone } : {}),
     prompt: text("prompt", 12000),
     sampleBrief: text("sampleBrief", 2000, 0),
     layout: pick("layout", ["title", "product", "device", "split"]),

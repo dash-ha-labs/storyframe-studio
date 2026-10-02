@@ -1,2 +1,0 @@
-#!/command/execlineb -P
-node --import tsx services/brag/server.mjs

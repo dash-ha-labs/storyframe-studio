@@ -1,2 +1,0 @@
-#!/command/execlineb -P
-node services/community/server.mjs

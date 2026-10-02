@@ -1,0 +1,46 @@
+# Single-container Dokploy deploy: nginx + community API + creation service.
+# Dokploy builds THIS file (Dockerfile.dokploy); the multi-stage `Dockerfile`
+# stays for local Compose.
+FROM node:22-alpine AS build
+WORKDIR /app
+COPY package*.json ./
+COPY apps/web/package*.json ./apps/web/
+COPY apps/website/package*.json ./apps/website/
+COPY packages/core/package*.json ./packages/core/
+COPY packages/tokens/package*.json ./packages/tokens/
+COPY packages/ui/package*.json ./packages/ui/
+COPY packages/catalog/package*.json ./packages/catalog/
+COPY packages/composition/package*.json ./packages/composition/
+RUN npm ci
+COPY . .
+RUN npm run build
+
+# Runtime: nginx in the foreground, two node services in the background.
+FROM node:22-alpine AS dokploy
+RUN apk add --no-cache nginx ffmpeg chromium ca-certificates
+ENV HOST=0.0.0.0 \
+    COMMUNITY_DB=/data/community.sqlite \
+    STUDIO_DB=/data/studio.sqlite \
+    BRAG_PORT=9184 \
+    COOKIE_SECURE=1 \
+    TRUST_PROXY=1 \
+    HYPERFRAMES_BROWSER_PATH=/usr/bin/chromium \
+    WEBSITE_DIST=/app/srv/website \
+    COMMUNITY_ORIGINS=https://storyframe.yamu.app \
+    BRAG_ORIGINS=https://studio.storyframe.yamu.app,https://storyframe-studio.yamu.app,https://storyframe.yamu.app
+WORKDIR /app
+COPY --from=build /app/services/community/ ./services/community/
+COPY --from=build /app/services/brag/ ./services/brag/
+COPY --from=build /app/node_modules/ ./node_modules/
+COPY --from=build /app/package.json ./package.json
+COPY --from=build /app/packages/ ./packages/
+COPY --from=build /app/apps/web/public/demo/ ./apps/web/public/demo/
+COPY --from=build /app/apps/website/dist/ ./srv/website/
+COPY --from=build /app/apps/web/dist/ ./srv/web/
+COPY dokploy-nginx.conf /etc/nginx/http.d/default.conf
+RUN mkdir -p /data /var/log/nginx /var/lib/nginx/tmp /run/nginx \
+    && chown -R node:node /data /var/log/nginx /var/lib/nginx /run/nginx \
+    && ln -sf /dev/stdout /var/log/nginx/access.log \
+    && ln -sf /dev/stderr /var/log/nginx/error.log
+EXPOSE 80
+CMD ["sh", "-c", "node services/community/server.mjs & node --import tsx services/brag/server.mjs & exec nginx -g 'daemon off;'"]

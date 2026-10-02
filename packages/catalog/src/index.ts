@@ -20,10 +20,12 @@ export type CatalogTemplate = {
   description: string;
   proof: string;
   audience: string;
-  scenes: { title: string; instruction: string; seconds: number }[];
+  scenes: { title: string; instruction: string; seconds: number; beat?: string }[];
   duration: number;
   color: string;
   featured: boolean;
+  /** Creative tone name; resolves via services/brag/tones.mjs (defaults to the category tone). */
+  tone?: string;
   prompt?: string;
   motion?: string;
   layout?: string;

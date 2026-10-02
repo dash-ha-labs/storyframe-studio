@@ -1,0 +1,237 @@
+{
+  "auto": {
+    "templateSlug": "auto",
+    "payload": {
+      "instruction": "Make a short launch strip",
+      "scope": "all",
+      "selectedScenes": [
+        {
+          "id": "a",
+          "title": "Opening",
+          "caption": "Original",
+          "seconds": 4,
+          "sourceIn": 0,
+          "assetId": "shot",
+          "locked": false,
+          "layout": "product",
+          "motion": "fade"
+        }
+      ],
+      "template": {
+        "direction": {
+          "energy": "Playful, clean, postable. The product gets to be funny on its own terms.",
+          "voice": "First person plural. Warm. Direct. No corporate language.",
+          "typography": "Mixed case. Comfortable weight. Let words breathe.",
+          "pacing": "4-6 scenes, each 2-4 seconds, comfortable rhythm in 15-25 seconds.",
+          "hook": "A simple question or observation that sets up the reveal.",
+          "highlight": "Short punchy phrases. One idea per scene.",
+          "outro": "The product name, then a tagline. Light punchline.",
+          "transitions": "Crossfade or clean slide."
+        }
+      },
+      "projectContext": {
+        "product": {
+          "name": "Kurutu",
+          "description": "Grocery list app that remembers what you buy.",
+          "apps": []
+        },
+        "brand": {
+          "background": "#f7f3ea",
+          "accent": "#d5e04b",
+          "ink": "#1c2829",
+          "font": "Bricolage Grotesque",
+          "voice": "Warm, direct, no corporate filler.",
+          "source": "",
+          "components": []
+        },
+        "storyboard": [
+          {
+            "text": "Show the remembered list",
+            "seconds": 4
+          }
+        ],
+        "video": {
+          "title": "",
+          "brief": "",
+          "format": "9:16",
+          "scenes": [
+            {
+              "id": "a",
+              "title": "Opening",
+              "caption": "Original",
+              "seconds": 4,
+              "sourceIn": 0,
+              "assetId": "shot",
+              "locked": false,
+              "layout": "product",
+              "motion": "fade"
+            }
+          ]
+        },
+        "media": [
+          {
+            "id": "shot",
+            "name": "cart screenshot",
+            "type": "image",
+            "duration": 4,
+            "origin": ""
+          }
+        ]
+      },
+      "resources": []
+    },
+    "composedScenes": 4,
+    "cues": [
+      {
+        "time": 0.125,
+        "intensity": 0.47,
+        "kind": "beat"
+      },
+      {
+        "time": 1.042,
+        "intensity": 0.46,
+        "kind": "beat"
+      },
+      {
+        "time": 1.542,
+        "intensity": 0.46,
+        "kind": "beat"
+      },
+      {
+        "time": 2.25,
+        "intensity": 0.45,
+        "kind": "beat"
+      },
+      {
+        "time": 2.708,
+        "intensity": 0.73,
+        "kind": "beat"
+      },
+      {
+        "time": 5.708,
+        "intensity": 0.77,
+        "kind": "beat"
+      },
+      {
+        "time": 6.167,
+        "intensity": 0.47,
+        "kind": "beat"
+      },
+      {
+        "time": 6.708,
+        "intensity": 0.47,
+        "kind": "beat"
+      },
+      {
+        "time": 8.042,
+        "intensity": 0.47,
+        "kind": "beat"
+      },
+      {
+        "time": 8.708,
+        "intensity": 0.72,
+        "kind": "beat"
+      }
+    ]
+  },
+  "forcedTemplate": {
+    "templateSlug": "changelog-highlight",
+    "payload": {
+      "instruction": "Make a short launch strip",
+      "scope": "all",
+      "selectedScenes": [
+        {
+          "id": "a",
+          "title": "Opening",
+          "caption": "Original",
+          "seconds": 4,
+          "sourceIn": 0,
+          "assetId": "shot",
+          "locked": false,
+          "layout": "product",
+          "motion": "fade"
+        }
+      ],
+      "template": {
+        "title": "Changelog highlight",
+        "duration": 20,
+        "prompt": "Create a specific, brand-aware video for the supplied product. Turn one release note into a useful visual. Pair the release note with the changed interface.\nUse this story structure:\n1. The opening: Turn one release note into a useful visual.\n2. The product action: Pair the release note with the changed interface.\n3. The useful result: Hold on the actual result so the viewer can read it.\n4. The next step: Close with your product name and one clear invitation.\nUse only supplied facts. Show the user's product assets when available. Keep captions concise and readable.",
+        "scenes": [
+          {
+            "title": "The opening",
+            "instruction": "Turn one release note into a useful visual.",
+            "seconds": 4
+          },
+          {
+            "title": "The product action",
+            "instruction": "Pair the release note with the changed interface.",
+            "seconds": 8
+          },
+          {
+            "title": "The useful result",
+            "instruction": "Hold on the actual result so the viewer can read it.",
+            "seconds": 5
+          },
+          {
+            "title": "The next step",
+            "instruction": "Close with your product name and one clear invitation.",
+            "seconds": 3
+          }
+        ],
+        "layout": "product",
+        "motion": "slide"
+      },
+      "projectContext": {
+        "product": {
+          "name": "Kurutu",
+          "description": "Grocery list app that remembers what you buy.",
+          "apps": []
+        },
+        "brand": {
+          "background": "#f7f3ea",
+          "accent": "#d5e04b",
+          "ink": "#1c2829",
+          "font": "Bricolage Grotesque",
+          "voice": "Warm, direct, no corporate filler.",
+          "source": "",
+          "components": []
+        },
+        "storyboard": [
+          {
+            "text": "Show the remembered list",
+            "seconds": 4
+          }
+        ],
+        "video": {
+          "title": "",
+          "brief": "",
+          "format": "9:16",
+          "scenes": [
+            {
+              "id": "a",
+              "title": "Opening",
+              "caption": "Original",
+              "seconds": 4,
+              "sourceIn": 0,
+              "assetId": "shot",
+              "locked": false,
+              "layout": "product",
+              "motion": "fade"
+            }
+          ]
+        },
+        "media": [
+          {
+            "id": "shot",
+            "name": "cart screenshot",
+            "type": "image",
+            "duration": 4,
+            "origin": ""
+          }
+        ]
+      },
+      "resources": []
+    },
+    "composedScenes": 4
+  }
+}

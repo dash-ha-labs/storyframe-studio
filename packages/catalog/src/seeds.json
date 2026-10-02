@@ -14,27 +14,32 @@
         {
           "title": "The opening",
           "instruction": "Introduce a new workspace.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show the first useful result in your dashboard.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "blue",
-      "featured": true
+      "featured": true,
+      "tone": "default"
     },
     {
       "slug": "mobile-app-debut",
@@ -50,27 +55,32 @@
         {
           "title": "The opening",
           "instruction": "Introduce an app to first-time users.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show the main action on a real phone capture.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "mint",
-      "featured": false
+      "featured": false,
+      "tone": "default"
     },
     {
       "slug": "new-website-reveal",
@@ -86,27 +96,32 @@
         {
           "title": "The opening",
           "instruction": "Announce a redesigned website.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Move from the homepage to the most useful page.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "peach",
-      "featured": false
+      "featured": false,
+      "tone": "default"
     },
     {
       "slug": "product-hunt-launch",
@@ -122,27 +137,32 @@
         {
           "title": "The opening",
           "instruction": "Give early adopters a clear reason to try.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Demonstrate the differentiating workflow.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "lilac",
-      "featured": false
+      "featured": false,
+      "tone": "default"
     },
     {
       "slug": "beta-invitation",
@@ -158,27 +178,32 @@
         {
           "title": "The opening",
           "instruction": "Invite a focused group of early testers.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show the task they can test today.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "blue",
-      "featured": false
+      "featured": false,
+      "tone": "default"
     },
     {
       "slug": "founder-introduction",
@@ -194,27 +219,32 @@
         {
           "title": "The opening",
           "instruction": "Explain why you built the product.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Pair a founder introduction with a real product action.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "mint",
-      "featured": false
+      "featured": false,
+      "tone": "default"
     },
     {
       "slug": "waitlist-announcement",
@@ -230,27 +260,32 @@
         {
           "title": "The opening",
           "instruction": "Introduce a product before general access.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show the product promise with an actual prototype screen.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "peach",
-      "featured": false
+      "featured": false,
+      "tone": "default"
     },
     {
       "slug": "desktop-app-launch",
@@ -266,27 +301,32 @@
         {
           "title": "The opening",
           "instruction": "Introduce a desktop workflow.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show the app window completing one task.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "lilac",
-      "featured": false
+      "featured": false,
+      "tone": "default"
     },
     {
       "slug": "ai-tool-introduction",
@@ -302,27 +342,32 @@
         {
           "title": "The opening",
           "instruction": "Explain an AI-assisted workflow.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show an input and a reviewed output together.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "blue",
-      "featured": false
+      "featured": false,
+      "tone": "default"
     },
     {
       "slug": "marketplace-opening",
@@ -338,27 +383,32 @@
         {
           "title": "The opening",
           "instruction": "Introduce a new place to discover products.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Browse a category and open one useful listing.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "mint",
-      "featured": false
+      "featured": false,
+      "tone": "default"
     },
     {
       "slug": "monthly-release-roundup",
@@ -374,27 +424,32 @@
         {
           "title": "The opening",
           "instruction": "Keep existing users up to date.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show three meaningful changes in sequence.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "peach",
-      "featured": true
+      "featured": true,
+      "tone": "changelog"
     },
     {
       "slug": "one-feature-announcement",
@@ -410,27 +465,32 @@
         {
           "title": "The opening",
           "instruction": "Make a new capability easy to understand.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Compare the old task with the new control.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "lilac",
-      "featured": false
+      "featured": false,
+      "tone": "changelog"
     },
     {
       "slug": "redesigned-dashboard",
@@ -446,27 +506,32 @@
         {
           "title": "The opening",
           "instruction": "Orient users after a dashboard redesign.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Point out the relocated controls with real captures.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "blue",
-      "featured": false
+      "featured": false,
+      "tone": "changelog"
     },
     {
       "slug": "integration-announcement",
@@ -482,27 +547,32 @@
         {
           "title": "The opening",
           "instruction": "Show how two tools now work together.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Follow one item from its source to its destination.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "mint",
-      "featured": false
+      "featured": false,
+      "tone": "changelog"
     },
     {
       "slug": "performance-improvement",
@@ -518,27 +588,32 @@
         {
           "title": "The opening",
           "instruction": "Explain a measured workflow improvement.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Use your own recorded timings and the same task.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "peach",
-      "featured": false
+      "featured": false,
+      "tone": "changelog"
     },
     {
       "slug": "new-mobile-experience",
@@ -554,27 +629,32 @@
         {
           "title": "The opening",
           "instruction": "Introduce an updated mobile workflow.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show the updated screen and its primary action.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "lilac",
-      "featured": false
+      "featured": false,
+      "tone": "changelog"
     },
     {
       "slug": "changelog-highlight",
@@ -590,27 +670,32 @@
         {
           "title": "The opening",
           "instruction": "Turn one release note into a useful visual.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Pair the release note with the changed interface.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "blue",
-      "featured": false
+      "featured": false,
+      "tone": "changelog"
     },
     {
       "slug": "accessibility-update",
@@ -626,27 +711,32 @@
         {
           "title": "The opening",
           "instruction": "Explain a specific accessibility improvement.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Demonstrate the interaction using the improved control.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "mint",
-      "featured": false
+      "featured": false,
+      "tone": "changelog"
     },
     {
       "slug": "new-language-release",
@@ -662,27 +752,32 @@
         {
           "title": "The opening",
           "instruction": "Welcome users in a newly supported language.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show the language selector and localized interface.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "peach",
-      "featured": false
+      "featured": false,
+      "tone": "changelog"
     },
     {
       "slug": "workflow-migration",
@@ -698,27 +793,32 @@
         {
           "title": "The opening",
           "instruction": "Help users move to a new workflow.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show where the old task now begins and ends.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "lilac",
-      "featured": false
+      "featured": false,
+      "tone": "changelog"
     },
     {
       "slug": "dashboard-walkthrough",
@@ -734,27 +834,32 @@
         {
           "title": "The opening",
           "instruction": "Explain one dashboard task.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Select a view and interpret the resulting information.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "blue",
-      "featured": true
+      "featured": true,
+      "tone": "polished"
     },
     {
       "slug": "search-in-action",
@@ -770,27 +875,32 @@
         {
           "title": "The opening",
           "instruction": "Help users find the right item.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Enter a realistic query and narrow the results.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "mint",
-      "featured": false
+      "featured": false,
+      "tone": "polished"
     },
     {
       "slug": "collaboration-demo",
@@ -806,27 +916,32 @@
         {
           "title": "The opening",
           "instruction": "Show how people work together.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Add a comment and show how a teammate responds.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "peach",
-      "featured": false
+      "featured": false,
+      "tone": "polished"
     },
     {
       "slug": "automation-walkthrough",
@@ -842,27 +957,32 @@
         {
           "title": "The opening",
           "instruction": "Explain a repeatable automation.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show the trigger, rule and resulting action.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "lilac",
-      "featured": false
+      "featured": false,
+      "tone": "polished"
     },
     {
       "slug": "analytics-explainer",
@@ -878,27 +998,32 @@
         {
           "title": "The opening",
           "instruction": "Make a report understandable.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Choose a date range and explain one metric.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "blue",
-      "featured": false
+      "featured": false,
+      "tone": "polished"
     },
     {
       "slug": "import-your-data",
@@ -914,27 +1039,32 @@
         {
           "title": "The opening",
           "instruction": "Reduce uncertainty around an import.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Select a sample file and review the mapped fields.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "mint",
-      "featured": false
+      "featured": false,
+      "tone": "polished"
     },
     {
       "slug": "export-a-result",
@@ -950,27 +1080,32 @@
         {
           "title": "The opening",
           "instruction": "Help users take their work elsewhere.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Open export settings and show the saved result.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "peach",
-      "featured": false
+      "featured": false,
+      "tone": "polished"
     },
     {
       "slug": "keyboard-shortcut-spotlight",
@@ -986,27 +1121,32 @@
         {
           "title": "The opening",
           "instruction": "Teach a faster way to perform one task.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show the shortcut beside its visible result.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "lilac",
-      "featured": false
+      "featured": false,
+      "tone": "polished"
     },
     {
       "slug": "phone-mockup-showcase",
@@ -1022,27 +1162,32 @@
         {
           "title": "The opening",
           "instruction": "Present a mobile feature in context.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Place an exact screenshot inside a phone frame.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "blue",
-      "featured": false
+      "featured": false,
+      "tone": "polished"
     },
     {
       "slug": "before-and-after-workflow",
@@ -1058,27 +1203,32 @@
         {
           "title": "The opening",
           "instruction": "Explain how a task becomes simpler.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Use the same task and comparable starting conditions.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "mint",
-      "featured": false
+      "featured": false,
+      "tone": "polished"
     },
     {
       "slug": "first-session-welcome",
@@ -1094,27 +1244,32 @@
         {
           "title": "The opening",
           "instruction": "Help a new trial user begin.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show the first action after opening the workspace.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "peach",
-      "featured": true
+      "featured": true,
+      "tone": "app-store"
     },
     {
       "slug": "your-first-project",
@@ -1130,27 +1285,32 @@
         {
           "title": "The opening",
           "instruction": "Get a trial user to a first saved project.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Name a project and add its first piece of content.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "lilac",
-      "featured": false
+      "featured": false,
+      "tone": "app-store"
     },
     {
       "slug": "activation-checklist",
@@ -1166,27 +1326,32 @@
         {
           "title": "The opening",
           "instruction": "Guide the first useful setup steps.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show the short path from setup to first result.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "blue",
-      "featured": false
+      "featured": false,
+      "tone": "app-store"
     },
     {
       "slug": "invite-your-team",
@@ -1202,27 +1367,32 @@
         {
           "title": "The opening",
           "instruction": "Explain team onboarding.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Open the invite flow using fictional sample accounts.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "mint",
-      "featured": false
+      "featured": false,
+      "tone": "app-store"
     },
     {
       "slug": "connect-your-first-source",
@@ -1238,27 +1408,32 @@
         {
           "title": "The opening",
           "instruction": "Help users bring their own content.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Choose a source and review the imported information.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "peach",
-      "featured": false
+      "featured": false,
+      "tone": "app-store"
     },
     {
       "slug": "trial-value-recap",
@@ -1274,27 +1449,32 @@
         {
           "title": "The opening",
           "instruction": "Help users recognize what they have made.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Use their own project milestones without invented metrics.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "lilac",
-      "featured": false
+      "featured": false,
+      "tone": "app-store"
     },
     {
       "slug": "return-to-your-draft",
@@ -1310,27 +1490,32 @@
         {
           "title": "The opening",
           "instruction": "Bring users back to unfinished work.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Open a saved draft at the next useful action.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "blue",
-      "featured": false
+      "featured": false,
+      "tone": "app-store"
     },
     {
       "slug": "explore-a-second-feature",
@@ -1346,27 +1531,32 @@
         {
           "title": "The opening",
           "instruction": "Introduce a relevant next capability.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Connect a completed task to its natural next step.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "mint",
-      "featured": false
+      "featured": false,
+      "tone": "app-store"
     },
     {
       "slug": "trial-faq-video",
@@ -1382,27 +1572,32 @@
         {
           "title": "The opening",
           "instruction": "Answer one common trial question.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show the exact screen that resolves the question.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "peach",
-      "featured": false
+      "featured": false,
+      "tone": "app-store"
     },
     {
       "slug": "aha-moment-demo",
@@ -1418,27 +1613,32 @@
         {
           "title": "The opening",
           "instruction": "Help a new user reach a meaningful result.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show the shortest repeatable path to that result.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "lilac",
-      "featured": false
+      "featured": false,
+      "tone": "app-store"
     },
     {
       "slug": "product-walkthrough-video",
@@ -1454,32 +1654,38 @@
         {
           "title": "The result",
           "instruction": "Show what viewers will learn: create a focused long-form product tour.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "Before you begin",
           "instruction": "Show the starting screen and name any prerequisites.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The walkthrough",
           "instruction": "Move through a task with readable chapter breaks.",
-          "seconds": 20
+          "seconds": 20,
+          "beat": "highlight"
         },
         {
           "title": "Check your work",
           "instruction": "Hold on the result and explain how to recognize success.",
-          "seconds": 10
+          "seconds": 10,
+          "beat": "highlight"
         },
         {
           "title": "Keep learning",
           "instruction": "End with one related action or lesson.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 48,
       "color": "blue",
-      "featured": true
+      "featured": true,
+      "tone": "tutorial"
     },
     {
       "slug": "software-tutorial-intro",
@@ -1495,32 +1701,38 @@
         {
           "title": "The result",
           "instruction": "Show what viewers will learn: introduce a practical tutorial.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "Before you begin",
           "instruction": "Show the starting screen and name any prerequisites.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The walkthrough",
           "instruction": "Show the result viewers will learn to make.",
-          "seconds": 20
+          "seconds": 20,
+          "beat": "highlight"
         },
         {
           "title": "Check your work",
           "instruction": "Hold on the result and explain how to recognize success.",
-          "seconds": 10
+          "seconds": 10,
+          "beat": "highlight"
         },
         {
           "title": "Keep learning",
           "instruction": "End with one related action or lesson.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 48,
       "color": "mint",
-      "featured": false
+      "featured": false,
+      "tone": "tutorial"
     },
     {
       "slug": "feature-comparison",
@@ -1536,32 +1748,38 @@
         {
           "title": "The result",
           "instruction": "Show what viewers will learn: compare two real approaches to a task.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "Before you begin",
           "instruction": "Show the starting screen and name any prerequisites.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The walkthrough",
           "instruction": "Use consistent examples and verified differences.",
-          "seconds": 20
+          "seconds": 20,
+          "beat": "highlight"
         },
         {
           "title": "Check your work",
           "instruction": "Hold on the result and explain how to recognize success.",
-          "seconds": 10
+          "seconds": 10,
+          "beat": "highlight"
         },
         {
           "title": "Keep learning",
           "instruction": "End with one related action or lesson.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 48,
       "color": "peach",
-      "featured": false
+      "featured": false,
+      "tone": "tutorial"
     },
     {
       "slug": "weekly-build-log",
@@ -1577,32 +1795,38 @@
         {
           "title": "The result",
           "instruction": "Show what viewers will learn: share progress on a product build.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "Before you begin",
           "instruction": "Show the starting screen and name any prerequisites.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The walkthrough",
           "instruction": "Show a shipped change and the decision behind it.",
-          "seconds": 20
+          "seconds": 20,
+          "beat": "highlight"
         },
         {
           "title": "Check your work",
           "instruction": "Hold on the result and explain how to recognize success.",
-          "seconds": 10
+          "seconds": 10,
+          "beat": "highlight"
         },
         {
           "title": "Keep learning",
           "instruction": "End with one related action or lesson.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 48,
       "color": "lilac",
-      "featured": false
+      "featured": false,
+      "tone": "tutorial"
     },
     {
       "slug": "screen-recording-explainer",
@@ -1618,32 +1842,38 @@
         {
           "title": "The result",
           "instruction": "Show what viewers will learn: explain a recorded workflow.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "Before you begin",
           "instruction": "Show the starting screen and name any prerequisites.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The walkthrough",
           "instruction": "Pair a continuous action with concise captions.",
-          "seconds": 20
+          "seconds": 20,
+          "beat": "highlight"
         },
         {
           "title": "Check your work",
           "instruction": "Hold on the result and explain how to recognize success.",
-          "seconds": 10
+          "seconds": 10,
+          "beat": "highlight"
         },
         {
           "title": "Keep learning",
           "instruction": "End with one related action or lesson.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 48,
       "color": "blue",
-      "featured": false
+      "featured": false,
+      "tone": "tutorial"
     },
     {
       "slug": "youtube-shorts-demo",
@@ -1659,32 +1889,38 @@
         {
           "title": "The result",
           "instruction": "Show what viewers will learn: teach one action in a vertical clip.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "Before you begin",
           "instruction": "Show the starting screen and name any prerequisites.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The walkthrough",
           "instruction": "Keep one phone-sized control and result in focus.",
-          "seconds": 20
+          "seconds": 20,
+          "beat": "highlight"
         },
         {
           "title": "Check your work",
           "instruction": "Hold on the result and explain how to recognize success.",
-          "seconds": 10
+          "seconds": 10,
+          "beat": "highlight"
         },
         {
           "title": "Keep learning",
           "instruction": "End with one related action or lesson.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 48,
       "color": "mint",
-      "featured": false
+      "featured": false,
+      "tone": "tutorial"
     },
     {
       "slug": "release-notes-video",
@@ -1700,32 +1936,38 @@
         {
           "title": "The result",
           "instruction": "Show what viewers will learn: turn a release into a chaptered video.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "Before you begin",
           "instruction": "Show the starting screen and name any prerequisites.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The walkthrough",
           "instruction": "Give each meaningful update its own short segment.",
-          "seconds": 20
+          "seconds": 20,
+          "beat": "highlight"
         },
         {
           "title": "Check your work",
           "instruction": "Hold on the result and explain how to recognize success.",
-          "seconds": 10
+          "seconds": 10,
+          "beat": "highlight"
         },
         {
           "title": "Keep learning",
           "instruction": "End with one related action or lesson.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 48,
       "color": "peach",
-      "featured": false
+      "featured": false,
+      "tone": "tutorial"
     },
     {
       "slug": "founder-product-breakdown",
@@ -1741,32 +1983,38 @@
         {
           "title": "The result",
           "instruction": "Show what viewers will learn: explain a product decision in context.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "Before you begin",
           "instruction": "Show the starting screen and name any prerequisites.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The walkthrough",
           "instruction": "Pair your explanation with the relevant app screen.",
-          "seconds": 20
+          "seconds": 20,
+          "beat": "highlight"
         },
         {
           "title": "Check your work",
           "instruction": "Hold on the result and explain how to recognize success.",
-          "seconds": 10
+          "seconds": 10,
+          "beat": "highlight"
         },
         {
           "title": "Keep learning",
           "instruction": "End with one related action or lesson.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 48,
       "color": "lilac",
-      "featured": false
+      "featured": false,
+      "tone": "tutorial"
     },
     {
       "slug": "tutorial-outro",
@@ -1782,32 +2030,38 @@
         {
           "title": "The result",
           "instruction": "Show what viewers will learn: give viewers a useful next step.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "Before you begin",
           "instruction": "Show the starting screen and name any prerequisites.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The walkthrough",
           "instruction": "Show the finished result and one related lesson.",
-          "seconds": 20
+          "seconds": 20,
+          "beat": "highlight"
         },
         {
           "title": "Check your work",
           "instruction": "Hold on the result and explain how to recognize success.",
-          "seconds": 10
+          "seconds": 10,
+          "beat": "highlight"
         },
         {
           "title": "Keep learning",
           "instruction": "End with one related action or lesson.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 48,
       "color": "blue",
-      "featured": false
+      "featured": false,
+      "tone": "tutorial"
     },
     {
       "slug": "webinar-highlight",
@@ -1823,32 +2077,38 @@
         {
           "title": "The result",
           "instruction": "Show what viewers will learn: repurpose one useful webinar moment.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "Before you begin",
           "instruction": "Show the starting screen and name any prerequisites.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The walkthrough",
           "instruction": "Keep the question, demonstration and answer together.",
-          "seconds": 20
+          "seconds": 20,
+          "beat": "highlight"
         },
         {
           "title": "Check your work",
           "instruction": "Hold on the result and explain how to recognize success.",
-          "seconds": 10
+          "seconds": 10,
+          "beat": "highlight"
         },
         {
           "title": "Keep learning",
           "instruction": "End with one related action or lesson.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 48,
       "color": "mint",
-      "featured": false
+      "featured": false,
+      "tone": "tutorial"
     },
     {
       "slug": "vertical-app-ad",
@@ -1864,27 +2124,32 @@
         {
           "title": "The opening",
           "instruction": "Introduce one mobile benefit in a feed.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show the relevant action within the opening scene.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "peach",
-      "featured": true
+      "featured": true,
+      "tone": "social-hype"
     },
     {
       "slug": "square-product-ad",
@@ -1900,27 +2165,32 @@
         {
           "title": "The opening",
           "instruction": "Present a product in a square placement.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Keep the product and caption inside a square frame.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "lilac",
-      "featured": false
+      "featured": false,
+      "tone": "social-hype"
     },
     {
       "slug": "linkedin-product-demo",
@@ -1936,27 +2206,32 @@
         {
           "title": "The opening",
           "instruction": "Explain a work-related product benefit.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Demonstrate a realistic professional workflow.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "blue",
-      "featured": false
+      "featured": false,
+      "tone": "social-hype"
     },
     {
       "slug": "instagram-feature-reel",
@@ -1972,27 +2247,32 @@
         {
           "title": "The opening",
           "instruction": "Make one feature clear on a phone.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Use large interface crops and a short caption.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "mint",
-      "featured": false
+      "featured": false,
+      "tone": "social-hype"
     },
     {
       "slug": "retargeting-reminder",
@@ -2008,27 +2288,32 @@
         {
           "title": "The opening",
           "instruction": "Remind interested viewers of a useful capability.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Return to the product action they already recognize.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "peach",
-      "featured": false
+      "featured": false,
+      "tone": "social-hype"
     },
     {
       "slug": "offer-announcement",
@@ -2044,27 +2329,32 @@
         {
           "title": "The opening",
           "instruction": "Explain a genuine product offer.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show the actual offer terms and relevant product value.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "lilac",
-      "featured": false
+      "featured": false,
+      "tone": "social-hype"
     },
     {
       "slug": "problem-and-solution-ad",
@@ -2080,27 +2370,32 @@
         {
           "title": "The opening",
           "instruction": "Connect a recognizable problem to a product action.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show the problem briefly before demonstrating the solution.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "blue",
-      "featured": false
+      "featured": false,
+      "tone": "social-hype"
     },
     {
       "slug": "carousel-companion-video",
@@ -2116,27 +2411,32 @@
         {
           "title": "The opening",
           "instruction": "Turn a static story into a short video.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Follow the same sequence as the companion carousel.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "mint",
-      "featured": false
+      "featured": false,
+      "tone": "social-hype"
     },
     {
       "slug": "event-promotion",
@@ -2152,27 +2452,32 @@
         {
           "title": "The opening",
           "instruction": "Invite viewers to a product event.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show the topic, date and registration destination.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "peach",
-      "featured": false
+      "featured": false,
+      "tone": "social-hype"
     },
     {
       "slug": "app-store-campaign",
@@ -2188,27 +2493,32 @@
         {
           "title": "The opening",
           "instruction": "Help viewers understand the app before installing.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show real interface actions at a readable scale.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "lilac",
-      "featured": false
+      "featured": false,
+      "tone": "social-hype"
     },
     {
       "slug": "homepage-hero-video",
@@ -2224,27 +2534,32 @@
         {
           "title": "The opening",
           "instruction": "Show product value beside a homepage headline.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Demonstrate one core workflow without dense captions.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "blue",
-      "featured": true
+      "featured": true,
+      "tone": "hero-anthem"
     },
     {
       "slug": "landing-page-demo",
@@ -2260,27 +2575,32 @@
         {
           "title": "The opening",
           "instruction": "Support a focused campaign landing page.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Match the product action to the page promise.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "mint",
-      "featured": false
+      "featured": false,
+      "tone": "hero-anthem"
     },
     {
       "slug": "pricing-page-explainer",
@@ -2296,27 +2616,32 @@
         {
           "title": "The opening",
           "instruction": "Explain a product option with context.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show a real workflow relevant to that option.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "peach",
-      "featured": false
+      "featured": false,
+      "tone": "hero-anthem"
     },
     {
       "slug": "feature-page-loop",
@@ -2332,27 +2657,32 @@
         {
           "title": "The opening",
           "instruction": "Give a feature page a concise demonstration.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Start and end on a compatible interface state.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "lilac",
-      "featured": false
+      "featured": false,
+      "tone": "hero-anthem"
     },
     {
       "slug": "checkout-walkthrough",
@@ -2368,27 +2698,32 @@
         {
           "title": "The opening",
           "instruction": "Explain an online purchase flow.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Use test data and show each required decision.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "blue",
-      "featured": false
+      "featured": false,
+      "tone": "hero-anthem"
     },
     {
       "slug": "portfolio-project-story",
@@ -2404,27 +2739,32 @@
         {
           "title": "The opening",
           "instruction": "Present the purpose of a portfolio project.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show the problem, your interface and its result.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "mint",
-      "featured": false
+      "featured": false,
+      "tone": "hero-anthem"
     },
     {
       "slug": "agency-service-demo",
@@ -2440,27 +2780,32 @@
         {
           "title": "The opening",
           "instruction": "Make a service tangible through its deliverable.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show an authorized example and explain the process.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "peach",
-      "featured": false
+      "featured": false,
+      "tone": "hero-anthem"
     },
     {
       "slug": "ecommerce-product-page",
@@ -2476,27 +2821,32 @@
         {
           "title": "The opening",
           "instruction": "Explain a product page interaction.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Choose a variant and show its relevant details.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "lilac",
-      "featured": false
+      "featured": false,
+      "tone": "hero-anthem"
     },
     {
       "slug": "booking-flow-demo",
@@ -2512,27 +2862,32 @@
         {
           "title": "The opening",
           "instruction": "Show how to book a service.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Select an available slot using sample details.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "blue",
-      "featured": false
+      "featured": false,
+      "tone": "hero-anthem"
     },
     {
       "slug": "website-redesign-case",
@@ -2548,27 +2903,32 @@
         {
           "title": "The opening",
           "instruction": "Explain a design change through a user task.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Compare the same task on both versions.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "mint",
-      "featured": false
+      "featured": false,
+      "tone": "hero-anthem"
     },
     {
       "slug": "app-onboarding-sequence",
@@ -2584,27 +2944,32 @@
         {
           "title": "The opening",
           "instruction": "Introduce the app without overwhelming users.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show the first meaningful setup action.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "peach",
-      "featured": true
+      "featured": true,
+      "tone": "app-store"
     },
     {
       "slug": "one-tap-feature",
@@ -2620,27 +2985,32 @@
         {
           "title": "The opening",
           "instruction": "Highlight a simple mobile interaction.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Hold on the control before showing its result.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "lilac",
-      "featured": false
+      "featured": false,
+      "tone": "app-store"
     },
     {
       "slug": "mobile-dashboard-tour",
@@ -2656,27 +3026,32 @@
         {
           "title": "The opening",
           "instruction": "Orient viewers within a mobile dashboard.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show the primary screen and one useful detail.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "blue",
-      "featured": false
+      "featured": false,
+      "tone": "app-store"
     },
     {
       "slug": "app-notification-flow",
@@ -2692,27 +3067,32 @@
         {
           "title": "The opening",
           "instruction": "Explain what happens after a notification.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show the notification and the destination screen.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "mint",
-      "featured": false
+      "featured": false,
+      "tone": "app-store"
     },
     {
       "slug": "mobile-checkout-demo",
@@ -2728,27 +3108,32 @@
         {
           "title": "The opening",
           "instruction": "Make a mobile purchase flow understandable.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Use a test checkout with no personal payment data.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "peach",
-      "featured": false
+      "featured": false,
+      "tone": "app-store"
     },
     {
       "slug": "gesture-walkthrough",
@@ -2764,27 +3149,32 @@
         {
           "title": "The opening",
           "instruction": "Teach a gesture through visible feedback.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show the gesture location and resulting interface state.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "lilac",
-      "featured": false
+      "featured": false,
+      "tone": "app-store"
     },
     {
       "slug": "app-settings-tip",
@@ -2800,27 +3190,32 @@
         {
           "title": "The opening",
           "instruction": "Help users personalize one setting.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Open the setting and show its visible effect.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "blue",
-      "featured": false
+      "featured": false,
+      "tone": "app-store"
     },
     {
       "slug": "mobile-search-story",
@@ -2836,27 +3231,32 @@
         {
           "title": "The opening",
           "instruction": "Demonstrate search on a small screen.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Enter a useful query and open one result.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "mint",
-      "featured": false
+      "featured": false,
+      "tone": "app-store"
     },
     {
       "slug": "app-sharing-feature",
@@ -2872,27 +3272,32 @@
         {
           "title": "The opening",
           "instruction": "Show how to share product content.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Use sample recipients and a non-sensitive example.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "peach",
-      "featured": false
+      "featured": false,
+      "tone": "app-store"
     },
     {
       "slug": "tablet-app-showcase",
@@ -2908,27 +3313,32 @@
         {
           "title": "The opening",
           "instruction": "Present a workflow on a larger touch screen.",
-          "seconds": 4
+          "seconds": 4,
+          "beat": "hook"
         },
         {
           "title": "The product action",
           "instruction": "Show the layout and one touch interaction.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The useful result",
           "instruction": "Hold on the actual result so the viewer can read it.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "highlight"
         },
         {
           "title": "The next step",
           "instruction": "Close with your product name and one clear invitation.",
-          "seconds": 3
+          "seconds": 3,
+          "beat": "punchline"
         }
       ],
       "duration": 20,
       "color": "lilac",
-      "featured": false
+      "featured": false,
+      "tone": "app-store"
     },
     {
       "slug": "quick-start-lesson",
@@ -2944,32 +3354,38 @@
         {
           "title": "The result",
           "instruction": "Show what viewers will learn: teach the minimum steps to begin.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "Before you begin",
           "instruction": "Show the starting screen and name any prerequisites.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The walkthrough",
           "instruction": "Show a complete first task from an empty state.",
-          "seconds": 20
+          "seconds": 20,
+          "beat": "highlight"
         },
         {
           "title": "Check your work",
           "instruction": "Hold on the result and explain how to recognize success.",
-          "seconds": 10
+          "seconds": 10,
+          "beat": "highlight"
         },
         {
           "title": "Keep learning",
           "instruction": "End with one related action or lesson.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 48,
       "color": "blue",
-      "featured": true
+      "featured": true,
+      "tone": "tutorial"
     },
     {
       "slug": "three-step-how-to",
@@ -2985,32 +3401,38 @@
         {
           "title": "The result",
           "instruction": "Show what viewers will learn: explain a short repeatable task.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "Before you begin",
           "instruction": "Show the starting screen and name any prerequisites.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The walkthrough",
           "instruction": "Give each step one action and a visible outcome.",
-          "seconds": 20
+          "seconds": 20,
+          "beat": "highlight"
         },
         {
           "title": "Check your work",
           "instruction": "Hold on the result and explain how to recognize success.",
-          "seconds": 10
+          "seconds": 10,
+          "beat": "highlight"
         },
         {
           "title": "Keep learning",
           "instruction": "End with one related action or lesson.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 48,
       "color": "mint",
-      "featured": false
+      "featured": false,
+      "tone": "tutorial"
     },
     {
       "slug": "troubleshooting-guide",
@@ -3026,32 +3448,38 @@
         {
           "title": "The result",
           "instruction": "Show what viewers will learn: resolve one concrete product problem.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "Before you begin",
           "instruction": "Show the starting screen and name any prerequisites.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The walkthrough",
           "instruction": "Show the symptom, the setting and the corrected result.",
-          "seconds": 20
+          "seconds": 20,
+          "beat": "highlight"
         },
         {
           "title": "Check your work",
           "instruction": "Hold on the result and explain how to recognize success.",
-          "seconds": 10
+          "seconds": 10,
+          "beat": "highlight"
         },
         {
           "title": "Keep learning",
           "instruction": "End with one related action or lesson.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 48,
       "color": "peach",
-      "featured": false
+      "featured": false,
+      "tone": "tutorial"
     },
     {
       "slug": "advanced-workflow-lesson",
@@ -3067,32 +3495,38 @@
         {
           "title": "The result",
           "instruction": "Show what viewers will learn: teach a workflow for experienced users.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "Before you begin",
           "instruction": "Show the starting screen and name any prerequisites.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The walkthrough",
           "instruction": "Name prerequisites before demonstrating the sequence.",
-          "seconds": 20
+          "seconds": 20,
+          "beat": "highlight"
         },
         {
           "title": "Check your work",
           "instruction": "Hold on the result and explain how to recognize success.",
-          "seconds": 10
+          "seconds": 10,
+          "beat": "highlight"
         },
         {
           "title": "Keep learning",
           "instruction": "End with one related action or lesson.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 48,
       "color": "lilac",
-      "featured": false
+      "featured": false,
+      "tone": "tutorial"
     },
     {
       "slug": "safety-settings-guide",
@@ -3108,32 +3542,38 @@
         {
           "title": "The result",
           "instruction": "Show what viewers will learn: help users understand a privacy-related control.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "Before you begin",
           "instruction": "Show the starting screen and name any prerequisites.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The walkthrough",
           "instruction": "Explain the effect using a fictional project.",
-          "seconds": 20
+          "seconds": 20,
+          "beat": "highlight"
         },
         {
           "title": "Check your work",
           "instruction": "Hold on the result and explain how to recognize success.",
-          "seconds": 10
+          "seconds": 10,
+          "beat": "highlight"
         },
         {
           "title": "Keep learning",
           "instruction": "End with one related action or lesson.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 48,
       "color": "blue",
-      "featured": false
+      "featured": false,
+      "tone": "tutorial"
     },
     {
       "slug": "team-training-clip",
@@ -3149,32 +3589,38 @@
         {
           "title": "The result",
           "instruction": "Show what viewers will learn: teach a shared team convention.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "Before you begin",
           "instruction": "Show the starting screen and name any prerequisites.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The walkthrough",
           "instruction": "Demonstrate the agreed naming or review workflow.",
-          "seconds": 20
+          "seconds": 20,
+          "beat": "highlight"
         },
         {
           "title": "Check your work",
           "instruction": "Hold on the result and explain how to recognize success.",
-          "seconds": 10
+          "seconds": 10,
+          "beat": "highlight"
         },
         {
           "title": "Keep learning",
           "instruction": "End with one related action or lesson.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 48,
       "color": "mint",
-      "featured": false
+      "featured": false,
+      "tone": "tutorial"
     },
     {
       "slug": "import-format-guide",
@@ -3190,32 +3636,38 @@
         {
           "title": "The result",
           "instruction": "Show what viewers will learn: explain what an import file needs.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "Before you begin",
           "instruction": "Show the starting screen and name any prerequisites.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The walkthrough",
           "instruction": "Compare a small sample file with its mapped result.",
-          "seconds": 20
+          "seconds": 20,
+          "beat": "highlight"
         },
         {
           "title": "Check your work",
           "instruction": "Hold on the result and explain how to recognize success.",
-          "seconds": 10
+          "seconds": 10,
+          "beat": "highlight"
         },
         {
           "title": "Keep learning",
           "instruction": "End with one related action or lesson.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 48,
       "color": "peach",
-      "featured": false
+      "featured": false,
+      "tone": "tutorial"
     },
     {
       "slug": "template-customization-lesson",
@@ -3231,32 +3683,38 @@
         {
           "title": "The result",
           "instruction": "Show what viewers will learn: teach users to adapt a starter.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "Before you begin",
           "instruction": "Show the starting screen and name any prerequisites.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The walkthrough",
           "instruction": "Replace the example text and apply a project brand.",
-          "seconds": 20
+          "seconds": 20,
+          "beat": "highlight"
         },
         {
           "title": "Check your work",
           "instruction": "Hold on the result and explain how to recognize success.",
-          "seconds": 10
+          "seconds": 10,
+          "beat": "highlight"
         },
         {
           "title": "Keep learning",
           "instruction": "End with one related action or lesson.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 48,
       "color": "lilac",
-      "featured": false
+      "featured": false,
+      "tone": "tutorial"
     },
     {
       "slug": "workflow-checklist-video",
@@ -3272,32 +3730,38 @@
         {
           "title": "The result",
           "instruction": "Show what viewers will learn: turn a checklist into a visual review.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "Before you begin",
           "instruction": "Show the starting screen and name any prerequisites.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The walkthrough",
           "instruction": "Show each check on the actual finished project.",
-          "seconds": 20
+          "seconds": 20,
+          "beat": "highlight"
         },
         {
           "title": "Check your work",
           "instruction": "Hold on the result and explain how to recognize success.",
-          "seconds": 10
+          "seconds": 10,
+          "beat": "highlight"
         },
         {
           "title": "Keep learning",
           "instruction": "End with one related action or lesson.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 48,
       "color": "blue",
-      "featured": false
+      "featured": false,
+      "tone": "tutorial"
     },
     {
       "slug": "help-center-answer",
@@ -3313,32 +3777,38 @@
         {
           "title": "The result",
           "instruction": "Show what viewers will learn: answer one support question visually.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "Before you begin",
           "instruction": "Show the starting screen and name any prerequisites.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "reveal"
         },
         {
           "title": "The walkthrough",
           "instruction": "Open the relevant screen and perform the action.",
-          "seconds": 20
+          "seconds": 20,
+          "beat": "highlight"
         },
         {
           "title": "Check your work",
           "instruction": "Hold on the result and explain how to recognize success.",
-          "seconds": 10
+          "seconds": 10,
+          "beat": "highlight"
         },
         {
           "title": "Keep learning",
           "instruction": "End with one related action or lesson.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 48,
       "color": "mint",
-      "featured": false
+      "featured": false,
+      "tone": "tutorial"
     },
     {
       "slug": "customer-workflow-story",
@@ -3354,27 +3824,32 @@
         {
           "title": "The context",
           "instruction": "Explain an authorized customer use case.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "The workflow",
           "instruction": "Show the actual task and a supported outcome.",
-          "seconds": 12
+          "seconds": 12,
+          "beat": "reveal"
         },
         {
           "title": "The evidence",
           "instruction": "Add a verified outcome or approved quote; keep its context.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "highlight"
         },
         {
           "title": "Try the workflow",
           "instruction": "Invite viewers to try the demonstrated task.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 30,
       "color": "peach",
-      "featured": true
+      "featured": true,
+      "tone": "case-study"
     },
     {
       "slug": "before-and-after-case-study",
@@ -3390,27 +3865,32 @@
         {
           "title": "The context",
           "instruction": "Compare a real workflow change.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "The workflow",
           "instruction": "Use evidence from both versions of the same task.",
-          "seconds": 12
+          "seconds": 12,
+          "beat": "reveal"
         },
         {
           "title": "The evidence",
           "instruction": "Add a verified outcome or approved quote; keep its context.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "highlight"
         },
         {
           "title": "Try the workflow",
           "instruction": "Invite viewers to try the demonstrated task.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 30,
       "color": "lilac",
-      "featured": false
+      "featured": false,
+      "tone": "case-study"
     },
     {
       "slug": "customer-quote-highlight",
@@ -3426,27 +3906,32 @@
         {
           "title": "The context",
           "instruction": "Share an approved customer quote.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "The workflow",
           "instruction": "Pair the exact quote with the product feature discussed.",
-          "seconds": 12
+          "seconds": 12,
+          "beat": "reveal"
         },
         {
           "title": "The evidence",
           "instruction": "Add a verified outcome or approved quote; keep its context.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "highlight"
         },
         {
           "title": "Try the workflow",
           "instruction": "Invite viewers to try the demonstrated task.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 30,
       "color": "blue",
-      "featured": false
+      "featured": false,
+      "tone": "case-study"
     },
     {
       "slug": "team-adoption-story",
@@ -3462,27 +3947,32 @@
         {
           "title": "The context",
           "instruction": "Show how a team adopted a product.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "The workflow",
           "instruction": "Present the setup and a repeatable shared workflow.",
-          "seconds": 12
+          "seconds": 12,
+          "beat": "reveal"
         },
         {
           "title": "The evidence",
           "instruction": "Add a verified outcome or approved quote; keep its context.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "highlight"
         },
         {
           "title": "Try the workflow",
           "instruction": "Invite viewers to try the demonstrated task.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 30,
       "color": "mint",
-      "featured": false
+      "featured": false,
+      "tone": "case-study"
     },
     {
       "slug": "creator-spotlight",
@@ -3498,27 +3988,32 @@
         {
           "title": "The context",
           "instruction": "Show what a creator built.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "The workflow",
           "instruction": "Feature their approved work and the relevant editing steps.",
-          "seconds": 12
+          "seconds": 12,
+          "beat": "reveal"
         },
         {
           "title": "The evidence",
           "instruction": "Add a verified outcome or approved quote; keep its context.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "highlight"
         },
         {
           "title": "Try the workflow",
           "instruction": "Invite viewers to try the demonstrated task.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 30,
       "color": "peach",
-      "featured": false
+      "featured": false,
+      "tone": "case-study"
     },
     {
       "slug": "agency-project-showcase",
@@ -3534,27 +4029,32 @@
         {
           "title": "The context",
           "instruction": "Explain a client project with permission.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "The workflow",
           "instruction": "Show the brief and authorized final deliverable.",
-          "seconds": 12
+          "seconds": 12,
+          "beat": "reveal"
         },
         {
           "title": "The evidence",
           "instruction": "Add a verified outcome or approved quote; keep its context.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "highlight"
         },
         {
           "title": "Try the workflow",
           "instruction": "Invite viewers to try the demonstrated task.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 30,
       "color": "lilac",
-      "featured": false
+      "featured": false,
+      "tone": "case-study"
     },
     {
       "slug": "community-use-case",
@@ -3570,27 +4070,32 @@
         {
           "title": "The context",
           "instruction": "Share a useful community workflow.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "The workflow",
           "instruction": "Show the contributor-approved example and its steps.",
-          "seconds": 12
+          "seconds": 12,
+          "beat": "reveal"
         },
         {
           "title": "The evidence",
           "instruction": "Add a verified outcome or approved quote; keep its context.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "highlight"
         },
         {
           "title": "Try the workflow",
           "instruction": "Invite viewers to try the demonstrated task.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 30,
       "color": "blue",
-      "featured": false
+      "featured": false,
+      "tone": "case-study"
     },
     {
       "slug": "founder-customer-interview",
@@ -3606,27 +4111,32 @@
         {
           "title": "The context",
           "instruction": "Turn an interview into a focused product story.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "The workflow",
           "instruction": "Keep the customer question and demonstrated answer together.",
-          "seconds": 12
+          "seconds": 12,
+          "beat": "reveal"
         },
         {
           "title": "The evidence",
           "instruction": "Add a verified outcome or approved quote; keep its context.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "highlight"
         },
         {
           "title": "Try the workflow",
           "instruction": "Invite viewers to try the demonstrated task.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 30,
       "color": "mint",
-      "featured": false
+      "featured": false,
+      "tone": "case-study"
     },
     {
       "slug": "result-breakdown",
@@ -3642,27 +4152,32 @@
         {
           "title": "The context",
           "instruction": "Explain a verified project result.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "The workflow",
           "instruction": "Show the original evidence with context and time period.",
-          "seconds": 12
+          "seconds": 12,
+          "beat": "reveal"
         },
         {
           "title": "The evidence",
           "instruction": "Add a verified outcome or approved quote; keep its context.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "highlight"
         },
         {
           "title": "Try the workflow",
           "instruction": "Invite viewers to try the demonstrated task.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 30,
       "color": "peach",
-      "featured": false
+      "featured": false,
+      "tone": "case-study"
     },
     {
       "slug": "customer-tutorial",
@@ -3678,27 +4193,32 @@
         {
           "title": "The context",
           "instruction": "Teach a workflow demonstrated by a customer.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "hook"
         },
         {
           "title": "The workflow",
           "instruction": "Use an approved recording and preserve its real interface.",
-          "seconds": 12
+          "seconds": 12,
+          "beat": "reveal"
         },
         {
           "title": "The evidence",
           "instruction": "Add a verified outcome or approved quote; keep its context.",
-          "seconds": 8
+          "seconds": 8,
+          "beat": "highlight"
         },
         {
           "title": "Try the workflow",
           "instruction": "Invite viewers to try the demonstrated task.",
-          "seconds": 5
+          "seconds": 5,
+          "beat": "punchline"
         }
       ],
       "duration": 30,
       "color": "lilac",
-      "featured": false
+      "featured": false,
+      "tone": "case-study"
     }
   ],
   "resources": [

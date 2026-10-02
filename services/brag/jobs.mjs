@@ -79,6 +79,7 @@ export function jobQueue(
         updateJob(db, id, {
           stage: "ready",
           plan: result.plan,
+          cues: result.cues,
           model: result.model,
           checksum,
           templateSlug: job.request.templateSlug,

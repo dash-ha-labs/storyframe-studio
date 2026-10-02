@@ -22,7 +22,7 @@ import {
   updateJob,
   fail,
 } from "./catalog.mjs";
-import { normalizeRequest, improveTemplate } from "./planner.mjs";
+import { normalizeRequest, improveTemplate, AUTO_TEMPLATE_SLUG } from "./planner.mjs";
 import { jobQueue } from "./jobs.mjs";
 import { providerConfigured } from "./gemini.mjs";
 import { validateProject } from "../../packages/core/src/model.ts";
@@ -267,7 +267,12 @@ export function createBragServer({
       if (req.method === "POST" && path === "/api/generations") {
         const s = ensureSession(req, res),
           b = await jsonBody(req);
-        let template = getTemplate(db, b.templateSlug, s.admin === 1);
+        // Default is raw brag "Auto" planning: no template is forced. An
+        // explicit template slug remains honored as optional creative
+        // direction (research/template-degradation.md: augment, not delete).
+        const wantsAuto =
+          !b.templateSlug || b.templateSlug === AUTO_TEMPLATE_SLUG;
+        let template = wantsAuto ? null : getTemplate(db, b.templateSlug, s.admin === 1);
         if (b.templateDraft) {
           requireAdmin(req);
           template = {
@@ -275,7 +280,8 @@ export function createBragServer({
             revision: b.templateDraft.revision || 1,
           };
         }
-        if (!template) throw fail("Choose an available template.", 404);
+        if (!wantsAuto && !template)
+          throw fail("Choose an available template.", 404);
         const request = normalizeRequest(b, template);
         return reply(
           res,
@@ -286,8 +292,8 @@ export function createBragServer({
               requestId: b.requestId,
               creationId: String(b.creationId || "").slice(0, 100),
               request,
-              templateSlug: template.slug,
-              templateRevision: template.revision,
+              templateSlug: request.templateSlug,
+              templateRevision: request.templateRevision,
             }),
           ),
         );

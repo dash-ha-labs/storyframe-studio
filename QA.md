@@ -120,3 +120,15 @@ Limits: tutorial recordings remain authorized placeholders. Template covers are 
 ## Future design guidance — 1 October 2026
 
 Documentation-only follow-up: added the required implementation workflow, source ownership map, page-pattern guide and reviewer note. AGENTS.md and README link the guide; design-language and review rules now distinguish styling-only reference adoption from the later authorized content-center expansion. Corrected the remaining Gallery terminology in current review rules. All 24 relative links in the five changed guidance documents resolve, source owners were checked against the repository, and the whitespace check passes. No runtime code changed; the build and 62-test evidence above remains the applicable verification.
+
+## Raw brag "Auto" planning mode — 2 October 2026
+
+Templates stopped being forced on every generation. `templateSlug` is optional; the default "Auto" mode sends the planner the project context plus brag's creative discipline (hook → reveal → highlights → close, energy/voice/pacing directives) instead of a rigid template scene map, and the rank scaler (ported from upstream brag constants: intensity 0.45·onset + 0.25·contrast + 0.20·rms + 0.10·bass, threshold 0.45, dedupe gap 0.18 s) attaches beat cues aligned to the composed scene cuts. Templates remain selectable as optional creative direction (research rec: augment, not delete).
+
+Verification:
+- Offline stub-provider tests: 4 new tests in `services/brag/auto.test.mjs` (scaler constants/dedupe, boundary beats, Auto payload carries raw direction with no template map, end-to-end HTTP generation without templateSlug → ready job with cues; unknown slug still 404). Full suites: 27 Studio, 23 website, 14 core, 11 service — all pass. No live provider call was made; generation quality claims about the routed model are not asserted from fixtures.
+- Payload evidence: `work/t_19d3aa5d/auto-vs-template-payload.json` and `work/t_19d3aa5d/verify-auto.mjs` show the Auto request body carries `{"direction":{...brag tone...}}` while a template request retains the template block.
+- Visual proof: `work/t_19d3aa5d/ai-panel-auto-default.png` — Studio AI panel at 1280×577, "Creative direction" select defaults to "Auto · plan from your project"; white surfaces, navy text, no overlap. Live dev servers (creation 9184, Vite 9181) used for the capture.
+- Full production build passes (tsc + Vite + 179 prerendered website pages).
+
+Limits: cues are computed from synthesized boundaries (no real audio feature extraction yet — placeholder noted in scaler for when audio analysis lands); no live Gemini generation was run in this change, so improved end-to-end output quality is expected from the restored brag discipline but not yet measured against the provider; existing stored jobs from before this change still carry their template payloads and replay unchanged.

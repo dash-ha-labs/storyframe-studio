@@ -31,7 +31,7 @@ Entry point: [server.mjs](../services/brag/server.mjs). Run with Node 22.12+ and
 - `GET /api/admin/templates/:slug/versions`: latest 50 immutable revisions.
 - `POST /api/admin/templates/improve` `{template,instruction}`: explicit 9Router call; returns revised `prompt` and model, does not save/publish. This endpoint is not yet a durable job; never retry a timeout automatically.
 
-Template schema: [validateTemplate](../services/brag/catalog.mjs). Required title, slug, description, category, platform, format, style, color, prompt, sampleBrief (can be empty), layout, motion, status, scenes. Each scene has title/instruction and 1–30 seconds; 1–12 scenes, total ≤120 seconds. Published+featured controls homepage eligibility. Seeds are initial data; editing seed JSON does not update an existing database automatically.
+Template schema: [validateTemplate](../services/brag/catalog.mjs). Required title, slug, description, category, platform, format, style, color, prompt, sampleBrief (can be empty), layout, motion, status, scenes. Optional `tone` specifies a creative tone name (validated against [tones.mjs](../services/brag/tones.mjs), defaults to category tone). Each scene has title/instruction, 1–30 seconds, and optional brag strip-shape `beat` (`hook`, `reveal`, `highlight`, `punchline`); 1–12 scenes, total ≤120 seconds. Published+featured controls homepage eligibility. Seeds are initial data; editing seed JSON does not update an existing database automatically.
 
 ## Generation and job recovery
 
@@ -50,7 +50,7 @@ Template schema: [validateTemplate](../services/brag/catalog.mjs). Required titl
 }
 ```
 
-The string above documents the `context` producer; send its actual object, not the literal string. `scope` is `new`, `all` or `selected`. `parentJobId` is optional. Admin may supply a fully validated `templateDraft` for preview without publishing. Normal users cannot preview private drafts.
+`templateSlug` is optional and defaults to raw brag planning (`"auto"`): the planner composes the strip dynamically from project context using the brag creative discipline (hook → reveal → highlights → close, tone directives) instead of a rigid template scene map, and the rank scaler attaches beat cues aligned to the composed scene cuts. Passing a real template slug keeps that template as creative direction: the planner passes the template's resolved tone directives (energy, voice, typography, pacing, hook/highlight/outro styles, transitions) and scene guide beats to Gemini, ensuring the output adheres to the STRIP_SHAPE law; an unknown slug still returns 404. The string above documents the `context` producer; send its actual object, not the literal string. `scope` is `new`, `all` or `selected`. `parentJobId` is optional. Admin may supply a fully validated `templateDraft` for preview without publishing. Normal users cannot preview private drafts.
 
 Returns 202 with a durable job. Reusing the same requestId **within the same owner session** returns the original job, even if the supplied payload differs. Do not generate a fresh ID for a retry. `GET /api/jobs` lists the latest 50 owner jobs; optional `creationId` currently filters that window. `GET /api/jobs/:id` returns stage, result/error and client requestId. Foreign sessions get 404. Stages: queued → planning → ready, or failed/interrupted/canceled. Render stages: queued → validating → rendering → complete. Only `ready` plans can be applied; only `complete` render jobs have encoded output.
 

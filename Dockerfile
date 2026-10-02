@@ -23,6 +23,17 @@ VOLUME /data
 EXPOSE 9183
 CMD ["node", "services/community/server.mjs"]
 
+# Studio brag strip generator: 9Router Gemini call happens server-side only.
+FROM node:22-alpine AS brag
+WORKDIR /app
+COPY --from=build /app/services/brag/ ./services/brag/
+ENV HOST=0.0.0.0 BRAG_PORT=9184 BRAG_DB=/data/brag.sqlite BRAG_ORIGINS=https://studio.storyframe.yamu.app,https://storyframe-studio.yamu.app
+RUN mkdir /data && chown node:node /data
+USER node
+VOLUME /data
+EXPOSE 9184
+CMD ["node", "services/brag/server.mjs"]
+
 # Static website pages and the Studio SPA.
 FROM nginx:alpine AS frontend
 COPY --from=build /app/apps/website/dist /usr/share/nginx/website

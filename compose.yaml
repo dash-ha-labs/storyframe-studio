@@ -7,6 +7,7 @@ services:
       - "127.0.0.1:8080:80"
     depends_on:
       - website-community
+      - studio-brag
   website-community:
     build:
       context: .
@@ -17,5 +18,17 @@ services:
       TRUST_PROXY: "1"
     volumes:
       - website-community-data:/data
+  studio-brag:
+    build:
+      context: .
+      target: brag
+    environment:
+      BRAG_ORIGINS: https://studio.storyframe.yamu.app,https://storyframe-studio.yamu.app
+      N9ROUTER_BASE_URL: ${N9ROUTER_BASE_URL:-https://router.darshgun.com/v1}
+      N9ROUTER_API_KEY: ${N9ROUTER_API_KEY:-}
+      GEMINI_MODEL: ${GEMINI_MODEL:-ag/gemini-3.8-flash-high}
+    volumes:
+      - studio-brag-data:/data
 volumes:
   website-community-data:
+  studio-brag-data:

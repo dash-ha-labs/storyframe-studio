@@ -646,6 +646,12 @@
   font-weight: 600;
 }
 
+.sf-review-stars {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: var(--sf-color-accent);
+}
+
 /* App embed shell (live product surface inside marketing pages) */
 .app-embed {
   margin: var(--sf-space-6) 0 var(--sf-space-8) 0;

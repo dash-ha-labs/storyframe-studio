@@ -2,7 +2,7 @@
 
 Initiative: storyframe-seo | Packet revision: kanban task body t_5497b9cc | Brief/plan revisions: n/a (ops ticket)
 Base revision: feat/t_b669bd2d-openseo-seo-agent @ 1147aca (script PR #18 still open; this branch stacks on it)
-Submitted revision/diff: feat/t_5497b9cc-seo-agent-ci @ d0f96af (commits 8492742 + d0f96af); PR #19
+Submitted revision/diff: feat/t_5497b9cc-seo-agent-ci @ c622f8e (8492742 + d0f96af + docs); PR #19 (base: PR #18's branch until it merges)
 Serving model: glm/glm-5.3 (team-glm-hydra route)
 
 ## Before implementation
@@ -74,7 +74,7 @@ No changes to the agent script, no UI, no Dokploy changes.
 | Commit → new branch → PR vs main | Commit step produced `seo-agent/rehearsal-1` @ 78f577f touching only seo.ts (13-line diff); `gh pr create --base main` (push/PR need GitHub, syntax `bash -n` + structure-checked; gh 2.102 preinstalled on ubuntu runners per runner-images) | pass (push/PR simulated locally) |
 | Secrets documented in docs/seo.md | Table of 6 secrets + 6 variables + activation + dry-run + costs | pass |
 | First rehearsal exposed real defect | Run with PR #18 tests: agent edit → `npm test` FAILED (2 pinned-description tests) — proving the loop needed the unpin; fixed, then full rehearsal green | pass (defect→fix→re-run) |
-| Repo checks after changes | `npm test` (all workspaces + services) and `npm run build` pass at 8492742/d0f96af | pass |
+| Repo checks after changes | Full `npm test` (all workspaces + services) and `npm run build` pass; website suite 34/34 at d0f96af; docs/QA committed at c622f8e | pass |
 
 Checks not run and why: a real GitHub Actions execution (needs the workflow on
 a branch with Actions enabled + secrets; reviewer/human can dispatch a dry-run

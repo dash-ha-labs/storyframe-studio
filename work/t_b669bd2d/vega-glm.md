@@ -1,7 +1,7 @@
 # Work: t_b669bd2d — vega-glm
 
 Initiative: storyframe-seo | Packet revision: task body (kanban t_b669bd2d) | Brief/plan revisions: n/a (ops scaffold)
-Base revision: origin/main 9b31f49 | Submitted revision/diff: commit 02eed5a on branch feat/t_b669bd2d-openseo-seo-agent
+Base revision: origin/main 9b31f49 | Submitted revision/diff: commits 02eed5a + ec6e3fb on branch feat/t_b669bd2d-openseo-seo-agent; PR https://github.com/dash-ha-labs/storyframe-studio/pull/18 (merge blocked on review by design)
 Serving model: glm/glm-5.3-flash (team-glm-vega route)
 
 ## Before implementation

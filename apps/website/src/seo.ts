@@ -13,7 +13,7 @@ const indexPages:Record<string,[string,string]>={
  '/blog':['Ideas for better product videos','Explore product video techniques, creative workflows and practical ways to show what your app can do.'],
  '/roadmap':['Product roadmap & community ideas','See what is next for Storyframe. Share a proposal, vote for useful improvements and follow selected ideas onto the product timeline.'],
  '/status':['Product status','Find the status of Storyframe product capabilities.'],
- '/legal':['Legal information','Storyframe legal information and policy contacts.'],
+ '/legal':['Legal information','Storyframe legal information, terms, privacy and policy contacts for the marketing site and studio.'],
  '/ecommerce':['Shopify URL or product photo to a viral ad','Paste a Shopify URL or upload a product photo, and AI instantly creates a viral TikTok or Facebook ad. Built for e-commerce sellers and dropshippers.'],
 };
 export function metadata(path:string):PageMetadata{let title='',description='',type='WebPage',schema:Record<string,unknown>|undefined;const t=TEMPLATES.find(t=>path===`/templates/${t.slug}`),r=RESOURCES.find(r=>path===`/resources/${r.slug}`),post=BLOG_POSTS.find(p=>path===`/blog/${p.slug}`),doc=DOC_SECTIONS.flatMap(s=>s.articles.map(a=>({a,path:`/docs/${s.slug}/${a.slug}`}))).find(d=>d.path===path),course=COURSES.find(c=>path===`/tutorials/${c.slug}`||c.lessons.some(l=>path===`/tutorials/${c.slug}/${l.slug}`));

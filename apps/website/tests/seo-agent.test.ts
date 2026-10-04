@@ -134,15 +134,19 @@ test('parseIndexPages reads the real seo.ts entries', async () => {
   assert.equal(entries.length, 11);
   const home = entries.find((e) => e.path === '/');
   assert.equal(home?.title, 'From your idea to a video in minutes');
-  assert.equal(
-    home?.description,
-    'An AI-aided, brand-aware video builder. Bring screenshots and footage, plan a storyboard and edit every scene. Free signup, no credit card required.',
-  );
+  // Descriptions are deliberately not pinned: the SEO agent (see
+  // scripts/seo-agent.ts and .github/workflows/seo-agent.yml) rewrites them;
+  // tests run in CI on its proposed edits, so only the shared contract is
+  // asserted here — 50-160 chars, single line, no markup.
   const roadmap = entries.find((e) => e.path === '/roadmap');
-  assert.equal(
-    roadmap?.description,
-    'See what is next for Storyframe. Share a proposal, vote for useful improvements and follow selected ideas onto the product timeline.',
-  );
+  assert.equal(roadmap?.title, 'Product roadmap & community ideas');
+  for (const entry of entries) {
+    assert.ok(
+      entry.description.length >= 50 && entry.description.length <= 160,
+      `${entry.path} description length ${entry.description.length} is outside 50-160`,
+    );
+    assert.ok(!/[\r\n<>]/.test(entry.description), `${entry.path} description carries newline or angle brackets`);
+  }
 });
 
 test('applyDescription changes one description and verifyMutations accepts it', async () => {
@@ -259,7 +263,10 @@ test('end-to-end loop: stub MCP + stub chat mutate a temp seo.ts copy only', asy
     assert.equal(payload.pages.length, 1);
     assert.equal(payload.pages[0].path, '/');
     assert.equal(payload.pages[0].impressions, 5000);
-    assert.ok(payload.pages[0].currentDescription.startsWith('An AI-aided'));
+    // Not pinned to a literal: in the CI agent loop the repo seo.ts may already
+    // carry a proposed description; the prompt must carry whatever is current.
+    const currentDesc = agent.parseIndexPages(REPO_SEO).find((e) => e.path === '/')?.description;
+    assert.equal(payload.pages[0].currentDescription, currentDesc);
     return JSON.stringify([
       { path: '/', description: newDesc },
       { path: '/nope', description: 'x'.repeat(80) },

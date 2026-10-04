@@ -6,16 +6,18 @@ The agent queries a self-hosted or hosted OpenSEO MCP server for Search Console
 performance data, picks pages with high impressions but weak CTR, asks the
 routed completion model for improved meta descriptions, and rewrites **only the
 description strings** of existing entries in `indexPages` inside
-`apps/website/src/seo.ts`. It never commits, pushes or opens a PR: a human
-reviews the diff, runs the checks and opens the pull request (PR automation is
-a separate future ticket).
+`apps/website/src/seo.ts`. The script itself never commits, pushes or opens a
+PR. Unattended operation (weekly schedule, tests, branch, PR) is wired in CI:
+see [seo.md](seo.md).
 
 ## What it deliberately does not do
 
 - No structural edits to `seo.ts`: `metadata()`, entry paths, titles, entries
   and the rest of the file are verified unchanged after every mutation.
 - No writes outside `apps/website/src/seo.ts` (and only when not in dry-run).
-- No direct commits to main, no automatic PRs, no scheduled runs yet.
+- No direct commits to main and no automatic merges. The CI workflow
+  ([seo.md](seo.md)) commits to a dedicated branch and opens a PR; a human
+  reviews and merges. The script itself never commits or pushes.
 - No retries of provider calls; a failed or unclear run leaves the file alone.
 
 ## Usage
@@ -63,7 +65,8 @@ After a run: review the printed diff, `npm test`, `npm run build`, then open a P
 - OpenSEO does not document stable MCP tool names; the first live run may need
   `OPENSEO_QUERY_TOOL`/`OPENSEO_QUERY_ARGS` set from the server's tool list.
 - Each MCP query costs DataForSEO credits (research file, "Unknown"): budgets
-  and scheduling are not defined yet by design.
+  are not defined; the weekly CI schedule is opt-in via `SEO_AGENT_ENABLED`
+  ([seo.md](seo.md)).
 - The GSC-style parser understands page/metric rows keyed by `url`/`page`/…
   with `impressions`/`clicks`/`ctr`/`position` (absolute or percent strings);
   if OpenSEO's real payload shape differs, extend `extractPageRows` with a

@@ -1,0 +1,143 @@
+# Scheduled SEO agent: OpenSEO MCP -> seo.ts description edits -> PR for human review.
+# Setup, secrets and activation switch: docs/seo.md.
+# The agent script itself never commits; this workflow commits on a dedicated
+# branch only, after the only-seo.ts guard, the test suite and the website build pass.
+name: SEO agent
+
+on:
+  schedule:
+    - cron: '17 6 * * 1' # Mondays 06:17 UTC (off the top of the hour)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run: query OpenSEO and log the proposal, but do not commit or open a PR.'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write # push the dedicated seo-agent/* branch
+  pull-requests: write # open the PR for human review
+
+concurrency:
+  group: seo-agent
+  cancel-in-progress: false
+
+jobs:
+  seo-agent:
+    name: OpenSEO loop to PR
+    # Weekly runs are opt-in: set repository variable SEO_AGENT_ENABLED=true once the
+    # OpenSEO and 9Router secrets exist, so unprovisioned weeks do not fail noisily and
+    # no DataForSEO credits are spent without an explicit human decision.
+    # Manual dispatches always run (setup and diagnostics).
+    if: ${{ github.event_name != 'schedule' || vars.SEO_AGENT_ENABLED == 'true' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run SEO agent (OpenSEO MCP query, then seo.ts read-modify)
+        working-directory: apps/website
+        env:
+          OPENSEO_MCP_URL: ${{ secrets.OPENSEO_MCP_URL }}
+          OPENSEO_API_KEY: ${{ secrets.OPENSEO_API_KEY }}
+          OPENSEO_QUERY_TOOL: ${{ secrets.OPENSEO_QUERY_TOOL }}
+          OPENSEO_QUERY_ARGS: ${{ secrets.OPENSEO_QUERY_ARGS }}
+          N9ROUTER_API_KEY: ${{ secrets.N9ROUTER_API_KEY }}
+          N9ROUTER_BASE_URL: ${{ secrets.N9ROUTER_BASE_URL }}
+          SEO_AGENT_MODEL: ${{ vars.SEO_AGENT_MODEL }}
+          SEO_SITE_ORIGIN: ${{ vars.SEO_SITE_ORIGIN }}
+          SEO_AGENT_MIN_IMPRESSIONS: ${{ vars.SEO_AGENT_MIN_IMPRESSIONS }}
+          SEO_AGENT_MAX_CTR: ${{ vars.SEO_AGENT_MAX_CTR }}
+          SEO_AGENT_MAX_POSITION: ${{ vars.SEO_AGENT_MAX_POSITION }}
+          SEO_AGENT_MAX_EDITS: ${{ vars.SEO_AGENT_MAX_EDITS }}
+          SEO_AGENT_DRY_RUN: ${{ (inputs.dry_run && '1') || '0' }}
+        run: node --import tsx scripts/seo-agent.ts
+
+      - name: Guard that only apps/website/src/seo.ts changed
+        id: changes
+        run: |
+          set -euo pipefail
+          # Unstaged modification of seo.ts is the only acceptable worktree
+          # state here (gitignored build output never appears in porcelain).
+          status="$(git status --porcelain)"
+          if [ -n "$status" ] && printf '%s\n' "$status" | grep -vqxF ' M apps/website/src/seo.ts'; then
+            echo "::error::The SEO agent run left unexpected worktree changes; refusing to continue."
+            printf 'Offending paths:\n%s\n' "$status"
+            git --no-pager diff --stat HEAD
+            exit 1
+          fi
+          if [ -z "$status" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "seo.ts is unchanged after the run; nothing to propose."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --stat HEAD -- apps/website/src/seo.ts
+          fi
+
+      - name: Run test suite on the proposed edit
+        if: steps.changes.outputs.changed == 'true'
+        run: npm test
+
+      - name: Build website with the proposed edit
+        if: steps.changes.outputs.changed == 'true'
+        run: npm run build --workspace @storyframe/website
+
+      - name: Commit the proposed edit to a dedicated branch
+        if: steps.changes.outputs.changed == 'true'
+        id: branch
+        env:
+          BRANCH: seo-agent/${{ github.run_id }}-${{ github.run_attempt }}
+        run: |
+          set -euo pipefail
+          git config user.name "storyframe-seo-agent"
+          git config user.email "action@github.com"
+          git switch -c "$BRANCH"
+          git add apps/website/src/seo.ts
+          git commit -m "chore(seo): automated meta description update ($(date -u +%Y-%m-%d))"
+          git push origin "HEAD:refs/heads/$BRANCH"
+          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
+
+      - name: Open a pull request for human review
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH: ${{ steps.branch.outputs.branch }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          body="$(mktemp)"
+          {
+            echo "Automated meta-description update proposed by the scheduled SEO agent. Nothing here reaches production without this review."
+            echo
+            echo "- Workflow run: $RUN_URL (attempt ${GITHUB_RUN_ATTEMPT})"
+            echo "- The workflow verified that only \`apps/website/src/seo.ts\` changed, then passed \`npm test\` and the website build on this exact commit."
+            echo "- Query cost note: each run spends OpenSEO/DataForSEO credits (see docs/seo.md)."
+            echo
+            echo '### Proposed diff'
+            echo
+            echo '```diff'
+            git --no-pager diff HEAD~1 -- apps/website/src/seo.ts
+            echo '```'
+            echo
+            echo '### Reviewer checklist'
+            echo
+            echo '- [ ] Descriptions are concrete product copy: no invented features, prices or claims; no vague slogans.'
+            echo '- [ ] Each description is 50-160 characters, one paragraph, sentence case.'
+            echo '- [ ] Only description string literals changed; paths, titles and the rest of the file are untouched.'
+            echo '- [ ] Merging is approved (merge to main triggers the production deploy).'
+          } > "$body"
+          gh pr create \
+            --base main \
+            --head "$BRANCH" \
+            --title "chore(seo): automated meta description update $(date -u +%Y-%m-%d)" \
+            --body-file "$body"

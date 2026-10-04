@@ -1,7 +1,7 @@
 # Work: t_b669bd2d — vega-glm
 
 Initiative: storyframe-seo | Packet revision: task body (kanban t_b669bd2d) | Brief/plan revisions: n/a (ops scaffold)
-Base revision: origin/main 9b31f49 | Submitted revision/diff: branch feat/t_b669bd2d-openseo-seo-agent
+Base revision: origin/main 9b31f49 | Submitted revision/diff: commit 02eed5a on branch feat/t_b669bd2d-openseo-seo-agent
 Serving model: glm/glm-5.3-flash (team-glm-vega route)
 
 ## Before implementation
@@ -83,4 +83,15 @@ PR automation + scheduled run. Decision needed from Astra: none.
 
 ## Repair log
 
-(none yet)
+1. Lazy env read (real defect found by tests): the first draft captured
+   `N9ROUTER_API_KEY`/`OPENSEO_MCP_URL` at module load; this machine's shell
+   carries a real router key, so the "refuses without key" test would have made
+   a live paid call. Fix: all credentials/URLs read lazily; tests snapshot and
+   restore env around every test. Check: `defaultChat` refusal test passes with
+   the real key present in the shell.
+2. Test-expectation fixes (not script defects): candidate order follows
+   impressions sort (`/templates` before `/docs`); `selectTool` fallback needs
+   required args to succeed; cross-test tool-call counter made relative.
+3. Type fix: `bad` helper returned `Array.push` (number) as `void`.
+
+All fixed states re-verified by the full suites listed above; no open findings.

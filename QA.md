@@ -2,6 +2,13 @@
 
 This section supersedes older capability statements below. Product intent: [PRODUCT](PRODUCT.md). Remaining acceptance work: [HANDOFF](docs/HANDOFF.md), [TASKS](TASKS.md).
 
+## OpenSEO SEO agent scaffold — 4 October 2026
+
+- `npm test`: **92 passed**, zero failed (27 Studio, 34 website, 14 core, 17 service/community). Ten new website tests cover the SEO agent: MCP streamable-HTTP handshake/session/tool listing/call against a stub loopback server, Search Console tool selection with required-arg validation, parsing the real `src/seo.ts` (11 entries), single-entry description mutation with escaping, candidate heuristics (impressions/CTR/position/known-path), fenced-JSON suggestion validation with rejection reporting, SSE/HTTP/JSON-RPC error surfacing, refusal without `N9ROUTER_API_KEY`, and an end-to-end stub loop writing a temp copy while the repo file stays byte-identical.
+- `npm run build`: passed (tsc + Vite + 179 prerendered pages). The agent script is not part of the client bundle; `scripts/seo-agent.ts` type-checked standalone (only pre-existing `@types/node`-absent diagnostics, same as `scripts/prerender.tsx`).
+- CLI exercised: `--parse-only` lists all 11 entries from the real file; running without configuration exits 2 with a clear setup message; `--help` prints usage. No live OpenSEO or 9Router call was made; a live end-to-end run awaits human-provisioned `OPENSEO_API_KEY` (and a DataForSEO budget decision), so suggestion quality against the real model is unverified.
+- The agent mutates only description string literals inside `indexPages`; `verifyMutations` re-parses and enforces byte-level scope (paths, titles, entry count, line count unchanged). PR automation, scheduling and OpenSEO server provisioning are explicitly out of scope ([docs/SEO-AGENT.md](docs/SEO-AGENT.md)).
+
 - `npm test`: **69 passed**, zero failed (27 Studio, 21 website, 14 canonical core, 7 service/community). Includes scoped edits, locked/unrelated scene preservation, foreign/duplicate target rejection, typography duration, server ownership/idempotency, restart without retry, admin revisions/publication/archive and existing manual model/import tests.
 - `npm run build`: passed, including type checks and 178 prerendered website pages. Legacy demo font/mask warnings remain; source media is not bundled in a clean clone.
 - `git diff --check`: passed. Active local Markdown documentation links checked and resolved.

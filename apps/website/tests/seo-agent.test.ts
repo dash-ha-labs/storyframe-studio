@@ -151,7 +151,9 @@ test('parseIndexPages reads the real seo.ts entries', async () => {
 
 test('applyDescription changes one description and verifyMutations accepts it', async () => {
   const agent = await import('../scripts/seo-agent.ts');
-  const desc = 'Storyframe legal information, terms, privacy and policy contacts for the marketing site and studio.';
+  // Distinct from the current /legal text on purpose: the mutation must be a
+  // real change for verifyMutations/lineDiff to have something to check.
+  const desc = 'Storyframe legal terms, privacy policy and contact routes for the marketing site and the studio app.';
   const mutated = agent.applyDescription(REPO_SEO, '/legal', desc);
   agent.verifyMutations(REPO_SEO, mutated, [{ path: '/legal', description: desc }]);
   const after = agent.parseIndexPages(mutated).find((e) => e.path === '/legal');

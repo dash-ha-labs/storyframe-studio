@@ -2,6 +2,13 @@
 
 This section supersedes older capability statements below. Product intent: [PRODUCT](PRODUCT.md). Remaining acceptance work: [HANDOFF](docs/HANDOFF.md), [TASKS](TASKS.md).
 
+## SEO agent CI automation — 4 October 2026
+
+- Added `.github/workflows/seo-agent.yml`: weekly (Mon 06:17 UTC, opt-in via the `SEO_AGENT_ENABLED` repository variable) + manual dispatch with a dry-run input. Sequence per run: checkout → Node 22 (npm cache) → `npm ci` → `seo-agent.ts` with GitHub secrets mapped to its documented env vars → guard (worktree must show exactly ` M apps/website/src/seo.ts`) → `npm test` → website build → commit to `seo-agent/<run>-<attempt>` → `gh pr create` against `main` with the diff and a reviewer checklist. Nothing merges automatically; merging deploys.
+- Guard verified against three scenarios in a scratch clone: only-seo.ts change → `changed=true`; seo.ts plus a stray untracked file → job-failing error (an earlier `git diff`-based draft passed this scenario wrongly and was rewritten); clean tree → `changed=false`, no PR.
+- Full offline rehearsal of the workflow (stub OpenSEO MCP + stub 9Router chat, same JSON-RPC/SSE shape as the repo's own tests): the agent's proposed `/` description passed guard, `npm test` (92/92 on the mutated file), the website build (179 pages), and landed as a single-file commit on a `seo-agent/*` branch. The same rehearsal against the pre-change tests failed in `seo-agent.test.ts` exactly where description literals were pinned — the documented reason tests now assert the 50–160/single-line/no-markup contract instead of exact strings (titles stay pinned). `npm test` and `npm run build` pass at d0f96af with these changes.
+- Not run: a real Actions execution and a live OpenSEO query — both need human-provisioned secrets (`OPENSEO_API_KEY`, `N9ROUTER_API_KEY`, optionally `OPENSEO_MCP_URL`/`OPENSEO_QUERY_TOOL`/`OPENSEO_QUERY_ARGS`; see [docs/seo.md](docs/seo.md)). Until `SEO_AGENT_ENABLED=true` is set, scheduled runs skip silently and spend no credits.
+
 ## OpenSEO SEO agent scaffold — 4 October 2026
 
 - `npm test`: **92 passed**, zero failed (27 Studio, 34 website, 14 core, 17 service/community). Ten new website tests cover the SEO agent: MCP streamable-HTTP handshake/session/tool listing/call against a stub loopback server, Search Console tool selection with required-arg validation, parsing the real `src/seo.ts` (11 entries), single-entry description mutation with escaping, candidate heuristics (impressions/CTR/position/known-path), fenced-JSON suggestion validation with rejection reporting, SSE/HTTP/JSON-RPC error surfacing, refusal without `N9ROUTER_API_KEY`, and an end-to-end stub loop writing a temp copy while the repo file stays byte-identical.

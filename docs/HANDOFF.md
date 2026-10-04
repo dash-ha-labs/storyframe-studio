@@ -20,6 +20,7 @@ UI consistency means shared identity, controls, states and predictable flow, wit
 | Shared controls | `packages/ui/src/index.tsx`, `ui.css`; `Button` studio variant, `Field`, `IconButton`, `Badge`, `Dialog` |
 | Brag updates | [upstream guide](BRAG-INTEGRATION.md) and [pinned manifest](../vendor/brag/UPSTREAM.json) |
 | Service integration | [API and runtime contract](CREATION-API.md) |
+| Website SEO agent | [OpenSEO loop](SEO-AGENT.md), `apps/website/scripts/seo-agent.ts`, `apps/website/tests/seo-agent.test.ts` |
 
 ## Verification commands
 
@@ -49,6 +50,7 @@ Local previews: 9180 Studio, `/admin/templates`; 9182 website; 9184 creation; 91
 - Example API is a foundation only. No public example browse/detail/reuse UI. Before enabling publication UI, whitelist only used/consented media; current project document may include unused assets. Preserve source provenance and create copies for reuse.
 - Admin edits save with optimistic revision checks and archive preserves records. Revision restore UI, better sample-project/media selection, recoverable preview jobs, unsaved close protection and an optional separate preview zoom are open.
 - Production Docker/nginx wiring updated but not built/run here. Verify browser sandbox, font/media availability, memory limits, proxy cookies/origins, backup/restore and dynamic page routes before deployment.
+- The OpenSEO SEO agent is a local read-modify scaffold: it edits description strings in `apps/website/src/seo.ts` only and never commits or opens PRs. Live OpenSEO credentials are not provisioned, and per-query DataForSEO cost is unbudgeted. PR automation and scheduling are future work ([SEO-AGENT.md](SEO-AGENT.md)).
 
 ## Do not repeat these mistakes
 

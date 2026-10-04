@@ -11,6 +11,7 @@ Purpose: [PRODUCT.md](PRODUCT.md). Exact owners, limits and commands: [HANDOFF](
 - [x] Admin template create/read/update/archive, immutable revisions, draft/publish/featured controls, prompt improvement and generated preview controls.
 - [x] Shared composition; offline four-second technical render through Hyperframes/FFmpeg.
 - [x] Replaced duplicate new controls with shared UI variants; removed retired Strip adapter/modal and redundant inspector assistant card. Admin uses task-specific layout, not a new customer design baseline.
+- [x] OpenSEO self-improving SEO loop scaffold: local read-modify script (`apps/website/scripts/seo-agent.ts`) that queries an OpenSEO MCP server, picks weak-CTR pages and rewrites only `indexPages` description strings in `apps/website/src/seo.ts` for human PR review. No PR automation, scheduling or live credentials yet; see [docs/SEO-AGENT.md](docs/SEO-AGENT.md).
 
 ## Next milestones, in order
 

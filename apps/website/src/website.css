@@ -56,6 +56,7 @@ h1, h2, h3 { text-wrap: pretty; }
 .feature-card .wire-storyboard { margin: 22px auto; max-width: 440px; }
 .feature-card .wire-generation, .feature-card .wire-media { max-width: 400px; margin: 18px auto; }
 .feature-card .wire-mockup { height: 205px; }
+.feature-card .wire-eshop-url, .feature-card .wire-eshop-ai, .feature-card .wire-eshop-publish { max-width: 400px; margin: 16px auto; }
 .feature-card .card-heading { margin-top: 0; }
 .feature-card > p { max-width: 480px; }
 .template-card .workflow-preview, .gallery-example .workflow-preview { border-radius: 14px; }
@@ -91,6 +92,11 @@ h1, h2, h3 { text-wrap: pretty; }
 .preview-media { background: #eaf5f3; }
 .preview-generate { background: #eff0ff; }
 .preview-mockup { background: #fcf0e5; }
+/* E-commerce landing illustrations: schematic, same light wireframe language. */
+.preview-ecommerce-url { background: #e9f1fd; }
+.preview-ecommerce-photo { background: #fcf0e5; }
+.preview-ecommerce-ai { background: #eff0ff; }
+.preview-ecommerce-publish { background: #f2ecfc; }
 .wire-toolbar { height: 36px; display: flex; align-items: center; gap: 7px; padding: 0 13px; background: #fff; border-bottom: 1px solid #e4e8f0; font-size: 12px; }
 .wire-toolbar > svg { color: #2142e7; }
 .wire-toolbar > i { flex: 1; }
@@ -141,7 +147,7 @@ h1, h2, h3 { text-wrap: pretty; }
 .wire-variants > div > span { position: absolute; left: 5px; top: 4px; font-size: 9px; color: #7a869b; }
 .wire-variants .wire-app-window { transform: scale(.73); }
 .wire-mockup { display: flex; gap: 17px; align-items: center; justify-content: center; height: 179px; }
-.wire-upload { width: 89px; height: 110px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; border: 1px dashed #b4c2e2; border-radius: 5px; font-size: 10px; color: #7c8ba8; background: #fff; }
+.wire-upload, .wire-drop { width: 89px; height: 110px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; border: 1px dashed #b4c2e2; border-radius: 5px; font-size: 10px; color: #7c8ba8; background: #fff; }
 .wire-arrow { color: #a3b3d5; }
 .wire-phone { height: 149px; width: 77px; border: 2px solid #9eaed0; border-radius: 15px; padding: 9px 6px; background: white; box-shadow: 5px 7px 0 #e4e9f4; }
 .wire-phone > i { display: block; height: 3px; width: 24px; margin: 0 auto 13px; background: #9eaed0; border-radius: 3px; }
@@ -156,6 +162,61 @@ h1, h2, h3 { text-wrap: pretty; }
 .wire-audio > span { display: flex; align-items: center; justify-content: space-between; gap: 2px; flex: 1; height: 25px; }
 .wire-audio i { width: 2px; background: #ae95d4; }
 .wire-audio small { font-size: 9px; }
+/* E-commerce: pasted Shopify URL recognized into product details. */
+.wire-eshop-url { padding: 16px 15px 30px; position: relative; }
+.wire-browser { background: white; border: 1px solid #d9e2f2; border-radius: 6px; overflow: hidden; box-shadow: 4px 5px 0 #dfe7f5; }
+.wire-browser-bar { display: flex; align-items: center; gap: 5px; padding: 8px 10px; border-bottom: 1px solid #e7ecf6; background: #f6f8fd; }
+.wire-browser-bar > span { width: 7px; height: 7px; border-radius: 50%; background: #ccd7ec; flex-shrink: 0; }
+.wire-urlbar { flex: 1; min-width: 0; display: flex; align-items: center; gap: 6px; margin-left: 4px; background: white; border: 1px solid #d9e2f2; border-radius: 99px; padding: 4px 9px; font: 10px var(--sf-font-mono); color: #43506a; white-space: nowrap; }
+.wire-urlbar > svg { color: #2142e7; flex-shrink: 0; }
+.wire-urlbar > span { overflow: hidden; text-overflow: ellipsis; }
+.wire-urlbar > em { flex-shrink: 0; width: 5px; height: 5px; border-radius: 50%; background: #2d9d78; }
+.wire-product-found { display: flex; align-items: center; gap: 10px; padding: 11px 12px; }
+.wire-product-thumb { width: 34px; height: 34px; flex-shrink: 0; display: grid; place-items: center; border-radius: 6px; background: #e8effc; color: #2142e7; }
+.wire-product-found > div { min-width: 0; flex: 1; }
+.wire-product-found small { display: block; font-size: 8px; letter-spacing: .6px; color: #77839a; }
+.wire-product-found strong { display: block; font-size: 12px; font-weight: 550; color: #182b4e; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.wire-meta { display: flex; gap: 5px; margin-top: 4px; }
+.wire-meta i { font: 9px var(--sf-font-sans); font-style: normal; color: #626d80; background: #eef2fa; border-radius: 3px; padding: 1px 5px; }
+.wire-tag { flex-shrink: 0; display: inline-flex; align-items: center; gap: 3px; font-size: 9px; font-weight: 550; color: #1d7a5f; background: #e2f4ec; border-radius: 99px; padding: 3px 8px; }
+.wire-eshop-url .wire-caption { position: absolute; bottom: 8px; left: 15px; }
+/* E-commerce: product photo dropzone turning into an ad. */
+.wire-eshop-photo .wire-drop { width: 104px; height: 116px; gap: 7px; }
+.wire-eshop-photo .wire-drop strong { font-size: 10px; font-weight: 550; color: #43506a; text-align: center; line-height: 1.3; padding: 0 6px; }
+.wire-eshop-photo .wire-drop small { font: 9px var(--sf-font-mono); }
+.wire-screen-product { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; }
+.wire-screen-product > span { width: 26px; height: 26px; display: grid; place-items: center; border-radius: 50%; background: #f3d9bd; color: #a4652a; }
+.wire-screen-product-caption { width: 74%; }
+.wire-screen-product-caption i { display: block; height: 4px; border-radius: 2px; background: #a8b8f5; margin-top: 4px; }
+.wire-screen-product-caption i:last-child { width: 62%; background: #d3dcf0; }
+/* E-commerce: AI ad build with visible pipeline steps. */
+.wire-eshop-ai { padding: 16px 15px; }
+.wire-ai-steps { margin-top: 12px; display: grid; gap: 7px; }
+.wire-ai-steps > div { display: flex; align-items: center; gap: 8px; background: white; border: 1px solid #dce3ef; border-radius: 5px; padding: 7px 10px; }
+.wire-ai-step-icon { width: 14px; height: 14px; flex-shrink: 0; display: grid; place-items: center; border-radius: 50%; background: #eef1f8; color: #77839a; }
+.wire-ai-steps .done .wire-ai-step-icon { background: #2d9d78; color: white; }
+.wire-ai-steps .active .wire-ai-step-icon { background: #2142e7; color: white; }
+.wire-ai-steps small { flex: 1; font-size: 10px; color: #354561; }
+.wire-ai-steps .done small { color: #626d80; }
+.wire-ai-steps em { font: 9px var(--sf-font-mono); font-style: normal; color: #77839a; }
+.wire-ai-steps .active em { color: #2142e7; }
+.wire-spin { animation: wire-rotate 1s linear infinite; }
+@keyframes wire-rotate { to { transform: rotate(360deg); } }
+/* E-commerce: finished vertical ad with engagement metrics. */
+.wire-eshop-publish { padding: 15px 15px 30px; position: relative; }
+.wire-eshop-publish-row { display: flex; align-items: center; justify-content: center; gap: 22px; }
+.wire-phone-ad { cursor: default; animation: none; }
+.wire-phone-ad .wire-screen { display: none; }
+.wire-ad-screen { height: 96px; margin-top: 2px; border-radius: 8px; background: linear-gradient(160deg, #26418f 0%, #2142e7 100%); color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 8px; text-align: center; }
+.wire-ad-product { width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%; background: #ffffff2e; color: white; }
+.wire-ad-screen strong { font: 650 11px/1.2 var(--sf-font-display); letter-spacing: -.2px; }
+.wire-ad-cta { display: inline-flex; align-items: center; justify-content: center; white-space: nowrap; font: 550 8px/1 var(--sf-font-sans); font-style: normal; background: white; color: #2142e7; border-radius: 99px; padding: 4px 8px; }
+.wire-ad-metrics { display: grid; gap: 9px; }
+.wire-ad-metrics > div { display: flex; align-items: center; gap: 7px; background: white; border: 1px solid #dce3ef; border-radius: 99px; padding: 5px 11px 5px 8px; color: #626d80; }
+.wire-ad-metrics svg { color: #b13b6b; }
+.wire-ad-metrics strong { font-size: 11px; color: #182b4e; min-width: 30px; }
+.wire-ad-metrics small { font-size: 9px; color: #77839a; }
+.wire-eshop-publish .wire-caption { position: absolute; bottom: 8px; left: 15px; }
 @media (prefers-reduced-motion: no-preference) {
  .hero-copy h1 { animation: entrance .5s ease-out both; }
  .wire-playhead { animation: timeline-preview 3s ease-in-out 1; }
@@ -259,6 +320,13 @@ h1, h2, h3 { text-wrap: pretty; }
  .wire-brand-fields > div { gap: 4px; }
  .wire-mockup { gap: 10px; }
  .wire-upload { width: 65px; font-size: 9px; }
+ .wire-upload, .wire-drop { width: 65px; font-size: 9px; }
+ .wire-eshop-photo .wire-drop { width: 84px; height: 104px; }
+ .wire-eshop-photo .wire-drop strong { font-size: 9px; }
+ .wire-urlbar { font-size: 9px; }
+ .wire-urlbar > span { min-width: 0; }
+ .wire-product-found strong { font-size: 11px; }
+ .wire-eshop-publish-row { gap: 14px; }
  .card-heading h3 { font-size: 21px; }
  .resource-card { padding: 20px; }
  .resource-card h3 { font-size: 22px; }
@@ -306,6 +374,9 @@ h1, h2, h3 { text-wrap: pretty; }
  .wire-player { height: 117px; }
  .wire-mockup { height: 190px; gap: 28px; }
  .wire-upload { width: 90px; font-size: 11px; }
+ .wire-upload, .wire-drop { width: 90px; font-size: 11px; }
+ .wire-eshop-photo .wire-drop { width: 104px; height: 116px; }
+ .wire-eshop-photo .wire-drop strong { font-size: 10px; }
  .card-heading { margin-top: 16px; }
  .card-heading h3 { font-size: 24px; }
  .feature-card > p, .template-card > p, .gallery-example > p { font-size: 16px; }

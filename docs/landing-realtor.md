@@ -37,7 +37,8 @@ capture endpoint exists.
 
 The hero background is a stock placeholder clip, self-hosted at
 `apps/website/public/media/realtor-tour-placeholder.webm` (12 s, 854×480,
-WebM/VP9, ~255 KB — a trimmed loop cut from the ready Wikimedia transcode of
+WebM/VP9, ~304 KB (310,979 bytes) — a trimmed loop cut from the ready
+Wikimedia transcode of
 "Addison, VT Home (aerial drone footage)"). Source: Wikimedia Commons, author
 **Herrick Spencer**, license
 [CC BY 3.0](https://creativecommons.org/licenses/by/3.0). The attribution line
@@ -56,7 +57,7 @@ footage is approved; keep attribution in sync.
   gradient scrim so navy text stays readable — the marketing surface stays
   white/navy/cobalt per the design language; the video is texture, not a dark
   theme.
-- The capture card overlaps the hero (`margin-top: -64px`) to keep the video
+- The capture card overlaps the hero (`margin-top: -56px`) to keep the video
   visible behind the form.
 - No new nav item: the page is reachable at `/real-estate` and via the sitemap.
   It is a campaign landing page like `/ecommerce`, not a primary feature.

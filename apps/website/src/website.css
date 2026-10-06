@@ -385,6 +385,13 @@ h1, h2, h3 { text-wrap: pretty; }
 .re-input:focus-visible { outline: 2px solid #2142e7; outline-offset: 2px; }
 .re-form-note { font-size: 13px; color: #697387; margin: 2px 0 0; overflow-wrap: anywhere; }
 .re-error { color: #b3261e; font-size: 14px; margin: 0; }
+/* Tablet band: .sf-main gutters are 28px between 621-1100px (see the shared
+   max-width:1100px block); track them so the hero bleed never causes
+   horizontal scroll. Full-bleed at desktop (>1100px) and mobile (<=620px)
+   stay governed by the base rule and the block below. */
+@media (max-width:1100px) and (min-width:621px) {
+ .re-hero { margin-inline: -28px; padding-inline: 28px; }
+}
 @media (max-width: 620px) {
  .re-hero { margin: 0 -20px; padding: 56px 20px 88px; }
  .re-hero-title { font-size: clamp(38px, 9vw, 48px); }

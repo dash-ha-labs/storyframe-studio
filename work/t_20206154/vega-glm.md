@@ -1,7 +1,7 @@
 # Work: t_20206154 — vega-glm
 
 Initiative: storyframe-website | Packet revision: kanban card t_20206154 body (no separate spec file) | Brief/plan revisions: not opened (ticket carries the anchor; no REQUIRED references)
-Base revision: 42486c71ef9f909187aeef16ef00a5ec3907af7d (origin/main) | Submitted revision: feat/t_20206154-ecommerce-illustrations (PR opened; hash recorded at commit)
+Base revision: 42486c71ef9f909187aeef16ef00a5ec3907af7d (origin/main) | Submitted revision: 884f03f83ed8a0396620efc127f5110ecae450ba on feat/t_20206154-ecommerce-illustrations
 Serving model: glm (route team-glm-vega); exact version unknown
 
 ## Before implementation

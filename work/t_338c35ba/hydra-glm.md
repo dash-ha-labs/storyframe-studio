@@ -1,7 +1,7 @@
 # Work: t_338c35ba — hydra-glm
 
 Initiative: storyframe (website marketing surface) | Packet: card body (no separate spec file)
-Base revision: origin/main 42486c7 | Submitted revision: see PR branch feat/t_338c35ba-landing-youtube
+Base revision: origin/main 42486c7 | Submitted revision: 1cfc874 (PR #21, branch feat/t_338c35ba-landing-youtube)
 Serving model: team-glm-hydra (glm/ pool)
 
 ## Before implementation

@@ -360,3 +360,43 @@ h1, h2, h3 { text-wrap: pretty; }
  .collection-heading { margin-bottom: var(--sf-heading-gap); }
  .sf-footer { margin-top: var(--sf-section-gap); padding-top: 0; }
 }
+
+/* Realtor landing (/real-estate): arrangement for the video hero and two-step capture. */
+.re-hero { position: relative; margin: 0 -40px; padding: 64px 40px 72px; overflow: hidden; isolation: isolate; }
+.re-hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; background: #0e1b33; }
+.re-hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(255,255,255,.9) 0%, rgba(255,255,255,.74) 48%, rgba(255,255,255,.28) 100%); }
+.re-hero-copy { max-width: 720px; display: flex; flex-direction: column; gap: 16px; }
+.re-hero-title { font-family: var(--sf-font-display); font-size: clamp(40px, 4.2vw, 58px); font-weight: 500; letter-spacing: -2.4px; line-height: 1.08; margin: 0; color: #182b4e; }
+.re-hero-title span { color: #2142e7; }
+.re-hero-subtitle { font-size: 17px; line-height: 1.6; color: #43506a; margin: 0; max-width: 600px; }
+.re-hero-credit { font-size: 12px; color: #697387; margin: 2px 0 0; }
+.re-capture { margin: -56px 0 0; position: relative; z-index: 1; }
+.re-capture-card { background: var(--sf-color-card); border: 1px solid var(--sf-color-card-border); border-radius: 12px; box-shadow: 0 18px 42px #182b4e1a; padding: 26px 30px 22px; display: flex; flex-direction: column; gap: 14px; }
+.re-capture-title { font-family: var(--sf-font-display); font-size: 30px; font-weight: 500; letter-spacing: -1px; margin: 0; }
+.re-capture-text { font-size: 16px; line-height: 1.6; color: #626d80; margin: 0; }
+.re-steps { display: flex; align-items: center; gap: 12px; list-style: none; margin: 0; padding: 0; font-size: 13px; color: #697387; }
+.re-steps li { display: flex; align-items: center; white-space: nowrap; }
+.re-step-active { color: #2142e7; font-weight: 500; }
+.re-step-arrow { color: #a8b3c8; }
+.re-form { display: flex; flex-direction: column; gap: 10px; }
+.re-form-row { display: flex; gap: 12px; align-items: stretch; }
+.re-field { font-size: 14px; color: #43506a; }
+.re-input { flex: 1; min-width: 0; min-height: 46px; border: 1px solid var(--sf-color-border); border-radius: 8px; padding: 10px 14px; background: #fff; color: #182b4e; font: inherit; line-height: 1.5; }
+.re-input:focus-visible { outline: 2px solid #2142e7; outline-offset: 2px; }
+.re-form-note { font-size: 13px; color: #697387; margin: 2px 0 0; overflow-wrap: anywhere; }
+.re-error { color: #b3261e; font-size: 14px; margin: 0; }
+/* Tablet band: .sf-main gutters are 28px between 621-1100px (see the shared
+   max-width:1100px block); track them so the hero bleed never causes
+   horizontal scroll. Full-bleed at desktop (>1100px) and mobile (<=620px)
+   stay governed by the base rule and the block below. */
+@media (max-width:1100px) and (min-width:621px) {
+ .re-hero { margin-inline: -28px; padding-inline: 28px; }
+}
+@media (max-width: 620px) {
+ .re-hero { margin: 0 -20px; padding: 56px 20px 88px; }
+ .re-hero-title { font-size: clamp(38px, 9vw, 48px); }
+ .re-capture-card { padding: 22px 20px 20px; }
+ .re-form-row { flex-direction: column; }
+ .re-form-row .sf-button { width: 100%; }
+ .re-steps { flex-wrap: wrap; }
+}

@@ -64,4 +64,30 @@ Decision needed from Astra: none.
 
 ## Repair log
 
-(none — first submission)
+### Round 1 (argus-nv, 2026-10-06) — fixed in c0f73f1
+
+1. MAJOR horizontal overflow 621–1100px: `.re-hero` bled -40px while
+   `.sf-main` gutters are 28px in that band (website.css:232) → 12px scroll.
+   Fix: `@media (max-width:1100px) and (min-width:621px) { .re-hero {
+   margin-inline: -28px; padding-inline: 28px; } }` — hero now tracks the
+   actual gutter; desktop full-bleed (-40px) and ≤620px (-20px) untouched.
+2. MINOR doc size: "~255 KB" → "~304 KB (310,979 bytes)"; also corrected the
+   stale `margin-top: -64px` note to the actual `-56px`.
+
+Recheck evidence (c0f73f1, vite preview + CDP width emulation):
+- scrollWidth == clientWidth at 621/700/800/900/1000/1100px AND a 20px sweep
+  of the whole 621–1100 band: all clean (900px was 897/885 → now 885/885).
+- Computed-margin proof the rule scopes exactly to the band: 621/900/1100px →
+  -28px; 620px → -20px; 1101/1440px → -40px; 390/600px → -20px. Zero
+  offenders (hero/copy/card/nav/footer/input all inside viewport) at
+  900/1440/390px; hero→capture overlap still 56px at all three.
+- Two-step flow re-exercised at 900px: invalid URL error → step-2 reveal with
+  listing echoed → "You're on the list." confirmation.
+- Visual: `work/t_e030db42/fix-900px.png` vision-verified clean (no overflow,
+  no cut-offs, hero/card intact); `fix-1440px.png`, `fix-390px.png` captured
+  (vision service timed out on them; band-scoping proof above covers them —
+  the new rule cannot match outside 621–1100px).
+- `npm test`: 84/84 across workspaces (website 26/26). `npm run build`:
+  tsc + vite + 180-page prerender, `/real-estate` in dist + sitemap.
+
+Submitted revision after repair: c0f73f1 (PR #20 head).

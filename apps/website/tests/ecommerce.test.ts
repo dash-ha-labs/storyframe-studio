@@ -17,6 +17,23 @@ test('Ecommerce page renders hero, zig-zag and signup CTA', () => {
   assert.ok(html.includes('wire-'), 'visual placeholders missing');
 });
 
+test('E-commerce flow illustrations replace generic app placeholders', () => {
+  const html = renderToString(React.createElement(EcommercePage));
+  assert.ok(html.includes('preview-ecommerce-url'), 'Shopify URL illustration missing');
+  assert.ok(html.includes('preview-ecommerce-photo'), 'product photo illustration missing');
+  assert.ok(html.includes('preview-ecommerce-ai'), 'AI pipeline illustration missing');
+  assert.ok(html.includes('preview-ecommerce-publish'), 'vertical ad illustration missing');
+  assert.ok(html.includes('my-store.myshopify.com/products/'), 'pasted Shopify product URL not illustrated');
+  assert.ok(html.includes('Aurora Desk Lamp'), 'recognized product details not illustrated');
+  assert.ok(html.includes('wire-browser'), 'browser chrome missing from URL illustration');
+  assert.ok(html.includes('wire-drop'), 'photo dropzone missing');
+  assert.ok(html.includes('wire-ai-steps'), 'AI processing steps missing');
+  assert.ok(html.includes('Shop now'), 'vertical ad CTA missing');
+  assert.ok(html.includes('TikTok · 9:16'), 'vertical ad format label missing');
+  assert.ok(!html.includes('Your screenshot'), 'generic app-mockup placeholder copy must not remain');
+  assert.ok(!html.includes('preview-mockup'), 'generic phone mockup illustration must not remain on /ecommerce');
+});
+
 test('/ecommerce route renders the ecommerce page', () => {
   const html = renderToString(React.createElement(App, { initialPath: '/ecommerce' } as any));
   assert.ok(html.includes('sf-mkt-hero'), 'route not rendering ecommerce hero');

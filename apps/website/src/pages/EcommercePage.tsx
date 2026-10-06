@@ -16,14 +16,14 @@ export function EcommercePage({ onNavigate }: { onNavigate?: (path: string) => v
   <p className="sf-signup-note">Free. No credit card required.</p>
 
   <div id="how"><FeatureZigzag items={[
-   {title:'Paste a Shopify URL',description:'Drop in any product page link. Storyframe pulls the product details and builds a ready-to-edit video ad around them.',visual:<WorkflowPreview kind="mockup"/>},
-   {flip:true,title:'Or upload a product photo',description:'No store link handy? Upload a product photo and let AI turn it into scroll-stopping ad scenes with hooks, captions and music.',visual:<WorkflowPreview kind="media"/>},
-   {title:'AI writes the viral ad',description:'Get a TikTok or Facebook ad draft in seconds: hook, scenes and captions tuned for what performs on social.',visual:<WorkflowPreview kind="generate"/>},
+   {title:'Paste a Shopify URL',description:'Drop in any product page link. Storyframe pulls the product details and builds a ready-to-edit video ad around them.',visual:<WorkflowPreview kind="ecommerce-url"/>},
+   {flip:true,title:'Or upload a product photo',description:'No store link handy? Upload a product photo and let AI turn it into scroll-stopping ad scenes with hooks, captions and music.',visual:<WorkflowPreview kind="ecommerce-photo"/>},
+   {title:'AI writes the viral ad',description:'Get a TikTok or Facebook ad draft in seconds: hook, scenes and captions tuned for what performs on social.',visual:<WorkflowPreview kind="ecommerce-ai"/>},
    {flip:true,title:'Edit every scene, stay on brand',description:'Keep full control. Refine each scene, apply your brand colours and typeface, then export in every format your channels need.',visual:<WorkflowPreview kind="editor"/>},
   ]} /></div>
 
   <section className="home-section" id="formats"><div className="collection-heading"><h2>One product. Every ad format.</h2></div><div className="feature-collection sf-mkt-grid">
-   <article className="feature-card"><WorkflowPreview kind="storyboard"/><div className="card-heading"><h3>TikTok and Reels ads</h3></div><p>Vertical 9:16 ads with hooks in the first second, captions and trend-aware pacing.</p></article>
+   <article className="feature-card"><WorkflowPreview kind="ecommerce-publish"/><div className="card-heading"><h3>TikTok and Reels ads</h3></div><p>Vertical 9:16 ads with hooks in the first second, captions and trend-aware pacing.</p></article>
    <article className="feature-card"><WorkflowPreview kind="brand"/><div className="card-heading"><h3>Facebook and Instagram ads</h3></div><p>Square and landscape variants that carry your brand colours, typeface and voice.</p></article>
   </div></section>
 

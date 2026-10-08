@@ -1,7 +1,7 @@
 # Work: t_1326b684 — hydra-glm
 
 Initiative: landing-realtor (Part 2/2: AI Scene Gen & Video Editor UI DOM)
-Base revision: origin/main 60a994e | Branch: feat/t_1326b684-landing-realtor
+Base revision: origin/main 60a994e | Submitted revision: 55b000c | PR #26 | Branch: feat/t_1326b684-landing-realtor
 Serving model: hydra-glm (pinned GLM route / team-spare-gemini active runner)
 
 ## Before implementation

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { FeatureTemplate } from '../templates';
 import { Button, FeatureZigzag } from '@storyframe/ui';
 import { RealEstateStudioReplicas } from '../RealEstateStudioReplicas';
-import { WorkflowPreview } from '../WorkflowPreview';
 
 export const REAL_ESTATE_VIDEO_SRC = '/media/realtor-tour-placeholder.webm';
 export const REAL_ESTATE_VIDEO_CREDIT = 'Herrick Spencer · CC BY 3.0, via Wikimedia Commons';
@@ -153,14 +152,14 @@ export function RealEstatePage({ onNavigate }: { onNavigate?: (path: string) => 
               title: 'Ready for every channel',
               description:
                 'Export the full tour for your listing site, plus vertical cuts for Instagram Reels and TikTok that stop the scroll.',
-              visual: <WorkflowPreview kind="generate" />,
+              visual: <RealEstateStudioReplicas kind="ai-scene-gen" />,
             },
             {
               flip: true,
               title: 'Edit any scene, stay in control',
               description:
                 'Every scene stays editable in Storyframe. Fix a caption, swap music or reorder rooms without starting over.',
-              visual: <WorkflowPreview kind="editor" />,
+              visual: <RealEstateStudioReplicas kind="video-editor" />,
             },
           ]}
         />

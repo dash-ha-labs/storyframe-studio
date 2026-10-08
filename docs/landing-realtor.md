@@ -27,7 +27,7 @@ capture endpoint exists.
 | Piece | Path |
 | --- | --- |
 | Page component (two-step state machine) | `apps/website/src/pages/RealEstatePage.tsx` |
-| Studio UI replicas component (Part 1: paste + storyboard) | `apps/website/src/RealEstateStudioReplicas.tsx` |
+| Studio UI replicas component (paste, storyboard, AI scene gen, video editor) | `apps/website/src/RealEstateStudioReplicas.tsx` |
 | Route registration | `apps/website/src/App.tsx` (`/real-estate`) |
 | Page CSS (hero, capture, and studio replicas) | `apps/website/src/website.css` (`.re-*`, `.re-replica*`) |
 | SEO metadata (prerender + sitemap) | `apps/website/src/seo.ts` (`indexPages`) |
@@ -64,6 +64,8 @@ footage is approved; keep attribution in sync.
 - High-fidelity Studio UI replicas in `FeatureZigzag` replace abstract placeholders:
   - **Paste Listing:** Replicates the SetupWizard "From URL" dialog with real `apps/web` controls, typing URL animation, primary `Generate` button, and listing captured confirmation.
   - **Storyboard:** Replicates the `StoryboardWorkspace` M2 visual canvas with 4 sequenced frames, preview stills, script fields, and duration inputs populating sequentially.
+  - **AI Scene Gen:** Replicates the Studio AI Panel (`apps/web/src/AiPanel.tsx`) with real project context (`118 Meadow Rd`), creative direction, prompt, generation loading state (scanning beam, progress track, pipeline steps) transitioning into cinematic proposal output (aerial preview, lower-third titles, property specs HUD, `Applied 4 scenes to timeline` confirmation).
+  - **Video Editor:** Replicates the Studio video canvas and timeline (`apps/web/src/VideoEditor.tsx`) with real property video playback, safe area guides, caption overlay, transport bar with timecode and playback controls, and multi-track timeline (`30 FPS` ruler, picture track with 4 scene clips & thumbnails, caption track, music track with waveform, and moving playhead).
   - Sized via CSS container queries on `.re-replica` to scale proportionally from desktop down to mobile (390px) without horizontal overflow or clipping.
 - No new nav item: the page is reachable at `/real-estate` and via the sitemap.
   It is a campaign landing page like `/ecommerce`, not a primary feature.

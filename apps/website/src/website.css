@@ -400,3 +400,116 @@ h1, h2, h3 { text-wrap: pretty; }
  .re-form-row .sf-button { width: 100%; }
  .re-steps { flex-wrap: wrap; }
 }
+
+/* Realtor landing: DOM replicas of the real Studio app (apps/web).
+   Rendered inside the marketing visual card, mirroring apps/web style.css /
+   studio-ui.css / suite.css / ai-workspace.css values. Scoped under
+   .re-replica. No backend, no provider calls, no live editor iframe. */
+.re-replica { --re-line:#e5e8ef; --re-border:#d6dbe6; --re-ink:#182b4e; --re-ink-2:#354561; --re-muted:#626d80; --re-cobalt:#2142e7; --re-canvas:#f7f8fa; --re-soft:#f3f4f7; position:relative; display:flex; flex-direction:column; border:1px solid var(--re-line); border-radius:10px; overflow:hidden; background:#fff; box-shadow:0 14px 42px #182b4e14; container-type:inline-size; }
+.re-replica-chrome { display:flex; align-items:center; gap:6px; height:34px; min-height:34px; padding:0 12px; background:#fff; border-bottom:1px solid var(--re-line); }
+.re-replica-dot { width:10px; height:10px; border-radius:50%; background:#e5e8ef; }
+.re-replica-url { margin-left:10px; font-size:11px; color:var(--re-muted); background:var(--re-soft); border-radius:99px; padding:2px 10px; }
+.re-replica-screen { flex:none; position:relative; background:#fff; overflow:hidden; height:calc(var(--re-stage-h) * 0.35); }
+/* The replica drives its own height; don't let the zigzag row stretch the
+   frame taller than the scaled stage (avoids dead space below the content). */
+#how .sf-mkt-zigzag-visual { align-items: center; }
+/* Fixed app-true stages scaled down like a screen recording: paddings,
+   line-heights and control sizes stay pixel-true to apps/web. Each stage
+   height matches that replica's real content; each container-query step
+   pairs a scale with screen height = stage height * scale. */
+.re-replica { --re-stage-h: 530px; }
+.re-replica-paste { --re-stage-h: 530px; }
+.re-replica-storyboard { --re-stage-h: 490px; }
+.re-replica-stage { width:960px; height:var(--re-stage-h); flex:none; transform-origin:top left; background:#fff; display:flex; flex-direction:column; overflow:hidden; transform:scale(0.35); }
+/* Each step keeps scale*960 <= the breakpoint width so nothing clips
+   horizontally; screen height pairs as stage height * scale. */
+@container (min-width: 380px) { .re-replica-screen { height:calc(var(--re-stage-h) * 0.39); } .re-replica-stage { transform:scale(0.39); } }
+@container (min-width: 440px) { .re-replica-screen { height:calc(var(--re-stage-h) * 0.45); } .re-replica-stage { transform:scale(0.45); } }
+@container (min-width: 500px) { .re-replica-screen { height:calc(var(--re-stage-h) * 0.51); } .re-replica-stage { transform:scale(0.51); } }
+@container (min-width: 560px) { .re-replica-screen { height:calc(var(--re-stage-h) * 0.58); } .re-replica-stage { transform:scale(0.58); } }
+@container (min-width: 620px) { .re-replica-screen { height:calc(var(--re-stage-h) * 0.63); } .re-replica-stage { transform:scale(0.63); } }
+
+/* Shared app controls inside replicas (mirror apps/web style.css). */
+.re-replica .button { height:36px; display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:0 14px; border:1px solid var(--re-border); background:#fff; color:var(--re-ink); font-size:14px; font-weight:500; white-space:nowrap; border-radius:6px; }
+.re-replica .button.primary { background:var(--re-cobalt); border-color:#1935c4; color:#fff; font-weight:600; }
+.re-replica .button.studio { height:32px; font-size:13px; }
+.re-replica .button.full { width:100%; margin-top:12px; }
+.re-replica .icon-button { width:32px; height:32px; display:inline-flex; align-items:center; justify-content:center; color:var(--re-ink-2); border-radius:5px; border:0; background:none; }
+.re-replica .icon-button.is-active { background:#edf0ff; color:var(--re-cobalt); }
+.re-replica .suite-field { display:flex; flex-direction:column; gap:9px; font-size:14px; color:var(--re-ink-2); margin:16px 0 0; }
+.re-replica .suite-field input, .re-replica .suite-field textarea { width:100%; background:#fff; border:1px solid var(--re-border); border-radius:6px; padding:10px 12px; color:var(--re-ink); font-size:15px; line-height:1.5; resize:none; }
+.re-replica kbd { font:12px ui-monospace,monospace; color:var(--re-ink-2); border:1px solid var(--re-border); border-radius:3px; padding:2px 5px; background:#fff; }
+.re-replica .spin { animation: re-spin 1s linear infinite; }
+@keyframes re-spin { to { transform: rotate(360deg); } }
+
+/* 1 - Paste listing (Suite "From URL" wizard step) */
+.re-replica .replica-paste-card { border:0; background:none; padding:0; width:100%; display:flex; flex-direction:column; }
+.re-replica .dialog-title { margin:0; padding:22px 28px 0; }
+.re-replica .dialog-title h2 { font-size:22px; font-weight:600; letter-spacing:-.5px; color:var(--re-ink); margin:0; }
+.re-replica .wizard-steps { display:flex; align-items:center; justify-content:space-between; border-top:1px solid var(--re-line); border-bottom:1px solid var(--re-line); margin:14px 0 0; padding:12px 28px; gap:14px; }
+.re-replica .wizard-steps > div { display:flex; align-items:center; gap:9px; font-size:12px; color:var(--re-muted); white-space:nowrap; }
+.re-replica .wizard-steps > div > span { display:grid; place-items:center; width:22px; height:22px; border:1px solid var(--re-border); border-radius:50%; font-size:11px; }
+.re-replica .wizard-steps > div.active, .re-replica .wizard-steps > div.complete { color:var(--re-cobalt); }
+.re-replica .wizard-steps > div.active > span { background:var(--re-cobalt); border-color:var(--re-cobalt); color:#fff; }
+.re-replica .wizard-body { padding:4px 28px 20px; flex:1; display:flex; flex-direction:column; }
+.re-replica .replica-wizard-h3 { font-size:17px; font-weight:600; color:var(--re-ink); margin:14px 0 0; }
+.re-replica .wizard-body > p { font-size:14px; color:var(--re-muted); margin:6px 0 0; }
+.re-replica .source-methods { display:flex; padding:5px; background:var(--re-soft); border:1px solid var(--re-line); border-radius:6px; gap:5px; margin:14px 0 0; }
+.re-replica .source-methods > button { flex:1; display:flex; align-items:center; justify-content:center; gap:8px; padding:9px 7px; font-size:12px; color:var(--re-muted); border:0; background:none; border-radius:4px; }
+.re-replica .source-methods > button.selected { background:#fff; color:var(--re-cobalt); box-shadow:0 1px 3px #182b4e12; font-weight:500; }
+.re-replica .url-actions { display:flex; gap:9px; flex-wrap:wrap; margin-top:12px; }
+.re-replica .micro-note { font-size:12px; line-height:1.6; color:var(--re-muted); margin-top:10px; }
+.re-replica .brand-found { display:flex; align-items:center; gap:12px; margin-top:12px; padding:10px 14px; background:#eff8f2; border:1px solid #d5e8dc; border-radius:7px; color:#26704c; }
+.re-replica .brand-found > div:last-child { flex:1; min-width:0; }
+.re-replica .brand-found strong { display:block; font-size:13px; }
+.re-replica .brand-found small { display:block; font-size:11px; opacity:.8; margin-top:2px; }
+.re-replica .found-swatches { display:flex; gap:5px; flex-shrink:0; }
+.re-replica .found-swatches i { width:20px; height:20px; border-radius:4px; border:1px solid var(--re-border); }
+
+/* 2 - Storyboard canvas */
+.re-replica .replica-storyboard { width:100%; padding:18px 24px; overflow:hidden; display:flex; flex-direction:column; flex:1; }
+.re-replica .storyboard-heading { display:flex; align-items:flex-start; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+.re-replica .page-eyebrow { font-size:12px; letter-spacing:1px; color:var(--re-muted); font-weight:600; }
+.re-replica .storyboard-title-input { background:none; border:none; border-bottom:1px solid var(--re-border); color:var(--re-ink); font-size:22px; font-weight:600; letter-spacing:-.4px; padding:4px 0; width:100%; outline:none; margin-top:4px; }
+.re-replica .storyboard-meta-row { display:flex; align-items:center; gap:12px; font-size:13px; color:var(--re-muted); margin-top:6px; }
+.re-replica .storyboard-meta-badge { display:flex; align-items:center; gap:6px; background:#f3f5fa; border:1px solid #e2e6ef; padding:3px 9px; border-radius:4px; font-size:12px; color:var(--re-ink-2); }
+.re-replica .storyboard-meta-tag { font-size:11px; color:var(--re-muted); background:#f3f5fa; padding:3px 8px; border-radius:4px; letter-spacing:.4px; }
+.re-replica .storyboard-actions { display:flex; align-items:center; gap:10px; }
+.re-replica .frame-canvas-grid { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:12px; margin-top:14px; flex:1; }
+.re-replica .frame-card { background:#fff; border:1px solid var(--re-line); border-radius:8px; padding:10px; display:flex; flex-direction:column; gap:7px; box-shadow:0 4px 14px #182b4e12; }
+.re-replica .frame-card-header { display:flex; align-items:center; justify-content:space-between; gap:8px; }
+.re-replica .frame-sequence-badge { display:flex; align-items:center; gap:8px; }
+.re-replica .frame-number { font-weight:600; font-size:12px; color:var(--re-ink); background:#f3f5fa; padding:2px 7px; border-radius:4px; }
+.re-replica .frame-order-meta { font-size:11px; color:var(--re-muted); }
+.re-replica .frame-reorder-group { display:flex; align-items:center; gap:4px; }
+.re-replica .frame-reorder-group .icon-button { width:22px; height:22px; opacity:.45; }
+.re-replica .frame-visual-preview { width:100%; aspect-ratio:16/9; background:#fff; border:1px solid var(--re-line); border-radius:6px; display:grid; place-items:center; overflow:hidden; position:relative; }
+.re-replica .frame-preview-image { width:100%; height:100%; object-fit:cover; }
+.re-replica .frame-field { margin:0; font-size:11px; gap:4px; }
+.re-replica .frame-field input { width:100%; background:#fff; border:1px solid var(--re-border); border-radius:5px; padding:6px 8px; color:var(--re-ink); font-size:12px; line-height:1.4; min-height:28px; }
+.re-replica .frame-field textarea { font-size:12px; line-height:1.4; padding:6px 8px; resize:none; }
+.re-replica .frame-duration-input-wrapper { display:flex; align-items:center; gap:8px; }
+.re-replica .frame-duration-input-wrapper input { width:70px; }
+.re-replica .frame-unit-label { font-size:11px; color:var(--re-muted); }
+/* URL typing animation: real input with caret overlay; text reveals via
+   steps() so the URL looks typed, then the found-brand chip fades in. */
+.re-replica .replica-url-typed { position:relative; display:flex; align-items:center; background:#fff; border:1px solid var(--re-border); border-radius:6px; height:42px; padding:0 12px; overflow:hidden; }
+.re-replica .replica-url-typed input { border:none; background:transparent; padding:0; color:var(--re-ink); font-size:15px; outline:none; width:100%; }
+.re-replica .replica-caret { position:absolute; left:12px; top:50%; transform:translateY(-50%); width:2px; height:20px; background:var(--re-cobalt); }
+.re-replica-paste .replica-url-typed input { animation: re-type-url 2.4s steps(43) .4s both; }
+@keyframes re-type-url { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+.re-replica-paste .replica-caret { animation: re-caret-blink .9s steps(1) infinite, re-caret-type 2.4s linear .4s both; }
+@keyframes re-caret-blink { 0%,100% { opacity:1; } 50% { opacity:0; } }
+@keyframes re-caret-type { from { left:12px; } to { left:388px; } }
+.re-replica-paste .brand-found { animation: re-fade-in .5s ease-out 2.9s both; }
+@keyframes re-fade-in { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+/* Frames populate one by one on the storyboard canvas. */
+.re-replica-storyboard .frame-card.re-frame-0 { animation: re-frame-in .45s cubic-bezier(.2,.9,.3,1.2) .15s backwards; }
+.re-replica-storyboard .frame-card.re-frame-1 { animation: re-frame-in .45s cubic-bezier(.2,.9,.3,1.2) .75s backwards; }
+.re-replica-storyboard .frame-card.re-frame-2 { animation: re-frame-in .45s cubic-bezier(.2,.9,.3,1.2) 1.35s backwards; }
+.re-replica-storyboard .frame-card.re-frame-3 { animation: re-frame-in .45s cubic-bezier(.2,.9,.3,1.2) 1.95s backwards; }
+@keyframes re-frame-in { from { opacity:0; transform:translateY(12px) scale(.96); } to { opacity:1; transform:translateY(0) scale(1); } }
+@media (prefers-reduced-motion: reduce) {
+  .re-replica-paste .replica-url-typed input, .re-replica-paste .brand-found, .re-replica-paste .replica-caret,
+  .re-replica-storyboard .frame-card { animation: none !important; }
+}

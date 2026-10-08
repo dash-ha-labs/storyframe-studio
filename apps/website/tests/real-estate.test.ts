@@ -25,7 +25,14 @@ test('Real estate page renders video hero and step 1 (URL capture)', () => {
 test('Real estate page renders zig-zag sections', () => {
   const html = renderToString(React.createElement(RealEstatePage));
   assert.ok(html.includes('sf-mkt-zigzag'), 'feature zig-zag missing');
-  assert.ok(html.includes('wire-'), 'visual placeholders missing');
+  // Part 1: paste-listing + storyboard show exact Studio UI replicas.
+  assert.ok(html.includes('re-replica-paste'), 'paste-listing replica missing');
+  assert.ok(html.includes('re-replica-storyboard'), 'storyboard replica missing');
+  assert.ok(html.includes('Give your product a home.'), 'paste replica must mirror the real SetupWizard dialog');
+  assert.ok(html.includes('Generate'), 'paste replica must show the real Generate button');
+  assert.ok(html.includes('Listing captured'), 'paste replica must show the real listing captured confirmation');
+  assert.ok(html.includes('STORYBOARD CANVAS'), 'storyboard replica must mirror the real storyboard heading');
+  assert.ok(html.includes('frame-canvas-grid'), 'storyboard replica must show the real frame canvas grid');
 });
 
 test('/real-estate route renders the page and is indexed', () => {

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FeatureTemplate } from '../templates';
 import { Button, FeatureZigzag } from '@storyframe/ui';
+import { RealEstateStudioReplicas } from '../RealEstateStudioReplicas';
 import { WorkflowPreview } from '../WorkflowPreview';
 
 export const REAL_ESTATE_VIDEO_SRC = '/media/realtor-tour-placeholder.webm';
@@ -139,14 +140,14 @@ export function RealEstatePage({ onNavigate }: { onNavigate?: (path: string) => 
               title: 'Paste the listing, keep the truth',
               description:
                 'Storyframe reads the listing photos, facts and description you already have on Zillow — nothing to reshoot and nothing invented.',
-              visual: <WorkflowPreview kind="mockup" />,
+              visual: <RealEstateStudioReplicas kind="paste" />,
             },
             {
               flip: true,
               title: 'A tour that feels like a film',
               description:
                 'AI plans the scene order, adds motion and captions, and applies your agency brand so every tour looks like it came from one studio.',
-              visual: <WorkflowPreview kind="storyboard" />,
+              visual: <RealEstateStudioReplicas kind="storyboard" />,
             },
             {
               title: 'Ready for every channel',

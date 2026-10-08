@@ -27,10 +27,12 @@ capture endpoint exists.
 | Piece | Path |
 | --- | --- |
 | Page component (two-step state machine) | `apps/website/src/pages/RealEstatePage.tsx` |
+| Studio UI replicas component (Part 1: paste + storyboard) | `apps/website/src/RealEstateStudioReplicas.tsx` |
 | Route registration | `apps/website/src/App.tsx` (`/real-estate`) |
-| Page CSS (hero + capture arrangement) | `apps/website/src/website.css` (`.re-*`) |
+| Page CSS (hero, capture, and studio replicas) | `apps/website/src/website.css` (`.re-*`, `.re-replica*`) |
 | SEO metadata (prerender + sitemap) | `apps/website/src/seo.ts` (`indexPages`) |
 | Placeholder video asset | `apps/website/public/media/realtor-tour-placeholder.webm` |
+| Frame still assets for replicas | `apps/website/public/media/realtor/` |
 | Tests | `apps/website/tests/real-estate.test.ts` |
 
 ## Placeholder video and license
@@ -59,6 +61,10 @@ footage is approved; keep attribution in sync.
   theme.
 - The capture card overlaps the hero (`margin-top: -56px`) to keep the video
   visible behind the form.
+- High-fidelity Studio UI replicas in `FeatureZigzag` replace abstract placeholders:
+  - **Paste Listing:** Replicates the SetupWizard "From URL" dialog with real `apps/web` controls, typing URL animation, primary `Generate` button, and listing captured confirmation.
+  - **Storyboard:** Replicates the `StoryboardWorkspace` M2 visual canvas with 4 sequenced frames, preview stills, script fields, and duration inputs populating sequentially.
+  - Sized via CSS container queries on `.re-replica` to scale proportionally from desktop down to mobile (390px) without horizontal overflow or clipping.
 - No new nav item: the page is reachable at `/real-estate` and via the sitemap.
   It is a campaign landing page like `/ecommerce`, not a primary feature.
 

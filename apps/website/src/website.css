@@ -400,3 +400,64 @@ h1, h2, h3 { text-wrap: pretty; }
  .re-form-row .sf-button { width: 100%; }
  .re-steps { flex-wrap: wrap; }
 }
+
+/* /ecommerce auto-playing flow demo (EcommerceFlowDemo.tsx). Schematic
+   illustration only: it demonstrates the paste-URL-to-ad workflow and never
+   claims a backend request ran. One 10.5s master loop; every state change
+   within the loop is ≤2.6s, matching the existing preview motion scale.
+   Without animation support (reduced motion, prerender) the same elements
+   render as the static composition below — no separate fallback markup. */
+.sf-eco-flow { display: flex; flex-direction: column; height: 100%; background: #eef3ff; font-family: var(--sf-font-sans); color: #43506a; }
+.sf-eco-browser { display: flex; align-items: center; gap: 9px; height: 38px; padding: 0 13px; background: #fff; border-bottom: 1px solid #e4e8f0; }
+.sf-eco-dots { display: flex; gap: 4px; }
+.sf-eco-dots i { width: 7px; height: 7px; border-radius: 50%; background: #d7deed; }
+.sf-eco-url { flex: 1; display: flex; align-items: center; min-width: 0; height: 22px; padding: 0 9px; background: #f4f7fd; border: 1px solid #dce3ef; border-radius: 11px; font: 10.5px/1 var(--sf-font-mono); color: #43506a; }
+.sf-eco-url-text { white-space: nowrap; overflow: hidden; }
+.sf-eco-caret { width: 1px; height: 11px; margin-left: 1px; background: #2142e7; flex-shrink: 0; opacity: 0; }
+.sf-eco-go { display: flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: #2142e7; color: #fff; flex-shrink: 0; }
+.sf-eco-stage { position: relative; flex: 1; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 18px; padding: 20px 18px 16px; }
+.sf-eco-found { background: #fff; border: 1px solid #dce3ef; border-radius: 7px; padding: 11px 13px; display: flex; flex-direction: column; gap: 5px; box-shadow: 5px 7px 0 #e4e9f4; }
+.sf-eco-found-badge { display: inline-flex; align-items: center; gap: 4px; align-self: flex-start; padding: 2px 7px; border-radius: 9px; background: #e3f4e8; color: #1e7a3c; font-size: 9.5px; font-weight: 600; }
+.sf-eco-found strong { font-size: 12.5px; font-weight: 600; color: #182b4e; }
+.sf-eco-found-meta { font-size: 10px; color: #697387; }
+.sf-eco-loader { display: flex; align-items: center; gap: 7px; margin-top: 14px; color: #697387; font-size: 10px; }
+.sf-eco-loader i { width: 12px; height: 12px; border: 2px solid #c9d5f2; border-top-color: #2142e7; border-radius: 50%; }
+.sf-eco-phone { position: relative; height: 168px; width: 86px; border: 2px solid #9eaed0; border-radius: 15px; padding: 8px 6px 6px; background: #fff; box-shadow: 5px 7px 0 #e4e9f4; }
+.sf-eco-ad { position: relative; height: 100%; border-radius: 8px; padding: 9px 8px; background: linear-gradient(160deg, #2142e7, #4a66f0); color: #fff; display: flex; flex-direction: column; overflow: hidden; }
+.sf-eco-ad-hook { font-size: 9px; font-weight: 700; letter-spacing: .2px; }
+.sf-eco-ad strong { font-size: 11px; font-weight: 600; line-height: 1.25; margin-top: 4px; }
+.sf-eco-ad-cta { align-self: flex-start; margin-top: auto; padding: 3px 7px; border-radius: 9px; background: #fff; color: #2142e7; font-size: 8.5px; font-weight: 700; white-space: nowrap; }
+.sf-eco-ad-chip { align-self: flex-start; padding: 1px 5px; border-radius: 6px; background: rgba(255,255,255,.22); font-size: 7.5px; margin-bottom: 3px; }
+.sf-eco-ad-progress { position: absolute; left: 0; bottom: 0; height: 3px; width: 100%; background: rgba(255,255,255,.85); transform-origin: 0 50%; }
+.sf-eco-pills { position: absolute; left: -6px; bottom: -8px; display: flex; gap: 4px; background: #fff; border: 1px solid #dce3ef; border-radius: 9px; padding: 3px 7px; font-size: 8.5px; color: #43506a; box-shadow: 3px 4px 0 #e4e9f4; }
+.sf-eco-pills > span { display: inline-flex; align-items: center; gap: 2px; }
+.sf-eco-pills svg { color: #2142e7; }
+@media (max-width: 900px) {
+ .sf-eco-stage { grid-template-columns: 1fr; justify-items: center; gap: 14px; padding: 16px 14px 20px; }
+ .sf-eco-found { flex-direction: row; align-items: center; gap: 9px; }
+ .sf-eco-found strong { font-size: 11.5px; }
+ .sf-eco-url { font-size: 9px; }
+ .sf-eco-phone { height: 150px; width: 78px; }
+ .sf-eco-ad { padding: 8px 7px; }
+ .sf-eco-ad-cta { font-size: 8px; padding: 3px 6px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+ .sf-eco-url-text { animation: eco-type 10.5s steps(43, end) infinite; width: 43ch; overflow: hidden; }
+ .sf-eco-caret { animation: eco-caret 10.5s infinite; }
+ .sf-eco-go { animation: eco-go 10.5s ease infinite; }
+ .sf-eco-found { animation: eco-found 10.5s ease infinite; }
+ .sf-eco-loader { animation: eco-loader 10.5s ease infinite; }
+ .sf-eco-loader i { animation: eco-spin 10.5s linear infinite; }
+ .sf-eco-phone { animation: eco-phone 10.5s ease infinite; }
+ .sf-eco-ad-progress { animation: eco-progress 10.5s linear infinite; }
+ .sf-eco-pills { animation: eco-pills 10.5s ease infinite; }
+}
+@keyframes eco-type { 0%, 5% { width: 0; } 24%, 100% { width: 43ch; } }
+@keyframes eco-caret { 0%, 4% { opacity: 1; } 4.1%, 8% { opacity: 0; } 8.1%, 12% { opacity: 1; } 12.1%, 16% { opacity: 0; } 16.1%, 23.9% { opacity: 1; } 24%, 100% { opacity: 0; } }
+@keyframes eco-go { 0%, 23.9% { transform: scale(1); } 24.5% { transform: scale(.86); } 26%, 100% { transform: scale(1); } }
+@keyframes eco-found { 0%, 27% { opacity: 0; transform: translateY(7px); } 31%, 92% { opacity: 1; transform: translateY(0); } 96%, 100% { opacity: 0; transform: translateY(7px); } }
+@keyframes eco-loader { 0%, 28% { opacity: 0; transform: translateY(7px); } 31%, 62% { opacity: 1; transform: translateY(0); } 66%, 100% { opacity: 0; transform: translateY(7px); } }
+@keyframes eco-spin { 0%, 30% { transform: rotate(0); } 62%, 100% { transform: rotate(1080deg); } }
+@keyframes eco-phone { 0%, 62% { opacity: 0; transform: translateY(9px) scale(.96); } 66%, 94% { opacity: 1; transform: translateY(0) scale(1); } 97%, 100% { opacity: 0; transform: translateY(9px) scale(.96); } }
+@keyframes eco-progress { 0%, 64% { transform: scaleX(0); } 94%, 100% { transform: scaleX(1); } }
+@keyframes eco-pills { 0%, 70% { opacity: 0; transform: translateY(4px); } 74%, 94% { opacity: 1; transform: translateY(0); } 97%, 100% { opacity: 0; transform: translateY(4px); } }

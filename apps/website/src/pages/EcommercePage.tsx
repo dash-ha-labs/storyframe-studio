@@ -1,6 +1,7 @@
 import React from 'react';
 import { FeatureTemplate } from '../templates';
 import { WorkflowPreview } from '../WorkflowPreview';
+import { EcommerceFlowDemo } from '../EcommerceFlowDemo';
 import { Hero, FeatureZigzag } from '@storyframe/ui';
 
 export const ECOMMERCE_SIGNUP_URL = 'https://storyframe-studio.yamu.app/';
@@ -16,7 +17,7 @@ export function EcommercePage({ onNavigate }: { onNavigate?: (path: string) => v
   <p className="sf-signup-note">Free. No credit card required.</p>
 
   <div id="how"><FeatureZigzag items={[
-   {title:'Paste a Shopify URL',description:'Drop in any product page link. Storyframe pulls the product details and builds a ready-to-edit video ad around them.',visual:<WorkflowPreview kind="mockup"/>},
+   {title:'Paste a Shopify URL',description:'Drop in any product page link. Storyframe pulls the product details and builds a ready-to-edit video ad around them.',visual:<EcommerceFlowDemo/>},
    {flip:true,title:'Or upload a product photo',description:'No store link handy? Upload a product photo and let AI turn it into scroll-stopping ad scenes with hooks, captions and music.',visual:<WorkflowPreview kind="media"/>},
    {title:'AI writes the viral ad',description:'Get a TikTok or Facebook ad draft in seconds: hook, scenes and captions tuned for what performs on social.',visual:<WorkflowPreview kind="generate"/>},
    {flip:true,title:'Edit every scene, stay on brand',description:'Keep full control. Refine each scene, apply your brand colours and typeface, then export in every format your channels need.',visual:<WorkflowPreview kind="editor"/>},

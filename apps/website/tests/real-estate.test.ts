@@ -33,6 +33,18 @@ test('Real estate page renders zig-zag sections', () => {
   assert.ok(html.includes('Listing captured'), 'paste replica must show the real listing captured confirmation');
   assert.ok(html.includes('STORYBOARD CANVAS'), 'storyboard replica must mirror the real storyboard heading');
   assert.ok(html.includes('frame-canvas-grid'), 'storyboard replica must show the real frame canvas grid');
+
+  // Part 2: AI Scene Gen + Video Editor replicas.
+  assert.ok(html.includes('re-replica-generate'), 'AI scene gen replica missing');
+  assert.ok(html.includes('re-replica-editor'), 'video editor replica missing');
+  assert.ok(html.includes('Create and edit with AI'), 'AI replica must mirror the real AiPanel heading');
+  assert.ok(html.includes('Planning your edit...'), 'AI replica must show the real generation loading state');
+  assert.ok(html.includes('Applied 4 scenes to timeline'), 'AI replica must show applied status');
+  assert.ok(html.includes('AI Generation complete'), 'AI replica must show the completed output badge');
+  assert.ok(html.includes('Timeline'), 'video editor replica must show timeline heading');
+  assert.ok(html.includes('30 FPS'), 'video editor replica must show FPS ruler label');
+  assert.ok(html.includes('replica-playhead'), 'video editor replica must show playhead element');
+  assert.ok(!html.includes('wire-'), 'real estate page must not contain abstract wireframe shapes');
 });
 
 test('/real-estate route renders the page and is indexed', () => {

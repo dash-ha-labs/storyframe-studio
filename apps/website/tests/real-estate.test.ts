@@ -22,10 +22,15 @@ test('Real estate page renders video hero and step 1 (URL capture)', () => {
   assert.ok(!html.includes('<iframe'), 'marketing page must not mount the live editor');
 });
 
-test('Real estate page renders zig-zag sections', () => {
+test('Real estate page renders zig-zag sections with animated demos', () => {
   const html = renderToString(React.createElement(RealEstatePage));
   assert.ok(html.includes('sf-mkt-zigzag'), 'feature zig-zag missing');
-  assert.ok(html.includes('wire-'), 'visual placeholders missing');
+  assert.ok(html.includes('re-demo-listing'), 'listing (paste URL) demo missing');
+  assert.ok(html.includes('re-demo-storyboard'), 'storyboard demo missing');
+  assert.ok(html.includes('re-demo-scene"') || html.includes('re-demo-scene '), 'AI scene generation demo missing');
+  assert.ok(html.includes('re-demo-editor'), 'video editor demo missing');
+  assert.ok(html.includes('role="img"'), 'demos must be exposed as schematic images');
+  assert.ok(!html.includes('wire-'), 'static workflow placeholders must be replaced');
 });
 
 test('/real-estate route renders the page and is indexed', () => {

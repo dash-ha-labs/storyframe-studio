@@ -27,11 +27,35 @@ capture endpoint exists.
 | Piece | Path |
 | --- | --- |
 | Page component (two-step state machine) | `apps/website/src/pages/RealEstatePage.tsx` |
+| "How it works" animated demos | `apps/website/src/RealtorFlowDemos.tsx` |
 | Route registration | `apps/website/src/App.tsx` (`/real-estate`) |
-| Page CSS (hero + capture arrangement) | `apps/website/src/website.css` (`.re-*`) |
+| Page CSS (hero + capture arrangement + demo keyframes) | `apps/website/src/website.css` (`.re-*`, `.re-demo-*`) |
 | SEO metadata (prerender + sitemap) | `apps/website/src/seo.ts` (`indexPages`) |
 | Placeholder video asset | `apps/website/public/media/realtor-tour-placeholder.webm` |
 | Tests | `apps/website/tests/real-estate.test.ts` |
+
+## "How it works" animated demos
+
+The four zig-zag sections use auto-playing CSS illustrations
+(`RealtorFlowDemos.tsx`, `.re-demo-*` in `website.css`), replacing the generic
+static `WorkflowPreview` placeholders. They are schematic only — they never
+claim a backend request ran, the same rule as `EcommerceFlowDemo` on
+`/ecommerce`:
+
+1. **Listing demo** (Paste the listing): a Zillow URL types into a browser bar,
+   then the listing card (address, beds/sqft/acre, description lines) and a
+   photo grid pop in.
+2. **Storyboard demo** (A tour that feels like a film): four numbered scene
+   frames pop in one after another with durations.
+3. **Scene demo** (Ready for every channel): a shimmering skeleton loader
+   resolves into a finished branded scene with caption.
+4. **Editor demo** (Edit any scene): a playhead scrubs across a 4-clip video
+   timeline with an audio track while the preview crossfades per scene.
+
+Each demo is a single CSS loop (8–9 s) with state changes ≤3 s, exposed as
+`role="img"` with a descriptive `aria-label`. Under
+`prefers-reduced-motion: reduce` (and in prerendered HTML) the same markup
+renders as the static final-stage composition — no separate fallback.
 
 ## Placeholder video and license
 

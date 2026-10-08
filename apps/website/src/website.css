@@ -400,3 +400,134 @@ h1, h2, h3 { text-wrap: pretty; }
  .re-form-row .sf-button { width: 100%; }
  .re-steps { flex-wrap: wrap; }
 }
+
+/* /real-estate "how it works" demos (RealtorFlowDemos.tsx). Schematic
+   illustration only: they demonstrate the realtor workflow and never claim a
+   backend request ran, same rule as WorkflowPreview/EcommerceFlowDemo. Each
+   demo runs one master CSS loop; state changes inside it are ≤3s, matching
+   the existing preview motion scale. Without animation support (reduced
+   motion, prerender) the same elements render as the static final-stage
+   composition — no separate fallback markup. */
+.re-demo { display: flex; flex-direction: column; height: 265px; border: 1px solid #dce3ef; border-radius: 10px; overflow: hidden; background: #eef3ff; font-family: var(--sf-font-sans); color: #43506a; }
+.re-demo-browser { display: flex; align-items: center; gap: 9px; height: 38px; padding: 0 13px; background: #fff; border-bottom: 1px solid #e4e8f0; }
+.re-demo-dots { display: flex; gap: 4px; }
+.re-demo-dots i { width: 7px; height: 7px; border-radius: 50%; background: #d7deed; }
+.re-demo-url { flex: 1; display: flex; align-items: center; min-width: 0; height: 22px; padding: 0 9px; background: #f4f7fd; border: 1px solid #dce3ef; border-radius: 11px; font: 10.5px/1 var(--sf-font-mono); color: #43506a; }
+.re-demo-url-text { white-space: nowrap; overflow: hidden; }
+.re-demo-caret { width: 1px; height: 11px; margin-left: 1px; background: #2142e7; flex-shrink: 0; opacity: 0; }
+.re-demo-go { display: flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: #2142e7; color: #fff; flex-shrink: 0; }
+.re-demo-bar { display: flex; align-items: center; gap: 7px; height: 36px; padding: 0 13px; background: #fff; border-bottom: 1px solid #e4e8f0; font-size: 12px; }
+.re-demo-bar > svg { color: #2142e7; flex-shrink: 0; }
+.re-demo-bar > i { flex: 1; }
+.re-demo-bar-note { display: inline-flex; align-items: center; gap: 4px; font-size: 9.5px; color: #77839a; }
+.re-demo-bar-note svg { color: #839bdf; }
+
+/* Listing demo */
+.re-demo-listing .re-demo-stage { position: relative; flex: 1; display: grid; grid-template-columns: 1fr auto; align-items: center; align-content: center; gap: 10px; padding: 12px 24px; }
+.re-demo-facts { grid-column: 1; grid-row: 1; background: #fff; border: 1px solid #dce3ef; border-radius: 7px; padding: 11px 13px; display: flex; flex-direction: column; gap: 5px; box-shadow: 5px 7px 0 #e4e9f4; }
+.re-demo-badge { display: inline-flex; align-items: center; gap: 4px; align-self: flex-start; padding: 2px 7px; border-radius: 9px; background: #e3f4e8; color: #1e7a3c; font-size: 9.5px; font-weight: 600; }
+.re-demo-facts strong { font-size: 12.5px; font-weight: 600; color: #182b4e; }
+.re-demo-meta { display: flex; gap: 10px; font-size: 10px; color: #697387; }
+.re-demo-meta span { display: inline-flex; align-items: center; gap: 3px; }
+.re-demo-meta svg { color: #839bdf; }
+.re-demo-fact-bars { display: flex; flex-direction: column; gap: 4px; }
+.re-demo-fact-bars i { display: block; height: 5px; border-radius: 2px; background: #d3dcf0; }
+.re-demo-photos { grid-column: 2; grid-row: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.re-demo-photo { display: grid; place-items: center; width: 58px; height: 46px; border-radius: 6px; border: 1px solid #cdd8ec; background: #f7f9ff; color: #839bdf; }
+.re-demo-photo-4 { position: relative; color: #77839a; }
+.re-demo-photo-4 span { position: absolute; right: 4px; bottom: 3px; font-size: 8px; }
+.re-demo-photo-1 { background: linear-gradient(150deg, #dbe4fb, #c6d4f7); border-color: #b9c8ef; color: #43506a; }
+.re-demo-photo-2 { background: linear-gradient(150deg, #e4ebfd, #d4e0fa); }
+
+/* Storyboard demo */
+.re-demo-storyboard .re-demo-frames { position: relative; flex: 1; display: flex; gap: 9px; align-items: center; padding: 18px 16px 30px; }
+.re-demo-frame { flex: 1; min-width: 0; background: #fff; border: 1px solid #dce3ef; border-radius: 5px; padding: 9px 7px; color: #697387; text-align: left; }
+.re-demo-frame > span { font: 10px var(--sf-font-mono); }
+.re-demo-frame-art { display: grid; place-items: center; height: 58px; margin-top: 7px; border: 1px solid #e1e6f0; border-radius: 3px; background: #f7f9ff; color: #839bdf; }
+.re-demo-frame strong { display: block; font-size: 10px; font-weight: 500; white-space: nowrap; margin-top: 7px; color: #354561; }
+.re-demo-frame small { display: block; font-size: 10px; margin-top: 3px; }
+.re-demo-frames-note { position: absolute; bottom: 9px; left: 17px; font-size: 10px; color: #77839a; }
+
+/* Scene generation demo */
+.re-demo-scene-stage { position: relative; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 14px 24px; }
+.re-demo-scene-window { position: relative; width: 226px; height: 126px; border: 1px solid #cdd8ec; border-radius: 6px; background: #f7f9ff; overflow: hidden; box-shadow: 5px 7px 0 #e4e9f4; }
+.re-demo-skeleton { position: absolute; inset: 0; display: flex; flex-direction: column; gap: 7px; padding: 11px; }
+.re-demo-skeleton i { display: block; height: 12px; border-radius: 3px; background: linear-gradient(90deg, #dde5f5 25%, #e9effc 50%, #dde5f5 75%); background-size: 220% 100%; }
+.re-demo-skeleton i:nth-child(2) { margin-top: 8px; height: 8px; width: 74%; }
+.re-demo-skeleton i:nth-child(3) { height: 8px; width: 52%; }
+.re-demo-scene-image { position: absolute; inset: 0; display: grid; place-items: center; background: linear-gradient(155deg, #2247ea 0%, #4a66f0 55%, #7d94f5 100%); color: #fff; }
+.re-demo-scene-caption { position: absolute; left: 9px; right: 9px; bottom: 8px; font-size: 9.5px; font-weight: 600; color: #fff; text-shadow: 0 1px 3px #182b4e73; }
+.re-demo-scene-chip { position: absolute; right: 8px; top: 7px; padding: 2px 7px; border-radius: 9px; background: #ffffffd9; color: #2142e7; font-size: 8.5px; font-weight: 700; }
+.re-demo-scene-status { display: flex; align-items: center; gap: 7px; color: #697387; font-size: 10px; }
+.re-demo-spinner { width: 12px; height: 12px; border: 2px solid #c9d5f2; border-top-color: #2142e7; border-radius: 50%; }
+.re-demo-scene-done { display: none; }
+
+/* Editor demo */
+.re-demo-editor-stage { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 12px; padding: 14px 22px 18px; }
+.re-demo-player { position: relative; height: 108px; border-radius: 5px; background: #edf1fc; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.re-demo-player-frame { position: absolute; inset: 0; display: grid; place-items: center; color: #839bdf; }
+.re-demo-player-1 { background: linear-gradient(150deg, #dbe4fb, #c6d4f7); color: #43506a; }
+.re-demo-player-2 { background: linear-gradient(160deg, #2247ea, #4a66f0); color: #fff; }
+.re-demo-play { position: absolute; bottom: 8px; right: 10px; display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: #fff; color: #2142e7; box-shadow: 0 2px 6px #182b4e26; }
+.re-demo-timeline { position: relative; display: flex; flex-direction: column; gap: 5px; }
+.re-demo-track { display: flex; gap: 4px; height: 20px; }
+.re-demo-track > i { border-radius: 3px; }
+.re-demo-track-video i { background: #bfd0fc; border: 1px solid #93a9e8; }
+.re-demo-track-video i:nth-child(2) { background: #9eb5f4; }
+.re-demo-track-video i:nth-child(4) { background: #b7c8fa; }
+.re-demo-track-music { height: 12px; }
+.re-demo-track-music i { background: #dbd2f0; border: 1px solid #c3b6e4; }
+.re-demo-playhead { position: absolute; top: -3px; bottom: -3px; left: 0; width: 2px; background: #2142e7; border-radius: 1px; }
+.re-demo-playhead::after { content: ""; position: absolute; top: -3px; left: -3px; width: 8px; height: 8px; border-radius: 2px; background: #2142e7; }
+
+@media (max-width: 900px) {
+ .re-demo { height: 250px; }
+ .re-demo-listing .re-demo-stage { grid-template-columns: 1fr; justify-items: center; gap: 9px; padding: 10px 16px 12px; }
+ .re-demo-facts { min-width: 0; width: 100%; }
+ .re-demo-photos { grid-column: 1; grid-row: 2; }
+ .re-demo-frame-art { height: 52px; }
+ .re-demo-scene-window { width: 200px; height: 112px; }
+ .re-demo-player { height: 96px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+ /* Listing: type the URL, press go, listing card + photos pop in. */
+ .re-demo-listing .re-demo-url-text { animation: re-type 9s steps(30, end) infinite; width: 30ch; overflow: hidden; }
+ .re-demo-listing .re-demo-caret { animation: re-caret 9s infinite; }
+ .re-demo-listing .re-demo-go { animation: re-go 9s ease infinite; }
+ .re-demo-listing .re-demo-facts { animation: re-facts 9s ease infinite; }
+ .re-demo-listing .re-demo-photos .re-demo-photo { animation: re-photo 9s ease infinite; animation-fill-mode: backwards; }
+ .re-demo-listing .re-demo-photo-2 { animation-delay: .25s; }
+ .re-demo-listing .re-demo-photo-3 { animation-delay: .5s; }
+ .re-demo-listing .re-demo-photo-4 { animation-delay: .75s; }
+ /* Storyboard: frames pop in one after another. */
+ .re-demo-storyboard .re-demo-frame { animation: re-frame 8s ease infinite; animation-fill-mode: backwards; }
+ .re-demo-storyboard .re-demo-frame-02 { animation-delay: .5s; }
+ .re-demo-storyboard .re-demo-frame-03 { animation-delay: 1s; }
+ .re-demo-storyboard .re-demo-frame-04 { animation-delay: 1.5s; }
+ /* Scene: skeleton shimmers, then the generated scene fades in. */
+ .re-demo-scene .re-demo-skeleton i { animation: re-shimmer 1.4s linear infinite; }
+ .re-demo-scene .re-demo-scene-image { animation: re-scene-in 9s ease infinite; }
+ .re-demo-scene .re-demo-scene-caption { animation: re-scene-in 9s ease infinite; }
+ .re-demo-scene .re-demo-scene-chip { animation: re-scene-in 9s ease infinite; animation-delay: .3s; }
+ .re-demo-scene .re-demo-skeleton { animation: re-skeleton-out 9s ease infinite; }
+ .re-demo-scene .re-demo-scene-status { animation: re-status 9s ease infinite; }
+ .re-demo-scene .re-demo-spinner { animation: re-spin 9s linear infinite; }
+ /* Editor: playhead scrubs the timeline; preview crossfades per scene. */
+ .re-demo-editor .re-demo-playhead { animation: re-scrub 8s linear infinite; }
+ .re-demo-editor .re-demo-player-2 { animation: re-player-2 8s ease infinite; }
+ .re-demo-editor .re-demo-player-1 { animation: re-player-1 8s ease infinite; }
+}
+@keyframes re-type { 0%, 4% { width: 0; } 30%, 100% { width: 30ch; } }
+@keyframes re-caret { 0%, 3% { opacity: 1; } 3.1%, 6% { opacity: 0; } 6.1%, 29.9% { opacity: 1; } 30%, 100% { opacity: 0; } }
+@keyframes re-go { 0%, 29.9% { transform: scale(1); } 31% { transform: scale(.86); } 33%, 100% { transform: scale(1); } }
+@keyframes re-facts { 0%, 33% { opacity: 0; transform: translateY(7px); } 38%, 94% { opacity: 1; transform: translateY(0); } 97%, 100% { opacity: 0; transform: translateY(7px); } }
+@keyframes re-photo { 0%, 36% { opacity: 0; transform: translateY(6px) scale(.92); } 42%, 94% { opacity: 1; transform: translateY(0) scale(1); } 97%, 100% { opacity: 0; transform: translateY(6px) scale(.92); } }
+@keyframes re-frame { 0%, 8% { opacity: 0; transform: translateY(10px) scale(.94); } 14%, 96% { opacity: 1; transform: translateY(0) scale(1); } 100% { opacity: 0; transform: translateY(10px) scale(.94); } }
+@keyframes re-shimmer { 0% { background-position: 120% 0; } 100% { background-position: -120% 0; } }
+@keyframes re-skeleton-out { 0%, 40% { opacity: 1; } 55%, 100% { opacity: 0; } }
+@keyframes re-scene-in { 0%, 48% { opacity: 0; } 60%, 94% { opacity: 1; } 97%, 100% { opacity: 0; } }
+@keyframes re-status { 0%, 4% { opacity: 0; } 8%, 55% { opacity: 1; } 62%, 100% { opacity: 0; } }
+@keyframes re-spin { 0% { transform: rotate(0); } 55%, 100% { transform: rotate(900deg); } }
+@keyframes re-scrub { 0% { left: 0; } 100% { left: calc(100% - 2px); } }
+@keyframes re-player-1 { 0%, 96% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes re-player-2 { 0%, 28% { opacity: 0; } 38%, 90% { opacity: 1; } 100% { opacity: 0; } }
